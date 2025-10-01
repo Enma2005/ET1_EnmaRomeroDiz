@@ -14,46 +14,118 @@ el mensaje de respuesta asociado al resultado. (en el mismo idioma para todos lo
 //DEFINICIONES DE TESTS PARA LOGIN
 let alumnograduacion_def_tests = [
     //LOGIN
+    
+    //ADD LOGIN
     ['alumnograduacion', 'alumnograduacion_login', 1, 'Validar que el campo no este vacio', 'ADD', 'alumnograduacion_login_vacio_KO', 'Complete el campo'],
     ['alumnograduacion', 'alumnograduacion_login', 2, 'Validar que el campo este compuesto por alfabeticos sin ñ ni espacios ni acentos', 'ADD', 'alumnosgraduacion_login_formato_KO', 'No se admiten ni ñ, ni espacios, ni acentos.'],
     ['alumnograduacion', 'alumnograduacion_login', 3, 'Validar que el campo tenga un minimo de 4 caracteres', 'ADD', 'alumnograduacion_login_min_size_KO', 'Mínimo 4 caracteres.'],
     ['alumnograduacion', 'alumnograduacion_login', 4, 'Validar que el campo tenga un maximo de 15 caracteres', 'ADD', 'alumnograduacion_login_max_size_KO', 'Máximo 15 caracteres.'],   
     ['alumnograduacion', 'alumnograduacion_login', 5, 'Validar que el campo sea correcto', 'ADD', true, 'Correcto.'],
     
+    //EDITAR LOGIN
+    ['alumnograduacion', 'alumnograduacion_login', 49, 'Validar que el campo no este vacio', 'EDIT', 'alumnograduacion_login_vacio_KO', 'Complete el campo'],
+    ['alumnograduacion', 'alumnograduacion_login', 50, 'Validar que el campo este compuesto por alfabeticos sin ñ ni espacios ni acentos', 'EDIT', 'alumnosgraduacion_login_formato_KO', 'No se admiten ni ñ, ni espacios, ni acentos.'],
+    ['alumnograduacion', 'alumnograduacion_login', 51, 'Validar que el campo tenga un minimo de 4 caracteres', 'EDIT', 'alumnograduacion_login_min_size_KO', 'Mínimo 4 caracteres.'],
+    ['alumnograduacion', 'alumnograduacion_login', 52, 'Validar que el campo tenga un maximo de 15 caracteres', 'EDIT', 'alumnograduacion_login_max_size_KO', 'Máximo 15 caracteres.'],   
+    ['alumnograduacion', 'alumnograduacion_login', 53, 'Validar que el campo sea correcto', 'EDIT', true, 'Correcto.'],
+
+    //BUSQUEDA LOGIN
+    ['alumnograduacion', 'alumnograduacion_login', 55, 'Validar que el campo este vacio o compuesto por alfabeticos sin ñ ni espacios ni acentos ', 'SEARCH', 'alumnosgraduacion_login_formato_KO', 'No se admiten ni ñ, ni espacios, ni acentos.'],
+    ['alumnograduacion', 'alumnograduacion_login', 57, 'Validar que el campo tenga un maximo de 15 caracteres', 'SEARCH', 'alumnograduacion_login_max_size_KO', 'Maximo 15 caracteres.'],
+    ['alumnograduacion', 'alumnograduacion_login', 58, 'Validar que el campo sea correcto', 'SEARCH', true, 'Correcto.'],
+   
     //PASSWORD
+
+    //ADD PASSWORD
     ['alumnograduacion', 'alumnograduacion_password', 6, 'Validar que el campo no este vacio', 'ADD', 'alumnograduacion_password_vacio_KO', 'Complete el campo'],
     ['alumnograduacion', 'alumnograduacion_password', 7, 'Validar que el campo tenga un minimo de 4 caracteres', 'ADD', 'alumnograduacion_password_min_size_KO', 'Mínimo 8 caracteres.'],
-    ['alumnograduacion', 'alumnograduacion_password', 8, 'Validar que el campo tenga un maximo de 15 caracteres', 'ADD', 'alumnograduacion_password_max_size_KO', 'Máximo 100 caracteres.'],
-    ['alumnograduacion', 'alumnograduacion_password', 9, 'Validar que el campo no tenga acentos ni ñ', 'ADD', 'alumnograduacion_password_formato_KO', 'No debe contener ni ñ ni acentos.'],
+   // ['alumnograduacion', 'alumnograduacion_password', 8, 'Validar que el campo tenga un maximo de 15 caracteres', 'ADD', 'alumnograduacion_password_max_size_KO', 'Máximo 100 caracteres.'],
+    ['alumnograduacion', 'alumnograduacion_password', 9, 'Validar que el campo no tenga acentos ni ñ', 'ADD', 'alumnograduacio_password_formato_KO', 'No debe contener ni ñ ni acentos.'],
     ['alumnograduacion', 'alumnograduacion_password', 10, 'Validar que el campo sea correcto', 'ADD', true, 'Correcto.'],
     
-    //NOMBRE
+    //EDITAR PASSWORD
+    ['alumnograduacion', 'alumnograduacion_password', 54, 'Validar que el campo no este vacio', 'EDIT', 'alumnograduacion_password_vacio_KO', 'Complete el campo'],
+    ['alumnograduacion', 'alumnograduacion_password', 56, 'Validar que el campo tenga un minimo de 4 caracteres', 'EDIT', 'alumnograduacion_password_min_size_KO', 'Mínimo 8 caracteres.'],
+    //['alumnograduacion', 'alumnograduacion_password', 57, 'Validar que el campo tenga un maximo de 15 caracteres', 'EDIT', 'alumnograduacion_password_max_size_KO', 'Máximo 100 caracteres.'],
+    ['alumnograduacion', 'alumnograduacion_password', 59, 'Validar que el campo no tenga acentos ni ñ', 'EDIT', 'alumnograduacio_password_formato_KO', 'No debe contener ni ñ ni acentos.'],
+    ['alumnograduacion', 'alumnograduacion_password', 60, 'Validar que el campo sea correcto', 'EDIT', true, 'Correcto.'],
+
+    //BUSQUEDA PASSWORD
+    ['alumnograduacion', 'alumnograduacion_password', 61, 'Validar que el campo este vacio o compuesto por alfabeticos sin ñ ni espacios ni acentos ', 'SEARCH', 'alumnosgraduacion_password_formato_KO', 'No se admiten ni ñ, ni espacios, ni acentos.'],
+   // ['alumnograduacion', 'alumnograduacion_password', 57, 'Validar que el campo tenga un minimo de 15 caracteres', 'SEARCH', 'alumnograduacion_password_max_size_KO', 'Maximo 15 caracteres.'],
+    ['alumnograduacion', 'alumnograduacion_password', 62, 'Validar que el campo sea correcto', 'SEARCH', true, 'Correcto.'],
+
+    //ADD NOMBRE
     ['alumnograduacion', 'alumnograduacion_nombre', 11, 'Validar que el campo no este vacio', 'ADD', 'alumnograduacion_nombre_vacio_KO', 'Complete el campo'],
     ['alumnograduacion', 'alumnograduacion_nombre', 12, 'Validar que el campo este compuesto por alfabeticos con ñ, espacios y acentos permitidos', 'ADD', 'alumnograduacion_nombre_formato_KO', 'No se admiten caracteres que no sean espacios, ñ o acentos.'],
     ['alumnograduacion', 'alumnograduacion_nombre', 13, 'Validar que el campo tenga un minimo de 2 caracteres', 'ADD', 'alumnograduacion_nombre_min_size_KO', 'Mínimo 2 caracteres.'],
     ['alumnograduacion', 'alumnograduacion_nombre', 14, 'Validar que el campo tenga un maximo de 25 caracteres', 'ADD', 'alumnograduacion_nombre_max_size_KO', 'Máximo 25 caracteres.'],   
     ['alumnograduacion', 'alumnograduacion_nombre', 15, 'Validar que el campo sea correcto', 'ADD', true, 'Correcto.'], 
 
-    //APELLIDOS
+    //EDITAR NOMBRE
+    ['alumnograduacion', 'alumnograduacion_nombre', 63, 'Validar que el campo no este vacio', 'EDIT', 'alumnograduacion_nombre_vacio_KO', 'Complete el campo'],  
+    ['alumnograduacion', 'alumnograduacion_nombre', 64, 'Validar que el campo este compuesto por alfabeticos con ñ, espacios y acentos permitidos', 'EDIT', 'alumnograduacion_nombre_formato_KO', 'No se admiten caracteres que no sean espacios, ñ o acentos.'],
+    ['alumnograduacion', 'alumnograduacion_nombre', 65, 'Validar que el campo tenga un minimo de 2 caracteres', 'EDIT', 'alumnograduacion_nombre_min_size_KO', 'Mínimo 2 caracteres.'],
+    ['alumnograduacion', 'alumnograduacion_nombre', 66, 'Validar que el campo tenga un maximo de 25 caracteres', 'EDIT', 'alumnograduacion_nombre_max_size_KO', 'Máximo 25 caracteres.'],   
+    ['alumnograduacion', 'alumnograduacion_nombre', 67, 'Validar que el campo sea correcto', 'EDIT', true, 'Correcto.'],
+    
+    //BUSQUEDA NOMBRE
+    ['alumnograduacion', 'alumnograduacion_nombre', 68, 'Validar que el campo este vacio o compuesto por alfabeticos con ñ, espacios y acentos permitidos', 'SEARCH', 'alumnograduacion_nombre_formato_KO', 'No se admiten caracteres que no sean espacios, ñ o acentos.'],
+    ['alumnograduacion', 'alumnograduacion_nombre', 57, 'Validar que el campo tenga un maximo de 25 caracteres', 'SEARCH', 'alumnograduacion_login_max_size_KO', 'Maximo 25 caracteres.'],
+    ['alumnograduacion', 'alumnograduacion_nombre', 69, 'Validar que el campo sea correcto', 'SEARCH', true, 'Correcto.'],
+
+    //ADD APELLIDOS
     ['alumnograduacion', 'alumnograduacion_apellidos', 16, 'Validar que el campo no este vacio', 'ADD', 'alumnograduacion_apellidos_vacio_KO', 'Complete el campo'],
-    ['alumnograduacion', 'alumnograduacion_apellidos', 17, 'Validar que el campo este compuesto por alfabeticos con ñ, espacios y acentos permitidos', 'ADD', 'alumnograduacion_apellidos_formato_KO', 'No se admiten caracteres que no sean espacios, ñ o acentos.'],
+    ['alumnograduacion', 'alumnograduacion_apellidos', 17, 'Validar que el campo este compuesto por alfabeticos con ñ, espacinos y acentos permitidos', 'ADD', 'alumnograduacion_apellidos_formato_KO', 'No se admiten caracteres que no sean espacios, ñ o acentos.'],
     ['alumnograduacion', 'alumnograduacion_apellidos', 18, 'Validar que el campo tenga un minimo de 2 caracteres', 'ADD', 'alumnograduacion_apellidos_min_size_KO', 'Mínimo 2 caracteres.'],
     ['alumnograduacion', 'alumnograduacion_apellidos', 19, 'Validar que el campo tenga un maximo de 35 caracteres', 'ADD', 'alumnograduacion_apellidos_max_size_KO', 'Máximo 35 caracteres.'],   
     ['alumnograduacion', 'alumnograduacion_apellidos', 20, 'Validar que el campo sea correcto', 'ADD', true, 'Correcto.'], 
     
-    //TITULACION
+    //EDITAR APELLIDOS
+    ['alumnograduacion', 'alumnograduacion_apellidos', 70, 'Validar que el campo no este vacio', 'EDIT', 'alumnograduacion_apellidos_vacio_KO', 'Complete el campo'],
+    ['alumnograduacion', 'alumnograduacion_apellidos', 71, 'Validar que el campo este compuesto por alfabeticos con ñ, espacios y acentos permitidos', 'EDIT', 'alumnograduacion_apellidos_formato_KO', 'No se admiten caracteres que no sean espacios, ñ o acentos.'],
+    ['alumnograduacion', 'alumnograduacion_apellidos', 72, 'Validar que el campo tenga un minimo de 2 caracteres', 'EDIT', 'alumnograduacion_apellidos_min_size_KO', 'Mínimo 2 caracteres.'],
+    ['alumnograduacion', 'alumnograduacion_apellidos', 73, 'Validar que el campo tenga un maximo de 35 caracteres', 'EDIT', 'alumnograduacion_apellidos_max_size_KO', 'Máximo 35 caracteres.'],   
+    ['alumnograduacion', 'alumnograduacion_apellidos', 74, 'Validar que el campo sea correcto', 'EDIT', true, 'Correcto.'],
+    
+    //BUSQUEDA APELLIDOS
+    ['alumnograduacion', 'alumnograduacion_apellidos', 75, 'Validar que el campo este vacio o compuesto por alfabeticos con ñ, espacios y acentos permitidos', 'SEARCH', 'alumnograduacion_apellidos_formato_KO', 'No se admiten caracteres que no sean espacios, ñ o acentos.'],            
+    ['alumnograduacion', 'alumnograduacion_apellidos', 57, 'Validar que el campo tenga un maximo de 35 caracteres', 'SEARCH', 'alumnograduacion_apellidos_max_size_KO', 'Maximo 35 caracteres.'],
+    ['alumnograduacion', 'alumnograduacion_apellidos', 76, 'Validar que el campo sea correcto', 'SEARCH', true, 'Correcto.'],
+
+    //ADD TITULACION
     ['alumnograduacion', 'alumnograduacion_titulacion', 21, 'Validar que el campo no este vacio', 'ADD', 'alumnograduacion_titulacion_vacio_KO', 'Complete el campo'],
     //HOLAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA LOLOLOLOLOLOLLOLOLOLOLOLOLOLOL??????????????
     ['alumnograduacion', 'alumnograduacion_titulacion', 22, 'Validar que el campoa sea uno de los siguientes terminos: ["GREI","GRIA","MEI","MIA","PCEO"]', 'ADD', 'alumnograduacion_titulacion_formato_KO', 'No se admiten otros valores que no sean ["GREI","GRIA","MEI","MIA","PCEO"].'],
     ['alumnograduacion', 'alumnograduacion_titulacion', 23, 'Validar que el campo sea correcto', 'ADD', true, 'Correcto.'], 
+    
+    //EDITAR TITULACION
+    ['alumnograduacion', 'alumnograduacion_titulacion', 77, 'Validar que el campo no este vacio', 'EDIT', 'alumnograduacion_titulacion_vacio_KO', 'Complete el campo'],
+    ['alumnograduacion', 'alumnograduacion_titulacion', 78, 'Validar que el campoa sea uno de los siguientes terminos: ["GREI","GRIA","MEI","MIA","PCEO"]', 'EDIT', 'alumnograduacion_titulacion_formato_KO', 'No se admiten otros valores que no sean ["GREI","GRIA","MEI","MIA","PCEO"].'],
+    ['alumnograduacion', 'alumnograduacion_titulacion', 79, 'Validar que el campo sea correcto', 'EDIT', true, 'Correcto.'],
+
+    //BUSQUEDA TITULACION
+    ['alumnograduacion', 'alumnograduacion_titulacion', 80, 'Validar que el campo este vacio o sea uno de los siguientes terminos: ["GREI","GRIA","MEI","MIA","PCEO"]', 'SEARCH', 'busqueda_alumnograduacion_titulacion_formato_KO', 'No se admiten otros valores que no sean ["GREI","GRIA","MEI","MIA","PCEO"].'],
+    ['alumnograduacion', 'alumnograduacion_titulacion', 81, 'Validar que el campo sea correcto', 'SEARCH', true, 'Correcto.'],  
+
 
     //DNI
-
     ['alumnograduacion', 'alumnograduacion_dni', 24, 'Validar que el campo no este vacio', 'ADD', 'alumnograduacion_dni_vacio_KO', 'Complete el campo'],
     //HOLAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA LOLOLOLOLOLOLLOLOLOLOLOLOLOLOL??????????????
     ['alumnograduacion', 'alumnograduacion_dni', 25, 'Validar que el campo tenga 8 numero y y una letra valida para los numeros','ADD', 'alumnograduacion_dni_formato_KO', 'El formato debe ser 8 dígitos y una letra mayúscula que corresponda al numero.'],
     ['alumnograduacion', 'alumnograduacion_dni', 26, 'Validar que el campo tenga un maximo de 9 caracteres', 'ADD', 'alumnograduacion_dni_max_size_KO', 'Máximo 9 caracteres.'],   
     ['alumnograduacion', 'alumnograduacion_dni', 27, 'Validar que el campo sea correcto', 'ADD', true, 'Correcto.'],
+
+    //EDITAR DNI
+    ['alumnograduacion', 'alumnograduacion_dni', 82, 'Validar que el campo no este vacio', 'EDIT', 'alumnograduacion_dni_vacio_KO', 'Complete el campo'],
+    ['alumnograduacion', 'alumnograduacion_dni', 83, 'Validar que el campo tenga 8 numero y y una letra valida para los numeros','EDIT', 'alumnograduacion_dni_formato_KO', 'El formato debe ser 8 dígitos y una letra mayúscula que corresponda al numero.'],
+    ['alumnograduacion', 'alumnograduacion_dni', 84, 'Validar que el campo tenga un maximo de 9 caracteres', 'EDIT', 'alumnograduacion_dni_max_size_KO', 'Máximo 9 caracteres.'],   
+    ['alumnograduacion', 'alumnograduacion_dni', 85, 'Validar que el campo sea correcto', 'EDIT', true, 'Correcto.'],
+
+    //BUSQUEDA DNI
+    ['alumnograduacion', 'alumnograduacion_dni', 86, 'Validar que el campo este vacio o tenga 8 numero y y una letra valida para los numeros','SEARCH', 'alumnograduacion_dni_formato_KO', 'El formato debe ser 8 dígitos y una letra mayúscula que corresponda al numero.'],
+    ['alumnograduacion', 'alumnograduacion_dni', 57, 'Validar que el campo tenga un maximo de 9 caracteres', 'SEARCH', 'alumnograduacion_dni_max_size_KO', 'Maximo 9 caracteres.'],
+    ['alumnograduacion', 'alumnograduacion_dni', 87, 'Validar que el campo sea correcto', 'SEARCH', true, 'Correcto.'],
 
     //TELEFONO
     ['alumnograduacion', 'alumnograduacion_telefono', 28, 'Validar que el campo no este vacio', 'ADD', 'alumnograduacion_telefono_vacio_KO', 'Complete el campo'],
@@ -61,6 +133,18 @@ let alumnograduacion_def_tests = [
     ['alumnograduacion', 'alumnograduacion_telefono', 30, 'Validar que el campo este compuesto por numeros', 'ADD', 'alumnograduacion_telefono_formato_KO', 'Solo se admiten números.'],
     ['alumnograduacion', 'alumnograduacion_telefono', 31, 'Validar que el campo tenga un minimo de 9 caracteres', 'ADD', 'alumnograduacion_telefono_min_size_KO', 'Mínimo 9 caracteres.'],
     ['alumnograduacion', 'alumnograduacion_telefono', 32, 'Validar que el campo sea correcto', 'ADD', true, 'Correcto.'],
+
+    //EDITAR TELEFONO
+    ['alumnograduacion', 'alumnograduacion_telefono', 88, 'Validar que el campo no este vacio', 'EDIT', 'alumnograduacion_telefono_vacio_KO', 'Complete el campo'],
+    ['alumnograduacion', 'alumnograduacion_telefono', 89, 'Validar que el campo tenga un maximo de 9 caracteres', 'EDIT', 'alumnograduacion_telefono_max_size_KO', 'Máximo 9 caracteres.'],
+    ['alumnograduacion', 'alumnograduacion_telefono', 90, 'Validar que el campo este compuesto por numeros', 'EDIT', 'alumnograduacion_telefono_formato_KO', 'Solo se admiten números.'],
+    ['alumnograduacion', 'alumnograduacion_telefono', 91, 'Validar que el campo tenga un minimo de 9 caracteres', 'EDIT', 'alumnograduacion_telefono_min_size_KO', 'Mínimo 9 caracteres.'],
+    ['alumnograduacion', 'alumnograduacion_telefono', 92, 'Validar que el campo sea correcto', 'EDIT', true, 'Correcto.'],
+
+    //BUSQUEDA TELEFONO
+    ['alumnograduacion', 'alumnograduacion_telefono', 93, 'Validar que el campo este vacio o compuesto por numeros', 'SEARCH', 'alumnograduacion_telefono_formato_KO', 'Solo se admiten números.'],
+    ['alumnograduacion', 'alumnograduacion_telefono', 57, 'Validar que el campo tenga un maximo de 9 caracteres', 'SEARCH', 'alumnograduacion_login_max_size_KO', 'Maximo 9 caracteres.'],
+    ['alumnograduacion', 'alumnograduacion_telefono', 94, 'Validar que el campo sea correcto', 'SEARCH', true, 'Correcto.'],
 
     //DIRECCION
     ['alumnograduacion', 'alumnograduacion_direccion', 33, 'Validar que el campo no este vacio', 'ADD', 'alumnograduacion_direccion_vacio_KO', 'Complete el campo'],
@@ -70,12 +154,33 @@ let alumnograduacion_def_tests = [
     ['alumnograduacion', 'alumnograduacion_direccion', 36, 'Validar que el campo tenga un maximo de 100 caracteres', 'ADD', 'alumnograduacion_direccion_max_size_KO', 'Máximo 100 caracteres.'],   
     ['alumnograduacion', 'alumnograduacion_direccion', 37, 'Validar que el campo sea correcto', 'ADD', true, 'Correcto.'], 
 
+    //EDITAR DIRECCION
+    ['alumnograduacion', 'alumnograduacion_direccion', 95, 'Validar que el campo no este vacio', 'EDIT', 'alumnograduacion_direccion_vacio_KO', 'Complete el campo'],
+    ['alumnograduacion', 'alumnograduacion_direccion', 96, 'Validar que el campo este compuesto por alfabeticos con ñ, espacios y acentos permitidos', 'EDIT', 'alumnograduacion_direccion_formato_KO', 'No se admiten caracteres que no sean espacios, ñ o acentos.'],
+    ['alumnograduacion', 'alumnograduacion_direccion', 97, 'Validar que el campo tenga un minimo de 2 caracteres', 'EDIT', 'alumnograduacion_direccion_min_size_KO', 'Mínimo 2 caracteres.'],
+    ['alumnograduacion', 'alumnograduacion_direccion', 98, 'Validar que el campo tenga un maximo de 100 caracteres', 'EDIT', 'alumnograduacion_direccion_max_size_KO', 'Máximo 100 caracteres.'],
+    ['alumnograduacion', 'alumnograduacion_direccion', 99, 'Validar que el campo sea correcto', 'EDIT', true, 'Correcto.'],
+    
+    //BUSQUEDA DIRECCION
+    ['alumnograduacion', 'alumnograduacion_direccion', 100, 'Validar que el campo este vacio o compuesto por alfabeticos con ñ, espacios y acentos permitidos', 'SEARCH', 'alumnograduacion_direccion_formato_KO', 'No se admiten caracteres que no sean espacios, ñ o acentos.'],
+    ['alumnograduacion', 'alumnograduacion_direccion', 101, 'Validar que el campo sea correcto', 'SEARCH', true, 'Correcto.'],
+
     //EMAIL
     ['alumnograduacion', 'alumnograduacion_email', 38, 'Validar que el campo no este vacio', 'ADD', 'alumnograduacion_email_vacio_KO', 'Complete el campo'],
     ['alumnograduacion', 'alumnograduacion_email', 39, 'Validar que el campo tenga un maximo de 40 caracteres', 'ADD', 'alumnograduacion_email_max_size_KO', 'Máximo 40 caracteres.'],   
     //volvemos a lo mismo los minimos los considero o no?
     ['alumnograduacion', 'alumnograduacion_email', 40, 'Validar que el campo este compuesto por un formato de email valido', 'ADD', 'alumnograduacion_email_formato_KO', 'El formato debe ser email válido.'],
     ['alumnograduacion', 'alumnograduacion_email', 41, 'Validar que el campo sea correcto', 'ADD', true, 'Correcto.'],  
+
+    //EDITAR EMAIL
+    ['alumnograduacion', 'alumnograduacion_email', 102, 'Validar que el campo no este vacio', 'EDIT', 'alumnograduacion_email_vacio_KO', 'Complete el campo'],
+    ['alumnograduacion', 'alumnograduacion_email', 103, 'Validar que el campo tenga un maximo de 40 caracteres', 'EDIT', 'alumnograduacion_email_max_size_KO', 'Máximo 40 caracteres.'],
+    ['alumnograduacion', 'alumnograduacion_email', 104, 'Validar que el campo este compuesto por un formato de email valido', 'EDIT', 'alumnograduacion_email_formato_KO', 'El formato debe ser email válido.'],
+    ['alumnograduacion', 'alumnograduacion_email', 105, 'Validar que el campo sea correcto', 'EDIT', true, 'Correcto.'],
+    
+    //BUSQUEDA EMAIL
+    ['alumnograduacion', 'alumnograduacion_email', 106, 'Validar que el campo este vacio o compuesto por un formato de email valido', 'SEARCH', 'alumnograduacion_email_formato_KO', 'El formato debe ser email válido.'],
+    ['alumnograduacion', 'alumnograduacion_email', 107, 'Validar que el campo sea correcto', 'SEARCH', true, 'Correcto.'],
 
     //FOTOACTO
     ['alumnograduacion', 'alumnograduacion_fotoacto', 42, 'Validar que el campo no este vacio', 'ADD', 'alumnograduacion_fotoacto_vacio_KO', 'Complete el campo'],
@@ -87,6 +192,18 @@ let alumnograduacion_def_tests = [
     ['alumnograduacion', 'alumnograduacion_fotoacto', 47, 'Validar que el campo no supere el tamaño maximo de 2MB', 'ADD', 'alumnograduacion_fotoacto_max_size_KO', 'El tamaño máximo permitido es 2MB.'],
     ['alumnograduacion', 'alumnograduacion_fotoacto', 48, 'Validar que el campo sea correcto', 'ADD', true, 'Correcto.'],   
 
+    //EDITAR FOTOACTO
+    ['alumnograduacion', 'alumnograduacion_fotoacto', 108, 'Validar que el campo no este vacio', 'EDIT', 'alumnograduacion_fotoacto_vacio_KO', 'Complete el campo'],
+    ['alumnograduacion', 'alumnograduacion_fotoacto', 109, 'Validar que el campo tenga un nombre con solo alfabeticos sin acentos ni ñ ni espacios', 'EDIT', 'alumnograduacion_fotoacto_nombrefoto_formato_KO', 'El formato deben ser alfabeticos sin acentos, ñ ni espacios.'],
+    ['alumnograduacion', 'alumnograduacion_fotoacto', 110, 'Validar que el campo tenga un nombre con un minimo de 7 caracteres', 'EDIT', 'alumnograduacion_fotoacto_nombrefoto_min_size_KO', 'El nombre debe contener minimo de 7 caracteres.'],
+    ['alumnograduacion', 'alumnograduacion_fotoacto', 111, 'Validar que el campo tenga un nombre con un maximo de 100 caracteres', 'EDIT', 'alumnograduacion_fotoacto_nombrefoto_max_size_KO', 'El nombre debe contener maximo de 100 caracteres.'],
+    ['alumnograduacion', 'alumnograduacion_fotoacto', 112, 'Validar que el campo sea una imagen', 'EDIT', 'alumnograduacion_fotoacto_formato_KO', 'El formato debe ser jpg.'],
+    ['alumnograduacion', 'alumnograduacion_fotoacto', 113, 'Validar que el campo no supere el tamaño maximo de 2MB', 'EDIT', 'alumnograduacion_fotoacto_max_size_KO', 'El tamaño máximo permitido es 2MB.'],
+    ['alumnograduacion', 'alumnograduacion_fotoacto', 114, 'Validar que el campo sea correcto', 'EDIT', true, 'Correcto.'],
+    
+    //BUSQUEDA FOTOACTO
+    //no tiene sentido hacer pruebas de busqueda en un campo file
+    
 
 ];
 
