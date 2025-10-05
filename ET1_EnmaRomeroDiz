@@ -1,1 +1,1 @@
-let datosgenerales= Array(Romero Diz Enma, ET1, 15);
+let datosgenerales= Array('Romero Diz Enma', ET1, 15);
