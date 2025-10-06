@@ -51,8 +51,8 @@ let alumnograduacion_def_tests = [
     ['alumnograduacion', 'alumnograduacion_password', 23, 'Validar que el campo sea correcto', 'EDIT', true, 'Correcto.'],
 
     //BUSQUEDA PASSWORD
-    ['alumnograduacion', 'alumnograduacion_password', 24, 'Validar que el campo este vacio o compuesto por alfabeticos sin ñ ni espacios ni acentos ', 'SEARCH', 'alumnosgraduacion_password_formato_KO', 'No se admiten ni ñ, ni espacios, ni acentos.'],
-    ['alumnograduacion', 'alumnograduacion_password', 25, 'Validar que el campo tenga un minimo de 64 caracteres', 'SEARCH', 'alumnograduacion_password_max_size_KO', 'Maximo 64 caracteres.'],
+    ['alumnograduacion', 'alumnograduacion_password', 24, 'Validar que el campo este vacio o compuesto por alfabeticos sin ñ ni espacios ni acentos ', 'SEARCH', 'alumnograduacion_password_formato_KO', 'No se admiten ni ñ, ni espacios, ni acentos.'],
+    ['alumnograduacion', 'alumnograduacion_password', 25, 'Validar que el campo tenga un maximo de 64 caracteres', 'SEARCH', 'alumnograduacion_password_max_size_KO', 'Maximo 64 caracteres.'],
     ['alumnograduacion', 'alumnograduacion_password', 26, 'Validar que el campo sea correcto', 'SEARCH', true, 'Correcto.'],
 
     //ADD NOMBRE
@@ -141,25 +141,25 @@ let alumnograduacion_def_tests = [
 
     //BUSQUEDA TELEFONO
     ['alumnograduacion', 'alumnograduacion_telefono', 82, 'Validar que el campo este vacio o compuesto por numeros', 'SEARCH', 'alumnograduacion_telefono_formato_KO', 'Solo se admiten números.'],
-    ['alumnograduacion', 'alumnograduacion_telefono', 83, 'Validar que el campo tenga un maximo de 9 caracteres', 'SEARCH', 'alumnograduacion_login_max_size_KO', 'Maximo 9 caracteres.'],
+    ['alumnograduacion', 'alumnograduacion_telefono', 83, 'Validar que el campo tenga un maximo de 9 caracteres', 'SEARCH', 'alumnograduacion_telefono_max_size_KO', 'Maximo 9 caracteres.'],
     ['alumnograduacion', 'alumnograduacion_telefono', 84, 'Validar que el campo sea correcto', 'SEARCH', true, 'Correcto.'],
 
     //DIRECCION
     ['alumnograduacion', 'alumnograduacion_direccion', 85, 'Validar que el campo no este vacio', 'ADD', 'alumnograduacion_direccion_vacio_KO', 'Complete el campo'],
-    ['alumnograduacion', 'alumnograduacion_direccion', 86, 'Validar que el campo este compuesto por alfabeticos con ñ, espacios y acentos permitidos', 'ADD', 'alumnograduacion_direccion_formato_KO', 'No se admiten caracteres que no sean espacios, ñ o acentos.'],
+    ['alumnograduacion', 'alumnograduacion_direccion', 86, 'Validar que el campo este compuesto por alfabeticos con ñ, espacios y acentos permitidos', 'ADD', 'alumnograduacion_direccion_formato_KO', 'No se admiten caracteres que no sean alfabeticos, espacios, ñ o acentos.'],
     ['alumnograduacion', 'alumnograduacion_direccion', 87, 'Validar que el campo tenga un minimo de 2 caracteres', 'ADD', 'alumnograduacion_direccion_min_size_KO', 'Mínimo 2 caracteres.'],
     ['alumnograduacion', 'alumnograduacion_direccion', 88, 'Validar que el campo tenga un maximo de 100 caracteres', 'ADD', 'alumnograduacion_direccion_max_size_KO', 'Máximo 100 caracteres.'],   
     ['alumnograduacion', 'alumnograduacion_direccion', 89, 'Validar que el campo sea correcto', 'ADD', true, 'Correcto.'], 
 
     //EDITAR DIRECCION
     ['alumnograduacion', 'alumnograduacion_direccion', 90, 'Validar que el campo no este vacio', 'EDIT', 'alumnograduacion_direccion_vacio_KO', 'Complete el campo'],
-    ['alumnograduacion', 'alumnograduacion_direccion', 91, 'Validar que el campo este compuesto por alfabeticos con ñ, espacios y acentos permitidos', 'EDIT', 'alumnograduacion_direccion_formato_KO', 'No se admiten caracteres que no sean espacios, ñ o acentos.'],
+    ['alumnograduacion', 'alumnograduacion_direccion', 91, 'Validar que el campo este compuesto por alfabeticos con ñ, espacios y acentos permitidos', 'EDIT', 'alumnograduacion_direccion_formato_KO', 'No se admiten caracteres que no sean alfabeticos, espacios, ñ o acentos.'],
     ['alumnograduacion', 'alumnograduacion_direccion', 92, 'Validar que el campo tenga un minimo de 2 caracteres', 'EDIT', 'alumnograduacion_direccion_min_size_KO', 'Mínimo 2 caracteres.'],
     ['alumnograduacion', 'alumnograduacion_direccion', 93, 'Validar que el campo tenga un maximo de 100 caracteres', 'EDIT', 'alumnograduacion_direccion_max_size_KO', 'Máximo 100 caracteres.'],
     ['alumnograduacion', 'alumnograduacion_direccion', 94, 'Validar que el campo sea correcto', 'EDIT', true, 'Correcto.'],
     
     //BUSQUEDA DIRECCION
-    ['alumnograduacion', 'alumnograduacion_direccion', 95, 'Validar que el campo este vacio o compuesto por alfabeticos con ñ, espacios y acentos permitidos', 'SEARCH', 'alumnograduacion_direccion_formato_KO', 'No se admiten caracteres que no sean espacios, ñ o acentos.'],
+    ['alumnograduacion', 'alumnograduacion_direccion', 95, 'Validar que el campo este vacio o compuesto por alfabeticos con ñ, espacios y acentos permitidos', 'SEARCH', 'alumnograduacion_direccion_formato_KO', 'No se admiten caracteres que no sean alfabeticos, espacios, ñ o acentos.'],
     ['alumnograduacion', 'alumnograduacion_direccion', 96, 'Validar que el campo tenga un maximo de 100 caracteres', 'SEARCH', 'alumnograduacion_direccion_max_size_KO', 'Máximo 100 caracteres.'],
     ['alumnograduacion', 'alumnograduacion_direccion', 97, 'Validar que el campo sea correcto', 'SEARCH', true, 'Correcto.'],
 //CAMBIAR
@@ -219,10 +219,9 @@ el código asociado de error/valor true de éxito
 */
 
 let alumnograduacion_tests_fields = [
-    //ADDS
 
 
-    //LOGIN
+    //ADD LOGIN
     ['alumnograduacion', 'alumnograduacion_login', 1, 1, 'ADD', [{alumnograduacion_loging:''}], 'alumnograduacion_login_vacio_KO'],
     ['alumnograduacion', 'alumnograduacion_login', 2, 2, 'ADD', [{alumnograduacion_login:'abcñ'}], 'alumnograduacion_login_formato_KO'],
     ['alumnograduacion', 'alumnograduacion_login', 2, 3, 'ADD', [{alumnograduacion_login:'abc def'}], 'alumnograduacion_login_formato_KO'],
@@ -243,264 +242,279 @@ let alumnograduacion_tests_fields = [
     ['alumnograduacion', 'alumnograduacion_login', 4, 18, 'ADD', [{alumnograduacion_login:'abcdefghijklmnoq'}], 'alumnograduacion_login_max_size_KO'],
     ['alumnograduacion', 'alumnograduacion_login', 5, 19, 'ADD', [{alumnograduacion_login:'usuario1'}], true],    
 
-     //LOGIN
-     ['alumnograduacion', 'alumnograduacion_login', 6, 1, 'EDIT', [{alumnograduacion_loging:''}], 'alumnograduacion_login_vacio_KO'],
-     ['alumnograduacion', 'alumnograduacion_login', 7, 2, 'EDIT', [{alumnograduacion_login:'abcñ'}], 'alumnograduacion_login_formato_KO'],
-     ['alumnograduacion', 'alumnograduacion_login', 7, 3, 'EDIT', [{alumnograduacion_login:'abc def'}], 'alumnograduacion_login_formato_KO'],
-     ['alumnograduacion', 'alumnograduacion_login', 7, 4, 'EDIT', [{alumnograduacion_login:'acxddgó'}], 'alumnograduacion_login_formato_KO'],
-     ['alumnograduacion', 'alumnograduacion_login', 7, 5, 'EDIT', [{alumnograduacion_login:'acxddgá'}], 'alumnograduacion_login_formato_KO'],
-     ['alumnograduacion', 'alumnograduacion_login', 7, 6, 'EDIT', [{alumnograduacion_login:'acéxddg'}], 'alumnograduacion_login_formato_KO'],
-     ['alumnograduacion', 'alumnograduacion_login', 7, 7, 'EDIT', [{alumnograduacion_login:'acíddg'}], 'alumnograduacion_login_formato_KO'],
-     ['alumnograduacion', 'alumnograduacion_login', 7, 8, 'EDIT', [{alumnograduacion_login:'úcxddg'}], 'alumnograduacion_login_formato_KO'],
-     ['alumnograduacion', 'alumnograduacion_login', 7, 9, 'EDIT', [{alumnograduacion_login:'acxòddg'}], 'alumnograduacion_login_formato_KO'],
-     ['alumnograduacion', 'alumnograduacion_login', 7, 10, 'EDIT', [{alumnograduacion_login:'acxddgè'}], 'alumnograduacion_login_formato_KO'],
-     ['alumnograduacion', 'alumnograduacion_login', 7, 11, 'EDIT', [{alumnograduacion_login:'acxìdg'}], 'alumnograduacion_login_formato_KO'],
-     ['alumnograduacion', 'alumnograduacion_login', 7, 12, 'EDIT', [{alumnograduacion_login:'àcxddg'}], 'alumnograduacion_login_formato_KO'],
-     ['alumnograduacion', 'alumnograduacion_login', 7, 13, 'EDIT', [{alumnograduacion_login:'aùxddg'}], 'alumnograduacion_login_formato_KO'],
-     ['alumnograduacion', 'alumnograduacion_login', 7, 14, 'EDIT', [{alumnograduacion_login:'acÜxddg'}], 'alumnograduacion_login_formato_KO'],
-     ['alumnograduacion', 'alumnograduacion_login', 7, 15, 'EDIT', [{alumnograduacion_login:'acïddg'}], 'alumnograduacion_login_formato_KO'],
-     ['alumnograduacion', 'alumnograduacion_login', 7, 16, 'EDIT', [{alumnograduacion_login:'acôddg'}], 'alumnograduacion_login_formato_KO'],
-     ['alumnograduacion', 'alumnograduacion_login', 8, 17, 'EDIT', [{alumnograduacion_login:'abc'}], 'alumnograduacion_login_min_size_KO'],
-     ['alumnograduacion', 'alumnograduacion_login', 9, 18, 'EDIT', [{alumnograduacion_login:'abcdefghijklmnoq'}], 'alumnograduacion_login_max_size_KO'],
-     ['alumnograduacion', 'alumnograduacion_login', 10, 19, 'EDIT', [{alumnograduacion_login:'usuario1'}], true],    
+     //EDIT LOGIN
+     ['alumnograduacion', 'alumnograduacion_login', 6, 20, 'EDIT', [{alumnograduacion_loging:''}], 'alumnograduacion_login_vacio_KO'],
+     ['alumnograduacion', 'alumnograduacion_login', 7, 21, 'EDIT', [{alumnograduacion_login:'abcñ'}], 'alumnograduacion_login_formato_KO'],
+     ['alumnograduacion', 'alumnograduacion_login', 7, 22, 'EDIT', [{alumnograduacion_login:'abc def'}], 'alumnograduacion_login_formato_KO'],
+     ['alumnograduacion', 'alumnograduacion_login', 7, 23, 'EDIT', [{alumnograduacion_login:'acxddgó'}], 'alumnograduacion_login_formato_KO'],
+     ['alumnograduacion', 'alumnograduacion_login', 7, 24, 'EDIT', [{alumnograduacion_login:'acxddgá'}], 'alumnograduacion_login_formato_KO'],
+     ['alumnograduacion', 'alumnograduacion_login', 7, 25, 'EDIT', [{alumnograduacion_login:'acéxddg'}], 'alumnograduacion_login_formato_KO'],
+     ['alumnograduacion', 'alumnograduacion_login', 7, 26, 'EDIT', [{alumnograduacion_login:'acíddg'}], 'alumnograduacion_login_formato_KO'],
+     ['alumnograduacion', 'alumnograduacion_login', 7, 27, 'EDIT', [{alumnograduacion_login:'úcxddg'}], 'alumnograduacion_login_formato_KO'],
+     ['alumnograduacion', 'alumnograduacion_login', 7, 28, 'EDIT', [{alumnograduacion_login:'acxòddg'}], 'alumnograduacion_login_formato_KO'],
+     ['alumnograduacion', 'alumnograduacion_login', 7, 29, 'EDIT', [{alumnograduacion_login:'acxddgè'}], 'alumnograduacion_login_formato_KO'],
+     ['alumnograduacion', 'alumnograduacion_login', 7, 30, 'EDIT', [{alumnograduacion_login:'acxìdg'}], 'alumnograduacion_login_formato_KO'],
+     ['alumnograduacion', 'alumnograduacion_login', 7, 31, 'EDIT', [{alumnograduacion_login:'àcxddg'}], 'alumnograduacion_login_formato_KO'],
+     ['alumnograduacion', 'alumnograduacion_login', 7, 32, 'EDIT', [{alumnograduacion_login:'aùxddg'}], 'alumnograduacion_login_formato_KO'],
+     ['alumnograduacion', 'alumnograduacion_login', 7, 33, 'EDIT', [{alumnograduacion_login:'acÜxddg'}], 'alumnograduacion_login_formato_KO'],
+     ['alumnograduacion', 'alumnograduacion_login', 7, 34, 'EDIT', [{alumnograduacion_login:'acïddg'}], 'alumnograduacion_login_formato_KO'],
+     ['alumnograduacion', 'alumnograduacion_login', 7, 35, 'EDIT', [{alumnograduacion_login:'acôddg'}], 'alumnograduacion_login_formato_KO'],
+     ['alumnograduacion', 'alumnograduacion_login', 8, 36, 'EDIT', [{alumnograduacion_login:'abc'}], 'alumnograduacion_login_min_size_KO'],
+     ['alumnograduacion', 'alumnograduacion_login', 9, 37, 'EDIT', [{alumnograduacion_login:'abcdefghijklmnoq'}], 'alumnograduacion_login_max_size_KO'],
+     ['alumnograduacion', 'alumnograduacion_login', 10, 38, 'EDIT', [{alumnograduacion_login:'usuario1'}], true],    
 
-     //BUSQUEDA LOGIN
-     ['alumnograduacion', 'alumnograduacion_login', 11, 2, 'SEARCH', [{alumnograduacion_login:'abcñ'}], 'alumnograduacion_login_formato_KO'],
-    ['alumnograduacion', 'alumnograduacion_login', 11, 3, 'SEARCH', [{alumnograduacion_login:'abc def'}], 'alumnograduacion_login_formato_KO'],
-    ['alumnograduacion', 'alumnograduacion_login',11, 4, 'SEARCH', [{alumnograduacion_login:'acxddgó'}], 'alumnograduacion_login_formato_KO'],
-    ['alumnograduacion', 'alumnograduacion_login',11, 5, 'SEARCH', [{alumnograduacion_login:'acxddgá'}], 'alumnograduacion_login_formato_KO'],
-    ['alumnograduacion', 'alumnograduacion_login',11, 6, 'SEARCH', [{alumnograduacion_login:'acéxddg'}], 'alumnograduacion_login_formato_KO'],
-    ['alumnograduacion', 'alumnograduacion_login', 11, 7, 'SEARCH', [{alumnograduacion_login:'acíddg'}], 'alumnograduacion_login_formato_KO'],
-    ['alumnograduacion', 'alumnograduacion_login',11, 8, 'SEARCH', [{alumnograduacion_login:'úcxddg'}], 'alumnograduacion_login_formato_KO'],
-    ['alumnograduacion', 'alumnograduacion_login',11, 9, 'SEARCH', [{alumnograduacion_login:'acxòddg'}], 'alumnograduacion_login_formato_KO'],
-    ['alumnograduacion', 'alumnograduacion_login',11, 10, 'SEARCH', [{alumnograduacion_login:'acxddgè'}], 'alumnograduacion_login_formato_KO'],
-    ['alumnograduacion', 'alumnograduacion_login',11, 11, 'SEARCH', [{alumnograduacion_login:'acxìdg'}], 'alumnograduacion_login_formato_KO'],
-    ['alumnograduacion', 'alumnograduacion_login',11, 12, 'SEARCH', [{alumnograduacion_login:'àcxddg'}], 'alumnograduacion_login_formato_KO'],
-    ['alumnograduacion', 'alumnograduacion_login',11, 13, 'SEARCH', [{alumnograduacion_login:'aùxddg'}], 'alumnograduacion_login_formato_KO'],
-    ['alumnograduacion', 'alumnograduacion_login',11, 14, 'SEARCH', [{alumnograduacion_login:'acÜxddg'}], 'alumnograduacion_login_formato_KO'],
-    ['alumnograduacion', 'alumnograduacion_login',11, 15, 'SEARCH', [{alumnograduacion_login:'acïddg'}], 'alumnograduacion_login_formato_KO'],
-    ['alumnograduacion', 'alumnograduacion_login',11, 16, 'SEARCH', [{alumnograduacion_login:'acôddg'}], 'alumnograduacion_login_formato_KO'],
-    ['alumnograduacion', 'alumnograduacion_login', 12, 18, 'SEARCH', [{alumnograduacion_login:'abcdefghijklmnoq'}], 'alumnograduacion_login_max_size_KO'],
-    ['alumnograduacion', 'alumnograduacion_login', 13, 1, 'SEARCH', [{alumnograduacion_login:'usuario1'}], true],
+     //SEARCH LOGIN
+     ['alumnograduacion', 'alumnograduacion_login', 11, 39, 'SEARCH', [{alumnograduacion_login:'abcñ'}], 'alumnograduacion_login_formato_KO'],
+    ['alumnograduacion', 'alumnograduacion_login', 11, 40, 'SEARCH', [{alumnograduacion_login:'abc def'}], 'alumnograduacion_login_formato_KO'],
+    ['alumnograduacion', 'alumnograduacion_login',11, 41, 'SEARCH', [{alumnograduacion_login:'acxddgó'}], 'alumnograduacion_login_formato_KO'],
+    ['alumnograduacion', 'alumnograduacion_login',11, 42, 'SEARCH', [{alumnograduacion_login:'acxddgá'}], 'alumnograduacion_login_formato_KO'],
+    ['alumnograduacion', 'alumnograduacion_login',11, 43, 'SEARCH', [{alumnograduacion_login:'acéxddg'}], 'alumnograduacion_login_formato_KO'],
+    ['alumnograduacion', 'alumnograduacion_login', 11, 44, 'SEARCH', [{alumnograduacion_login:'acíddg'}], 'alumnograduacion_login_formato_KO'],
+    ['alumnograduacion', 'alumnograduacion_login',11, 45, 'SEARCH', [{alumnograduacion_login:'úcxddg'}], 'alumnograduacion_login_formato_KO'],
+    ['alumnograduacion', 'alumnograduacion_login',11, 46, 'SEARCH', [{alumnograduacion_login:'acxòddg'}], 'alumnograduacion_login_formato_KO'],
+    ['alumnograduacion', 'alumnograduacion_login',11, 47, 'SEARCH', [{alumnograduacion_login:'acxddgè'}], 'alumnograduacion_login_formato_KO'],
+    ['alumnograduacion', 'alumnograduacion_login',11, 48, 'SEARCH', [{alumnograduacion_login:'acxìdg'}], 'alumnograduacion_login_formato_KO'],
+    ['alumnograduacion', 'alumnograduacion_login',11, 49, 'SEARCH', [{alumnograduacion_login:'àcxddg'}], 'alumnograduacion_login_formato_KO'],
+    ['alumnograduacion', 'alumnograduacion_login',11, 50, 'SEARCH', [{alumnograduacion_login:'aùxddg'}], 'alumnograduacion_login_formato_KO'],
+    ['alumnograduacion', 'alumnograduacion_login',11, 51, 'SEARCH', [{alumnograduacion_login:'acÜxddg'}], 'alumnograduacion_login_formato_KO'],
+    ['alumnograduacion', 'alumnograduacion_login',11, 52, 'SEARCH', [{alumnograduacion_login:'acïddg'}], 'alumnograduacion_login_formato_KO'],
+    ['alumnograduacion', 'alumnograduacion_login',11, 53, 'SEARCH', [{alumnograduacion_login:'acôddg'}], 'alumnograduacion_login_formato_KO'],
+    ['alumnograduacion', 'alumnograduacion_login', 12, 54, 'SEARCH', [{alumnograduacion_login:'abcdefghijklmnoq'}], 'alumnograduacion_login_max_size_KO'],
+    ['alumnograduacion', 'alumnograduacion_login', 13, 55, 'SEARCH', [{alumnograduacion_login:'usuario1'}], true],
    
-    
-    //PASSWORD
-    ['alumnograduacion', 'alumnograduacion_password', 14, 20, 'ADD', [{alumnograduacion_password:''}], 'alumnograduacion_password_vacio_KO'],
-    ['alumnograduacion', 'alumnograduacion_password', 15, 21, 'ADD', [{alumnograduacion_password:'abc1222'}], 'alumnograduacion_password_min_size_KO'],
-    ['alumnograduacion', 'alumnograduacion_password', 16, 22, 'ADD', [{alumnograduacion_password:'abcdefghijklmnoqrsabcdefghijklmnoqrsabcdefghijklmnoqrsabcdddjwijidiefiefe'}], 'alumnograduacion_password_max_size_KO'],
-    ['alumnograduacion', 'alumnograduacion_password', 17, 23, 'ADD', [{alumnograduacion_password:'abcñdefgh'}], 'alumnograduacion_password_formato_KO'], 
-    ['alumnograduacion', 'alumnograduacion_password', 17, 24, 'ADD', [{alumnograduacion_password:'abcódefgh'}], 'alumnograduacion_password_formato_KO'], 
-    ['alumnograduacion', 'alumnograduacion_password', 17, 25, 'ADD', [{alumnograduacion_password:'ábcñdefgh'}], 'alumnograduacion_password_formato_KO'], 
-    ['alumnograduacion', 'alumnograduacion_password', 17, 26, 'ADD', [{alumnograduacion_password:'abcñdéfgh'}], 'alumnograduacion_password_formato_KO'], 
-    ['alumnograduacion', 'alumnograduacion_password', 17, 27, 'ADD', [{alumnograduacion_password:'abcñdefghí'}], 'alumnograduacion_password_formato_KO'], 
-    ['alumnograduacion', 'alumnograduacion_password', 17, 28, 'ADD', [{alumnograduacion_password:'abcñdefgú'}], 'alumnograduacion_password_formato_KO'], 
-    ['alumnograduacion', 'alumnograduacion_password', 17, 29, 'ADD', [{alumnograduacion_password:'àbcñdefgh'}], 'alumnograduacion_password_formato_KO'], 
-    ['alumnograduacion', 'alumnograduacion_password', 17, 30, 'ADD', [{alumnograduacion_password:'abcñdèfgh'}], 'alumnograduacion_password_formato_KO'], 
-    ['alumnograduacion', 'alumnograduacion_password', 17, 31, 'ADD', [{alumnograduacion_password:'abcñdefghì'}], 'alumnograduacion_password_formato_KO'], 
-    ['alumnograduacion', 'alumnograduacion_password', 17, 32, 'ADD', [{alumnograduacion_password:'aòcñdefgh'}], 'alumnograduacion_password_formato_KO'],              
-    ['alumnograduacion', 'alumnograduacion_password', 17, 33, 'ADD', [{alumnograduacion_password:'abcÙdefgh'}], 'alumnograduacion_password_formato_KO'], 
-    ['alumnograduacion', 'alumnograduacion_password', 17, 34, 'ADD', [{alumnograduacion_password:'abôcdefgh'}], 'alumnograduacion_password_formato_KO'],
-    ['alumnograduacion', 'alumnograduacion_password', 17, 35, 'ADD', [{alumnograduacion_password:'abcüdefgh'}], 'alumnograduacion_password_formato_KO'],  
-    ['alumnograduacion', 'alumnograduacion_password', 18, 36, 'ADD', [{alumnograduacion_password:'password1'}], true],
 
-    //PASSWORD
-    ['alumnograduacion', 'alumnograduacion_password', 19, 1, 'EDIT', [{alumnograduacion_password:''}], 'alumnograduacion_password_vacio_KO'],   
-    ['alumnograduacion', 'alumnograduacion_password', 20, 1, 'EDIT', [{alumnograduacion_password:'abc'}], 'alumnograduacion_password_min_size_KO'],
-    ['alumnograduacion', 'alumnograduacion_password', 21, 1, 'EDIT', [{alumnograduacion_password:'abcdefghijklmnoqrsabcdefghijklmnoqrsabcdefghijklmnoqrsabcdSDSFFDSAF'}], 'alumnograduacion_password_max_size_KO'],
-    ['alumnograduacion', 'alumnograduacion_password', 22, 23, 'EDIT', [{alumnograduacion_password:'abcñdefgh'}], 'alumnograduacion_password_formato_KO'], 
-    ['alumnograduacion', 'alumnograduacion_password', 22, 24, 'EDIT', [{alumnograduacion_password:'abcódefgh'}], 'alumnograduacion_password_formato_KO'], 
-    ['alumnograduacion', 'alumnograduacion_password', 22, 25, 'EDIT', [{alumnograduacion_password:'ábcñdefgh'}], 'alumnograduacion_password_formato_KO'], 
-    ['alumnograduacion', 'alumnograduacion_password', 22, 26, 'EDIT', [{alumnograduacion_password:'abcñdéfgh'}], 'alumnograduacion_password_formato_KO'], 
-    ['alumnograduacion', 'alumnograduacion_password', 22, 27, 'EDIT', [{alumnograduacion_password:'abcñdefghí'}], 'alumnograduacion_password_formato_KO'], 
-    ['alumnograduacion', 'alumnograduacion_password', 22, 28, 'EDIT', [{alumnograduacion_password:'abcñdefgú'}], 'alumnograduacion_password_formato_KO'], 
-    ['alumnograduacion', 'alumnograduacion_password', 22, 29, 'EDIT', [{alumnograduacion_password:'àbcñdefgh'}], 'alumnograduacion_password_formato_KO'], 
-    ['alumnograduacion', 'alumnograduacion_password', 22, 30, 'EDIT', [{alumnograduacion_password:'abcñdèfgh'}], 'alumnograduacion_password_formato_KO'], 
-    ['alumnograduacion', 'alumnograduacion_password', 22, 31, 'EDIT', [{alumnograduacion_password:'abcñdefghì'}], 'alumnograduacion_password_formato_KO'], 
-    ['alumnograduacion', 'alumnograduacion_password', 22, 32, 'EDIT', [{alumnograduacion_password:'aòcñdefgh'}], 'alumnograduacion_password_formato_KO'],              
-    ['alumnograduacion', 'alumnograduacion_password', 22, 33, 'EDIT', [{alumnograduacion_password:'abcÙdefgh'}], 'alumnograduacion_password_formato_KO'], 
-    ['alumnograduacion', 'alumnograduacion_password', 22, 34, 'EDIT', [{alumnograduacion_password:'abôcdefgh'}], 'alumnograduacion_password_formato_KO'],
-    ['alumnograduacion', 'alumnograduacion_password', 22, 35, 'EDIT', [{alumnograduacion_password:'abcüdefgh'}], 'alumnograduacion_password_formato_KO'],  
-    ['alumnograduacion', 'alumnograduacion_password', 23, 1, 'EDIT', [{alumnograduacion_password:'password1'}], true],
-
-    //PASSWORD
-    ['alumnograduacion', 'alumnograduacion_password', 24, 23, 'SEARCH', [{alumnograduacion_password:'abcñdefgh'}], 'alumnograduacion_password_formato_KO'], 
-    ['alumnograduacion', 'alumnograduacion_password', 24, 24, 'SEARCH', [{alumnograduacion_password:'abcódefgh'}], 'alumnograduacion_password_formato_KO'], 
-    ['alumnograduacion', 'alumnograduacion_password', 24, 25, 'SEARCH', [{alumnograduacion_password:'ábcñdefgh'}], 'alumnograduacion_password_formato_KO'], 
-    ['alumnograduacion', 'alumnograduacion_password', 24, 26, 'SEARCH', [{alumnograduacion_password:'abcñdéfgh'}], 'alumnograduacion_password_formato_KO'], 
-    ['alumnograduacion', 'alumnograduacion_password', 24, 27, 'SEARCH', [{alumnograduacion_password:'abcñdefghí'}], 'alumnograduacion_password_formato_KO'], 
-    ['alumnograduacion', 'alumnograduacion_password', 24, 28, 'SEARCH', [{alumnograduacion_password:'abcñdefgú'}], 'alumnograduacion_password_formato_KO'], 
-    ['alumnograduacion', 'alumnograduacion_password', 24, 29, 'SEARCH', [{alumnograduacion_password:'àbcñdefgh'}], 'alumnograduacion_password_formato_KO'], 
-    ['alumnograduacion', 'alumnograduacion_password', 24, 30, 'SEARCH', [{alumnograduacion_password:'abcñdèfgh'}], 'alumnograduacion_password_formato_KO'], 
-    ['alumnograduacion', 'alumnograduacion_password', 24, 31, 'SEARCH', [{alumnograduacion_password:'abcñdefghì'}], 'alumnograduacion_password_formato_KO'], 
-    ['alumnograduacion', 'alumnograduacion_password', 24, 32, 'SEARCH', [{alumnograduacion_password:'aòcñdefgh'}], 'alumnograduacion_password_formato_KO'],              
-    ['alumnograduacion', 'alumnograduacion_password', 24, 33, 'SEARCH', [{alumnograduacion_password:'abcÙdefgh'}], 'alumnograduacion_password_formato_KO'], 
-    ['alumnograduacion', 'alumnograduacion_password', 24, 34, 'SEARCH', [{alumnograduacion_password:'abôcdefgh'}], 'alumnograduacion_password_formato_KO'],
-    ['alumnograduacion', 'alumnograduacion_password', 24, 35, 'SEARCH', [{alumnograduacion_password:'abcüdefgh'}], 'alumnograduacion_password_formato_KO'],
-    ['alumnograduacion', 'alumnograduacion_password', 25, 1, 'SEARCH', [{alumnograduacion_password:'abcdefghijklmnoqrsabcdefghijklmnoqrsabcdefghijklmnoqrsabcdSDSFFDSAF'}], 'alumnograduacion_password_max_size_KO'],  
-    ['alumnograduacion', 'alumnograduacion_password', 26, 1, 'SEARCH', [{alumnograduacion_password:'password1'}], true],
-
-    //NOMBRE                                
-    ['alumnograduacion', 'alumnograduacion_nombre', 27, 1, 'ADD', [{alumnograduacion_nombre:''}], 'alumnograduacion_nombre_vacio_KO'],      
-    ['alumnograduacion', 'alumnograduacion_nombre', 28, 1, 'ADD', [{alumnograduacion_nombre:'abc123'}], 'alumnograduacion_nombre_formato_KO'],
-    ['alumnograduacion', 'alumnograduacion_nombre', 28, 1, 'ADD', [{alumnograduacion_nombre:'ab.sdff'}], 'alumnograduacion_nombre_formato_KO'],
-    ['alumnograduacion', 'alumnograduacion_nombre', 28, 1, 'ADD', [{alumnograduacion_nombre:'abcsds.'}], 'alumnograduacion_nombre_formato_KO'],
-    ['alumnograduacion', 'alumnograduacion_nombre', 28, 1, 'ADD', [{alumnograduacion_nombre:'(abcsadasf'}], 'alumnograduacion_nombre_formato_KO'],
-    ['alumnograduacion', 'alumnograduacion_nombre', 29, 1, 'ADD', [{alumnograduacion_nombre:'a'}], 'alumnograduacion_nombre_min_size_KO'],
-    ['alumnograduacion', 'alumnograduacion_nombre', 30, 1, 'ADD', [{alumnograduacion_nombre:'abcdefghijklmnoqrsabcdefghijklmnoqrsabcd'}], 'alumnograduacion_nombre_max_size_KO'],           
-    ['alumnograduacion', 'alumnograduacion_nombre', 31, 1, 'ADD', [{alumnograduacion_nombre:'Nombre'}], true],  
     
-    //NOMBRE                                
-    ['alumnograduacion', 'alumnograduacion_nombre', 32, 1, 'EDIT', [{alumnograduacion_nombre:''}], 'alumnograduacion_nombre_vacio_KO'],      
-    ['alumnograduacion', 'alumnograduacion_nombre', 33, 1, 'EDIT', [{alumnograduacion_nombre:'abc123'}], 'alumnograduacion_nombre_formato_KO'],
-    ['alumnograduacion', 'alumnograduacion_nombre', 33, 1, 'EDIT', [{alumnograduacion_nombre:'ab.sdff'}], 'alumnograduacion_nombre_formato_KO'],
-    ['alumnograduacion', 'alumnograduacion_nombre', 33, 1, 'EDIT', [{alumnograduacion_nombre:'abcsds.'}], 'alumnograduacion_nombre_formato_KO'],
-    ['alumnograduacion', 'alumnograduacion_nombre', 33, 1, 'EDIT', [{alumnograduacion_nombre:'(abcsadasf'}], 'alumnograduacion_nombre_formato_KO'],
-    ['alumnograduacion', 'alumnograduacion_nombre', 34, 1, 'EDIT', [{alumnograduacion_nombre:'a'}], 'alumnograduacion_nombre_min_size_KO'],
-    ['alumnograduacion', 'alumnograduacion_nombre', 35, 1, 'EDIT', [{alumnograduacion_nombre:'abcdefghijklmnoqrsabcdefghijklmnoqrsabcd'}], 'alumnograduacion_nombre_max_size_KO'],           
-    ['alumnograduacion', 'alumnograduacion_nombre', 36, 1, 'EDIT', [{alumnograduacion_nombre:'Nombre'}], true],  
+    //ADD PASSWORD
+    ['alumnograduacion', 'alumnograduacion_password', 14, 56, 'ADD', [{alumnograduacion_password:''}], 'alumnograduacion_password_vacio_KO'],
+    ['alumnograduacion', 'alumnograduacion_password', 15, 57, 'ADD', [{alumnograduacion_password:'abc1222'}], 'alumnograduacion_password_min_size_KO'],
+    ['alumnograduacion', 'alumnograduacion_password', 16, 58, 'ADD', [{alumnograduacion_password:'abcdefghijklmnoqrsabcdefghijklmnoqrsabcdefghijklmnoqrsabcdddjwijidiefiefe'}], 'alumnograduacion_password_max_size_KO'],
+    ['alumnograduacion', 'alumnograduacion_password', 17, 59, 'ADD', [{alumnograduacion_password:'abcñdefgh'}], 'alumnograduacion_password_formato_KO'], 
+    ['alumnograduacion', 'alumnograduacion_password', 17, 60, 'ADD', [{alumnograduacion_password:'abcódefgh'}], 'alumnograduacion_password_formato_KO'], 
+    ['alumnograduacion', 'alumnograduacion_password', 17, 61, 'ADD', [{alumnograduacion_password:'ábcñdefgh'}], 'alumnograduacion_password_formato_KO'], 
+    ['alumnograduacion', 'alumnograduacion_password', 17, 62, 'ADD', [{alumnograduacion_password:'abcñdéfgh'}], 'alumnograduacion_password_formato_KO'], 
+    ['alumnograduacion', 'alumnograduacion_password', 17, 63, 'ADD', [{alumnograduacion_password:'abcñdefghí'}], 'alumnograduacion_password_formato_KO'], 
+    ['alumnograduacion', 'alumnograduacion_password', 17, 64, 'ADD', [{alumnograduacion_password:'abcñdefgú'}], 'alumnograduacion_password_formato_KO'], 
+    ['alumnograduacion', 'alumnograduacion_password', 17, 65, 'ADD', [{alumnograduacion_password:'àbcñdefgh'}], 'alumnograduacion_password_formato_KO'], 
+    ['alumnograduacion', 'alumnograduacion_password', 17, 66, 'ADD', [{alumnograduacion_password:'abcñdèfgh'}], 'alumnograduacion_password_formato_KO'], 
+    ['alumnograduacion', 'alumnograduacion_password', 17, 67, 'ADD', [{alumnograduacion_password:'abcñdefghì'}], 'alumnograduacion_password_formato_KO'], 
+    ['alumnograduacion', 'alumnograduacion_password', 17, 68, 'ADD', [{alumnograduacion_password:'aòcñdefgh'}], 'alumnograduacion_password_formato_KO'],              
+    ['alumnograduacion', 'alumnograduacion_password', 17, 69, 'ADD', [{alumnograduacion_password:'abcÙdefgh'}], 'alumnograduacion_password_formato_KO'], 
+    ['alumnograduacion', 'alumnograduacion_password', 17, 70, 'ADD', [{alumnograduacion_password:'abôcdefgh'}], 'alumnograduacion_password_formato_KO'],
+    ['alumnograduacion', 'alumnograduacion_password', 17, 71, 'ADD', [{alumnograduacion_password:'abcüdefgh'}], 'alumnograduacion_password_formato_KO'],  
+    ['alumnograduacion', 'alumnograduacion_password', 18, 72, 'ADD', [{alumnograduacion_password:'password1'}], true],
+
+    //EDIT PASSWORD
+    ['alumnograduacion', 'alumnograduacion_password', 19, 73, 'EDIT', [{alumnograduacion_password:''}], 'alumnograduacion_password_vacio_KO'],   
+    ['alumnograduacion', 'alumnograduacion_password', 20, 74, 'EDIT', [{alumnograduacion_password:'abc'}], 'alumnograduacion_password_min_size_KO'],
+    ['alumnograduacion', 'alumnograduacion_password', 21, 75, 'EDIT', [{alumnograduacion_password:'abcdefghijklmnoqrsabcdefghijklmnoqrsabcdefghijklmnoqrsabcdSDSFFDSAF'}], 'alumnograduacion_password_max_size_KO'],
+    ['alumnograduacion', 'alumnograduacion_password', 22, 76, 'EDIT', [{alumnograduacion_password:'abcñdefgh'}], 'alumnograduacion_password_formato_KO'], 
+    ['alumnograduacion', 'alumnograduacion_password', 22, 77, 'EDIT', [{alumnograduacion_password:'abcódefgh'}], 'alumnograduacion_password_formato_KO'], 
+    ['alumnograduacion', 'alumnograduacion_password', 22, 78, 'EDIT', [{alumnograduacion_password:'ábcñdefgh'}], 'alumnograduacion_password_formato_KO'], 
+    ['alumnograduacion', 'alumnograduacion_password', 22, 79, 'EDIT', [{alumnograduacion_password:'abcñdéfgh'}], 'alumnograduacion_password_formato_KO'], 
+    ['alumnograduacion', 'alumnograduacion_password', 22, 80, 'EDIT', [{alumnograduacion_password:'abcñdefghí'}], 'alumnograduacion_password_formato_KO'], 
+    ['alumnograduacion', 'alumnograduacion_password', 22, 81, 'EDIT', [{alumnograduacion_password:'abcñdefgú'}], 'alumnograduacion_password_formato_KO'], 
+    ['alumnograduacion', 'alumnograduacion_password', 22, 82, 'EDIT', [{alumnograduacion_password:'àbcñdefgh'}], 'alumnograduacion_password_formato_KO'], 
+    ['alumnograduacion', 'alumnograduacion_password', 22, 83, 'EDIT', [{alumnograduacion_password:'abcñdèfgh'}], 'alumnograduacion_password_formato_KO'], 
+    ['alumnograduacion', 'alumnograduacion_password', 22, 84, 'EDIT', [{alumnograduacion_password:'abcñdefghì'}], 'alumnograduacion_password_formato_KO'], 
+    ['alumnograduacion', 'alumnograduacion_password', 22, 85, 'EDIT', [{alumnograduacion_password:'aòcñdefgh'}], 'alumnograduacion_password_formato_KO'],              
+    ['alumnograduacion', 'alumnograduacion_password', 22, 86, 'EDIT', [{alumnograduacion_password:'abcÙdefgh'}], 'alumnograduacion_password_formato_KO'], 
+    ['alumnograduacion', 'alumnograduacion_password', 22, 87, 'EDIT', [{alumnograduacion_password:'abôcdefgh'}], 'alumnograduacion_password_formato_KO'],
+    ['alumnograduacion', 'alumnograduacion_password', 22, 88, 'EDIT', [{alumnograduacion_password:'abcüdefgh'}], 'alumnograduacion_password_formato_KO'],  
+    ['alumnograduacion', 'alumnograduacion_password', 23, 89, 'EDIT', [{alumnograduacion_password:'password1'}], true],
+
+    //SEARCH PASSWORD
+    ['alumnograduacion', 'alumnograduacion_password', 24, 90, 'SEARCH', [{alumnograduacion_password:'abcñdefgh'}], 'alumnograduacion_password_formato_KO'], 
+    ['alumnograduacion', 'alumnograduacion_password', 24, 91, 'SEARCH', [{alumnograduacion_password:'abcódefgh'}], 'alumnograduacion_password_formato_KO'], 
+    ['alumnograduacion', 'alumnograduacion_password', 24, 92, 'SEARCH', [{alumnograduacion_password:'ábcñdefgh'}], 'alumnograduacion_password_formato_KO'], 
+    ['alumnograduacion', 'alumnograduacion_password', 24, 93, 'SEARCH', [{alumnograduacion_password:'abcñdéfgh'}], 'alumnograduacion_password_formato_KO'], 
+    ['alumnograduacion', 'alumnograduacion_password', 24, 94, 'SEARCH', [{alumnograduacion_password:'abcñdefghí'}], 'alumnograduacion_password_formato_KO'], 
+    ['alumnograduacion', 'alumnograduacion_password', 24, 95, 'SEARCH', [{alumnograduacion_password:'abcñdefgú'}], 'alumnograduacion_password_formato_KO'], 
+    ['alumnograduacion', 'alumnograduacion_password', 24, 96, 'SEARCH', [{alumnograduacion_password:'àbcñdefgh'}], 'alumnograduacion_password_formato_KO'], 
+    ['alumnograduacion', 'alumnograduacion_password', 24, 97, 'SEARCH', [{alumnograduacion_password:'abcñdèfgh'}], 'alumnograduacion_password_formato_KO'], 
+    ['alumnograduacion', 'alumnograduacion_password', 24, 98, 'SEARCH', [{alumnograduacion_password:'abcñdefghì'}], 'alumnograduacion_password_formato_KO'], 
+    ['alumnograduacion', 'alumnograduacion_password', 24, 99, 'SEARCH', [{alumnograduacion_password:'aòcñdefgh'}], 'alumnograduacion_password_formato_KO'],              
+    ['alumnograduacion', 'alumnograduacion_password', 24, 100, 'SEARCH', [{alumnograduacion_password:'abcÙdefgh'}], 'alumnograduacion_password_formato_KO'], 
+    ['alumnograduacion', 'alumnograduacion_password', 24, 101, 'SEARCH', [{alumnograduacion_password:'abôcdefgh'}], 'alumnograduacion_password_formato_KO'],
+    ['alumnograduacion', 'alumnograduacion_password', 24, 102, 'SEARCH', [{alumnograduacion_password:'abcüdefgh'}], 'alumnograduacion_password_formato_KO'],
+    ['alumnograduacion', 'alumnograduacion_password', 25, 103, 'SEARCH', [{alumnograduacion_password:'abcdefghijklmnoqrsabcdefghijklmnoqrsabcdefghijklmnoqrsabcdSDSFFDSAF'}], 'alumnograduacion_password_max_size_KO'],  
+    ['alumnograduacion', 'alumnograduacion_password', 26, 104, 'SEARCH', [{alumnograduacion_password:'password1'}], true],
+
+
+
+    //ADD NOMBRE                                
+    ['alumnograduacion', 'alumnograduacion_nombre', 27, 105, 'ADD', [{alumnograduacion_nombre:''}], 'alumnograduacion_nombre_vacio_KO'],      
+    ['alumnograduacion', 'alumnograduacion_nombre', 28, 106, 'ADD', [{alumnograduacion_nombre:'abc123'}], 'alumnograduacion_nombre_formato_KO'],
+    ['alumnograduacion', 'alumnograduacion_nombre', 28, 107, 'ADD', [{alumnograduacion_nombre:'ab.sdff'}], 'alumnograduacion_nombre_formato_KO'],
+    ['alumnograduacion', 'alumnograduacion_nombre', 28, 108, 'ADD', [{alumnograduacion_nombre:'abcsds.'}], 'alumnograduacion_nombre_formato_KO'],
+    ['alumnograduacion', 'alumnograduacion_nombre', 28, 109, 'ADD', [{alumnograduacion_nombre:'(abcsadasf'}], 'alumnograduacion_nombre_formato_KO'],
+    ['alumnograduacion', 'alumnograduacion_nombre', 29, 110, 'ADD', [{alumnograduacion_nombre:'a'}], 'alumnograduacion_nombre_min_size_KO'],
+    ['alumnograduacion', 'alumnograduacion_nombre', 30, 111, 'ADD', [{alumnograduacion_nombre:'abcdefghijklmnoqrsabcdefghijklmnoqrsabcd'}], 'alumnograduacion_nombre_max_size_KO'],           
+    ['alumnograduacion', 'alumnograduacion_nombre', 31, 112, 'ADD', [{alumnograduacion_nombre:'Nombre'}], true],  
     
-    //BUSQUEDA NOMBRE
-    ['alumnograduacion', 'alumnograduacion_nombre', 37, 1, 'SEARCH', [{alumnograduacion_nombre:'abc123'}], 'alumnograduacion_nombre_formato_KO'],
-    ['alumnograduacion', 'alumnograduacion_nombre', 37, 1, 'SEARCH', [{alumnograduacion_nombre:'ab.sdff'}], 'alumnograduacion_nombre_formato_KO'],
-    ['alumnograduacion', 'alumnograduacion_nombre', 37, 1, 'SEARCH', [{alumnograduacion_nombre:'abcsds.'}], 'alumnograduacion_nombre_formato_KO'],
-    ['alumnograduacion', 'alumnograduacion_nombre', 37, 1, 'SEARCH', [{alumnograduacion_nombre:'(abcsadasf'}], 'alumnograduacion_nombre_formato_KO'],
-    ['alumnograduacion', 'alumnograduacion_nombre', 38, 1, 'SEARCH', [{alumnograduacion_nombre:'abcdefghijklmnoqrsabcdefghijklmnoqrsabcd'}], 'alumnograduacion_nombre_max_size_KO'],
-    ['alumnograduacion', 'alumnograduacion_nombre', 39 , 1, 'SEARCH', [{alumnograduacion_nombre:'Nombre'}], true],
+    //EDIT NOMBRE                                
+    ['alumnograduacion', 'alumnograduacion_nombre', 32, 113, 'EDIT', [{alumnograduacion_nombre:''}], 'alumnograduacion_nombre_vacio_KO'],      
+    ['alumnograduacion', 'alumnograduacion_nombre', 33, 114, 'EDIT', [{alumnograduacion_nombre:'abc123'}], 'alumnograduacion_nombre_formato_KO'],
+    ['alumnograduacion', 'alumnograduacion_nombre', 33, 115, 'EDIT', [{alumnograduacion_nombre:'ab.sdff'}], 'alumnograduacion_nombre_formato_KO'],
+    ['alumnograduacion', 'alumnograduacion_nombre', 33, 116, 'EDIT', [{alumnograduacion_nombre:'abcsds.'}], 'alumnograduacion_nombre_formato_KO'],
+    ['alumnograduacion', 'alumnograduacion_nombre', 33, 117, 'EDIT', [{alumnograduacion_nombre:'(abcsadasf'}], 'alumnograduacion_nombre_formato_KO'],
+    ['alumnograduacion', 'alumnograduacion_nombre', 34, 118, 'EDIT', [{alumnograduacion_nombre:'a'}], 'alumnograduacion_nombre_min_size_KO'],
+    ['alumnograduacion', 'alumnograduacion_nombre', 35, 119, 'EDIT', [{alumnograduacion_nombre:'abcdefghijklmnoqrsabcdefghijklmnoqrsabcd'}], 'alumnograduacion_nombre_max_size_KO'],           
+    ['alumnograduacion', 'alumnograduacion_nombre', 36, 120, 'EDIT', [{alumnograduacion_nombre:'Nombre'}], true],  
+    
+    //SEARCH NOMBRE
+    ['alumnograduacion', 'alumnograduacion_nombre', 37, 121, 'SEARCH', [{alumnograduacion_nombre:'abc123'}], 'alumnograduacion_nombre_formato_KO'],
+    ['alumnograduacion', 'alumnograduacion_nombre', 37, 122, 'SEARCH', [{alumnograduacion_nombre:'ab.sdff'}], 'alumnograduacion_nombre_formato_KO'],
+    ['alumnograduacion', 'alumnograduacion_nombre', 37, 123, 'SEARCH', [{alumnograduacion_nombre:'abcsds.'}], 'alumnograduacion_nombre_formato_KO'],
+    ['alumnograduacion', 'alumnograduacion_nombre', 37, 124, 'SEARCH', [{alumnograduacion_nombre:'(abcsadasf'}], 'alumnograduacion_nombre_formato_KO'],
+    ['alumnograduacion', 'alumnograduacion_nombre', 38, 125, 'SEARCH', [{alumnograduacion_nombre:'abcdefghijklmnoqrsabcdefghijklmnoqrsabcd'}], 'alumnograduacion_nombre_max_size_KO'],
+    ['alumnograduacion', 'alumnograduacion_nombre', 39 , 126, 'SEARCH', [{alumnograduacion_nombre:'Nombre'}], true],
    
-    //APELLIDOS 
-    ['alumnograduacion', 'alumnograduacion_apellidos', 40, 1, 'ADD', [{alumnograduacion_apellidos:''}], 'alumnograduacion_apellidos_vacio_KO'],     
-    ['alumnograduacion', 'alumnograduacion_apellidos', 41, 1, 'ADD', [{alumnograduacion_apellidos:'abc123'}], 'alumnograduacion_apellidos_formato_KO'], 
-    ['alumnograduacion', 'alumnograduacion_apellidos', 41, 1, 'ADD', [{alumnograduacion_apellidos:'abcsad.'}], 'alumnograduacion_apellidos_formato_KO'],
-    ['alumnograduacion', 'alumnograduacion_apellidos', 41, 1, 'ADD', [{alumnograduacion_apellidos:'abc.zsad'}], 'alumnograduacion_apellidos_formato_KO'],
-    ['alumnograduacion', 'alumnograduacion_apellidos', 41, 1, 'ADD', [{alumnograduacion_apellidos:'(abcsfa'}], 'alumnograduacion_apellidos_formato_KO'],
-    ['alumnograduacion', 'alumnograduacion_apellidos', 42, 1, 'ADD', [{alumnograduacion_apellidos:'a'}], 'alumnograduacion_apellidos_min_size_KO'], 
-    ['alumnograduacion', 'alumnograduacion_apellidos', 43, 1, 'ADD', [{alumnograduacion_apellidos:'abcdefghijklmnoqrsabcdefghijklmnoqrsabcd'}], 'alumnograduacion_apellidos_max_size_KO'],  
-    ['alumnograduacion', 'alumnograduacion_apellidos', 44, 1, 'ADD', [{alumnograduacion_apellidos:'Apellidos'}], true],
+
+
+    //ADD APELLIDOS 
+    ['alumnograduacion', 'alumnograduacion_apellidos', 40, 127, 'ADD', [{alumnograduacion_apellidos:''}], 'alumnograduacion_apellidos_vacio_KO'],     
+    ['alumnograduacion', 'alumnograduacion_apellidos', 41, 128, 'ADD', [{alumnograduacion_apellidos:'abc123'}], 'alumnograduacion_apellidos_formato_KO'], 
+    ['alumnograduacion', 'alumnograduacion_apellidos', 41, 129, 'ADD', [{alumnograduacion_apellidos:'abcsad.'}], 'alumnograduacion_apellidos_formato_KO'],
+    ['alumnograduacion', 'alumnograduacion_apellidos', 41, 130, 'ADD', [{alumnograduacion_apellidos:'abc.zsad'}], 'alumnograduacion_apellidos_formato_KO'],
+    ['alumnograduacion', 'alumnograduacion_apellidos', 41, 131, 'ADD', [{alumnograduacion_apellidos:'(abcsfa'}], 'alumnograduacion_apellidos_formato_KO'],
+    ['alumnograduacion', 'alumnograduacion_apellidos', 42, 132, 'ADD', [{alumnograduacion_apellidos:'a'}], 'alumnograduacion_apellidos_min_size_KO'], 
+    ['alumnograduacion', 'alumnograduacion_apellidos', 43, 133, 'ADD', [{alumnograduacion_apellidos:'abcdefghijklmnoqrsabcdefghijklmnoqrsabcd'}], 'alumnograduacion_apellidos_max_size_KO'],  
+    ['alumnograduacion', 'alumnograduacion_apellidos', 44, 134, 'ADD', [{alumnograduacion_apellidos:'Apellidos'}], true],
     
-    //APELLIDOS
-    ['alumnograduacion', 'alumnograduacion_apellidos', 45, 1, 'EDIT', [{alumnograduacion_apellidos:''}], 'alumnograduacion_apellidos_vacio_KO'],     
-    ['alumnograduacion', 'alumnograduacion_apellidos', 46, 1, 'EDIT', [{alumnograduacion_apellidos:'abc123'}], 'alumnograduacion_apellidos_formato_KO'], 
-    ['alumnograduacion', 'alumnograduacion_apellidos', 46, 1, 'EDIT', [{alumnograduacion_apellidos:'abcsad.'}], 'alumnograduacion_apellidos_formato_KO'],
-    ['alumnograduacion', 'alumnograduacion_apellidos', 46, 1, 'EDIT', [{alumnograduacion_apellidos:'abc.zsad'}], 'alumnograduacion_apellidos_formato_KO'],
-    ['alumnograduacion', 'alumnograduacion_apellidos', 46, 1, 'EDIT', [{alumnograduacion_apellidos:'(abcsfa'}], 'alumnograduacion_apellidos_formato_KO'],
-    ['alumnograduacion', 'alumnograduacion_apellidos', 47, 1, 'EDIT', [{alumnograduacion_apellidos:'a'}], 'alumnograduacion_apellidos_min_size_KO'], 
-    ['alumnograduacion', 'alumnograduacion_apellidos', 48, 1, 'EDIT', [{alumnograduacion_apellidos:'abcdefghijklmnoqrsabcdefghijklmnoqrsabcd'}], 'alumnograduacion_apellidos_max_size_KO'],  
-    ['alumnograduacion', 'alumnograduacion_apellidos', 49, 1, 'EDIT', [{alumnograduacion_apellidos:'Apellidos'}], true],
+    //EDIT APELLIDOS
+    ['alumnograduacion', 'alumnograduacion_apellidos', 45, 135, 'EDIT', [{alumnograduacion_apellidos:''}], 'alumnograduacion_apellidos_vacio_KO'],     
+    ['alumnograduacion', 'alumnograduacion_apellidos', 46, 136, 'EDIT', [{alumnograduacion_apellidos:'abc123'}], 'alumnograduacion_apellidos_formato_KO'], 
+    ['alumnograduacion', 'alumnograduacion_apellidos', 46, 137, 'EDIT', [{alumnograduacion_apellidos:'abcsad.'}], 'alumnograduacion_apellidos_formato_KO'],
+    ['alumnograduacion', 'alumnograduacion_apellidos', 46, 138, 'EDIT', [{alumnograduacion_apellidos:'abc.zsad'}], 'alumnograduacion_apellidos_formato_KO'],
+    ['alumnograduacion', 'alumnograduacion_apellidos', 46, 139, 'EDIT', [{alumnograduacion_apellidos:'(abcsfa'}], 'alumnograduacion_apellidos_formato_KO'],
+    ['alumnograduacion', 'alumnograduacion_apellidos', 47, 140, 'EDIT', [{alumnograduacion_apellidos:'a'}], 'alumnograduacion_apellidos_min_size_KO'], 
+    ['alumnograduacion', 'alumnograduacion_apellidos', 48, 141, 'EDIT', [{alumnograduacion_apellidos:'abcdefghijklmnoqrsabcdefghijklmnoqrsabcd'}], 'alumnograduacion_apellidos_max_size_KO'],  
+    ['alumnograduacion', 'alumnograduacion_apellidos', 49, 142, 'EDIT', [{alumnograduacion_apellidos:'Apellidos'}], true],
     
-    //APELLIDOS
-    ['alumnograduacion', 'alumnograduacion_apellidos', 50, 1, 'SEARCH', [{alumnograduacion_apellidos:'abc123'}], 'alumnograduacion_apellidos_formato_KO'], 
-    ['alumnograduacion', 'alumnograduacion_apellidos', 50, 1, 'SEARCH', [{alumnograduacion_apellidos:'abcsad.'}], 'alumnograduacion_apellidos_formato_KO'],
-    ['alumnograduacion', 'alumnograduacion_apellidos', 50, 1, 'SEARCH', [{alumnograduacion_apellidos:'abc.zsad'}], 'alumnograduacion_apellidos_formato_KO'],
-    ['alumnograduacion', 'alumnograduacion_apellidos', 50, 1, 'SEARCH', [{alumnograduacion_apellidos:'(abcsfa'}], 'alumnograduacion_apellidos_formato_KO'],
-    ['alumnograduacion', 'alumnograduacion_apellidos', 51, 1, 'SEARCH', [{alumnograduacion_apellidos:'abcdefghijklmnoqrsabcdefghijklmnoqrsabcd'}], 'alumnograduacion_apellidos_max_size_KO'],  
-    ['alumnograduacion', 'alumnograduacion_apellidos', 52, 1, 'SEARCH', [{alumnograduacion_apellidos:'Apellidos'}], true],
+    //SEARCH APELLIDOS
+    ['alumnograduacion', 'alumnograduacion_apellidos', 50, 143, 'SEARCH', [{alumnograduacion_apellidos:'abc123'}], 'alumnograduacion_apellidos_formato_KO'], 
+    ['alumnograduacion', 'alumnograduacion_apellidos', 50, 144, 'SEARCH', [{alumnograduacion_apellidos:'abcsad.'}], 'alumnograduacion_apellidos_formato_KO'],
+    ['alumnograduacion', 'alumnograduacion_apellidos', 50, 145, 'SEARCH', [{alumnograduacion_apellidos:'abc.zsad'}], 'alumnograduacion_apellidos_formato_KO'],
+    ['alumnograduacion', 'alumnograduacion_apellidos', 50, 146, 'SEARCH', [{alumnograduacion_apellidos:'(abcsfa'}], 'alumnograduacion_apellidos_formato_KO'],
+    ['alumnograduacion', 'alumnograduacion_apellidos', 51, 147, 'SEARCH', [{alumnograduacion_apellidos:'abcdefghijklmnoqrsabcdefghijklmnoqrsabcd'}], 'alumnograduacion_apellidos_max_size_KO'],  
+    ['alumnograduacion', 'alumnograduacion_apellidos', 52, 148, 'SEARCH', [{alumnograduacion_apellidos:'Apellidos'}], true],
     
-    //TITULACION            
-    ['alumnograduacion', 'alumnograduacion_titulacion', 53, 1, 'ADD', [{alumnograduacion_titulacion:''}], 'alumnograduacion_titulacion_vacio_KO'],      
-    ['alumnograduacion', 'alumnograduacion_titulacion', 54, 1, 'ADD', [{alumnograduacion_titulacion:'ABC'}], 'alumnograduacion_titulacion_formato_KO'], 
-    ['alumnograduacion', 'alumnograduacion_titulacion', 55, 1, 'ADD', [{alumnograduacion_titulacion:'GREI'}], true],        
+
+
+    //ADD TITULACION            
+    ['alumnograduacion', 'alumnograduacion_titulacion', 53, 149, 'ADD', [{alumnograduacion_titulacion:''}], 'alumnograduacion_titulacion_vacio_KO'],      
+    ['alumnograduacion', 'alumnograduacion_titulacion', 54, 150, 'ADD', [{alumnograduacion_titulacion:'ABC'}], 'alumnograduacion_titulacion_formato_KO'], 
+    ['alumnograduacion', 'alumnograduacion_titulacion', 55, 151, 'ADD', [{alumnograduacion_titulacion:'GREI'}], true],        
    
-     //TITULACION            
-    ['alumnograduacion', 'alumnograduacion_titulacion', 56, 1, 'EDIT', [{alumnograduacion_titulacion:''}], 'alumnograduacion_titulacion_vacio_KO'],      
-    ['alumnograduacion', 'alumnograduacion_titulacion', 57, 1, 'EDIT', [{alumnograduacion_titulacion:'ABC'}], 'alumnograduacion_titulacion_formato_KO'], 
-    ['alumnograduacion', 'alumnograduacion_titulacion', 58, 1, 'EDIT', [{alumnograduacion_titulacion:'GREI'}], true],        
+    //EDIT TITULACION            
+    ['alumnograduacion', 'alumnograduacion_titulacion', 56, 152, 'EDIT', [{alumnograduacion_titulacion:''}], 'alumnograduacion_titulacion_vacio_KO'],      
+    ['alumnograduacion', 'alumnograduacion_titulacion', 57, 153, 'EDIT', [{alumnograduacion_titulacion:'ABC'}], 'alumnograduacion_titulacion_formato_KO'], 
+    ['alumnograduacion', 'alumnograduacion_titulacion', 58, 154, 'EDIT', [{alumnograduacion_titulacion:'GREI'}], true],        
   
-    //BUSQUEDA TITULACION            
-    ['alumnograduacion', 'alumnograduacion_titulacion', 59, 1, 'SEARCH', [{alumnograduacion_titulacion:'ABC'}], 'alumnograduacion_titulacion_formato_KO'], 
-    ['alumnograduacion', 'alumnograduacion_titulacion', 60, 1, 'SEARCH', [{alumnograduacion_titulacion:'GREI'}], true],        
+    //SEARCH TITULACION            
+    ['alumnograduacion', 'alumnograduacion_titulacion', 59, 155, 'SEARCH', [{alumnograduacion_titulacion:'ABC'}], 'alumnograduacion_titulacion_formato_KO'], 
+    ['alumnograduacion', 'alumnograduacion_titulacion', 60, 156, 'SEARCH', [{alumnograduacion_titulacion:'GREI'}], true],        
    
-    //DNI       
-    ['alumnograduacion', 'alumnograduacion_dni', 61, 1, 'ADD', [{alumnograduacion_dni:''}], 'alumnograduacion_dni_vacio_KO'],       
-    ['alumnograduacion', 'alumnograduacion_dni', 62, 1, 'ADD', [{alumnograduacion_dni:'1234567A'}], 'alumnograduacion_dni_formato_KO'], 
-    ['alumnograduacion', 'alumnograduacion_dni', 63, 1, 'ADD', [{alumnograduacion_dni:'123456789A'}], 'alumnograduacion_dni_max_size_KO'],  
-    ['alumnograduacion', 'alumnograduacion_dni', 64, 1, 'ADD', [{alumnograduacion_dni:'12345678Z'}], true], 
+
+
+    //ADD DNI       
+    ['alumnograduacion', 'alumnograduacion_dni', 61, 157, 'ADD', [{alumnograduacion_dni:''}], 'alumnograduacion_dni_vacio_KO'],       
+    ['alumnograduacion', 'alumnograduacion_dni', 62, 158, 'ADD', [{alumnograduacion_dni:'1234567A'}], 'alumnograduacion_dni_formato_KO'], 
+    ['alumnograduacion', 'alumnograduacion_dni', 63, 159, 'ADD', [{alumnograduacion_dni:'123456789A'}], 'alumnograduacion_dni_max_size_KO'],  
+    ['alumnograduacion', 'alumnograduacion_dni', 64, 160, 'ADD', [{alumnograduacion_dni:'12345678Z'}], true], 
    
-    //DNI       
-    ['alumnograduacion', 'alumnograduacion_dni', 65, 1, 'EDIT', [{alumnograduacion_dni:''}], 'alumnograduacion_dni_vacio_KO'],     
-    ['alumnograduacion', 'alumnograduacion_dni', 66, 1, 'ADD', [{alumnograduacion_dni:'1234567A'}], 'alumnograduacion_dni_formato_KO'], 
-    ['alumnograduacion', 'alumnograduacion_dni', 67, 1, 'EDIT', [{alumnograduacion_dni:'123456789A'}], 'alumnograduacion_dni_max_size_KO'],  
-    ['alumnograduacion', 'alumnograduacion_dni', 68, 1, 'EDIT', [{alumnograduacion_dni:'12345678Z'}], true], 
+    //EDIT DNI       
+    ['alumnograduacion', 'alumnograduacion_dni', 65, 161, 'EDIT', [{alumnograduacion_dni:''}], 'alumnograduacion_dni_vacio_KO'],     
+    ['alumnograduacion', 'alumnograduacion_dni', 66, 162, 'EDIT', [{alumnograduacion_dni:'1234567A'}], 'alumnograduacion_dni_formato_KO'], 
+    ['alumnograduacion', 'alumnograduacion_dni', 67, 163, 'EDIT', [{alumnograduacion_dni:'123456789A'}], 'alumnograduacion_dni_max_size_KO'],  
+    ['alumnograduacion', 'alumnograduacion_dni', 68, 164, 'EDIT', [{alumnograduacion_dni:'12345678Z'}], true], 
 
-    //DNI       
-    ['alumnograduacion', 'alumnograduacion_dni', 69, 1, 'ADD', [{alumnograduacion_dni:'1234567A'}], 'alumnograduacion_dni_formato_KO'], 
-    ['alumnograduacion', 'alumnograduacion_dni', 70, 1, 'SEARCH', [{alumnograduacion_dni:'123456789A'}], 'alumnograduacion_dni_max_size_KO'],  
-    ['alumnograduacion', 'alumnograduacion_dni', 71, 1, 'SEARCH', [{alumnograduacion_dni:'12345678Z'}], true], 
+    //SEARCH DNI       
+    ['alumnograduacion', 'alumnograduacion_dni', 69, 165, 'SEARCH', [{alumnograduacion_dni:'1234567A'}], 'alumnograduacion_dni_formato_KO'], 
+    ['alumnograduacion', 'alumnograduacion_dni', 70, 166, 'SEARCH', [{alumnograduacion_dni:'123456789A'}], 'alumnograduacion_dni_max_size_KO'],  
+    ['alumnograduacion', 'alumnograduacion_dni', 71, 167, 'SEARCH', [{alumnograduacion_dni:'12345678Z'}], true], 
     
-    //TELEFONO
-    ['alumnograduacion', 'alumnograduacion_telefono', 72, 1, 'ADD', [{alumnograduacion_telefono:''}], 'alumnograduacion_telefono_vacio_KO'],       
-    ['alumnograduacion', 'alumnograduacion_telefono', 73, 1, 'ADD', [{alumnograduacion_telefono:'1234567890'}], 'alumnograduacion_telefono_max_size_KO'],  
-    ['alumnograduacion', 'alumnograduacion_telefono', 74, 1, 'ADD', [{alumnograduacion_telefono:'12345abcd'}], 'alumnograduacion_telefono_formato_KO'], 
-    ['alumnograduacion', 'alumnograduacion_telefono', 74, 1, 'ADD', [{alumnograduacion_telefono:'12345.898'}], 'alumnograduacion_telefono_formato_KO'],
-    ['alumnograduacion', 'alumnograduacion_telefono', 74, 1, 'ADD', [{alumnograduacion_telefono:'12345355.'}], 'alumnograduacion_telefono_formato_KO'],
-    ['alumnograduacion', 'alumnograduacion_telefono', 75, 1, 'ADD', [{alumnograduacion_telefono:'12345678'}], 'alumnograduacion_telefono_min_size_KO'],  
-    ['alumnograduacion', 'alumnograduacion_telefono', 76, 1, 'ADD', [{alumnograduacion_telefono:'123456789'}], true],
-    
-     //TELEFONO
-    ['alumnograduacion', 'alumnograduacion_telefono', 77, 1, 'EDIT', [{alumnograduacion_telefono:''}], 'alumnograduacion_telefono_vacio_KO'],       
-    ['alumnograduacion', 'alumnograduacion_telefono', 78, 1, 'EDIT', [{alumnograduacion_telefono:'1234567890'}], 'alumnograduacion_telefono_max_size_KO'],  
-    ['alumnograduacion', 'alumnograduacion_telefono', 79, 1, 'EDIT', [{alumnograduacion_telefono:'12345abcd'}], 'alumnograduacion_telefono_formato_KO'], 
-    ['alumnograduacion', 'alumnograduacion_telefono', 79, 1, 'EDIT', [{alumnograduacion_telefono:'12345.898'}], 'alumnograduacion_telefono_formato_KO'],
-    ['alumnograduacion', 'alumnograduacion_telefono', 79, 1, 'EDIT', [{alumnograduacion_telefono:'12345355.'}], 'alumnograduacion_telefono_formato_KO'],
-    ['alumnograduacion', 'alumnograduacion_telefono', 80, 1, 'EDIT', [{alumnograduacion_telefono:'12345678'}], 'alumnograduacion_telefono_min_size_KO'],  
-    ['alumnograduacion', 'alumnograduacion_telefono', 81, 1, 'EDIT', [{alumnograduacion_telefono:'123456789'}], true],
 
-     //TELEFONO
-    ['alumnograduacion', 'alumnograduacion_telefono', 82, 1, 'SEARCH', [{alumnograduacion_telefono:'12345abcd'}], 'alumnograduacion_telefono_formato_KO'], 
-    ['alumnograduacion', 'alumnograduacion_telefono', 82, 1, 'SEARCH', [{alumnograduacion_telefono:'12345.898'}], 'alumnograduacion_telefono_formato_KO'],
-    ['alumnograduacion', 'alumnograduacion_telefono', 82, 1, 'SEARCH', [{alumnograduacion_telefono:'12345355.'}], 'alumnograduacion_telefono_formato_KO'],
-    ['alumnograduacion', 'alumnograduacion_telefono', 83, 1, 'SEARCH', [{alumnograduacion_telefono:'1234567890'}], 'alumnograduacion_telefono_max_size_KO'],  
-    ['alumnograduacion', 'alumnograduacion_telefono', 84, 1, 'SEARCH', [{alumnograduacion_telefono:'123456789'}], true],
-    
-    //DIRECCION
-    ['alumnograduacion', 'alumnograduacion_direccion',85 , 1, 'ADD', [{alumnograduacion_direccion:''}], 'alumnograduacion_direccion_vacio_KO'],      
-    ['alumnograduacion', 'alumnograduacion_direccion', 86, 1, 'ADD', [{alumnograduacion_direccion:'aiooieef*sd'}], 'alumnograduacion_direccion_formato_KO'], 
-    ['alumnograduacion', 'alumnograduacion_direccion', 87, 1, 'ADD', [{alumnograduacion_direccion:'a'}], 'alumnograduacion_direccion_min_size_KO'], 
-    ['alumnograduacion', 'alumnograduacion_direccion', 88, 1, 'ADD', [{alumnograduacion_direccion:'abcdefghhjgfghdhfdfdfdgdfhfdfhdhfdhfijklmnoqrsabcdefghijklmnoqrsabcdugyjgghbhjhjhcfhhghjggjhfghffjgfjhhfffgfhfhdrsg'}], 'alumnograduacion_direccion_max_size_KO'],           
-    ['alumnograduacion', 'alumnograduacion_direccion', 89, 1, 'ADD', [{alumnograduacion_direccion:'Direccion 123'}], true],             
 
-    //DIRECCION
-    ['alumnograduacion', 'alumnograduacion_direccion', 90, 1, 'EDIT', [{alumnograduacion_direccion:''}], 'alumnograduacion_direccion_vacio_KO'],      
-    ['alumnograduacion', 'alumnograduacion_direccion', 91, 1, 'EDIT', [{alumnograduacion_direccion:'abc*qfd323'}], 'alumnograduacion_direccion_formato_KO'], 
-    ['alumnograduacion', 'alumnograduacion_direccion', 92, 1, 'EDIT', [{alumnograduacion_direccion:'a'}], 'alumnograduacion_direccion_min_size_KO'], 
-    ['alumnograduacion', 'alumnograduacion_direccion', 93, 1, 'EDIT', [{alumnograduacion_direccion:'abcdefghijklmnoqrsabcdefghijklmnoqrsabcdabcdefghijklmnoqrsabcdefghijklmnoqrsabcdabcdefghijklmnoqrsabcdefghijklm'}], 'alumnograduacion_direccion_max_size_KO'],           
-    ['alumnograduacion', 'alumnograduacion_direccion', 94, 1, 'EDIT', [{alumnograduacion_direccion:'Direccion 123'}], true],    
+    //ADD TELEFONO
+    ['alumnograduacion', 'alumnograduacion_telefono', 72, 168, 'ADD', [{alumnograduacion_telefono:''}], 'alumnograduacion_telefono_vacio_KO'],       
+    ['alumnograduacion', 'alumnograduacion_telefono', 73, 169, 'ADD', [{alumnograduacion_telefono:'1234567890'}], 'alumnograduacion_telefono_max_size_KO'],  
+    ['alumnograduacion', 'alumnograduacion_telefono', 74, 170, 'ADD', [{alumnograduacion_telefono:'12345abcd'}], 'alumnograduacion_telefono_formato_KO'], 
+    ['alumnograduacion', 'alumnograduacion_telefono', 74, 171, 'ADD', [{alumnograduacion_telefono:'12345.898'}], 'alumnograduacion_telefono_formato_KO'],
+    ['alumnograduacion', 'alumnograduacion_telefono', 74, 172, 'ADD', [{alumnograduacion_telefono:'12345355.'}], 'alumnograduacion_telefono_formato_KO'],
+    ['alumnograduacion', 'alumnograduacion_telefono', 75, 173, 'ADD', [{alumnograduacion_telefono:'12345678'}], 'alumnograduacion_telefono_min_size_KO'],  
+    ['alumnograduacion', 'alumnograduacion_telefono', 76, 174, 'ADD', [{alumnograduacion_telefono:'123456789'}], true],
+    
+    //EDIT TELEFONO
+    ['alumnograduacion', 'alumnograduacion_telefono', 77, 175, 'EDIT', [{alumnograduacion_telefono:''}], 'alumnograduacion_telefono_vacio_KO'],       
+    ['alumnograduacion', 'alumnograduacion_telefono', 78, 176, 'EDIT', [{alumnograduacion_telefono:'1234567890'}], 'alumnograduacion_telefono_max_size_KO'],  
+    ['alumnograduacion', 'alumnograduacion_telefono', 79, 177, 'EDIT', [{alumnograduacion_telefono:'12345abcd'}], 'alumnograduacion_telefono_formato_KO'], 
+    ['alumnograduacion', 'alumnograduacion_telefono', 79, 178, 'EDIT', [{alumnograduacion_telefono:'12345.898'}], 'alumnograduacion_telefono_formato_KO'],
+    ['alumnograduacion', 'alumnograduacion_telefono', 79, 179, 'EDIT', [{alumnograduacion_telefono:'12345355.'}], 'alumnograduacion_telefono_formato_KO'],
+    ['alumnograduacion', 'alumnograduacion_telefono', 80, 180, 'EDIT', [{alumnograduacion_telefono:'12345678'}], 'alumnograduacion_telefono_min_size_KO'],  
+    ['alumnograduacion', 'alumnograduacion_telefono', 81, 181, 'EDIT', [{alumnograduacion_telefono:'123456789'}], true],
+
+    //SEARCH TELEFONO
+    ['alumnograduacion', 'alumnograduacion_telefono', 82, 182, 'SEARCH', [{alumnograduacion_telefono:'12345abcd'}], 'alumnograduacion_telefono_formato_KO'], 
+    ['alumnograduacion', 'alumnograduacion_telefono', 82, 183, 'SEARCH', [{alumnograduacion_telefono:'12345.898'}], 'alumnograduacion_telefono_formato_KO'],
+    ['alumnograduacion', 'alumnograduacion_telefono', 82, 184, 'SEARCH', [{alumnograduacion_telefono:'12345355.'}], 'alumnograduacion_telefono_formato_KO'],
+    ['alumnograduacion', 'alumnograduacion_telefono', 83, 185, 'SEARCH', [{alumnograduacion_telefono:'1234567890'}], 'alumnograduacion_telefono_max_size_KO'],  
+    ['alumnograduacion', 'alumnograduacion_telefono', 84, 186, 'SEARCH', [{alumnograduacion_telefono:'123456789'}], true],
+    
+
+    
+    //ADD DIRECCION
+    ['alumnograduacion', 'alumnograduacion_direccion', 85, 187, 'ADD', [{alumnograduacion_direccion:''}], 'alumnograduacion_direccion_vacio_KO'],      
+    ['alumnograduacion', 'alumnograduacion_direccion', 86, 188, 'ADD', [{alumnograduacion_direccion:'aiooieef*sd'}], 'alumnograduacion_direccion_formato_KO'], 
+    ['alumnograduacion', 'alumnograduacion_direccion', 87, 189, 'ADD', [{alumnograduacion_direccion:'a'}], 'alumnograduacion_direccion_min_size_KO'], 
+    ['alumnograduacion', 'alumnograduacion_direccion', 88, 190, 'ADD', [{alumnograduacion_direccion:'abcdefghhjgfghdhfdfdfdgdfhfdfhdhfdhfijklmnoqrsabcdefghijklmnoqrsabcdugyjgghbhjhjhcfhhghjggjhfghffjgfjhhfffgfhfhdrsg'}], 'alumnograduacion_direccion_max_size_KO'],           
+    ['alumnograduacion', 'alumnograduacion_direccion', 89, 191, 'ADD', [{alumnograduacion_direccion:'Direccion 123'}], true],             
+
+    //EDIT DIRECCION
+    ['alumnograduacion', 'alumnograduacion_direccion', 90, 192, 'EDIT', [{alumnograduacion_direccion:''}], 'alumnograduacion_direccion_vacio_KO'],      
+    ['alumnograduacion', 'alumnograduacion_direccion', 91, 193, 'EDIT', [{alumnograduacion_direccion:'abc*qfd323'}], 'alumnograduacion_direccion_formato_KO'], 
+    ['alumnograduacion', 'alumnograduacion_direccion', 92, 194, 'EDIT', [{alumnograduacion_direccion:'a'}], 'alumnograduacion_direccion_min_size_KO'], 
+    ['alumnograduacion', 'alumnograduacion_direccion', 93, 195, 'EDIT', [{alumnograduacion_direccion:'abcdefghijklmnoqrsabcdefghijklmnoqrsabcdabcdefghijklmnoqrsabcdefghijklmnoqrsabcdabcdefghijklmnoqrsabcdefghijklm'}], 'alumnograduacion_direccion_max_size_KO'],           
+    ['alumnograduacion', 'alumnograduacion_direccion', 94, 196, 'EDIT', [{alumnograduacion_direccion:'Direccion 123'}], true],    
  
-    //DIRECCION
-    ['alumnograduacion', 'alumnograduacion_direccion', 95, 1, 'SEARCH', [{alumnograduacion_direccion:'abc*qfd323'}], 'alumnograduacion_direccion_formato_KO'], 
-    ['alumnograduacion', 'alumnograduacion_direccion', 96, 1, 'SEARCH', [{alumnograduacion_direccion:'abcdefghijklmnoqrsabcdefghijklmnoqrsabcdabcdefghijklmnoqrsabcdefghijklmnoqrsabcdabcdefghijklmnoqrsabcdefghijklm'}], 'alumnograduacion_direccion_max_size_KO'],           
-    ['alumnograduacion', 'alumnograduacion_direccion', 97, 1, 'SEARCH', [{alumnograduacion_direccion:'Direccion 123'}], true],
+    //SEARCH DIRECCION
+    ['alumnograduacion', 'alumnograduacion_direccion', 95, 197, 'SEARCH', [{alumnograduacion_direccion:'abc*qfd323'}], 'alumnograduacion_direccion_formato_KO'], 
+    ['alumnograduacion', 'alumnograduacion_direccion', 96, 198, 'SEARCH', [{alumnograduacion_direccion:'abcdefghijklmnoqrsabcdefghijklmnoqrsabcdabcdefghijklmnoqrsabcdefghijklmnoqrsabcdabcdefghijklmnoqrsabcdefghijklm'}], 'alumnograduacion_direccion_max_size_KO'],           
+    ['alumnograduacion', 'alumnograduacion_direccion', 97, 199, 'SEARCH', [{alumnograduacion_direccion:'Direccion 123'}], true],
     
-    //EMAIL
-    ['alumnograduacion', 'alumnograduacion_email', 98, 1, 'ADD', [{alumnograduacion_email:''}], 'alumnograduacion_email_vacio_KO'],      
-    ['alumnograduacion', 'alumnograduacion_email', 99, 1, 'ADD', [{alumnograduacion_email:'a'.repeat(41)+'@gmail.com'}], 'alumnograduacion_email_max_size_KO'],  
-    ['alumnograduacion', 'alumnograduacion_email', 100, 1, 'ADD', [{alumnograduacion_email:'emailformatoKO'}], 'alumnograduacion_email_formato_KO'], 
-    ['alumnograduacion', 'alumnograduacion_email', 100, 1, 'ADD', [{alumnograduacion_email:'ndjdndfbsfks'+'  '}], 'alumnograduacion_email_formato_KO'],  
-    ['alumnograduacion', 'alumnograduacion_email', 100, 1, 'ADD', [{alumnograduacion_email:' '+'@gmail.com'}], 'alumnograduacion_email_formato_KO'],
-    ['alumnograduacion', 'alumnograduacion_email', 100, 1, 'ADD', [{alumnograduacion_email:'sdfsd.' +'@gmail.com'}], 'alumnograduacion_email_formato_KO'],
-    ['alumnograduacion', 'alumnograduacion_email', 100, 1, 'ADD', [{alumnograduacion_email:'.sdfsdf'+'@gmail.com'}], 'alumnograduacion_email_formato_KO'],
-    ['alumnograduacion', 'alumnograduacion_email', 100, 1, 'ADD', [{alumnograduacion_email:' sf.sfsd'+'@gmail.com'}], 'alumnograduacion_email_formato_KO'], 
-    ['alumnograduacion', 'alumnograduacion_email', 101, 1, 'ADD', [{alumnograduacion_email:'sdasjaisjaj@gmail.com'}], true],   
+    
 
-    //EMAIL
-    ['alumnograduacion', 'alumnograduacion_email', 102, 1, 'EDIT', [{alumnograduacion_email:''}], 'alumnograduacion_email_vacio_KO'],      
-    ['alumnograduacion', 'alumnograduacion_email', 103, 1, 'EDIT', [{alumnograduacion_email:'a'.repeat(41)+'@gmail.com'}], 'alumnograduacion_email_max_size_KO'],  
-    ['alumnograduacion', 'alumnograduacion_email', 104, 1, 'EDIT', [{alumnograduacion_email:'emailformatoKO'}], 'alumnograduacion_email_formato_KO'], 
-    ['alumnograduacion', 'alumnograduacion_email', 104, 1, 'EDIT', [{alumnograduacion_email:'ndjdndfbsfks'+'  '}], 'alumnograduacion_email_formato_KO'],  
-    ['alumnograduacion', 'alumnograduacion_email', 104, 1, 'EDIT', [{alumnograduacion_email:' '+'@gmail.com'}], 'alumnograduacion_email_formato_KO'],
-    ['alumnograduacion', 'alumnograduacion_email', 104, 1, 'EDIT', [{alumnograduacion_email:'sdfsd.' +'@gmail.com'}], 'alumnograduacion_email_formato_KO'],
-    ['alumnograduacion', 'alumnograduacion_email', 104, 1, 'EDIT', [{alumnograduacion_email:'.sdfsdf'+'@gmail.com'}], 'alumnograduacion_email_formato_KO'],
-    ['alumnograduacion', 'alumnograduacion_email', 104, 1, 'EDIT', [{alumnograduacion_email:' sf.sfsd'+'@gmail.com'}], 'alumnograduacion_email_formato_KO'],     
-    ['alumnograduacion', 'alumnograduacion_email', 105, 1, 'EDIT', [{alumnograduacion_email:'sdasjaisjaj@gmail.com'}], true],   
+    //ADD EMAIL
+    ['alumnograduacion', 'alumnograduacion_email', 98, 200, 'ADD', [{alumnograduacion_email:''}], 'alumnograduacion_email_vacio_KO'],      
+    ['alumnograduacion', 'alumnograduacion_email', 99, 201, 'ADD', [{alumnograduacion_email:'a'.repeat(41)+'@gmail.com'}], 'alumnograduacion_email_max_size_KO'],  
+    ['alumnograduacion', 'alumnograduacion_email', 100, 202, 'ADD', [{alumnograduacion_email:'emailformatoKO'}], 'alumnograduacion_email_formato_KO'], 
+    ['alumnograduacion', 'alumnograduacion_email', 100, 203, 'ADD', [{alumnograduacion_email:'ndjdndfbsfks'+'  '}], 'alumnograduacion_email_formato_KO'],  
+    ['alumnograduacion', 'alumnograduacion_email', 100, 204, 'ADD', [{alumnograduacion_email:' '+'@gmail.com'}], 'alumnograduacion_email_formato_KO'],
+    ['alumnograduacion', 'alumnograduacion_email', 100, 205, 'ADD', [{alumnograduacion_email:'sdfsd.' +'@gmail.com'}], 'alumnograduacion_email_formato_KO'],
+    ['alumnograduacion', 'alumnograduacion_email', 100, 206, 'ADD', [{alumnograduacion_email:'.sdfsdf'+'@gmail.com'}], 'alumnograduacion_email_formato_KO'],
+    ['alumnograduacion', 'alumnograduacion_email', 100, 207, 'ADD', [{alumnograduacion_email:' sf.sfsd'+'@gmail.com'}], 'alumnograduacion_email_formato_KO'], 
+    ['alumnograduacion', 'alumnograduacion_email', 101, 208, 'ADD', [{alumnograduacion_email:'sdasjaisjaj@gmail.com'}], true],   
+
+    //EDIT EMAIL
+    ['alumnograduacion', 'alumnograduacion_email', 102, 209, 'EDIT', [{alumnograduacion_email:''}], 'alumnograduacion_email_vacio_KO'],      
+    ['alumnograduacion', 'alumnograduacion_email', 103, 210, 'EDIT', [{alumnograduacion_email:'a'.repeat(41)+'@gmail.com'}], 'alumnograduacion_email_max_size_KO'],  
+    ['alumnograduacion', 'alumnograduacion_email', 104, 211, 'EDIT', [{alumnograduacion_email:'emailformatoKO'}], 'alumnograduacion_email_formato_KO'], 
+    ['alumnograduacion', 'alumnograduacion_email', 104, 212, 'EDIT', [{alumnograduacion_email:'ndjdndfbsfks'+'  '}], 'alumnograduacion_email_formato_KO'],  
+    ['alumnograduacion', 'alumnograduacion_email', 104, 213, 'EDIT', [{alumnograduacion_email:' '+'@gmail.com'}], 'alumnograduacion_email_formato_KO'],
+    ['alumnograduacion', 'alumnograduacion_email', 104, 214, 'EDIT', [{alumnograduacion_email:'sdfsd.' +'@gmail.com'}], 'alumnograduacion_email_formato_KO'],
+    ['alumnograduacion', 'alumnograduacion_email', 104, 215, 'EDIT', [{alumnograduacion_email:'.sdfsdf'+'@gmail.com'}], 'alumnograduacion_email_formato_KO'],
+    ['alumnograduacion', 'alumnograduacion_email', 104, 216, 'EDIT', [{alumnograduacion_email:' sf.sfsd'+'@gmail.com'}], 'alumnograduacion_email_formato_KO'],     
+    ['alumnograduacion', 'alumnograduacion_email', 105, 217, 'EDIT', [{alumnograduacion_email:'sdasjaisjaj@gmail.com'}], true],   
     
-    //EMAIL
-    ['alumnograduacion', 'alumnograduacion_email', 106, 1, 'SEARCH', [{alumnograduacion_email:'a'.repeat(41)+'@gmail.com'}], 'alumnograduacion_email_max_size_KO'],  
-    ['alumnograduacion', 'alumnograduacion_email', 107, 1, 'SEARCH', [{alumnograduacion_email:'emailformatoKO'}], 'alumnograduacion_email_formato_KO'], 
-    ['alumnograduacion', 'alumnograduacion_email', 107, 1, 'SEARCH', [{alumnograduacion_email:'ndjdndfbsfks'+'  '}], 'alumnograduacion_email_formato_KO'],  
-    ['alumnograduacion', 'alumnograduacion_email', 107, 1, 'SEARCH', [{alumnograduacion_email:' '+'@gmail.com'}], 'alumnograduacion_email_formato_KO'],
-    ['alumnograduacion', 'alumnograduacion_email', 107, 1, 'SEARCH', [{alumnograduacion_email:'sdfsd.' +'@gmail.com'}], 'alumnograduacion_email_formato_KO'],
-    ['alumnograduacion', 'alumnograduacion_email', 107, 1, 'SEARCH', [{alumnograduacion_email:'.sdfsdf'+'@gmail.com'}], 'alumnograduacion_email_formato_KO'],
-    ['alumnograduacion', 'alumnograduacion_email', 107, 1, 'SEARCH', [{alumnograduacion_email:' sf.sfsd'+'@gmail.com'}], 'alumnograduacion_email_formato_KO'],     
-    ['alumnograduacion', 'alumnograduacion_email', 108, 1, 'SEARCH', [{alumnograduacion_email:'sdasjaisjaj@gmail.com'}], true],   
+    //SEARCH EMAIL
+    ['alumnograduacion', 'alumnograduacion_email', 106, 218, 'SEARCH', [{alumnograduacion_email:'a'.repeat(41)+'@gmail.com'}], 'alumnograduacion_email_max_size_KO'],  
+    ['alumnograduacion', 'alumnograduacion_email', 107, 219, 'SEARCH', [{alumnograduacion_email:'emailformatoKO'}], 'alumnograduacion_email_formato_KO'], 
+    ['alumnograduacion', 'alumnograduacion_email', 107, 220, 'SEARCH', [{alumnograduacion_email:'ndjdndfbsfks'+'  '}], 'alumnograduacion_email_formato_KO'],  
+    ['alumnograduacion', 'alumnograduacion_email', 107, 221, 'SEARCH', [{alumnograduacion_email:' '+'@gmail.com'}], 'alumnograduacion_email_formato_KO'],
+    ['alumnograduacion', 'alumnograduacion_email', 107, 222, 'SEARCH', [{alumnograduacion_email:'sdfsd.' +'@gmail.com'}], 'alumnograduacion_email_formato_KO'],
+    ['alumnograduacion', 'alumnograduacion_email', 107, 223, 'SEARCH', [{alumnograduacion_email:'.sdfsdf'+'@gmail.com'}], 'alumnograduacion_email_formato_KO'],
+    ['alumnograduacion', 'alumnograduacion_email', 107, 224, 'SEARCH', [{alumnograduacion_email:' sf.sfsd'+'@gmail.com'}], 'alumnograduacion_email_formato_KO'],     
+    ['alumnograduacion', 'alumnograduacion_email', 108, 225, 'SEARCH', [{alumnograduacion_email:'sdasjaisjaj@gmail.com'}], true],   
 
 ];
 
@@ -511,7 +525,7 @@ Las pruebas para tipo file se crearán mediante un array de nombre ‘nombrentid
 la entidad, 
 el campo, 
 el número de definición de test, 
-el número de prueba (secuencial desde 1 hasta el final)
+el número de prueba (secuencial desde 22 hasta el final)
 la acción a realizar
 // SOBRA el parámetro a probar (max_size_file, type_file, format_name_file)
 // valor/es de parámetro a probar [[parámetro, valor]] el código asociado de error/valor true de éxito
@@ -520,41 +534,39 @@ la acción a realizar
 
 let alumnograduacion_tests_files = [
     //FOTOACTO
+    
     //AÑADIR FOTOACTO
-    ['alumnograduacion', 'alumnograduacion_fotoacto', 109, 1, 'ADD', existe, [{max_size_file:''},{type_file: ''},{format_name_file: ''}], 'alumnograduacion_fotoacto_vacio_KO'], 
-    ['alumnograduacion', 'alumnograduacion_fotoacto', 110, 1, 'ADD', format_name_file, [{max_size_file:19},{type_file: 'jpg'},{format_name_file : 'nombre con espacios.jpg'}], 'alumnograduacion_fotoacto_nombrefoto_formato_KO'], //nombre con espacios y formato pdf
-    ['alumnograduacion', 'alumnograduacion_fotoacto', 110, 1, 'ADD', format_name_file, [{max_size_file:19},{type_file: 'jpg'},{format_name_file :  'nombreconñ.jpg'}], 'alumnograduacion_fotoacto_nombrefoto_formato_KO'], //nombre con espacios y formato jpg
-    ['alumnograduacion', 'alumnograduacion_fotoacto', 110, 1, 'ADD',format_name_file, [{max_size_file:19},{type_file: 'jpg'},{format_name_file : 'nombró.jpg'}], 'alumnograduacion_fotoacto_nombrefoto_formato_KO'], //nombre con espacios y formato jpg
-    ['alumnograduacion', 'alumnograduacion_fotoacto', 110, 1, 'ADD',format_name_file, [{max_size_file:19},{type_file: 'jpg'},{format_name_file : 'nombreúespacios.jpg'}], 'alumnograduacion_fotoacto_nombrefoto_formato_KO'], //nombre con espacios y formato jpg
-    ['alumnograduacion', 'alumnograduacion_fotoacto', 110, 1, 'ADD',format_name_file, [{max_size_file:19},{type_file: 'jpg'},{format_name_file : 'Ámbreespacios.jpg'}], 'alumnograduacion_fotoacto_nombrefoto_formato_KO'], //nombre con espacios y formato jpg
-    ['alumnograduacion', 'alumnograduacion_fotoacto', 111, 1, 'ADD',format_name_file, [{max_size_file:19},{type_file: 'jpg'},{format_name_file : 'nsdskj.jpg'}], 'alumnograduacion_fotoacto_nombrefoto_min_size_KO'], 
-    ['alumnograduacion', 'alumnograduacion_fotoacto', 112, 1, 'ADD',format_name_file, [{max_size_file:19},{type_file: 'jpg'},{format_name_file : 'n'.repeat(41)+'.jpg'}], 'alumnograduacion_fotoacto_nombrefoto_max_size_KO'], //nombre con 41 caracteres y formato jpg
-    ['alumnograduacion', 'alumnograduacion_fotoacto', 113, 1, 'ADD', type_file, [{max_size_file:19},{type_file: 'pdf'},{format_name_file: 'foto.pdf'}], 'alumnograduacion_fotoacto_formato_KO'], //formato jpg
-    ['alumnograduacion', 'alumnograduacion_fotoacto', 114, 1, 'ADD', max_size_file, [{max_size_file:21},{type_file:jpg},{format_name_file: 'foto.jpg'}], 'alumnograduacion_fotoacto_max_size_KO'], //20MB
-    ['alumnograduacion', 'alumnograduacion_fotoacto', 115, 1, 'ADD', [{max_size_file: 1}, {'type_file': 'jpg'}, {'format_name_file': 'nombrecorrecto.jpg'}], true], //correcto 
+    ['alumnograduacion', 'alumnograduacion_fotoacto', 109, 226, 'ADD', existe, [{max_size_file:''},{type_file: ''},{format_name_file: ''}], 'alumnograduacion_fotoacto_vacio_KO'], 
+    ['alumnograduacion', 'alumnograduacion_fotoacto', 110, 227, 'ADD', format_name_file, [{max_size_file:19},{type_file: 'jpg'},{format_name_file : 'nombre con espacios.jpg'}], 'alumnograduacion_fotoacto_nombrefoto_formato_KO'], //nombre con espacios y formato pdf
+    ['alumnograduacion', 'alumnograduacion_fotoacto', 110, 228, 'ADD', format_name_file, [{max_size_file:19},{type_file: 'jpg'},{format_name_file :  'nombreconñ.jpg'}], 'alumnograduacion_fotoacto_nombrefoto_formato_KO'], //nombre con espacios y formato jpg
+    ['alumnograduacion', 'alumnograduacion_fotoacto', 110, 229, 'ADD',format_name_file, [{max_size_file:19},{type_file: 'jpg'},{format_name_file : 'nombró.jpg'}], 'alumnograduacion_fotoacto_nombrefoto_formato_KO'], //nombre con espacios y formato jpg
+    ['alumnograduacion', 'alumnograduacion_fotoacto', 110, 230, 'ADD',format_name_file, [{max_size_file:19},{type_file: 'jpg'},{format_name_file : 'nombreúespacios.jpg'}], 'alumnograduacion_fotoacto_nombrefoto_formato_KO'], //nombre con espacios y formato jpg
+    ['alumnograduacion', 'alumnograduacion_fotoacto', 110, 231, 'ADD',format_name_file, [{max_size_file:19},{type_file: 'jpg'},{format_name_file : 'Ámbreespacios.jpg'}], 'alumnograduacion_fotoacto_nombrefoto_formato_KO'], //nombre con espacios y formato jpg
+    ['alumnograduacion', 'alumnograduacion_fotoacto', 111, 232, 'ADD',format_name_file, [{max_size_file:19},{type_file: 'jpg'},{format_name_file : 'nsdskj.jpg'}], 'alumnograduacion_fotoacto_nombrefoto_min_size_KO'], 
+    ['alumnograduacion', 'alumnograduacion_fotoacto', 112, 233, 'ADD',format_name_file, [{max_size_file:19},{type_file: 'jpg'},{format_name_file : 'n'.repeat(41)+'.jpg'}], 'alumnograduacion_fotoacto_nombrefoto_max_size_KO'], //nombre con 41 caracteres y formato jpg
+    ['alumnograduacion', 'alumnograduacion_fotoacto', 113, 234, 'ADD', type_file, [{max_size_file:19},{type_file: 'pdf'},{format_name_file: 'foto.pdf'}], 'alumnograduacion_fotoacto_formato_KO'], //formato jpg
+    ['alumnograduacion', 'alumnograduacion_fotoacto', 114, 235, 'ADD', max_size_file, [{max_size_file:21},{type_file:'jpg'},{format_name_file: 'foto.jpg'}], 'alumnograduacion_fotoacto_max_size_KO'], //20MB
+    ['alumnograduacion', 'alumnograduacion_fotoacto', 115, 236, 'ADD', [{max_size_file: 1}, {'type_file': 'jpg'}, {'format_name_file': 'nombrecorrecto.jpg'}], true], //correcto 
    
     //EDITAR FOTOACTO
-    ['alumnograduacion', 'alumnograduacion_fotoacto', 1, 1, 'ADD', existe, [{max_size_file:''},{type_file: ''},{format_name_file: ''}], 'alumnograduacion_fotoacto_vacio_KO'], 
-    ['alumnograduacion', 'alumnograduacion_fotoacto', 1, 1, 'EDIT', max_size_file, [{max_size_file:21},{type_file:jpg},{format_name_file: 'foto.jpg'}], 'alumnograduacion_fotoacto_max_size_KO'], //20MB
-    ['alumnograduacion', 'alumnograduacion_fotoacto', 2, 1, 'EDIT', type_file, [{max_size_file:19},{type_file: 'pdf'},{format_name_file: 'foto.pdf'}], 'alumnograduacion_fotoacto_formato_KO'], //formato jpg
-    ['alumnograduacion', 'alumnograduacion_fotoacto', 10, 1, 'EDIT',format_name_file, [{max_size_file:19},{type_file: 'jpg'},{format_name_file : 'nom.jpg'}], 'alumnograduacion_fotoacto_nombrefoto_min_size_KO'], //nombre con 3 caracteres y formato pdf
-    ['alumnograduacion', 'alumnograduacion_fotoacto', 3, 1, 'EDIT',format_name_file, [{max_size_file:19},{type_file: 'jpg'},{format_name_file : 'nombre con espacios.jpg'}], 'alumnograduacion_fotoacto_nombrefoto_formato_KO'], //nombre con espacios y formato pdf
-    ['alumnograduacion', 'alumnograduacion_fotoacto', 3, 1, 'EDIT',format_name_file, [{max_size_file:19},{type_file: 'jpg'},{format_name_file : 'nombreconñ.jpg'}], 'alumnograduacion_fotoacto_nombrefoto_formato_KO'], //nombre con espacios y formato pdf
-    ['alumnograduacion', 'alumnograduacion_fotoacto', 3, 1, 'EDIT',format_name_file, [{max_size_file:19},{type_file: 'jpg'},{format_name_file : 'nombró.jpg'}], 'alumnograduacion_fotoacto_nombrefoto_formato_KO'], //nombre con espacios y formato jpg
-    ['alumnograduacion', 'alumnograduacion_fotoacto', 3, 1, 'EDIT',format_name_file, [{max_size_file:19},{type_file: 'jpg'},{format_name_file : 'nombreúespacios.jpg'}], 'alumnograduacion_fotoacto_nombrefoto_formato_KO'], //nombre con espacios y formato jpg
-    ['alumnograduacion', 'alumnograduacion_fotoacto', 3, 1, 'EDIT',format_name_file, [{max_size_file:19},{type_file: 'jpg'},{format_name_file : 'Ámbreespacios.jpg'}], 'alumnograduacion_fotoacto_nombrefoto_formato_KO'], //nombre con espacios y formato jpg
-    ['alumnograduacion', 'alumnograduacion_fotoacto', 5, 1, 'EDIT',format_name_file, [{max_size_file:19},{type_file: 'jpg'},{format_name_file : 'n'.repeat(41)+'.jpg'}], 'alumnograduacion_fotoacto_nombrefoto_max_size_KO'], //nombre con 41 caracteres y formato jpg
-    ['alumnograduacion', 'alumnograduacion_fotoacto', 5, 1, 'EDIT',format_name_file, [{max_size_file:19},{type_file: 'jpg'},{format_name_file : 'nsdskj.jpg'}], 'alumnograduacion_fotoacto_nombrefoto_min_size_KO'], 
-    ['alumnograduacion', 'alumnograduacion_fotoacto', 6, 1, 'EDIT', [{max_size_file: 1}, {'type_file': 'jpg'}, {'format_name_file': 'nombrecorrecto.jpg'}], true], //correcto 
+    ['alumnograduacion', 'alumnograduacion_fotoacto', 116, 237, 'EDIT', existe, [{max_size_file:''},{type_file: ''},{format_name_file: ''}], 'alumnograduacion_fotoacto_vacio_KO'], 
+    ['alumnograduacion', 'alumnograduacion_fotoacto', 117, 238, 'EDIT',format_name_file, [{max_size_file:19},{type_file: 'jpg'},{format_name_file : 'nombre con espacios.jpg'}], 'alumnograduacion_fotoacto_nombrefoto_formato_KO'], //nombre con espacios y formato pdf
+    ['alumnograduacion', 'alumnograduacion_fotoacto', 117, 239, 'EDIT',format_name_file, [{max_size_file:19},{type_file: 'jpg'},{format_name_file : 'nombreconñ.jpg'}], 'alumnograduacion_fotoacto_nombrefoto_formato_KO'], //nombre con espacios y formato pdf
+    ['alumnograduacion', 'alumnograduacion_fotoacto', 117, 240, 'EDIT',format_name_file, [{max_size_file:19},{type_file: 'jpg'},{format_name_file : 'nombró.jpg'}], 'alumnograduacion_fotoacto_nombrefoto_formato_KO'], //nombre con espacios y formato jpg
+    ['alumnograduacion', 'alumnograduacion_fotoacto', 117, 241, 'EDIT',format_name_file, [{max_size_file:19},{type_file: 'jpg'},{format_name_file : 'nombreúespacios.jpg'}], 'alumnograduacion_fotoacto_nombrefoto_formato_KO'], //nombre con espacios y formato jpg
+    ['alumnograduacion', 'alumnograduacion_fotoacto', 117, 242, 'EDIT',format_name_file, [{max_size_file:19},{type_file: 'jpg'},{format_name_file : 'Ámbreespacios.jpg'}], 'alumnograduacion_fotoacto_nombrefoto_formato_KO'], //nombre con espacios y formato jpg
+    ['alumnograduacion', 'alumnograduacion_fotoacto', 118, 243, 'EDIT',format_name_file, [{max_size_file:19},{type_file: 'jpg'},{format_name_file : 'nsdskj.jpg'}], 'alumnograduacion_fotoacto_nombrefoto_min_size_KO'], 
+    ['alumnograduacion', 'alumnograduacion_fotoacto', 119, 244, 'EDIT',format_name_file, [{max_size_file:19},{type_file: 'jpg'},{format_name_file : 'n'.repeat(41)+'.jpg'}], 'alumnograduacion_fotoacto_nombrefoto_max_size_KO'], //nombre con 41 caracteres y formato jpg
+    ['alumnograduacion', 'alumnograduacion_fotoacto', 120, 245, 'EDIT', type_file, [{max_size_file:19},{type_file: 'pdf'},{format_name_file: 'foto.pdf'}], 'alumnograduacion_fotoacto_formato_KO'], //formato jpg
+    ['alumnograduacion', 'alumnograduacion_fotoacto', 121, 246, 'EDIT', max_size_file, [{max_size_file:21},{type_file:'jpg'},{format_name_file: 'foto.jpg'}], 'alumnograduacion_fotoacto_max_size_KO'], //20MB
+    ['alumnograduacion', 'alumnograduacion_fotoacto', 122, 247, 'EDIT', [{max_size_file: 1}, {'type_file': 'jpg'}, {'format_name_file': 'nombrecorrecto.jpg'}], true], //correcto 
 
     //BUSCAR FOTOACTO
-    ['alumnograduacion', 'alumnograduacion_fotoacto', 10, 1, 'EDIT',format_name_file, [{max_size_file:19},{type_file: 'jpg'},{format_name_file : 'nom.jpg'}], 'alumnograduacion_fotoacto_nombrefoto_min_size_KO'], //nombre con 3 caracteres y formato pdf
-    ['alumnograduacion', 'alumnograduacion_fotoacto', 11, 1, 'EDIT',format_name_file, [{max_size_file:19},{type_file: 'jpg'},{format_name_file : 'n'.repeat(41)+'.jpg'}], 'alumnograduacion_fotoacto_nombrefoto_max_size_KO'], //nombre con 41 caracteres y formato pdf
-    ['alumnograduacion', 'alumnograduacion_fotoacto', 3, 1, 'EDIT',format_name_file, [{max_size_file:19},{type_file: 'jpg'},{format_name_file : 'nombre con espacios.jpg'}], 'alumnograduacion_fotoacto_nombrefoto_formato_KO'], //nombre con espacios y formato pdf
-    ['alumnograduacion', 'alumnograduacion_fotoacto', 3, 1, 'EDIT',format_name_file, [{max_size_file:19},{type_file: 'jpg'},{format_name_file : 'nombreconñ.jpg'}], 'alumnograduacion_fotoacto_nombrefoto_formato_KO'], //nombre con espacios y formato pdf
-    ['alumnograduacion', 'alumnograduacion_fotoacto', 3, 1, 'EDIT',format_name_file, [{max_size_file:19},{type_file: 'jpg'},{format_name_file : 'nombró.jpg'}], 'alumnograduacion_fotoacto_nombrefoto_formato_KO'], //nombre con espacios y formato jpg
-    ['alumnograduacion', 'alumnograduacion_fotoacto', 3, 1, 'EDIT',format_name_file, [{max_size_file:19},{type_file: 'jpg'},{format_name_file : 'nombreúespacios.jpg'}], 'alumnograduacion_fotoacto_nombrefoto_formato_KO'], //nombre con espacios y formato jpg
-    ['alumnograduacion', 'alumnograduacion_fotoacto', 3, 1, 'EDIT',format_name_file, [{max_size_file:19},{type_file: 'jpg'},{format_name_file : 'Ámbreespacios.jpg'}], 'alumnograduacion_fotoacto_nombrefoto_formato_KO'], //nombre con espacios y formato jpg
-    ['alumnograduacion', 'alumnograduacion_fotoacto', 5, 1, 'EDIT',format_name_file, [{max_size_file:19},{type_file: 'jpg'},{format_name_file : 'n'.repeat(41)+'.jpg'}], 'alumnograduacion_fotoacto_nombrefoto_max_size_KO'], //nombre con 41 caracteres y formato jpg
-    ['alumnograduacion', 'alumnograduacion_nombre', 106, 1, 'SEARCH', [{alumnograduacion_nombre:'Nombre'}], true]
+    ['alumnograduacion', 'alumnograduacion_fotoacto', 123, 248, 'SEARCH',format_name_file, [{max_size_file:19},{type_file: 'jpg'},{format_name_file : 'nombre con espacios.jpg'}], 'alumnograduacion_fotoacto_nombrefoto_formato_KO'], //nombre con espacios y formato pdf
+    ['alumnograduacion', 'alumnograduacion_fotoacto', 123, 249, 'SEARCH',format_name_file, [{max_size_file:19},{type_file: 'jpg'},{format_name_file : 'nombreconñ.jpg'}], 'alumnograduacion_fotoacto_nombrefoto_formato_KO'], //nombre con espacios y formato pdf
+    ['alumnograduacion', 'alumnograduacion_fotoacto', 123, 250, 'SEARCH',format_name_file, [{max_size_file:19},{type_file: 'jpg'},{format_name_file : 'nombró.jpg'}], 'alumnograduacion_fotoacto_nombrefoto_formato_KO'], //nombre con espacios y formato jpg
+    ['alumnograduacion', 'alumnograduacion_fotoacto', 123, 251, 'SEARCH',format_name_file, [{max_size_file:19},{type_file: 'jpg'},{format_name_file : 'nombreúespacios.jpg'}], 'alumnograduacion_fotoacto_nombrefoto_formato_KO'], //nombre con espacios y formato jpg
+    ['alumnograduacion', 'alumnograduacion_fotoacto', 123, 252, 'SEARCH',format_name_file, [{max_size_file:19},{type_file: 'jpg'},{format_name_file : 'Ámbreespacios.jpg'}], 'alumnograduacion_fotoacto_nombrefoto_formato_KO'], //nombre con espacios y formato jpg
+    ['alumnograduacion', 'alumnograduacion_fotoacto', 124, 253, 'SEARCH',format_name_file, [{max_size_file:19},{type_file: 'jpg'},{format_name_file : 'n'.repeat(41)+'.jpg'}], 'alumnograduacion_fotoacto_nombrefoto_max_size_KO'], //nombre con 41 caracteres y formato jpg
+    ['alumnograduacion', 'alumnograduacion_fotoacto', 125, 254, 'SEARCH', [{max_size_file: 1}, {'type_file': 'jpg'}, {'format_name_file': 'nombrecorrecto.jpg'}], true]
 ];
