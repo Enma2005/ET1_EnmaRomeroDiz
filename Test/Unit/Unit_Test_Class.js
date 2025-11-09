@@ -1,58 +1,31 @@
 class Unit_Test {
     
-    constructor(){
+    constructor(entidad){
 
-        this.clases = [
-            {
-                stringclase : 'alumnograduacion',
-                attributes : [  'alumnograduacion_login',
-                                'alumnograduacion_password',
-                                'alumnograduacion_nombre',
-                                'alumnograduacion_apellidos',
-                                'alumnograduacion_titulacion',
-                                'alumnograduacion_dni',
-                                'alumnograduacion_telefono',
-                                'alumnograduacion_direccion',
-                                'alumnograduacion_email',
-                                'alumnograduacion_fotoacto',
-                                'nuevo_alumnograduacion_fotoacto'
-                            ],
-            },
-            /*{
-                stringclase : "alumnograduacion",
-                attributes : ['',''],
-            }*/
-        ];
+        
+        
+        this.nombreentidad = entidad;
 
         this.actions = ["ADD","EDIT","SEARCH"]
         
         var test_result = this.test_class_and_method_validation();
 
         this.dom = new dom;
-        //this.dom_table = new dom_table;
 
-        /**
-         * datosbotones = {
-         *  {
-         *      icono: 'ruta icono',
-         *      evento: 'evento',
-         *      invocacion: 'invocacion funcion'
-         *  },
-         *  {
-         *  },
-         *  .
-         *  .
-         *  .
-         * }
-         * 
-         */
         let marcados =	{
 					existe: {value:false, style:'background-color: red'}
         };
 
-        this.dom.showData('IU_Test_result', test_result, marcados);
+        const newWindow = window.open("", "Nueva Ventana test Unit", "width=1100,height=800");
+        
+        this.dom.showData('Div_IU_Test', test_result, marcados);
 
-        //this.comprobar_metodo_funciona('nada');
+        newWindow.document.body.innerHTML = document.getElementById('Div_IU_Test').innerHTML;
+        document.getElementById('Div_IU_Test').style.display = 'none';
+
+        newWindow.document.close();       
+
+
 
     }
 
@@ -67,7 +40,7 @@ class Unit_Test {
     */
     test_class_and_method_validation(){
         
-        const entidad = this.clases;
+        //const entidad = this.clases;
         
         // creo el objeto de salida que incluira todos los objetos de comprobacion de metodos de validacion
         var output = [];
@@ -75,7 +48,7 @@ class Unit_Test {
         let output_count = 0;
 
         // recorro todas las clases definidas
-        for (let i=0;i<entidad.length;i++){
+        //for (let i=0;i<entidad.length;i++){
         
             // creo el objeto de cada comprobacion de metodo de validacion
             var partial_output = {
@@ -87,12 +60,12 @@ class Unit_Test {
             };
 
             var validclass = true;
-            partial_output.clase = entidad[i].stringclase;
+            partial_output.clase = this.nombreentidad;
             
             // compruebo si la clase esta definida
             // hago try catch para evitar el pete por referenceError si no existe
             try{
-               if (typeof eval(entidad[i].stringclase) == 'function'){
+               if (typeof eval(this.nombreentidad) == 'function'){
                     validclass = true;
                }
             }
@@ -106,12 +79,12 @@ class Unit_Test {
                 
             if (validclass){
                 // para instanciar la clase necesita que el eval del string que la identifica
-                var claseacrear =  eval(entidad[i].stringclase);               
-                this.objetocomprobar = new claseacrear('test');
+                var claseacrear =  eval(this.nombreentidad);               
+                this.entidad = new claseacrear('test');
                 
 
                 // el metodo __proto__ devuelve un array con todos los metodos que tiene el objeto
-                var listametodos = this.objetocomprobar.__proto__;
+                var listametodos = this.entidad.__proto__;
 
                 // recorro las acciones para las cuales tengo validaciones
                 for (let j=0;j<this.actions.length;j++){
@@ -120,10 +93,10 @@ class Unit_Test {
                     // al entrar en la accion compruebo si existe la validacion de submit de accion
 
                     // creo el nombre del metodo de submit de accion
-                    var misubmitfunction = action+'_submit_'+entidad[i].stringclase;
+                    var misubmitfunction = action+'_submit_'+this.nombreentidad;
                     // creo el registro de comprobacion del submit de accion para el resultado
                     var submit_partial_output = {
-                            clase : entidad[i].stringclase,
+                            clase : this.nombreentidad,
                             accion : action,
                             metodo : misubmitfunction,
                             existe : false,
@@ -144,11 +117,11 @@ class Unit_Test {
                     output[output_count] = submit_partial_output;
                     // actualizo el indice de la salida
                     output_count++;
-                    
-                    // recorro todos los atributos para ver si tengo las validaciones para cada una de las acciones
-                    for (let x=0;x<entidad[i].attributes.length;x++){
 
-                        var atributo = entidad[i].attributes[x];
+                    // recorro todos los atributos para ver si tengo las validaciones para cada una de las acciones
+                    for (let x=0;x<this.entidad.attributes.length;x++){
+
+                        var atributo = this.entidad.attributes[x];
                         var mifunction = action+"_"+atributo+"_validation";
                         
 
@@ -161,7 +134,7 @@ class Unit_Test {
                             partial_output.existe = false;
                         }
 
-                        partial_output.clase = entidad[i].stringclase;
+                        partial_output.clase = this.nombreentidad;
                         partial_output.accion = action;
                         partial_output.metodo = mifunction;
                         partial_output.error = "No verificado";
@@ -171,13 +144,47 @@ class Unit_Test {
                         output_count++;
 
                     }
+
                 }
+
+                var actions_createForm = ['ADD','EDIT','DELETE','SEARCH','SHOWCURRENT'];
+
+                for (var k=0;k<actions_createForm.length;k++){
+                // compruebo create_form
+
+                    // creo el nombre del metodo de submit de accion
+                    var micreateFormfunction = 'createForm_'+actions_createForm[k];
+                    // creo el registro de comprobacion del submit de accion para el resultado
+                    var submit_partial_output = {
+                            clase : this.nombreentidad,
+                            accion : action,
+                            metodo : micreateFormfunction,
+                            existe : false,
+                            error : 'No verificado'
+                        };
+                    // si el metodo de submit de accion esta en los metodos de la clase actualizo la propiedad existe
+                    if (micreateFormfunction in listametodos){
+                        submit_partial_output.existe = true;
+                        
+                            //var error = this.comprobar_metodo_funciona(misubmitfunction);
+                            //submit_partial_output.error = error;                        
+                        
+                    }
+                    else{
+                        submit_partial_output.existe = false;
+                    }
+                    // almaceno el registro de comprobacion del submit de accion en la salida
+                    output[output_count] = submit_partial_output;
+                    // actualizo el indice de la salida
+                    output_count++;
+                }
+
             }
 
            
             
-        }
-console.log(output);
+        //}
+
         return output;
     
     }
