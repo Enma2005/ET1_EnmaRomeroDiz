@@ -1,0 +1,906 @@
+class alumnograduacion extends Validations {
+
+	constructor(esTest) {
+		super();
+		this.dom = new dom();
+		this.nombreentidad = 'alumnograduacion';
+
+		if (esTest == 'test') {
+
+		}
+		else {
+			this.dom.fillform(this.manual_form_creation(), 'IU_form');
+		}
+	}
+
+	/**
+	 * replace the content of section element with a particular entity menu
+	 * @returns 
+	 */
+	manual_form_creation() {
+		var form_content = `
+			<form action="http://193.147.87.202/procesaform.php" method="POST" enctype="multipart/form-data" onsubmit="return entidad.ADD_submit_alumnograduacion();">
+
+			
+			<label class="label_alumnograduacion_login">Login</label>
+			<input type='text' id='alumnograduacion_login' name='alumnograduacion_login' onblur=" return entidad.ADD_alumnograduacion_login_validation();"></input>
+			<span id="span_error_alumnograduacion_login" ><a id="error_alumnograduacion_login"></a></span>
+			<br>
+
+			<label class="label_alumnograduacion_password">Password</label>
+			<input type='text' id='alumnograduacion_password' name='alumnograduacion_password' onblur=" return entidad.ADD_alumnograduacion_password_validation();"></input>
+			<span id="span_error_alumnograduacion_password" ><a id="error_alumnograduacion_password"></a></span>
+			<br>
+			
+			<label class="label_alumnograduacion_nombre">Nombre</label>
+			<input type='text' id='alumnograduacion_nombre' name='alumnograduacion_nombre' onblur=" return entidad.ADD_alumnograduacion_nombre_validation();"></input>
+			<span id="span_error_alumnograduacion_nombre" ><a id="error_alumnograduacion_nombre"></a></span>
+			<br>
+			
+			<label class="label_alumnograduacion_apellidos">Apellidos</label>
+			<input type='text' id='alumnograduacion_apellidos' name='alumnograduacion_apellidos'></input>
+			<span id="span_error_alumnograduacion_apellidos" ><a id="error_alumnograduacion_apellidos"></a></span>
+			<br>
+
+			<label class="label_alumnograduacion_titulacion">Titulación</label>
+			<select id="alumnograduacion_titulacion" name="alumnograduacion_titulacion" required>
+  				<option value="">-- Selecciona tu titulación --</option>
+  				<option value="GREI">GREI</option>
+  				<option value="GRIA">GRIA</option>
+  				<option value="MEI">MEI</option>
+  				<option value="MIA">MIA</option>
+  				<option value="PCEO">PCEO</option>
+			</select>
+			<span id="span_error_alumnograduacion_titulacion"><a id="error_alumnograduacion_titulacion"></a></span>
+			<br>
+			
+			<label class="label_alumnograduacion_dni">DNI</label>
+			<input type='text' id='alumnograduacion_dni' name='alumnograduacion_dni' onblur=" return entidad.ADD_alumnograduacion_dni_validation();"></input>
+			<span id="span_error_alumnograduacion_dni"><a id="error_alumnograduacion_dni"></a></span>
+			<br>
+			
+			<label class="label_alumnograduacion_telefono">Teléfono</label>
+			<input type='text' id='alumnograduacion_telefono' name='alumnograduacion_telefono'></input>
+			<span id="span_error_alumnograduacion_telefono" ><a id="error_alumnograduacion_telefono"></a></span>
+			<br>
+
+			<label class="label_alumnograduacion_direccion">Dirección</label>
+			<textarea rows="5" cols="33" type='text' id='alumnograduacion_direccion' name='alumnograduacion_direccion'></textarea>
+			<span id="span_error_alumnograduacion_direccion" ><a id="error_alumnograduacion_direccion"></a></span>
+			<br>
+
+			<label class="label_alumnograduacion_email">Correo Electrónico</label>
+			<input type='text' id='alumnograduacion_email' name='alumnograduacion_email'></input>
+			<span id="span_error_alumnograduacion_email" ><a id="error_alumnograduacion_email"></a></span>
+
+			<br>
+			<label id="label_alumnograduacion_fotoacto" class="label_alumnograduacion_fotoacto">Foto Acto</label>
+			<input type='text' id='alumnograduacion_fotoacto' name='alumnograduacion_fotoacto'></input>
+			<span id="span_error_alumnograduacion_fotoacto"><a id="error_alumnograduacion_fotoacto"></a></span>
+			<a id="link_alumnograduacion_fotoacto" href="http://193.147.87.202/ET2/filesuploaded/files_alumnograduacion_fotoacto/"><img src="./iconos/FILE.png" /></a>
+			
+			<label id="label_nuevo_alumnograduacion_fotoacto" class="label_nuevo_alumnograduacion_fotoacto">Nueva Foto Acto</label>
+			<input type='file' id='nuevo_alumnograduacion_fotoacto' name='nuevo_alumnograduacion_fotoacto'></input>
+			<span id="span_error_nuevo_alumnograduacion_fotoacto"><a id="error_nuevo_alumnograduacion_fotoacto"></a></span>
+			<br>
+
+			<input id="submit_button" type="submit" value="Submit">
+
+		</form>
+		`;
+		return form_content;
+
+	}
+
+	/**********************************************************************************************
+		fields validations for ADD
+	***********************************************************************************************/
+
+	/** 
+		
+		@param 
+		@return
+			{string} Error code of field value (fieldname_validationfunction_KO) 
+			or
+			{bool} true due the field value is correct
+
+	*/
+
+	/**
+		
+		@param 
+		@return
+			{string} Error code of field value (fieldname_validationfunction_KO) 
+			or
+			{bool} true due the field value is correct
+
+	*/
+
+	/* Validaciones para ADD/EDIT */
+
+	ADD_alumnograduacion_login_validation() {
+/*
+		if (!(this.not_empty('alumnograduacion_login'))) {
+			this.dom.mostrar_error_campo('alumnograduacion_login', 'alumnograduacion_login_vacio_KO');
+			return "alumnograduacion_login_vacio_KO";
+		}
+*/		if (!(this.min_size('alumnograduacion_login', 4))) {
+			this.dom.mostrar_error_campo('alumnograduacion_login', 'alumnograduacion_login_min_size_KO');
+			return "alumnograduacion_login_min_size_KO";
+		}
+
+		if (!(this.max_size('alumnograduacion_login', 15))) {
+			this.dom.mostrar_error_campo('alumnograduacion_login', 'alumnograduacion_login_max_size_KO');
+			return "alumnograduacion_login_max_size_KO";
+		}
+
+		if (!(this.format('alumnograduacion_login', '^[A-Za-z]+$'))) {
+			this.dom.mostrar_error_campo('alumnograduacion_login', 'alumnograduacion_login_format_KO');
+			return "alumnograduacion_login_format_KO";
+		}
+
+		this.dom.mostrar_exito_campo('alumnograduacion_login');
+		return true;
+
+	}
+
+	ADD_alumnograduacion_password_validation() {
+
+		if (!(this.min_size('alumnograduacion_password', 8))) {
+			this.dom.mostrar_error_campo('alumnograduacion_password', 'alumnograduacion_password_min_size_KO');
+			return "alumnograduacion_password_min_size_KO";
+		}
+
+		if (!(this.max_size('alumnograduacion_password', 64))) {
+			this.dom.mostrar_error_campo('alumnograduacion_password', 'alumnograduacion_password_max_size_KO');
+			return "alumnograduacion_password_max_size_KO";
+		}
+
+		if (!(this.format('alumnograduacion_password', '^[A-Za-z ]+$'))) {
+			this.dom.mostrar_error_campo('alumnograduacion_password', 'alumnograduacion_password_format_KO');
+			return "alumnograduacion_password_format_KO";
+		}
+
+		this.dom.mostrar_exito_campo('alumnograduacion_password');
+		return true;
+
+	}
+
+	ADD_alumnograduacion_nombre_validation() {
+
+		if (!(this.min_size('alumnograduacion_nombre', 2))) {
+			this.dom.mostrar_error_campo('alumnograduacion_nombre', 'alumnograduacion_nombre_min_size_KO');
+			return "alumnograduacion_nombre_min_size_KO";
+		}
+
+		if (!(this.max_size('alumnograduacion_nombre', 25))) {
+			this.dom.mostrar_error_campo('alumnograduacion_nombre', 'alumnograduacion_nombre_max_size_KO');
+			return "alumnograduacion_nombre_max_size_KO";
+		}
+
+		if (!(this.format('alumnograduacion_nombre', '^[A-Za-zÁÉÍÓÚÜÑñáéíóúü ]+$'))) {
+			this.dom.mostrar_error_campo('alumnograduacion_nombre', 'alumnograduacion_nombre_format_KO');
+			return "alumnograduacion_nombre_format_KO";
+		}
+
+		this.dom.mostrar_exito_campo('alumnograduacion_nombre');
+		return true;
+
+	}
+
+	ADD_alumnograduacion_apellidos_validation() {
+
+		if (!(this.min_size('alumnograduacion_apellidos', 2))) {
+			this.dom.mostrar_error_campo('alumnograduacion_apellidos', 'alumnograduacion_apellidos_min_size_KO');
+			return "alumnograduacion_apellidos_min_size_KO";
+		}
+
+		if (!(this.max_size('alumnograduacion_apellidos', 35))) {
+			this.dom.mostrar_error_campo('alumnograduacion_apellidos', 'alumnograduacion_apellidos_max_size_KO');
+			return "alumnograduacion_apellidos_max_size_KO";
+		}
+
+		if (!(this.format('alumnograduacion_apellidos', '^[A-Za-zÁÉÍÓÚÜÑñáéíóúü ]+$'))) {
+			this.dom.mostrar_error_campo('alumnograduacion_apellidos', 'alumnograduacion_apellidos_format_KO');
+			return "alumnograduacion_apellidos_format_KO";
+		}
+
+		this.dom.mostrar_exito_campo('alumnograduacion_apellidos');
+		return true;
+
+	}
+
+	ADD_alumnograduacion_titulacion_validation() {
+
+		const allowed = ['GREI', 'GRIA', 'MEI', 'MIA', 'PCEO'];
+		const el = document.getElementById('alumnograduacion_titulacion');
+		const value = el ? el.value : '';
+
+		if (!value) {
+			this.dom.mostrar_error_campo('alumnograduacion_titulacion', 'alumnograduacion_titulacion_empty_KO');
+			return 'alumnograduacion_titulacion_empty_KO';
+		}
+
+		if (!allowed.includes(value)) {
+			this.dom.mostrar_error_campo('alumnograduacion_titulacion', 'alumnograduacion_titulacion_format_KO');
+			return 'alumnograduacion_titulacion_format_KO';
+		}
+
+		this.dom.mostrar_exito_campo('alumnograduacion_titulacion');
+		return true;
+
+	}
+
+	ADD_alumnograduacion_dni_validation() {
+
+		let id = "alumnograduacion_dni";
+
+		if (!this.min_size(id, 9)) {
+			this.dom.mostrar_error_campo(id, "alumnograduacion_dni_min_size_KO");
+			return "alumnograduacion_dni_min_size_KO";
+		}
+		if (!this.max_size(id, 9)) {
+			this.dom.mostrar_error_campo(id, "alumnograduacion_dni_max_size_KO");
+			return "alumnograduacion_dni_max_size_KO";
+		}
+		if (!this.format(id, "^[0-9]{8}[A-Z]$")) {
+			this.dom.mostrar_error_campo(id, "alumnograduacion_dni_format_KO");
+			return "alumnograduacion_dni_format_KO";
+		}
+		if (!this.validDNIoNIE(document.getElementById(id).value)) {
+			this.dom.mostrar_error_campo(id, "alumnograduacion_dni_valid_KO");
+			return "alumnograduacion_dni_valid_KO";
+		}
+
+		this.dom.mostrar_exito_campo(id);
+		return true;
+	}
+
+	ADD_alumnograduacion_telefono_validation() {
+
+		if (!(this.min_size('alumnograduacion_telefono', 9))) {
+			this.dom.mostrar_error_campo('alumnograduacion_telefono', 'alumnograduacion_telefono_min_size_KO');
+			return "alumnograduacion_telefono_min_size_KO";
+		}
+
+		if (!(this.max_size('alumnograduacion_telefono', 9))) {
+			this.dom.mostrar_error_campo('alumnograduacion_telefono', 'alumnograduacion_telefono_max_size_KO');
+			return "alumnograduacion_telefono_max_size_KO";
+		}
+
+		if (!(this.format('alumnograduacion_telefono', '^[0-9]+$'))) {
+			this.dom.mostrar_error_campo('alumnograduacion_telefono', 'alumnograduacion_telefono_format_KO');
+			return "alumnograduacion_telefono_format_KO";
+		}
+
+		this.dom.mostrar_exito_campo('alumnograduacion_telefono');
+		return true;
+
+	}
+
+	ADD_alumnograduacion_direccion_validation() {
+
+		if (!(this.min_size('alumnograduacion_direccion', 5))) {
+			this.dom.mostrar_error_campo('alumnograduacion_direccion', 'alumnograduacion_direccion_min_size_KO');
+			return "alumnograduacion_direccion_min_size_KO";
+		}
+
+		if (!(this.max_size('alumnograduacion_direccion', 100))) {
+			this.dom.mostrar_error_campo('alumnograduacion_direccion', 'alumnograduacion_direccion_max_size_KO');
+			return "alumnograduacion_direccion_max_size_KO";
+		}
+
+		if (!(this.format('alumnograduacion_direccion', '^[A-Za-zÁÉÍÓÚÜÑñáéíóúü0123456789 ]+$'))) {
+			this.dom.mostrar_error_campo('alumnograduacion_direccion', 'alumnograduacion_direccion_format_KO');
+			return "alumnograduacion_direccion_format_KO";
+		}
+
+		this.dom.mostrar_exito_campo('alumnograduacion_direccion');
+		return true;
+
+	}
+
+	ADD_alumnograduacion_email_validation() {
+
+		if (!(this.min_size('alumnograduacion_email', 5))) {
+			this.dom.mostrar_error_campo('alumnograduacion_email', 'alumnograduacion_email_min_size_KO');
+			return "alumnograduacion_email_min_size_KO";
+		}
+
+		if (!(this.max_size('alumnograduacion_email', 40))) {
+			this.dom.mostrar_error_campo('alumnograduacion_email', 'alumnograduacion_email_max_size_KO');
+			return "alumnograduacion_email_max_size_KO";
+		}
+
+		if (!(this.format('alumnograduacion_email', '^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$'))) {
+			this.dom.mostrar_error_campo('alumnograduacion_email', 'alumnograduacion_email_format_KO');
+			return "alumnograduacion_email_format_KO";
+		}
+
+		this.dom.mostrar_exito_campo('alumnograduacion_email');
+		return true;
+
+	}
+
+	ADD_nuevo_alumnograduacion_fotoacto_validation() {
+
+		if (!(this.not_exist_file('nuevo_alumnograduacion_fotoacto'))) {
+			this.dom.mostrar_error_campo('nuevo_alumnograduacion_fotoacto', 'nuevo_alumnograduacion_fotoacto_empty_file_KO');
+			return "nuevo_alumnograduacion_fotoacto_empty_file_KO";
+		}
+
+		if (!(this.max_size_file('nuevo_alumnograduacion_fotoacto', 2000000))) {
+			this.dom.mostrar_error_campo('nuevo_alumnograduacion_fotoacto', 'nuevo_alumnograduacion_fotoacto_max_size_file_KO');
+			return "nuevo_alumnograduacion_fotoacto_max_size_file_KO";
+		}
+
+		if (!(this.type_file('nuevo_alumnograduacion_fotoacto', ['image/jpeg']))) {
+			this.dom.mostrar_error_campo('nuevo_alumnograduacion_fotoacto', 'nuevo_alumnograduacion_fotoacto_type_file_KO');
+			return "nuevo_alumnograduacion_fotoacto_type_file_KO";
+		}
+
+		if (!(this.format_name_file('nuevo_alumnograduacion_fotoacto', '[a-zA-Z.]+$'))) {
+			this.dom.mostrar_error_campo('nuevo_alumnograduacion_fotoacto', 'nuevo_alumnograduacion_fotoacto_format_name_file_KO');
+			return "nuevo_alumnograduacion_fotoacto_format_name_file_KO";
+		}
+
+		if (!(this.min_size('nuevo_alumnograduacion_fotoacto', 7))) {
+			this.dom.mostrar_error_campo('nuevo_alumnograduacion_fotoacto', 'nuevo_alumnograduacion_fotoacto_min_size_KO');
+			return "nuevo_alumnograduacion_fotoacto_min_size_KO";
+		}
+
+		if (!(this.max_size('nuevo_alumnograduacion_fotoacto', 40))) {
+			this.dom.mostrar_error_campo('nuevo_alumnograduacion_fotoacto', 'nuevo_alumnograduacion_fotoacto_max_size_KO');
+			return "nuevo_alumnograduacion_fotoacto_max_size_KO";
+		}
+
+		this.dom.mostrar_exito_campo('nuevo_alumnograduacion_fotoacto');
+		return true;
+
+	}
+
+	/**
+		
+		@param 
+		@return
+			{bool} true if all field validations are correct or false if any field validation is false
+
+	*/
+	ADD_submit_alumnograduacion() {
+
+		let result = (
+			(this.ADD_alumnograduacion_login_validation()) &
+			(this.ADD_alumnograduacion_password_validation()) &
+			(this.ADD_alumnograduacion_nombre_validation()) &
+			(this.ADD_alumnograduacion_apellidos_validation()) &
+			(this.ADD_alumnograduacion_titulacion_validation()) &
+			(this.ADD_alumnograduacion_dni_validation()) &
+			(this.ADD_alumnograduacion_telefono_validation()) &
+			(this.ADD_alumnograduacion_direccion_validation()) &
+			(this.ADD_alumnograduacion_email_validation()) &
+			(this.ADD_nuevo_alumnograduacion_fotoacto_validation())
+
+		)
+
+		result = Boolean(result);
+
+		return result;
+
+
+	}
+
+	EDIT_alumnograduacion_login_validation() {
+	/*	if (!(this.not_empty('alumnograduacion_login'))) {
+			this.dom.mostrar_error_campo('alumnograduacion_login', 'alumnograduacion_login_vacio_KO');
+			return "alumnograduacion_login_vacio_KO";
+		}
+	*/	if (!(this.min_size('alumnograduacion_login', 4))) {
+			this.dom.mostrar_error_campo('alumnograduacion_login', 'alumnograduacion_login_min_size_KO');
+			return "alumnograduacion_login_min_size_KO";
+		}
+
+		if (!(this.max_size('alumnograduacion_login', 15))) {
+			this.dom.mostrar_error_campo('alumnograduacion_login', 'alumnograduacion_login_max_size_KO');
+			return "alumnograduacion_login_max_size_KO";
+		}
+
+		if (!(this.format('alumnograduacion_login', '^[A-Za-z]+$'))) {
+			this.dom.mostrar_error_campo('alumnograduacion_login', 'alumnograduacion_login_format_KO');
+			return "alumnograduacion_login_format_KO";
+		}
+
+		this.dom.mostrar_exito_campo('alumnograduacion_login');
+		return true;
+	}
+
+	EDIT_alumnograduacion_password_validation() {
+
+		if (!(this.min_size('alumnograduacion_password', 8))) {
+			this.dom.mostrar_error_campo('alumnograduacion_password', 'alumnograduacion_password_min_size_KO');
+			return "alumnograduacion_password_min_size_KO";
+		}
+
+		if (!(this.max_size('alumnograduacion_password', 64))) {
+			this.dom.mostrar_error_campo('alumnograduacion_password', 'alumnograduacion_password_max_size_KO');
+			return "alumnograduacion_password_max_size_KO";
+		}
+
+		if (!(this.format('alumnograduacion_password', '^[A-Za-z ]+$'))) {
+			this.dom.mostrar_error_campo('alumnograduacion_password', 'alumnograduacion_password_format_KO');
+			return "alumnograduacion_password_format_KO";
+		}
+
+		this.dom.mostrar_exito_campo('alumnograduacion_password');
+		return true;
+
+	}
+
+	EDIT_alumnograduacion_nombre_validation() {
+
+		if (!(this.min_size('alumnograduacion_nombre', 2))) {
+			this.dom.mostrar_error_campo('alumnograduacion_nombre', 'alumnograduacion_nombre_min_size_KO');
+			return "alumnograduacion_nombre_min_size_KO";
+		}
+
+		if (!(this.max_size('alumnograduacion_nombre', 25))) {
+			this.dom.mostrar_error_campo('alumnograduacion_nombre', 'alumnograduacion_nombre_max_size_KO');
+			return "alumnograduacion_nombre_max_size_KO";
+		}
+
+		if (!(this.format('alumnograduacion_nombre', '^[A-Za-zÁÉÍÓÚÜÑñáéíóúü ]+$'))) {
+			this.dom.mostrar_error_campo('alumnograduacion_nombre', 'alumnograduacion_nombre_format_KO');
+			return "alumnograduacion_nombre_format_KO";
+		}
+
+		this.dom.mostrar_exito_campo('alumnograduacion_nombre');
+		return true;
+
+	}
+
+	EDIT_alumnograduacion_apellidos_validation() {
+
+		if (!(this.min_size('alumnograduacion_apellidos', 2))) {
+			this.dom.mostrar_error_campo('alumnograduacion_apellidos', 'alumnograduacion_apellidos_min_size_KO');
+			return "alumnograduacion_apellidos_min_size_KO";
+		}
+
+		if (!(this.max_size('alumnograduacion_apellidos', 35))) {
+			this.dom.mostrar_error_campo('alumnograduacion_apellidos', 'alumnograduacion_apellidos_max_size_KO');
+			return "alumnograduacion_apellidos_max_size_KO";
+		}
+
+		if (!(this.format('alumnograduacion_apellidos', '^[A-Za-zÁÉÍÓÚÜÑñáéíóúü ]+$'))) {
+			this.dom.mostrar_error_campo('alumnograduacion_apellidos', 'alumnograduacion_apellidos_format_KO');
+			return "alumnograduacion_apellidos_format_KO";
+		}
+
+		this.dom.mostrar_exito_campo('alumnograduacion_apellidos');
+		return true;
+
+	}
+
+	EDIT_alumnograduacion_titulacion_validation() {
+
+		const allowed = ['GREI', 'GRIA', 'MEI', 'MIA', 'PCEO'];
+		const el = document.getElementById('alumnograduacion_titulacion');
+		const value = el ? el.value : '';
+
+		if (!value) {
+			this.dom.mostrar_error_campo('alumnograduacion_titulacion', 'alumnograduacion_titulacion_empty_KO');
+			return 'alumnograduacion_titulacion_empty_KO';
+		}
+
+		if (!allowed.includes(value)) {
+			this.dom.mostrar_error_campo('alumnograduacion_titulacion', 'alumnograduacion_titulacion_format_KO');
+			return 'alumnograduacion_titulacion_format_KO';
+		}
+
+		this.dom.mostrar_exito_campo('alumnograduacion_titulacion');
+		return true;
+
+	}
+
+	EDIT_alumnograduacion_dni_validation() {
+
+		let id = "alumnograduacion_dni";
+
+		if (!this.min_size(id, 9)) {
+			this.dom.mostrar_error_campo(id, "alumnograduacion_dni_min_size_KO");
+			return "alumnograduacion_dni_min_size_KO";
+		}
+		if (!this.max_size(id, 9)) {
+			this.dom.mostrar_error_campo(id, "alumnograduacion_dni_max_size_KO");
+			return "alumnograduacion_dni_max_size_KO";
+		}
+		if (!this.format(id, "^[0-9]{8}[A-Z]$")) {
+			this.dom.mostrar_error_campo(id, "alumnograduacion_dni_format_KO");
+			return "alumnograduacion_dni_format_KO";
+		}
+		if (!this.validDNIoNIE(document.getElementById(id).value)) {
+			this.dom.mostrar_error_campo(id, "alumnograduacion_dni_valid_KO");
+			return "alumnograduacion_dni_valid_KO";
+		}
+
+		this.dom.mostrar_exito_campo(id);
+		return true;
+
+	}
+
+	EDIT_alumnograduacion_telefono_validation() {
+
+		if (!(this.min_size('alumnograduacion_telefono', 9))) {
+			this.dom.mostrar_error_campo('alumnograduacion_telefono', 'alumnograduacion_telefono_min_size_KO');
+			return "alumnograduacion_telefono_min_size_KO";
+		}
+
+		if (!(this.max_size('alumnograduacion_telefono', 9))) {
+			this.dom.mostrar_error_campo('alumnograduacion_telefono', 'alumnograduacion_telefono_max_size_KO');
+			return "alumnograduacion_telefono_max_size_KO";
+		}
+
+		if (!(this.format('alumnograduacion_telefono', '^[0-9]+$'))) {
+			this.dom.mostrar_error_campo('alumnograduacion_telefono', 'alumnograduacion_telefono_format_KO');
+			return "alumnograduacion_telefono_format_KO";
+		}
+
+		this.dom.mostrar_exito_campo('alumnograduacion_telefono');
+		return true;
+
+	}
+
+	EDIT_alumnograduacion_direccion_validation() {
+
+		if (!(this.min_size('alumnograduacion_direccion', 5))) {
+			this.dom.mostrar_error_campo('alumnograduacion_direccion', 'alumnograduacion_direccion_min_size_KO');
+			return "alumnograduacion_direccion_min_size_KO";
+		}
+
+		if (!(this.max_size('alumnograduacion_direccion', 100))) {
+			this.dom.mostrar_error_campo('alumnograduacion_direccion', 'alumnograduacion_direccion_max_size_KO');
+			return "alumnograduacion_direccion_max_size_KO";
+		}
+
+		if (!(this.format('alumnograduacion_direccion', '^[A-Za-zÁÉÍÓÚÜÑñáéíóúü1234567890 ]+$'))) {
+			this.dom.mostrar_error_campo('alumnograduacion_direccion', 'alumnograduacion_direccion_format_KO');
+			return "alumnograduacion_direccion_format_KO";
+		}
+
+		this.dom.mostrar_exito_campo('alumnograduacion_direccion');
+		return true;
+
+	}
+
+	EDIT_alumnograduacion_email_validation() {
+
+		if (!(this.min_size('alumnograduacion_email', 5))) {
+			this.dom.mostrar_error_campo('alumnograduacion_email', 'alumnograduacion_email_min_size_KO');
+			return "alumnograduacion_email_min_size_KO";
+		}
+
+		if (!(this.max_size('alumnograduacion_email', 40))) {
+			this.dom.mostrar_error_campo('alumnograduacion_email', 'alumnograduacion_email_max_size_KO');
+			return "alumnograduacion_email_max_size_KO";
+		}
+
+		if (!(this.format('alumnograduacion_email', '^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$'))) {
+			this.dom.mostrar_error_campo('alumnograduacion_email', 'alumnograduacion_email_format_KO');
+			return "alumnograduacion_email_format_KO";
+		}
+
+		this.dom.mostrar_exito_campo('alumnograduacion_email');
+		return true;
+
+	}
+
+	EDIT_nuevo_alumnograduacion_fotoacto_validation() {
+
+		if (!(this.not_exist_file('nuevo_alumnograduacion_fotoacto'))) {
+			this.dom.mostrar_error_campo('nuevo_alumnograduacion_fotoacto', 'nuevo_alumnograduacion_fotoacto_empty_file_KO');
+			return "nuevo_alumnograduacion_fotoacto_empty_file_KO";
+		}
+
+		if (!(this.max_size_file('nuevo_alumnograduacion_fotoacto', 2000000))) {
+			this.dom.mostrar_error_campo('nuevo_alumnograduacion_fotoacto', 'nuevo_alumnograduacion_fotoacto_max_size_file_KO');
+			return "nuevo_alumnograduacion_fotoacto_max_size_file_KO";
+		}
+
+		if (!(this.type_file('nuevo_alumnograduacion_fotoacto', ['image/jpeg']))) {
+			this.dom.mostrar_error_campo('nuevo_alumnograduacion_fotoacto', 'nuevo_alumnograduacion_fotoacto_type_file_KO');
+			return "nuevo_alumnograduacion_fotoacto_type_file_KO";
+		}
+
+		if (!(this.format_name_file('nuevo_alumnograduacion_fotoacto', '[a-zA-Z.]+$'))) {
+			this.dom.mostrar_error_campo('nuevo_alumnograduacion_fotoacto', 'nuevo_alumnograduacion_fotoacto_format_name_file_KO');
+			return "nuevo_alumnograduacion_fotoacto_format_name_file_KO";
+		}
+
+		if (!(this.min_size('nuevo_alumnograduacion_fotoacto', 7))) {
+			this.dom.mostrar_error_campo('nuevo_alumnograduacion_fotoacto', 'nuevo_alumnograduacion_fotoacto_min_size_KO');
+			return "nuevo_alumnograduacion_fotoacto_min_size_KO";
+		}
+
+		if (!(this.max_size('nuevo_alumnograduacion_fotoacto', 40))) {
+			this.dom.mostrar_error_campo('nuevo_alumnograduacion_fotoacto', 'nuevo_alumnograduacion_fotoacto_max_size_KO');
+			return "nuevo_alumnograduacion_fotoacto_max_size_KO";
+		}
+
+		this.dom.mostrar_exito_campo('nuevo_alumnograduacion_fotoacto');
+		return true;
+
+	}
+
+
+	EDIT_submit_alumnograduacion() {
+
+		let result = (
+			(this.EDIT_alumnograduacion_login_validation()) &
+			(this.EDIT_alumnograduacion_password_validation()) &
+			(this.EDIT_alumnograduacion_nombre_validation()) &
+			(this.EDIT_alumnograduacion_apellidos_validation()) &
+			(this.EDIT_alumnograduacion_titulacion_validation()) &
+			(this.EDIT_alumnograduacion_dni_validation()) &
+			(this.EDIT_alumnograduacion_telefono_validation()) &
+			(this.EDIT_alumnograduacion_direccion_validation()) &
+			(this.EDIT_alumnograduacion_email_validation()) &
+			(this.EDIT_nuevo_alumnograduacion_fotoacto_validation())
+
+		)
+
+		result = Boolean(result);
+
+		return result;
+	}
+
+	/* Validaciones para SEARCH */
+
+	SEARCH_alumnograduacion_login_validation() {
+
+		if (!(this.max_size('alumnograduacion_login', 15))) {
+			this.dom.mostrar_error_campo('alumnograduacion_login', 'alumnograduacion_login_max_size_KO');
+			return "alumnograduacion_login_max_size_KO";
+		}
+
+		if (!(this.format('alumnograduacion_login', '^[A-Za-z]*$'))) {
+			this.dom.mostrar_error_campo('alumnograduacion_login', 'alumnograduacion_login_format_KO');
+			return "alumnograduacion_login_format_KO";
+		}
+
+		this.dom.mostrar_exito_campo('alumnograduacion_login');
+		return true;
+
+	}
+
+	SEARCH_alumnograduacion_password_validation() {
+
+		if (!(this.max_size('alumnograduacion_password', 64))) {
+			this.dom.mostrar_error_campo('alumnograduacion_password', 'alumnograduacion_password_max_size_KO');
+			return "alumnograduacion_password_max_size_KO";
+		}
+
+		if (!(this.format('alumnograduacion_password', '^[A-Za-z ]*$'))) {
+			this.dom.mostrar_error_campo('alumnograduacion_password', 'alumnograduacion_password_format_KO');
+			return "alumnograduacion_password_format_KO";
+		}
+
+		this.dom.mostrar_exito_campo('alumnograduacion_password');
+		return true;
+
+	}
+
+	SEARCH_alumnograduacion_nombre_validation() {
+
+		if (!(this.max_size('alumnograduacion_nombre', 25))) {
+			this.dom.mostrar_error_campo('alumnograduacion_nombre', 'alumnograduacion_nombre_max_size_KO');
+			return "alumnograduacion_nombre_max_size_KO";
+		}
+
+		if (!(this.format('alumnograduacion_nombre', '^[A-Za-zÁÉÍÓÚÜÑñáéíóúü ]*$'))) {
+			this.dom.mostrar_error_campo('alumnograduacion_nombre', 'alumnograduacion_nombre_format_KO');
+			return "alumnograduacion_nombre_format_KO";
+		}
+
+		this.dom.mostrar_exito_campo('alumnograduacion_nombre');
+		return true;
+
+	}
+
+	SEARCH_alumnograduacion_apellidos_validation() {
+
+		if (!(this.max_size('alumnograduacion_apellidos', 35))) {
+			this.dom.mostrar_error_campo('alumnograduacion_apellidos', 'alumnograduacion_apellidos_max_size_KO');
+			return "alumnograduacion_apellidos_max_size_KO";
+		}
+
+		if (!(this.format('alumnograduacion_apellidos', '^[A-Za-zÁÉÍÓÚÜÑñáéíóúü ]*$'))) {
+			this.dom.mostrar_error_campo('alumnograduacion_apellidos', 'alumnograduacion_apellidos_format_KO');
+			return "alumnograduacion_apellidos_format_KO";
+		}
+
+		this.dom.mostrar_exito_campo('alumnograduacion_apellidos');
+		return true;
+
+	}
+
+	SEARCH_alumnograduacion_titulacion_validation() {
+		const allowed = ['GREI', 'GRIA', 'MEI', 'MIA', 'PCEO'];
+		const id = 'alumnograduacion_titulacion';
+		const el = document.getElementById(id);
+		if (!el) return true; // si no hay campo en el DOM, no filtramos
+
+		// 1) Obtener valores según el tipo de control
+		let values = [];
+		if (el.tagName === 'SELECT' && el.multiple) {
+			values = Array.from(el.selectedOptions).map(o => (o.value || '').trim());
+		} else {
+			const raw = (el.value || '').trim();
+			if (raw === '') return true; // opcional en SEARCH
+			// soportar texto "GREI,MEI"
+			values = raw.split(',').map(v => v.trim()).filter(Boolean);
+		}
+
+		// 2) Normalizar y validar
+		const norm = values.map(v => v.toUpperCase());
+		if (norm.length === 0) return true; // quedó vacío tras normalizar
+
+		const allOk = norm.every(v => allowed.includes(v));
+		if (!allOk) {
+			this.dom.mostrar_error_campo(id, 'alumnograduacion_titulacion_search_format_KO');
+			return 'alumnograduacion_titulacion_search_format_KO';
+		}
+
+		// 3) Éxito
+		this.dom.mostrar_exito_campo(id);
+		return true;
+	}
+
+
+	SEARCH_alumnograduacion_dni_validation() {
+
+		let id = "alumnograduacion_dni";
+
+		if (!this.max_size(id, 9)) {
+			this.dom.mostrar_error_campo(id, "alumnograduacion_dni_max_size_KO");
+			return "alumnograduacion_dni_max_size_KO";
+		}
+		if (!this.format(id, "^[0-9]{8}[A-Z]$")) {
+			this.dom.mostrar_error_campo(id, "alumnograduacion_dni_format_KO");
+			return "alumnograduacion_dni_format_KO";
+		}
+		if (!this.validDNIoNIE(document.getElementById(id).value)) {
+			this.dom.mostrar_error_campo(id, "alumnograduacion_dni_valid_KO");
+			return "alumnograduacion_dni_valid_KO";
+		}
+
+		this.dom.mostrar_exito_campo(id);
+		return true;
+
+	}
+
+	SEARCH_alumnograduacion_direccion_validation() {
+
+		if (!(this.max_size('alumnograduacion_direccion', 100))) {
+			this.dom.mostrar_error_campo('alumnograduacion_direccion', 'alumnograduacion_direccion_max_size_KO');
+			return "alumnograduacion_direccion_max_size_KO";
+		}
+
+		if (!(this.format('alumnograduacion_direccion', '^[A-Za-zÁÉÍÓÚÜÑñáéíóúü1234567890 ]*$'))) {
+			this.dom.mostrar_error_campo('alumnograduacion_direccion', 'alumnograduacion_direccion_format_KO');
+			return "alumnograduacion_direccion_format_KO";
+		}
+
+		this.dom.mostrar_exito_campo('alumnograduacion_direccion');
+		return true;
+
+	}
+
+	SEARCH_alumnograduacion_telefono_validation() {
+
+		if (!(this.max_size('alumnograduacion_telefono', 9))) {
+			this.dom.mostrar_error_campo('alumnograduacion_telefono', 'alumnograduacion_telefono_max_size_KO');
+			return "alumnograduacion_telefono_max_size_KO";
+		}
+
+		if (!(this.format('alumnograduacion_telefono', '^[0-9]*$'))) {
+			this.dom.mostrar_error_campo('alumnograduacion_telefono', 'alumnograduacion_telefono_format_KO');
+			return "alumnograduacion_telefono_format_KO";
+		}
+
+		this.dom.mostrar_exito_campo('alumnograduacion_telefono');
+		return true;
+
+	}
+
+	SEARCH_alumnograduacion_email_validation() {
+
+		if (!(this.max_size('alumnograduacion_email', 40))) {
+			this.dom.mostrar_error_campo('alumnograduacion_email', 'alumnograduacion_email_max_size_KO');
+			return "alumnograduacion_email_max_size_KO";
+		}
+
+		if (!(this.format('alumnograduacion_email', '[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}'))) {
+			this.dom.mostrar_error_campo('alumnograduacion_email', 'alumnograduacion_email_format_KO');
+			return "alumnograduacion_email_format_KO";
+		}
+
+		this.dom.mostrar_exito_campo('alumnograduacion_email');
+		return true;
+
+	}
+
+	SEARCH_alumnograduacion_fotoacto_validation() {
+
+		if (!(this.format('alumnograduacion_fotoacto', '^[a-zA-Z0-9._-]*$'))) {
+			this.dom.mostrar_error_campo('alumnograduacion_fotoacto', 'alumnograduacion_fotoacto_format_name_file_KO');
+			return "alumnograduacion_fotoacto_format_name_file_KO";
+		}
+
+		if (!(this.max_size('alumnograduacion_fotoacto', 40))) {
+			this.dom.mostrar_error_campo('alumnograduacion_fotoacto', 'alumnograduacion_fotoacto_name_max_size_KO');
+			return "alumnograduacion_fotoacto_name_max_size_KO";
+		}
+
+		this.dom.mostrar_exito_campo('alumnograduacion_fotoacto');
+		return true;
+	}
+
+
+	SEARCH_submit_alumnograduacion() {
+
+		let result = (
+			(this.SEARCH_alumnograduacion_login_validation()) &
+			(this.SEARCH_alumnograduacion_password_validation()) &
+			(this.SEARCH_alumnograduacion_nombre_validation()) &
+			(this.SEARCH_alumnograduacion_apellidos_validation()) &
+			(this.SEARCH_alumnograduacion_titulacion_validation()) &
+			(this.SEARCH_alumnograduacion_dni_validation()) &
+			(this.SEARCH_alumnograduacion_telefono_validation()) &
+			(this.SEARCH_alumnograduacion_direccion_validation()) &
+			(this.SEARCH_alumnograduacion_email_validation()) &
+			(this.SEARCH_alumnograduacion_fotoacto_validation())
+
+		)
+
+		result = Boolean(result);
+
+		return result;
+
+	}
+
+
+	/* dwea dni rodeiro puto */
+	validDNIoNIE(valor) {
+		if (valor == null) return false;
+
+		// Normaliza: quita espacios/guiones y pasa a mayúsculas
+		let v = String(valor).toUpperCase().replace(/[\s-]/g, '');
+
+		const TABLA = "TRWAGMYFPDXBNJZSQVHLCKE";
+
+		// Patrones aceptados
+		const reDNI = /^\d{8}[A-Z]$/;              // 8 dígitos + letra
+		const reNIE = /^[XYZKLM]\d{7}[A-Z]$/;      // X/Y/Z/K/L/M + 7 dígitos + letra
+
+		if (!reDNI.test(v) && !reNIE.test(v)) return false;
+
+		// Obtiene el número base para el cálculo del índice
+		let numStr;
+		if (reDNI.test(v)) {
+			numStr = v.slice(0, 8);                  // 8 dígitos
+		} else {
+			// NIE/KLM: mapea la letra inicial a 0/1/2 (K/L/M → 0, X→0, Y→1, Z→2)
+			const mapa = { X: '0', Y: '1', Z: '2', K: '0', L: '0', M: '0' };
+			numStr = mapa[v[0]] + v.slice(1, 8);     // queda un número de 8 cifras
+		}
+
+		const numero = parseInt(numStr, 10);
+		const letraEsperada = TABLA[numero % 23];
+		const letraReal = v[v.length - 1];
+
+		return letraReal === letraEsperada;
+	}
+
+
+
+
+
+}
