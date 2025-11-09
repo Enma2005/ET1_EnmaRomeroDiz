@@ -1,16 +1,29 @@
-class alumnograduacion extends Validations {
+class alumnograduacion extends EntidadAbstracta {
 
 	constructor(esTest) {
+
 		super();
-		this.dom = new dom();
+		this.columnasamostrar = ['alumnograduacion_dni', 'alumnograduacion_nombre', 'alumnograduacion_fotoacto'];
+		this.mostrarespecial = [];
 		this.nombreentidad = 'alumnograduacion';
 
-		if (esTest == 'test') {
+		// definicion de los atributos del formulario (Necesario para test de unidad)
+		this.attributes = [
+			'alumnograduacion_login',
+			'alumnograduacion_password',
+			'alumnograduacion_nombre',
+			'alumnograduacion_apellidos',
+			'alumnograduacion_titulacion',
+			'alumnograduacion_dni',
+			'alumnograduacion_telefono',
+			'alumnograduacion_email',
+			'alumnograduacion_fotoacto',
+			'nuevo_alumnograduacion_fotoacto',
+		];
 
-		}
-		else {
-			this.dom.fillform(this.manual_form_creation(), 'IU_form');
-		}
+
+
+
 	}
 
 	/**
@@ -19,7 +32,7 @@ class alumnograduacion extends Validations {
 	 */
 	manual_form_creation() {
 		var form_content = `
-			<form action="http://193.147.87.202/procesaform.php" method="POST" enctype="multipart/form-data" onsubmit="return entidad.ADD_submit_alumnograduacion();">
+			<form id = 'form_iu'  action="http://193.147.87.202/procesaform.php" method="POST" enctype="multipart/form-data" onsubmit="return entidad.ADD_submit_alumnograduacion();">
 
 			
 			<label class="label_alumnograduacion_login">Login</label>
@@ -900,6 +913,212 @@ class alumnograduacion extends Validations {
 	}
 
 
+	createForm_EDIT(fila){
+
+		// limpiar poner titulo y poner visible el formulario
+		document.getElementById('contenedor_IU_form').innerHTML = this.manual_form_creation();
+		this.dom.show_element('Div_IU_form','block');
+
+		this.dom.remove_class_value('class_contenido_titulo_form', 'text_contenido_titulo_form');
+		this.dom.assign_class_value('class_contenido_titulo_form', 'text_contenido_titulo_form_persona_EDIT');
+
+		// rellenar onsubmit y action
+		this.dom.assign_property_value('form_iu','onsubmit','return entidad.EDIT_submit_'+this.nombreentidad);
+		this.dom.assign_property_value('form_iu', 'action', 'javascript:entidad.EDIT();');
+
+		//activar el link al fichero
+		this.dom.assign_property_value('link_foto_persona', 'href', 'http://193.147.87.202/ET2/filesuploaded/files_foto_persona/'+fila.foto_persona);
+		
+		// modificar presentacion (en este caso concreto para fecha)
+		fila.fechaNacimiento_persona = this.mostrarcambioatributo('fechaNacimiento_persona',fila.fechaNacimiento_persona);
+
+		// rellenar valores
+		this.dom.rellenarvaloresform(fila);
+		
+		// poner las validaciones
+		this.dom.colocarvalidaciones('form_iu','EDIT');
+
+		// poner inactivos los campos correspondientes
+		this.dom.assign_property_value('dni','readonly','true');
+		this.dom.assign_property_value('foto_persona','readonly','true');
+
+		// colocar boton de submit
+		this.dom.colocarboton('EDIT');
+
+		setLang();
+
+	}
+
+	createForm_DELETE(fila){
+
+		// limpiar y poner visible el formulario
+		document.getElementById('contenedor_IU_form').innerHTML = this.manual_form_creation();
+	
+		this.dom.show_element('Div_IU_form','block');
+		this.dom.remove_class_value('class_contenido_titulo_form','text_contenido_titulo_form');
+		this.dom.assign_class_value('class_contenido_titulo_form', 'text_contenido_titulo_form_persona_DELETE');
+
+		// rellenar y action
+		this.dom.assign_property_value('form_iu', 'action', 'javascript:entidad.DELETE();');
+
+		// poner no visible el campo nuevo_foto_persona (solo se puede ver el nombre de fichero)
+		this.dom.hide_element_form('nuevo_foto_persona');
+		this.dom.assign_property_value('link_foto_persona', 'href', 'http://193.147.87.202/ET2/filesuploaded/files_foto_persona/'+fila.foto_persona);
+		
+		// modificar presentacion (en este caso concreto para fecha)
+		fila.fechaNacimiento_persona = this.mostrarcambioatributo('fechaNacimiento_persona',fila.fechaNacimiento_persona);
+
+		// rellenar valores
+		this.dom.rellenarvaloresform(fila);
+
+		// poner inactivos los campos correspondientes
+		this.dom.colocartodosreadonly('form_iu');
+
+		// colocar boton de submit
+		this.dom.colocarboton('DELETE');
+
+		setLang();
+	}
+
+	createForm_SHOWCURRENT(fila){
+		// limpiar y poner visible el formulario
+		document.getElementById('contenedor_IU_form').innerHTML = this.manual_form_creation();
+		this.dom.show_element('Div_IU_form','block');
+		this.dom.remove_class_value('class_contenido_titulo_form', 'text_contenido_titulo_form');
+		this.dom.assign_class_value('class_contenido_titulo_form', 'text_contenido_titulo_form_persona_SHOWCURRENT');
+
+		// rellenar y action
+		//this.dom.assign_property_value('form_iu', 'action', 'javascript:entidad.DELETE();');
+
+		// poner no visible el campo nuevo_foto_persona (solo se puede ver el nombre de fichero)
+		this.dom.hide_element_form('nuevo_foto_persona');
+		this.dom.assign_property_value('link_foto_persona', 'href', 'http://193.147.87.202/ET2/filesuploaded/files_foto_persona/'+fila.foto_persona);
+		
+		// modificar presentacion (en este caso concreto para fecha)
+		fila.fechaNacimiento_persona = this.mostrarcambioatributo('fechaNacimiento_persona',fila.fechaNacimiento_persona);
+
+		// rellenar valores
+		this.dom.rellenarvaloresform(fila);
+
+		// poner inactivos los campos correspondientes
+		this.dom.colocartodosreadonly('form_iu');
+
+		// colocar boton de submit
+		//this.colocarboton('SHOWCURRENT');
+
+		setLang();
+
+	}
+
+	createForm_ADD(){
+
+		// poner titulo al formulario
+
+		// limpiar y poner visible el formulario
+		document.getElementById('contenedor_IU_form').innerHTML = this.manual_form_creation();
+		this.dom.show_element('Div_IU_form','block');
+		this.dom.remove_class_value('class_contenido_titulo_form', 'text_contenido_titulo_form');
+		this.dom.assign_class_value('class_contenido_titulo_form', 'text_contenido_titulo_form_persona_ADD');
+
+		// poner onsubmit
+		this.dom.assign_property_value('form_iu','onsubmit','return entidad.ADD_submit_'+this.nombreentidad+'()');
+
+		// poner action
+		this.dom.assign_property_value('form_iu', 'action', 'javascript:entidad.ADD();');
+		
+		// poner no visible el campo foto_persona (solo se puede subir fichero)
+		this.dom.hide_element_form('foto_persona');
+		this.dom.hide_element('link_foto_persona');
+
+		// rellenar valores
+		// en ADD no hay valores que rellenar
+
+		// poner las validaciones
+		this.dom.colocarvalidaciones('form_iu','ADD');
+
+		// poner inactivos los campos correspondientes
+		// en ADD no hay inactivos... si hubiese un autoincremental ya no se mostraria
+
+		// colocar boton de submit
+		this.dom.colocarboton('ADD');
+
+		setLang();
+	}
+
+	createForm_SEARCH(){
+
+		// poner titulo al formulario
+
+		// limpiar y poner visible el formulario
+		document.getElementById('contenedor_IU_form').innerHTML = this.manual_form_creation();
+		this.dom.show_element('Div_IU_form','block');
+		this.dom.remove_class_value('class_contenido_titulo_form', 'text_contenido_titulo_form');
+		this.dom.assign_class_value('class_contenido_titulo_form', 'text_contenido_titulo_form_persona_SEARCH');
+
+		// poner onsubmit
+		this.dom.assign_property_value('form_iu','onsubmit','return entidad.SEARCH_submit_'+this.nombreentidad);
+
+		// poner action
+		this.dom.assign_property_value('form_iu', 'action', 'javascript:entidad.SEARCH();');
+		
+		// poner no visible el campo foto_persona (solo se puede subir fichero)
+		this.dom.hide_element_form('nuevo_foto_persona');
+		this.dom.hide_element('link_foto_persona');
+
+		// reemplazar enumerados por texto
+		// titulacion_persona que es un select
+		this.dom.replaceSelectXEmptyInput('titulacion_persona');
+		// menu_persona que es un checkbox
+		this.dom.replaceEnumNameXEmptyInput('menu_persona');
+		// genero_persona que es un radio
+		this.dom.replaceEnumNameXEmptyInput('genero_persona');
+		
+		// rellenar valores
+		// en SEARCH no hay valores que rellenar
+
+		// poner las validaciones
+		this.dom.colocarvalidaciones('form_iu','SEARCH');
+
+		// colocar boton de submit
+		this.dom.colocarboton('SEARCH');
+
+		setLang();
+		
+	}
+
+	/**
+	 * modifica el formato de visualización de un atributo concreto y se devuelve el valor modificado
+	 * en el caso de solicitar cambio de formato para un atributo no implementado se lanza una alerta
+	 * 
+	 * @param {String} atributo string con el nombre del atributo a modificar su valor
+	 * @param {String} valorentrada string con el valor de entrada a modificar
+	 * @returns 
+	 */
+	mostrarcambioatributo(atributo, valorentrada){
+		
+		switch (atributo){
+			case 'fechaNacimiento_persona':
+				var elementos = valorentrada.split('-');
+
+				var day = elementos[2];
+				var month = elementos[1];
+				var year = elementos[0];
+				
+				return day+'/'+month+'/'+year;
+				break;
+			case 'foto_persona':
+				var link = 'error';
+				if (valorentrada !== ''){
+					link = valorentrada+`  <a class="link_foto_persona" href="http://193.147.87.202/ET2/filesuploaded/files_foto_persona/`+valorentrada+`"><img src="./iconos/FILE.png" /></a>`;
+				}
+				return link;
+				break;
+			case 'default':
+				alert('no existe mostrar especial para ese atributo');
+				break;
+		}
+
+	}
 
 
 
