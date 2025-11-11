@@ -4,7 +4,7 @@ class alumnograduacion extends EntidadAbstracta {
 
 		super();
 		this.columnasamostrar = ['alumnograduacion_dni', 'alumnograduacion_nombre', 'alumnograduacion_fotoacto'];
-		this.mostrarespecial = [];
+		this.mostrarespecial = ['alumnograduacion_fotoacto'];
 		this.nombreentidad = 'alumnograduacion';
 
 		// definicion de los atributos del formulario (Necesario para test de unidad)
@@ -314,13 +314,13 @@ class alumnograduacion extends EntidadAbstracta {
 	}
 
 	ADD_alumnograduacion_direccion_validation() {
-		
+
 		if (!(this.not_empty('alumnograduacion_direccion'))) {
 			this.dom.mostrar_error_campo('alumnograduacion_direccion', 'alumnograduacion_direccion_vacio_KO');
 			return "alumnograduacion_direccion_vacio_KO";
 		}
 
-		if (!(this.min_sizeDireccion( 5))) {
+		if (!(this.min_sizeDireccion(5))) {
 			this.dom.mostrar_error_campo('alumnograduacion_direccion', 'alumnograduacion_direccion_min_size_KO');
 			return "alumnograduacion_direccion_min_size_KO";
 		}
@@ -341,7 +341,7 @@ class alumnograduacion extends EntidadAbstracta {
 	}
 
 	ADD_alumnograduacion_email_validation() {
-		
+
 		if (!(this.not_empty('alumnograduacion_email'))) {
 			this.dom.mostrar_error_campo('alumnograduacion_email', 'alumnograduacion_email_vacio_KO');
 			return "alumnograduacion_email_vacio_KO";
@@ -379,24 +379,24 @@ class alumnograduacion extends EntidadAbstracta {
 			return "nuevo_alumnograduacion_fotoacto_max_size_KO";
 		}
 
+
+		if (!(this.min_size_fotoacto(7))) {
+			this.dom.mostrar_error_campo('nuevo_alumnograduacion_fotoacto', 'nuevo_alumnograduacion_nombrefoto_min_size_KO');
+			return "nuevo_alumnograduacion_fotoacto_nombrefoto_min_size_KO";
+		}
+
+		if (!(this.max_size_fotoacto(40))) {
+			this.dom.mostrar_error_campo('nuevo_alumnograduacion_fotoacto', 'nuevo_alumnograduacion_fotoacto_nombrefoto_max_size_KO');
+			return "nuevo_alumnograduacion_fotoacto_nombrefoto_max_size_KO";
+		}
+
 		if (!(this.validations.type_file('nuevo_alumnograduacion_fotoacto', ['image/jpeg']))) {
 			this.dom.mostrar_error_campo('nuevo_alumnograduacion_fotoacto', 'nuevo_alumnograduacion_fotoacto_format_KO');
 			return "nuevo_alumnograduacion_fotoacto_format_KO";
 		}
-
-		if (!(this.validations.format_name_file('nuevo_alumnograduacion_fotoacto', "^[a-zA-Z0-9]+\\.jpg$"))) {
+		if (!(this.validations.format_name_file('nuevo_alumnograduacion_fotoacto', '^[a-zA-Z.]+$'))) {
 			this.dom.mostrar_error_campo('nuevo_alumnograduacion_fotoacto', 'nuevo_alumnograduacion_fotoacto_nombrefoto_format_KO');
 			return "nuevo_alumnograduacion_fotoacto_nombrefoto_format_KO";
-		}
-
-		if (!(this.min_size_fotoacto( 7))) {
-			this.dom.mostrar_error_campo('nuevo_alumnograduacion_fotoacto', 'nuevo_alumnograduacion_nombrefoto_min_size_KO');
-			return "nuevo_alumnograduacion_nombrefoto_min_size_KO";
-		}
-
-		if (!(this.max_size_fotoacto( 40))) {
-			this.dom.mostrar_error_campo('nuevo_alumnograduacion_fotoacto', 'nuevo_alumnograduacion_fotoacto_nombrefoto_max_size_KO');
-			return "nuevo_alumnograduacion_fotoacto_nombrefoto_max_size_KO";
 		}
 
 		this.dom.mostrar_exito_campo('nuevo_alumnograduacion_fotoacto');
@@ -614,13 +614,13 @@ class alumnograduacion extends EntidadAbstracta {
 	}
 
 	EDIT_alumnograduacion_direccion_validation() {
-		
+
 		if (!(this.not_empty('alumnograduacion_direccion'))) {
 			this.dom.mostrar_error_campo('alumnograduacion_direccion', 'alumnograduacion_direccion_vacio_KO');
 			return "alumnograduacion_direccion_vacio_KO";
 		}
 
-		if (!(this.min_sizeDireccion( 5))) {
+		if (!(this.min_sizeDireccion(5))) {
 			this.dom.mostrar_error_campo('alumnograduacion_direccion', 'alumnograduacion_direccion_min_size_KO');
 			return "alumnograduacion_direccion_min_size_KO";
 		}
@@ -641,7 +641,7 @@ class alumnograduacion extends EntidadAbstracta {
 	}
 
 	EDIT_alumnograduacion_email_validation() {
-		
+
 		if (!(this.not_empty('alumnograduacion_email'))) {
 			this.dom.mostrar_error_campo('alumnograduacion_email', 'alumnograduacion_email_vacio_KO');
 			return "alumnograduacion_email_vacio_KO";
@@ -656,7 +656,7 @@ class alumnograduacion extends EntidadAbstracta {
 			this.dom.mostrar_error_campo('alumnograduacion_email', 'alumnograduacion_email_max_size_KO');
 			return "alumnograduacion_email_max_size_KO";
 		}
-		
+
 
 		if (!(this.validations.format('alumnograduacion_email', '^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$'))) {
 			this.dom.mostrar_error_campo('alumnograduacion_email', 'alumnograduacion_email_format_KO');
@@ -690,12 +690,12 @@ class alumnograduacion extends EntidadAbstracta {
 			return "nuevo_alumnograduacion_fotoacto_nombrefoto_format_KO";
 		}
 
-		if (!(this.min_size_fotoacto( 7))) {
-			this.dom.mostrar_error_campo('nuevo_alumnograduacion_fotoacto', 'nuevo_alumnograduacion_nombrefoto_min_size_KO');
-			return "nuevo_alumnograduacion_nombrefoto_min_size_KO";
+		if (!(this.min_size_fotoacto(7))) {
+			this.dom.mostrar_error_campo('nuevo_alumnograduacion_fotoacto', 'nuevo_alumnograduacion_fotoacto_nombrefoto_min_size_KO');
+			return "nuevo_alumnograduacion_fotoacto_nombrefoto_min_size_KO";
 		}
 
-		if (!(this.max_size_fotoacto( 40))) {
+		if (!(this.max_size_fotoacto(40))) {
 			this.dom.mostrar_error_campo('nuevo_alumnograduacion_fotoacto', 'nuevo_alumnograduacion_fotoacto_nombrefoto_max_size_KO');
 			return "nuevo_alumnograduacion_fotoacto_nombrefoto_max_size_KO";
 		}
@@ -801,9 +801,9 @@ class alumnograduacion extends EntidadAbstracta {
 		const id = 'alumnograduacion_titulacion';
 		const el = document.getElementById(id);
 		if (!el) return true; // si no existe el campo, no validamos nada
-	
+
 		let values = []; // aquí guardaremos los valores a comprobar
-	
+
 		// 1) Obtener valores según el tipo de control
 		if (el.tagName === 'SELECT' && el.multiple) {
 			// Si es un select múltiple, recoger todas las opciones seleccionadas
@@ -816,7 +816,7 @@ class alumnograduacion extends EntidadAbstracta {
 			// Si es un input de texto
 			let raw = el.value ? el.value.trim() : '';
 			if (raw === '') return true; // si está vacío, no pasa nada (campo opcional)
-	
+
 			// separar los valores por comas y limpiar espacios
 			let partes = raw.split(',');
 			values = [];
@@ -825,7 +825,7 @@ class alumnograduacion extends EntidadAbstracta {
 				if (texto !== '') values.push(texto);
 			}
 		}
-	
+
 		// 2) Pasar todo a mayúsculas
 		let norm = [];
 		for (let i = 0; i < values.length; i++) {
@@ -833,13 +833,13 @@ class alumnograduacion extends EntidadAbstracta {
 			norm.push(valor);
 		}
 		if (norm.length === 0) return true; // si no hay nada, se acepta
-	
+
 		// 3) Comprobar si todos los valores son válidos
 		let valido = true;
 		for (let i = 0; i < norm.length; i++) {
 			let valor = norm[i];
 			let permitido = false;
-	
+
 			// buscar si el valor está en la lista de permitidos
 			for (let j = 0; j < allowed.length; j++) {
 				if (valor === allowed[j]) {
@@ -847,20 +847,20 @@ class alumnograduacion extends EntidadAbstracta {
 					break;
 				}
 			}
-	
+
 			// si alguno no está permitido, marcar error
 			if (!permitido) {
 				valido = false;
 				break;
 			}
 		}
-	
+
 		// 4) Mostrar resultado
 		if (!valido) {
 			this.dom.mostrar_error_campo(id, 'alumnograduacion_titulacion_format_KO');
 			return 'alumnograduacion_titulacion_format_KO';
 		}
-	
+
 		this.dom.mostrar_exito_campo(id);
 		return true;
 	}
@@ -942,13 +942,13 @@ class alumnograduacion extends EntidadAbstracta {
 	SEARCH_alumnograduacion_fotoacto_validation() {
 
 		if (!(this.validations.format('alumnograduacion_fotoacto', '^[a-zA-Z0-9._-]*$'))) {
-			this.dom.mostrar_error_campo('alumnograduacion_fotoacto', 'alumnograduacion_fotoacto_format_name_file_KO');
-			return "alumnograduacion_fotoacto_format_name_file_KO";
+			this.dom.mostrar_error_campo('alumnograduacion_fotoacto', 'alumnograduacion_fotoacto_nombrefoto_format_KO');
+			return "alumnograduacion_fotoacto_nombrefoto_format_KO";
 		}
 
 		if (!(this.validations.max_size('alumnograduacion_fotoacto', 40))) {
-			this.dom.mostrar_error_campo('alumnograduacion_fotoacto', 'alumnograduacion_fotoacto_name_max_size_KO');
-			return "alumnograduacion_fotoacto_name_max_size_KO";
+			this.dom.mostrar_error_campo('alumnograduacion_fotoacto', 'alumnograduacion_fotoacto_nombrefoto_max_size_KO');
+			return "alumnograduacion_fotoacto_nombrefoto_max_size_KO";
 		}
 
 		this.dom.mostrar_exito_campo('alumnograduacion_fotoacto');
@@ -1012,34 +1012,34 @@ class alumnograduacion extends EntidadAbstracta {
 	}
 
 
-	createForm_EDIT(fila){
+	createForm_EDIT(fila) {
 
 		// limpiar poner titulo y poner visible el formulario
 		document.getElementById('contenedor_IU_form').innerHTML = this.manual_form_creation();
-		this.dom.show_element('Div_IU_form','block');
+		this.dom.show_element('Div_IU_form', 'block');
 
 		this.dom.remove_class_value('class_contenido_titulo_form', 'text_contenido_titulo_form');
 		this.dom.assign_class_value('class_contenido_titulo_form', 'text_contenido_titulo_form_persona_EDIT');
 
 		// rellenar onsubmit y action
-		this.dom.assign_property_value('form_iu','onsubmit','return entidad.EDIT_submit_'+this.nombreentidad);
+		this.dom.assign_property_value('form_iu', 'onsubmit', 'return entidad.EDIT_submit_' + this.nombreentidad);
 		this.dom.assign_property_value('form_iu', 'action', 'javascript:entidad.EDIT();');
 
 		//activar el link al fichero
-		this.dom.assign_property_value('link_foto_persona', 'href', 'http://193.147.87.202/ET2/filesuploaded/files_foto_persona/'+fila.foto_persona);
-		
+		this.dom.assign_property_value('link_foto_persona', 'href', 'http://193.147.87.202/ET2/filesuploaded/files_foto_persona/' + fila.foto_persona);
+
 		// modificar presentacion (en este caso concreto para fecha)
-		fila.fechaNacimiento_persona = this.mostrarcambioatributo('fechaNacimiento_persona',fila.fechaNacimiento_persona);
+		fila.fechaNacimiento_persona = this.mostrarcambioatributo('fechaNacimiento_persona', fila.fechaNacimiento_persona);
 
 		// rellenar valores
 		this.dom.rellenarvaloresform(fila);
-		
+
 		// poner las validaciones
-		this.dom.colocarvalidaciones('form_iu','EDIT');
+		this.dom.colocarvalidaciones('form_iu', 'EDIT');
 
 		// poner inactivos los campos correspondientes
-		this.dom.assign_property_value('dni','readonly','true');
-		this.dom.assign_property_value('foto_persona','readonly','true');
+		this.dom.assign_property_value('dni', 'readonly', 'true');
+		this.dom.assign_property_value('foto_persona', 'readonly', 'true');
 
 		// colocar boton de submit
 		this.dom.colocarboton('EDIT');
@@ -1048,13 +1048,13 @@ class alumnograduacion extends EntidadAbstracta {
 
 	}
 
-	createForm_DELETE(fila){
+	createForm_DELETE(fila) {
 
 		// limpiar y poner visible el formulario
 		document.getElementById('contenedor_IU_form').innerHTML = this.manual_form_creation();
-	
-		this.dom.show_element('Div_IU_form','block');
-		this.dom.remove_class_value('class_contenido_titulo_form','text_contenido_titulo_form');
+
+		this.dom.show_element('Div_IU_form', 'block');
+		this.dom.remove_class_value('class_contenido_titulo_form', 'text_contenido_titulo_form');
 		this.dom.assign_class_value('class_contenido_titulo_form', 'text_contenido_titulo_form_persona_DELETE');
 
 		// rellenar y action
@@ -1062,10 +1062,10 @@ class alumnograduacion extends EntidadAbstracta {
 
 		// poner no visible el campo nuevo_foto_persona (solo se puede ver el nombre de fichero)
 		this.dom.hide_element_form('nuevo_foto_persona');
-		this.dom.assign_property_value('link_foto_persona', 'href', 'http://193.147.87.202/ET2/filesuploaded/files_foto_persona/'+fila.foto_persona);
-		
+		this.dom.assign_property_value('link_foto_persona', 'href', 'http://193.147.87.202/ET2/filesuploaded/files_foto_persona/' + fila.foto_persona);
+
 		// modificar presentacion (en este caso concreto para fecha)
-		fila.fechaNacimiento_persona = this.mostrarcambioatributo('fechaNacimiento_persona',fila.fechaNacimiento_persona);
+		fila.fechaNacimiento_persona = this.mostrarcambioatributo('fechaNacimiento_persona', fila.fechaNacimiento_persona);
 
 		// rellenar valores
 		this.dom.rellenarvaloresform(fila);
@@ -1079,10 +1079,10 @@ class alumnograduacion extends EntidadAbstracta {
 		setLang();
 	}
 
-	createForm_SHOWCURRENT(fila){
+	createForm_SHOWCURRENT(fila) {
 		// limpiar y poner visible el formulario
 		document.getElementById('contenedor_IU_form').innerHTML = this.manual_form_creation();
-		this.dom.show_element('Div_IU_form','block');
+		this.dom.show_element('Div_IU_form', 'block');
 		this.dom.remove_class_value('class_contenido_titulo_form', 'text_contenido_titulo_form');
 		this.dom.assign_class_value('class_contenido_titulo_form', 'text_contenido_titulo_form_persona_SHOWCURRENT');
 
@@ -1091,10 +1091,10 @@ class alumnograduacion extends EntidadAbstracta {
 
 		// poner no visible el campo nuevo_foto_persona (solo se puede ver el nombre de fichero)
 		this.dom.hide_element_form('nuevo_foto_persona');
-		this.dom.assign_property_value('link_foto_persona', 'href', 'http://193.147.87.202/ET2/filesuploaded/files_foto_persona/'+fila.foto_persona);
-		
+		this.dom.assign_property_value('link_foto_persona', 'href', 'http://193.147.87.202/ET2/filesuploaded/files_foto_persona/' + fila.foto_persona);
+
 		// modificar presentacion (en este caso concreto para fecha)
-		fila.fechaNacimiento_persona = this.mostrarcambioatributo('fechaNacimiento_persona',fila.fechaNacimiento_persona);
+		fila.fechaNacimiento_persona = this.mostrarcambioatributo('fechaNacimiento_persona', fila.fechaNacimiento_persona);
 
 		// rellenar valores
 		this.dom.rellenarvaloresform(fila);
@@ -1109,22 +1109,22 @@ class alumnograduacion extends EntidadAbstracta {
 
 	}
 
-	createForm_ADD(){
+	createForm_ADD() {
 
 		// poner titulo al formulario
 
 		// limpiar y poner visible el formulario
 		document.getElementById('contenedor_IU_form').innerHTML = this.manual_form_creation();
-		this.dom.show_element('Div_IU_form','block');
+		this.dom.show_element('Div_IU_form', 'block');
 		this.dom.remove_class_value('class_contenido_titulo_form', 'text_contenido_titulo_form');
 		this.dom.assign_class_value('class_contenido_titulo_form', 'text_contenido_titulo_form_persona_ADD');
 
 		// poner onsubmit
-		this.dom.assign_property_value('form_iu','onsubmit','return entidad.ADD_submit_'+this.nombreentidad+'()');
+		this.dom.assign_property_value('form_iu', 'onsubmit', 'return entidad.ADD_submit_' + this.nombreentidad + '()');
 
 		// poner action
 		this.dom.assign_property_value('form_iu', 'action', 'javascript:entidad.ADD();');
-		
+
 		// poner no visible el campo foto_persona (solo se puede subir fichero)
 		this.dom.hide_element_form('foto_persona');
 		this.dom.hide_element('link_foto_persona');
@@ -1133,7 +1133,7 @@ class alumnograduacion extends EntidadAbstracta {
 		// en ADD no hay valores que rellenar
 
 		// poner las validaciones
-		this.dom.colocarvalidaciones('form_iu','ADD');
+		this.dom.colocarvalidaciones('form_iu', 'ADD');
 
 		// poner inactivos los campos correspondientes
 		// en ADD no hay inactivos... si hubiese un autoincremental ya no se mostraria
@@ -1144,22 +1144,22 @@ class alumnograduacion extends EntidadAbstracta {
 		setLang();
 	}
 
-	createForm_SEARCH(){
+	createForm_SEARCH() {
 
 		// poner titulo al formulario
 
 		// limpiar y poner visible el formulario
 		document.getElementById('contenedor_IU_form').innerHTML = this.manual_form_creation();
-		this.dom.show_element('Div_IU_form','block');
+		this.dom.show_element('Div_IU_form', 'block');
 		this.dom.remove_class_value('class_contenido_titulo_form', 'text_contenido_titulo_form');
 		this.dom.assign_class_value('class_contenido_titulo_form', 'text_contenido_titulo_form_persona_SEARCH');
 
 		// poner onsubmit
-		this.dom.assign_property_value('form_iu','onsubmit','return entidad.SEARCH_submit_'+this.nombreentidad);
+		this.dom.assign_property_value('form_iu', 'onsubmit', 'return entidad.SEARCH_submit_' + this.nombreentidad);
 
 		// poner action
 		this.dom.assign_property_value('form_iu', 'action', 'javascript:entidad.SEARCH();');
-		
+
 		// poner no visible el campo foto_persona (solo se puede subir fichero)
 		this.dom.hide_element_form('nuevo_foto_persona');
 		this.dom.hide_element('link_foto_persona');
@@ -1171,18 +1171,18 @@ class alumnograduacion extends EntidadAbstracta {
 		this.dom.replaceEnumNameXEmptyInput('menu_persona');
 		// genero_persona que es un radio
 		this.dom.replaceEnumNameXEmptyInput('genero_persona');
-		
+
 		// rellenar valores
 		// en SEARCH no hay valores que rellenar
 
 		// poner las validaciones
-		this.dom.colocarvalidaciones('form_iu','SEARCH');
+		this.dom.colocarvalidaciones('form_iu', 'SEARCH');
 
 		// colocar boton de submit
 		this.dom.colocarboton('SEARCH');
 
 		setLang();
-		
+
 	}
 
 	/**
@@ -1193,22 +1193,22 @@ class alumnograduacion extends EntidadAbstracta {
 	 * @param {String} valorentrada string con el valor de entrada a modificar
 	 * @returns 
 	 */
-	mostrarcambioatributo(atributo, valorentrada){
-		
-		switch (atributo){
+	mostrarcambioatributo(atributo, valorentrada) {
+
+		switch (atributo) {
 			case 'fechaNacimiento_persona':
 				var elementos = valorentrada.split('-');
 
 				var day = elementos[2];
 				var month = elementos[1];
 				var year = elementos[0];
-				
-				return day+'/'+month+'/'+year;
+
+				return day + '/' + month + '/' + year;
 				break;
 			case 'foto_persona':
 				var link = 'error';
-				if (valorentrada !== ''){
-					link = valorentrada+`  <a class="link_foto_persona" href="http://193.147.87.202/ET2/filesuploaded/files_foto_persona/`+valorentrada+`"><img src="./iconos/FILE.png" /></a>`;
+				if (valorentrada !== '') {
+					link = valorentrada + `  <a class="link_foto_persona" href="http://193.147.87.202/ET2/filesuploaded/files_foto_persona/` + valorentrada + `"><img src="./iconos/FILE.png" /></a>`;
 				}
 				return link;
 				break;
@@ -1235,7 +1235,7 @@ class alumnograduacion extends EntidadAbstracta {
 			return false;
 		}
 		else {
-			return true;
+			return true;
 		}
 	}
 
@@ -1256,21 +1256,40 @@ class alumnograduacion extends EntidadAbstracta {
 			return false;
 		}
 		else {
-			return true;
+			return true;
 		}
 	}
 
 
-	not_empty(nombre){
+	not_empty(nombre) {
 		let objfile = document.getElementById(nombre).value;
-		
+
 		if (objfile) {
 			return true;
 		}
 		else {
-			return false;
+			return false;
 		}
 
+	}
+
+
+	mostrarcambioatributo(atributo, valoratributo) {
+		if (atributo === 'alumnograduacion_fotoacto') {
+			if (!valoratributo) return `<a class="no_file_found"></a>`;
+
+			const id = `link_alumnograduacion_fotoacto_${ valoratributo }`;
+			const url = `http://193.147.87.202/ET2/filesuploaded/files_alumnograduacion_fotoacto/${valoratributo}`;
+
+			return `
+			<a id="${id}" href="${url}" target="_blank">
+				<img src="./iconos/FILE.png" alt="Archivo" />
+			</a>
+		`;
+		}
+
+		// Si no es el atributo esperado, devolver el valor tal cual
+		return valoratributo;
 	}
 
 }

@@ -520,6 +520,15 @@ let alumnograduacion_tests_fields = [
   ['alumnograduacion', 'alumnograduacion_email', 107, 224, 'SEARCH', [{alumnograduacion_email:' sf#  sfsd'+'@gmail.com'}], 'alumnograduacion_email_format_KO'],     
   ['alumnograduacion', 'alumnograduacion_email', 108, 225, 'SEARCH', [{alumnograduacion_email:'sdasjaisjaj@gmail.com'}], true],   
 
+  //BUSCAR FOTOACTO
+  ['alumnograduacion', 'alumnograduacion_fotoacto', 123, 23, 'SEARCH', [{alumnograduacion_fotoacto : 'nombre con espacios.jpg'}], 'alumnograduacion_fotoacto_nombrefoto_format_KO'], //nombre con espacios y format pdf
+  ['alumnograduacion', 'alumnograduacion_fotoacto', 123, 24, 'SEARCH', [{alumnograduacion_fotoacto : 'nombreconñ.jpg'}], 'alumnograduacion_fotoacto_nombrefoto_format_KO'], //nombre con espacios y format pdf
+  ['alumnograduacion', 'alumnograduacion_fotoacto', 123, 25, 'SEARCH', [{alumnograduacion_fotoacto : 'nombró.jpg'}], 'alumnograduacion_fotoacto_nombrefoto_format_KO'], //nombre con espacios y format jpg
+  ['alumnograduacion', 'alumnograduacion_fotoacto', 123, 26, 'SEARCH', [{alumnograduacion_fotoacto : 'nombreúespacios.jpg'}], 'alumnograduacion_fotoacto_nombrefoto_format_KO'], //nombre con espacios y format jpg
+  ['alumnograduacion', 'alumnograduacion_fotoacto', 123, 27, 'SEARCH', [{alumnograduacion_fotoacto : 'Ámbreespacios.jpg'}], 'alumnograduacion_fotoacto_nombrefoto_format_KO'], //nombre con espacios y format jpg
+  ['alumnograduacion', 'alumnograduacion_fotoacto', 124, 28, 'SEARCH', [{alumnograduacion_fotoacto : 'n'.repeat(41)+'.jpg'}], 'alumnograduacion_fotoacto_nombrefoto_max_size_KO'], //nombre con 41 caracteres y format jpg
+  ['alumnograduacion', 'alumnograduacion_fotoacto', 125, 29, 'SEARCH', [{alumnograduacion_fotoacto : 'nombrecorrecto.jpg'}], true]
+
 ];
 
 /*
@@ -540,36 +549,28 @@ let alumnograduacion_tests_files = [
   //FOTOACTO
   
   ['alumnograduacion', 'nuevo_alumnograduacion_fotoacto', 109, 1, 'ADD', 'existe', [], 'nuevo_alumnograduacion_fotoacto_vacio_KO'], 
-  ['alumnograduacion', 'nuevo_alumnograduacion_fotoacto', 110, 2, 'ADD', 'format_name_file', [{max_size_file:19},{type_file: 'image/jpeg'},{format_name_file : 'nombre con espacios.jpg'}], 'nuevo_alumnograduacion_fotoacto_nombrefoto_format_KO'], //nombre con espacios y format pdf
-  ['alumnograduacion', 'nuevo_alumnograduacion_fotoacto', 110, 3, 'ADD', 'format_name_file', [{max_size_file:19},{type_file: 'image/jpeg'},{format_name_file :  'nombreconñ.jpg'}], 'nuevo_alumnograduacion_fotoacto_nombrefoto_format_KO'], //nombre con espacios y format jpg
-  ['alumnograduacion', 'nuevo_alumnograduacion_fotoacto', 110, 4, 'ADD','format_name_file', [{max_size_file:19},{type_file: 'image/jpeg'},{format_name_file : 'nombró.jpg'}], 'nuevo_alumnograduacion_fotoacto_nombrefoto_format_KO'], //nombre con espacios y format jpg
-  ['alumnograduacion', 'nuevo_alumnograduacion_fotoacto', 110, 5, 'ADD','format_name_file', [{max_size_file:19},{type_file: 'image/jpeg'},{format_name_file : 'nombreúespacios.jpg'}], 'nuevo_alumnograduacion_fotoacto_nombrefoto_format_KO'], //nombre con espacios y format jpg
-  ['alumnograduacion', 'nuevo_alumnograduacion_fotoacto', 110, 6, 'ADD','format_name_file', [{max_size_file:19},{type_file: 'image/jpeg'},{format_name_file : 'Ámbreespacios.jpg'}], 'nuevo_alumnograduacion_fotoacto_nombrefoto_format_KO'], //nombre con espacios y format jpg
-  ['alumnograduacion', 'nuevo_alumnograduacion_fotoacto', 111, 7, 'ADD','format_name_file', [{max_size_file:19},{type_file: 'image/jpeg'},{format_name_file : 'nsdskj.jpg'}], 'nuevo_alumnograduacion_fotoacto_nombrefoto_min_size_KO'], 
-  ['alumnograduacion', 'nuevo_alumnograduacion_fotoacto', 112, 8, 'ADD','format_name_file', [{max_size_file:19},{type_file: 'image/jpeg'},{format_name_file : 'n'.repeat(41)+'.jpg'}], 'nuevo_alumnograduacion_fotoacto_nombrefoto_max_size_KO'], //nombre con 41 caracteres y format jpg
-  ['alumnograduacion', 'nuevo_alumnograduacion_fotoacto', 113, 9, 'ADD', 'type_file', [{max_size_file:19},{type_file: 'pdf'},{format_name_file: 'foto.pdf'}], 'nuevo_alumnograduacion_fotoacto_format_KO'], //format jpg
-  ['alumnograduacion', 'nuevo_alumnograduacion_fotoacto', 114, 10, 'ADD', 'max_size_file', [{max_size_file:21},{type_file:'image/jpeg'},{format_name_file: 'fomkjskdkto.jpg'}], 'nuevo_alumnograduacion_fotoacto_max_size_KO'], //20MB
-  ['alumnograduacion', 'nuevo_alumnograduacion_fotoacto', 115, 11, 'ADD','correcto', [{max_size_file: 1}, {type_file: 'image/jpeg'}, {format_name_file: 'nombrecorrecto.jpg'}], true], //correcto 
+  ['alumnograduacion', 'nuevo_alumnograduacion_fotoacto', 110, 2, 'ADD', 'format_name_file', [{format_name_file : 'nombre con espacios.jpg'},{type_file: 'image/jpeg'},{max_size_file:19}], 'nuevo_alumnograduacion_fotoacto_nombrefoto_format_KO'], //nombre con espacios y format pdf
+  ['alumnograduacion', 'nuevo_alumnograduacion_fotoacto', 110, 3, 'ADD', 'format_name_file', [{format_name_file :  'nombreconñ.jpg'},{type_file: 'image/jpeg'},{max_size_file:19}], 'nuevo_alumnograduacion_fotoacto_nombrefoto_format_KO'], //nombre con espacios y format jpg
+  ['alumnograduacion', 'nuevo_alumnograduacion_fotoacto', 110, 4, 'ADD','format_name_file', [{format_name_file : 'nombró.jpg'},{type_file: 'image/jpeg'},{max_size_file:19}], 'nuevo_alumnograduacion_fotoacto_nombrefoto_format_KO'], //nombre con espacios y format jpg
+  ['alumnograduacion', 'nuevo_alumnograduacion_fotoacto', 110, 5, 'ADD','format_name_file', [{format_name_file : 'nombreúespacios.jpg'},{type_file: 'image/jpeg'},{max_size_file:19}], 'nuevo_alumnograduacion_fotoacto_nombrefoto_format_KO'], //nombre con espacios y format jpg
+  ['alumnograduacion', 'nuevo_alumnograduacion_fotoacto', 110, 6, 'ADD','format_name_file', [{format_name_file : 'Ámbreespacios.jpg'},{type_file: 'image/jpeg'},{max_size_file:19}], 'nuevo_alumnograduacion_fotoacto_nombrefoto_format_KO'], //nombre con espacios y format jpg
+  ['alumnograduacion', 'nuevo_alumnograduacion_fotoacto', 111, 7, 'ADD','format_name_file', [{format_name_file : 'j.jpg'},{type_file: 'image/jpeg'},{max_size_file:19}], 'nuevo_alumnograduacion_fotoacto_nombrefoto_min_size_KO'], 
+  ['alumnograduacion', 'nuevo_alumnograduacion_fotoacto', 112, 8, 'ADD','format_name_file', [{format_name_file : 'n'.repeat(41)+'.jpg'},{type_file: 'image/jpeg'},{max_size_file:19}], 'nuevo_alumnograduacion_fotoacto_nombrefoto_max_size_KO'], //nombre con 41 caracteres y format jpg
+  ['alumnograduacion', 'nuevo_alumnograduacion_fotoacto', 113, 9, 'ADD', 'type_file', [{format_name_file: 'foto.pdf'},{type_file: 'pdf'},{max_size_file:19}], 'nuevo_alumnograduacion_fotoacto_format_KO'], //format jpg
+  ['alumnograduacion', 'nuevo_alumnograduacion_fotoacto', 114, 10, 'ADD', 'max_size_file', [{format_name_file: 'fomkjskdkto.jpg'},{type_file: 'image/jpeg'},{max_size_file:21}], 'nuevo_alumnograduacion_fotoacto_max_size_KO'], //20MB
+  ['alumnograduacion', 'nuevo_alumnograduacion_fotoacto', 115, 11, 'ADD','correcto', [{format_name_file: 'nombrecorrecto.jpg'},{type_file: 'image/jpeg'},{max_size_file:19}], true], //correcto 
  
   //EDITAR FOTOACTO
   ['alumnograduacion', 'nuevo_alumnograduacion_fotoacto', 116, 12, 'EDIT', 'existe', [], 'nuevo_alumnograduacion_fotoacto_vacio_KO'], 
-  ['alumnograduacion', 'nuevo_alumnograduacion_fotoacto', 117, 13, 'EDIT','format_name_file', [{max_size_file:19},{type_file: 'image/jpeg'},{format_name_file : 'nombre con espacios.jpg'}], 'nuevo_alumnograduacion_fotoacto_nombrefoto_format_KO'], //nombre con espacios y format pdf
-  ['alumnograduacion', 'nuevo_alumnograduacion_fotoacto', 117, 14, 'EDIT','format_name_file', [{max_size_file:19},{type_file: 'image/jpeg'},{format_name_file : 'nombreconñ.jpg'}], 'nuevo_alumnograduacion_fotoacto_nombrefoto_format_KO'], //nombre con espacios y format pdf
-  ['alumnograduacion', 'nuevo_alumnograduacion_fotoacto', 117, 15, 'EDIT','format_name_file', [{max_size_file:19},{type_file: 'image/jpeg'},{format_name_file : 'nombró.jpg'}], 'nuevo_alumnograduacion_fotoacto_nombrefoto_format_KO'], //nombre con espacios y format jpg
-  ['alumnograduacion', 'nuevo_alumnograduacion_fotoacto', 117, 16, 'EDIT','format_name_file', [{max_size_file:19},{type_file: 'image/jpeg'},{format_name_file : 'nombreúespacios.jpg'}], 'nuevo_alumnograduacion_fotoacto_nombrefoto_format_KO'], //nombre con espacios y format jpg
-  ['alumnograduacion', 'nuevo_alumnograduacion_fotoacto', 117, 17, 'EDIT','format_name_file', [{max_size_file:19},{type_file: 'image/jpeg'},{format_name_file : 'Ámbreespacios.jpg'}], 'nuevo_alumnograduacion_fotoacto_nombrefoto_format_KO'], //nombre con espacios y format jpg
-  ['alumnograduacion', 'nuevo_alumnograduacion_fotoacto', 118, 18, 'EDIT','format_name_file', [{max_size_file:19},{type_file: 'image/jpeg'},{format_name_file : 'nsdskj.jpg'}], 'nuevo_alumnograduacion_fotoacto_nombrefoto_min_size_KO'], 
-  ['alumnograduacion', 'nuevo_alumnograduacion_fotoacto', 119, 19, 'EDIT','format_name_file', [{max_size_file:19},{type_file: 'image/jpeg'},{format_name_file : 'n'.repeat(41)+'.jpg'}], 'nuevo_alumnograduacion_fotoacto_nombrefoto_max_size_KO'], //nombre con 41 caracteres y format jpg
-  ['alumnograduacion', 'nuevo_alumnograduacion_fotoacto', 120, 20, 'EDIT', 'type_file', [{max_size_file:19},{type_file: 'pdf'},{format_name_file: 'foto.pdf'}], 'nuevo_alumnograduacion_fotoacto_format_KO'], //format jpg
-  ['alumnograduacion', 'nuevo_alumnograduacion_fotoacto', 121, 21, 'EDIT', 'max_size_file', [{max_size_file:21},{type_file:'image/jpeg'},{format_name_file: 'foto.jpg'}], 'nuevo_alumnograduacion_fotoacto_max_size_KO'], //20MB
-  ['alumnograduacion', 'nuevo_alumnograduacion_fotoacto', 122, 22, 'EDIT', 'correcto',[{max_size_file: 1}, {type_file: 'image/jpeg'}, {format_name_file: 'nombrecorrecto.jpg'}], true], //correcto 
+  ['alumnograduacion', 'nuevo_alumnograduacion_fotoacto', 117, 13, 'EDIT','format_name_file', [{format_name_file : 'nombre con espacios.jpg'},{type_file: 'image/jpeg'},{max_size_file:19}], 'nuevo_alumnograduacion_fotoacto_nombrefoto_format_KO'], //nombre con espacios y format pdf
+  ['alumnograduacion', 'nuevo_alumnograduacion_fotoacto', 117, 14, 'EDIT','format_name_file', [{format_name_file : 'nombreconñ.jpg'},{type_file: 'image/jpeg'},{max_size_file:19}], 'nuevo_alumnograduacion_fotoacto_nombrefoto_format_KO'], //nombre con espacios y format pdf
+  ['alumnograduacion', 'nuevo_alumnograduacion_fotoacto', 117, 15, 'EDIT','format_name_file', [{format_name_file : 'nombró.jpg'},{type_file: 'image/jpeg'},{max_size_file:19}], 'nuevo_alumnograduacion_fotoacto_nombrefoto_format_KO'], //nombre con espacios y format jpg
+  ['alumnograduacion', 'nuevo_alumnograduacion_fotoacto', 117, 16, 'EDIT','format_name_file', [{format_name_file : 'nombreúespacios.jpg'},{type_file: 'image/jpeg'},{max_size_file:19}], 'nuevo_alumnograduacion_fotoacto_nombrefoto_format_KO'], //nombre con espacios y format jpg
+  ['alumnograduacion', 'nuevo_alumnograduacion_fotoacto', 117, 17, 'EDIT','format_name_file', [{format_name_file : 'Ámbreespacios.jpg'},{type_file: 'image/jpeg'},{max_size_file:19}], 'nuevo_alumnograduacion_fotoacto_nombrefoto_format_KO'], //nombre con espacios y format jpg
+  ['alumnograduacion', 'nuevo_alumnograduacion_fotoacto', 118, 18, 'EDIT','format_name_file', [{format_name_file : 'n.jpg'},{type_file: 'image/jpeg'},{max_size_file:19}], 'nuevo_alumnograduacion_fotoacto_nombrefoto_min_size_KO'], 
+  ['alumnograduacion', 'nuevo_alumnograduacion_fotoacto', 119, 19, 'EDIT','format_name_file', [{format_name_file : 'n'.repeat(41)+'.jpg'},{type_file: 'image/jpeg'},{max_size_file:19}], 'nuevo_alumnograduacion_fotoacto_nombrefoto_max_size_KO'], //nombre con 41 caracteres y format jpg
+  ['alumnograduacion', 'nuevo_alumnograduacion_fotoacto', 120, 20, 'EDIT', 'type_file', [{type_file: 'pdf'},{format_name_file: 'foto.pdf'},{type_file: 'pdf'},{max_size_file:19}], 'nuevo_alumnograduacion_fotoacto_format_KO'], //format jpg
+  ['alumnograduacion', 'nuevo_alumnograduacion_fotoacto', 121, 21, 'EDIT', 'max_size_file', [{format_name_file: 'foto.jpg'},{type_file: 'image/jpeg'},{max_size_file:21}], 'nuevo_alumnograduacion_fotoacto_max_size_KO'], //20MB
+  ['alumnograduacion', 'nuevo_alumnograduacion_fotoacto', 122, 22, 'EDIT', 'correcto',[{format_name_file: 'nombrecorrecto.jpg'},{type_file: 'image/jpeg'},{max_size_file:19}], true], //correcto 
 
-  //BUSCAR FOTOACTO
-  ['alumnograduacion', 'alumnograduacion_fotoacto', 123, 23, 'SEARCH','format_name_file', [{max_size_file:19},{type_file: 'image/jpeg'},{format_name_file : 'nombre con espacios.jpg'}], 'alumnograduacion_fotoacto_nombrefoto_format_KO'], //nombre con espacios y format pdf
-  ['alumnograduacion', 'alumnograduacion_fotoacto', 123, 24, 'SEARCH','format_name_file', [{max_size_file:19},{type_file: 'image/jpeg'},{format_name_file : 'nombreconñ.jpg'}], 'alumnograduacion_fotoacto_nombrefoto_format_KO'], //nombre con espacios y format pdf
-  ['alumnograduacion', 'alumnograduacion_fotoacto', 123, 25, 'SEARCH','format_name_file', [{max_size_file:19},{type_file: 'image/jpeg'},{format_name_file : 'nombró.jpg'}], 'alumnograduacion_fotoacto_nombrefoto_format_KO'], //nombre con espacios y format jpg
-  ['alumnograduacion', 'alumnograduacion_fotoacto', 123, 26, 'SEARCH','format_name_file', [{max_size_file:19},{type_file: 'image/jpeg'},{format_name_file : 'nombreúespacios.jpg'}], 'alumnograduacion_fotoacto_nombrefoto_format_KO'], //nombre con espacios y format jpg
-  ['alumnograduacion', 'alumnograduacion_fotoacto', 123, 27, 'SEARCH','format_name_file', [{max_size_file:19},{type_file: 'image/jpeg'},{format_name_file : 'Ámbreespacios.jpg'}], 'alumnograduacion_fotoacto_nombrefoto_format_KO'], //nombre con espacios y format jpg
-  ['alumnograduacion', 'alumnograduacion_fotoacto', 124, 28, 'SEARCH','format_name_file', [{max_size_file:19},{type_file: 'image/jpeg'},{format_name_file : 'n'.repeat(41)+'.jpg'}], 'alumnograduacion_fotoacto_nombrefoto_max_size_KO'], //nombre con 41 caracteres y format jpg
-  ['alumnograduacion', 'alumnograduacion_fotoacto', 125, 29, 'SEARCH','correcto', [{max_size_file: 1}, {type_file: 'image/jpeg'}, {format_name_file: 'nombrecorrecto.jpg'}], true]
-];
+  ];
