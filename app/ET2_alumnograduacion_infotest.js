@@ -626,20 +626,20 @@ let articulo_def_tests = [
   //CodigoA
 
   ['articulo', 'FechaPublicacionR', 'input', 1, 'Validar que el campo esté vacío.', 'ADD', 'FechaPublicacionR_vacio_KO', 'La fecha de publicación no puede estar vacía.'],
-  ['articulo', 'FechaPublicacionR', 'input', 2, 'Validar que el formato de la fecha sea incorrecto (no cumple YYYY-MM-DD).', 'ADD', 'FechaPublicacionR_formato_KO', 'El formato de la fecha debe ser YYYY-MM-DD.'],
+  ['articulo', 'FechaPublicacionR', 'input', 2, 'Validar que el formato de la fecha sea incorrecto (no cumple YYYY-MM-DD).', 'ADD', 'FechaPublicacionR_format_KO', 'El formato de la fecha debe ser YYYY-MM-DD.'],
   ['articulo', 'FechaPublicacionR', 'input', 3, 'Validar que la fecha sea posterior a la actual.', 'ADD', 'FechaPublicacionR_superiorActual_KO', 'La fecha de publicación no puede ser posterior a la fecha actual.'],
   ['articulo', 'FechaPublicacionR', 'input', 4, 'Validar que la fecha sea correcta.', 'ADD', 'FechaPublicacionR_correcto_OK', 'Fecha de publicación válida.'],
 
   // ---------- EDIT ----------
   ['articulo', 'FechaPublicacionR', 'input', 5, 'Validar que el campo esté vacío.', 'EDIT', 'FechaPublicacionR_vacio_KO', 'La fecha de publicación no puede estar vacía.'],
-  ['articulo', 'FechaPublicacionR', 'input', 6, 'Validar que el formato de la fecha sea incorrecto (no cumple YYYY-MM-DD).', 'EDIT', 'FechaPublicacionR_formato_KO', 'El formato de la fecha debe ser YYYY-MM-DD.'],
+  ['articulo', 'FechaPublicacionR', 'input', 6, 'Validar que el formato de la fecha sea incorrecto (no cumple YYYY-MM-DD).', 'EDIT', 'FechaPublicacionR_format_KO', 'El formato de la fecha debe ser YYYY-MM-DD.'],
   ['articulo', 'FechaPublicacionR', 'input', 7, 'Validar que la fecha sea posterior a la actual.', 'EDIT', 'FechaPublicacionR_superiorActual_KO', 'La fecha de publicación no puede ser posterior a la fecha actual.'],
   ['articulo', 'FechaPublicacionR', 'input', 8, 'Validar que la fecha sea correcta.', 'EDIT', 'FechaPublicacionR_correcto_OK', 'Fecha de publicación válida.'],
 
   // ---------- SEARCH ----------
   ['articulo', 'FechaPublicacionR', 'input', 9, 'Validar que el campo esté vacío (permitido en búsqueda).', 'SEARCH', 'FechaPublicacionR_vacio_OK', 'Campo vacío permitido en búsqueda.'],
-  ['articulo', 'FechaPublicacionR', 'input', 10, 'Validar que el formato de la fecha sea incorrecto (no cumple YYYY-MM-DD).', 'SEARCH', 'FechaPublicacionR_formato_KO', 'El formato de la fecha debe ser YYYY-MM-DD.'],
-  ['articulo', 'FechaPublicacionR', 'input', 11, 'Validar que la fecha sea correcta.', 'SEARCH', 'FechaPublicacionR_correcto_OK', 'Fecha de publicación válida.']
+  ['articulo', 'FechaPublicacionR', 'input', 10, 'Validar que el formato de la fecha sea incorrecto (no cumple YYYY-MM-DD).', 'SEARCH', 'FechaPublicacionR_format_KO', 'El formato de la fecha debe ser YYYY-MM-DD.'],
+  ['articulo', 'FechaPublicacionR', 'input', 11, 'Validar que la fecha sea correcta.', 'SEARCH', 'FechaPublicacionR_correcto_OK', 'Fecha de publicación válida.'],
 
 
   //BUSQUEDA CodigoA
@@ -688,24 +688,24 @@ let articulo_def_tests = [
   ['articulo', 'TituloA', 'input',  39, 'Validar que el campo tenga un maximo de 100 caracteres', 'SEARCH', 'TituloA_max_size_KO', 'Maximo 100 caracteres.'],
   ['articulo', 'TituloA', 'input',  40, 'Validar que el campo sea correcto', 'SEARCH', true, 'Correcto.'],
 
-  //ADD TitoloR
-  ['articulo', 'TitoloR', 'input', 41, 'Validar que el campo no este vacio', 'ADD', 'TitoloR_vacio_KO', 'Complete el campo'],
-  ['articulo', 'TitoloR', 'input', 42, 'Validar que el campo este compuesto por alfabeticos con ñ, espacios y acentos permitidos', 'ADD', 'TitoloR_format_KO', 'No se admiten caracteres que no sean alfabeticos, espacios, ñ o acentos.'],
-  ['articulo', 'TitoloR', 'input', 43, 'Validar que el campo tenga un minimo de 2 caracteres', 'ADD', 'TitoloR_min_size_KO', 'Mínimo 2 caracteres.'],
-  ['articulo', 'TitoloR', 'input', 44, 'Validar que el campo tenga un maximo de 100 caracteres', 'ADD', 'TitoloR_max_size_KO', 'Máximo 100 caracteres.'],   
-  ['articulo', 'TitoloR', 'input', 45, 'Validar que el campo sea correcto', 'ADD', true, 'Correcto.'], 
+  //ADD TituloR
+  ['articulo', 'TituloR', 'input', 41, 'Validar que el campo no este vacio', 'ADD', 'TituloR_vacio_KO', 'Complete el campo'],
+  ['articulo', 'TituloR', 'input', 42, 'Validar que el campo este compuesto por alfabeticos con ñ, espacios y acentos permitidos', 'ADD', 'TituloR_format_KO', 'No se admiten caracteres que no sean alfabeticos, espacios, ñ o acentos.'],
+  ['articulo', 'TituloR', 'input', 43, 'Validar que el campo tenga un minimo de 2 caracteres', 'ADD', 'TituloR_min_size_KO', 'Mínimo 2 caracteres.'],
+  ['articulo', 'TituloR', 'input', 44, 'Validar que el campo tenga un maximo de 100 caracteres', 'ADD', 'TituloR_max_size_KO', 'Máximo 100 caracteres.'],   
+  ['articulo', 'TituloR', 'input', 45, 'Validar que el campo sea correcto', 'ADD', true, 'Correcto.'], 
   
-  //EDITAR TitoloR
-  ['articulo', 'TitoloR', 'input', 46, 'Validar que el campo no este vacio', 'EDIT', 'TitoloR_vacio_KO', 'Complete el campo'],
-  ['articulo', 'TitoloR', 'input', 47, 'Validar que el campo este compuesto por alfabeticos con ñ, espacios y acentos permitidos', 'EDIT', 'TitoloR_format_KO', 'No se admiten caracteres que no sean alfabeticos, espacios, ñ o acentos.'],
-  ['articulo', 'TitoloR', 'input', 48, 'Validar que el campo tenga un minimo de 2 caracteres', 'EDIT', 'TitoloR_min_size_KO', 'Mínimo 2 caracteres.'],
-  ['articulo', 'TitoloR', 'input', 49, 'Validar que el campo tenga un maximo de 100 caracteres', 'EDIT', 'TitoloR_max_size_KO', 'Máximo 100 caracteres.'],   
-  ['articulo', 'TitoloR', 'input', 50, 'Validar que el campo sea correcto', 'EDIT', true, 'Correcto.'],
+  //EDITAR TituloR
+  ['articulo', 'TituloR', 'input', 46, 'Validar que el campo no este vacio', 'EDIT', 'TituloR_vacio_KO', 'Complete el campo'],
+  ['articulo', 'TituloR', 'input', 47, 'Validar que el campo este compuesto por alfabeticos con ñ, espacios y acentos permitidos', 'EDIT', 'TituloR_format_KO', 'No se admiten caracteres que no sean alfabeticos, espacios, ñ o acentos.'],
+  ['articulo', 'TituloR', 'input', 48, 'Validar que el campo tenga un minimo de 2 caracteres', 'EDIT', 'TituloR_min_size_KO', 'Mínimo 2 caracteres.'],
+  ['articulo', 'TituloR', 'input', 49, 'Validar que el campo tenga un maximo de 100 caracteres', 'EDIT', 'TituloR_max_size_KO', 'Máximo 100 caracteres.'],   
+  ['articulo', 'TituloR', 'input', 50, 'Validar que el campo sea correcto', 'EDIT', true, 'Correcto.'],
   
-  //BUSQUEDA TitoloR
-  ['articulo', 'TitoloR', 'input', 51, 'Validar que el campo este vacio o compuesto por alfabeticos con ñ, espacios y acentos permitidos', 'SEARCH', 'TitoloR_format_KO', 'No se admiten caracteres que no sean alfabeticos, espacios, ñ o acentos.'],            
-  ['articulo', 'TitoloR', 'input', 52, 'Validar que el campo tenga un maximo de 100 caracteres', 'SEARCH', 'TitoloR_max_size_KO', 'Maximo 100 caracteres.'],
-  ['articulo', 'TitoloR', 'input', 53, 'Validar que el campo sea correcto', 'SEARCH', true, 'Correcto.'],
+  //BUSQUEDA TituloR
+  ['articulo', 'TituloR', 'input', 51, 'Validar que el campo este vacio o compuesto por alfabeticos con ñ, espacios y acentos permitidos', 'SEARCH', 'TituloR_format_KO', 'No se admiten caracteres que no sean alfabeticos, espacios, ñ o acentos.'],            
+  ['articulo', 'TituloR', 'input', 52, 'Validar que el campo tenga un maximo de 100 caracteres', 'SEARCH', 'TituloR_max_size_KO', 'Maximo 100 caracteres.'],
+  ['articulo', 'TituloR', 'input', 53, 'Validar que el campo sea correcto', 'SEARCH', true, 'Correcto.'],
 
   //ADD EstadoA
   ['articulo', 'EstadoA','select', 54, 'Validar que el campo no este vacio', 'ADD', 'EstadoA_vacio_KO', 'Complete el campo'],
@@ -757,40 +757,40 @@ let articulo_def_tests = [
   ['articulo', 'VolumenR', 'input' , 83, 'Validar que el campo sea correcto', 'SEARCH', true, 'Correcto.'],
 
   
-  //PagInA
-  ['articulo', 'PagInA', 'textarea',  84, 'Validar que el campo no este vacio', 'ADD', 'PagInA_vacio_KO', 'Complete el campo'],
-  ['articulo', 'PagInA', 'textarea',  85, 'Validar que el campo este compuesto por numeros', 'ADD', 'PagInA_format_KO', 'No se admiten caracteres que no números.'],
-  ['articulo', 'PagInA', 'textarea',  86, 'Validar que el campo tenga un maximo de 4 caracteres', 'ADD', 'PagInA_max_size_KO', 'Máximo 4 caracteres.'],   
-  ['articulo', 'PagInA', 'textarea',  87, 'Validar que el campo sea correcto', 'ADD', true, 'Correcto.'], 
+  //PagIniA
+  ['articulo', 'PagIniA', 'input',  84, 'Validar que el campo no este vacio', 'ADD', 'PagIniA_vacio_KO', 'Complete el campo'],
+  ['articulo', 'PagIniA', 'input',  85, 'Validar que el campo este compuesto por numeros', 'ADD', 'PagIniA_format_KO', 'No se admiten caracteres que no números.'],
+  ['articulo', 'PagIniA', 'input',  86, 'Validar que el campo tenga un maximo de 4 caracteres', 'ADD', 'PagIniA_max_size_KO', 'Máximo 4 caracteres.'],   
+  ['articulo', 'PagIniA', 'input',  87, 'Validar que el campo sea correcto', 'ADD', true, 'Correcto.'], 
 
-  //EDITAR PagInA
-  ['articulo', 'PagInA', 'textarea',  88, 'Validar que el campo no este vacio', 'EDIT', 'PagInA_vacio_KO', 'Complete el campo'],
-  ['articulo', 'PagInA', 'textarea',  89, 'Validar que el campo este compuesto por numeros', 'EDIT', 'PagInA_format_KO', 'No se admiten caracteres que no números.'],
-  ['articulo', 'PagInA', 'textarea',  90, 'Validar que el campo tenga un maximo de 4 caracteres', 'EDIT', 'PagInA_max_size_KO', 'Máximo 4 caracteres.'],
-  ['articulo', 'PagInA', 'textarea',  91, 'Validar que el campo sea correcto', 'EDIT', true, 'Correcto.'],
+  //EDITAR PagIniA
+  ['articulo', 'PagIniA', 'input',  88, 'Validar que el campo no este vacio', 'EDIT', 'PagIniA_vacio_KO', 'Complete el campo'],
+  ['articulo', 'PagIniA', 'input',  89, 'Validar que el campo este compuesto por numeros', 'EDIT', 'PagIniA_format_KO', 'No se admiten caracteres que no números.'],
+  ['articulo', 'PagIniA', 'input',  90, 'Validar que el campo tenga un maximo de 4 caracteres', 'EDIT', 'PagIniA_max_size_KO', 'Máximo 4 caracteres.'],
+  ['articulo', 'PagIniA', 'input',  91, 'Validar que el campo sea correcto', 'EDIT', true, 'Correcto.'],
   
-  //BUSQUEDA PagInA
-  ['articulo', 'PagInA', 'textarea',  92, 'Validar que el campo este vacio o compuesto por numeros', 'SEARCH', 'PagInA_format_KO', 'No se admiten caracteres que no números.'],
-  ['articulo', 'PagInA', 'textarea',  93, 'Validar que el campo tenga un maximo de 4 caracteres', 'SEARCH', 'PagInA_max_size_KO', 'Máximo 4 caracteres.'],
-  ['articulo', 'PagInA', 'textarea',  94, 'Validar que el campo sea correcto', 'SEARCH', true, 'Correcto.'],
-
+  //BUSQUEDA PagIniA
+  ['articulo', 'PagIniA', 'input',  92, 'Validar que el campo este vacio o compuesto por numeros', 'SEARCH', 'PagIniA_format_KO', 'No se admiten caracteres que no números.'],
+  ['articulo', 'PagIniA', 'input',  93, 'Validar que el campo tenga un maximo de 4 caracteres', 'SEARCH', 'PagIniA_max_size_KO', 'Máximo 4 caracteres.'],
+  ['articulo', 'PagIniA', 'input',  94, 'Validar que el campo sea correcto', 'SEARCH', true, 'Correcto.'],
+/*
   //PagFinA
-  ['articulo', 'PagFinA', 'textarea', 95, 'Validar que el campo no este vacio', 'ADD', 'PagFinA_vacio_KO', 'Complete el campo'],
-  ['articulo', 'PagFinA', 'textarea', 96, 'Validar que el campo este compuesto por numeros', 'ADD', 'PagFinA_format_KO', 'No se admiten caracteres que no números.'],
-  ['articulo', 'PagFinA', 'textarea', 97, 'Validar que el campo tenga un maximo de 4 caracteres', 'ADD', 'PagFinA_max_size_KO', 'Máximo 4 caracteres.'],
-  ['articulo', 'PagFinA', 'textarea', 98 , 'Validar que el campo sea correcto', 'ADD', true, 'Correcto.'],
+  ['articulo', 'PagFinA', 'input', 95, 'Validar que el campo no este vacio', 'ADD', 'PagFinA_vacio_KO', 'Complete el campo'],
+  ['articulo', 'PagFinA', 'input', 96, 'Validar que el campo este compuesto por numeros', 'ADD', 'PagFinA_format_KO', 'No se admiten caracteres que no números.'],
+  ['articulo', 'PagFinA', 'input', 97, 'Validar que el campo tenga un maximo de 4 caracteres', 'ADD', 'PagFinA_max_size_KO', 'Máximo 4 caracteres.'],
+  ['articulo', 'PagFinA', 'input', 98 , 'Validar que el campo sea correcto', 'ADD', true, 'Correcto.'],
 
   //EDITAR PagFinA
-  ['articulo', 'PagFinA', 'textarea', 99, 'Validar que el campo no este vacio', 'EDIT', 'PagFinA_vacio_KO', 'Complete el campo'],
-  ['articulo', 'PagFinA', 'textarea', 100, 'Validar que el campo este compuesto por numeros', 'EDIT', 'PagFinA_format_KO', 'No se admiten caracteres que no números.'],
-  ['articulo', 'PagFinA', 'textarea', 101, 'Validar que el campo tenga un maximo de 4 caracteres', 'EDIT', 'PagFinA_max_size_KO', 'Máximo 4 caracteres.'],
-  ['articulo', 'PagFinA', 'textarea', 102, 'Validar que el campo sea correcto', 'EDIT', true, 'Correcto.'],
+  ['articulo', 'PagFinA', 'input', 99, 'Validar que el campo no este vacio', 'EDIT', 'PagFinA_vacio_KO', 'Complete el campo'],
+  ['articulo', 'PagFinA', 'input', 100, 'Validar que el campo este compuesto por numeros', 'EDIT', 'PagFinA_format_KO', 'No se admiten caracteres que no números.'],
+  ['articulo', 'PagFinA', 'input', 101, 'Validar que el campo tenga un maximo de 4 caracteres', 'EDIT', 'PagFinA_max_size_KO', 'Máximo 4 caracteres.'],
+  ['articulo', 'PagFinA', 'input', 102, 'Validar que el campo sea correcto', 'EDIT', true, 'Correcto.'],
 
   //BUSQUEDA PagFinA
-  ['articulo', 'PagFinA', 'textarea', 103, 'Validar que el campo este vacio o compuesto por numeros', 'SEARCH', 'PagFinA_format_KO', 'No se admiten caracteres que no números.'],
-  ['articulo', 'PagFinA', 'textarea', 104, 'Validar que el campo tenga un maximo de 4 caracteres', 'SEARCH', 'PagFinA_max_size_KO', 'Máximo 4 caracteres.'],
-  ['articulo', 'PagFinA', 'textarea', 105, 'Validar que el campo sea correcto', 'SEARCH', true, 'Correcto.'],
-
+  ['articulo', 'PagFinA', 'input', 103, 'Validar que el campo este vacio o compuesto por numeros', 'SEARCH', 'PagFinA_format_KO', 'No se admiten caracteres que no números.'],
+  ['articulo', 'PagFinA', 'input', 104, 'Validar que el campo tenga un maximo de 4 caracteres', 'SEARCH', 'PagFinA_max_size_KO', 'Máximo 4 caracteres.'],
+  ['articulo', 'PagFinA', 'input', 105, 'Validar que el campo sea correcto', 'SEARCH', true, 'Correcto.'],
+*/
   //ADD FicheropdfA
   ['articulo', 'nuevo_FicheropdfA', 'inputfile' ,106, 'Validar que el campo no este vacio', 'ADD', 'nuevo_FicheropdfA_vacio_KO', 'Complete el campo'],
   ['articulo', 'nuevo_FicheropdfA', 'inputfile' ,107, 'Validar que el campo tenga un nombre con solo alfabeticos sin espacios ni puntos antes de la extension', 'ADD', 'nuevo_FicheropdfA_nombrepdf_format_KO', 'El format deben ser alfabeticos sin espacios ni puntos antes de la extension (arc.hivo.pdf estaria mal).'],
@@ -822,20 +822,20 @@ let articulo_def_tests = [
 let articulo_tests_fields = [
 
   //fechaPublicacion
-  ['articulo', 'FechaPublicacionR', 1, 1, 'ADD', 'existe', [{FechaPublicacionR: ''}], 'FechaPublicacionR_vacio_KO'], 
-  /*['articulo', 'FechaPublicacionR', 2, 2, 'ADD', 'formato', [{FechaPublicacionR: '12/11/2025'}], 'FechaPublicacionR_formato_KO'], 
-  ['articulo', 'FechaPublicacionR', 3, 3, 'ADD', 'superior_actual', [{FechaPublicacionR: '2099-01-01'}], 'FechaPublicacionR_superiorActual_KO'], 
-  ['articulo', 'FechaPublicacionR', 4, 4, 'ADD', 'correcto', [{FechaPublicacionR: '2024-11-12'}], true], 
+  ['articulo', 'FechaPublicacionR', 1, 1, 'ADD', [{FechaPublicacionR: ''}], 'FechaPublicacionR_vacio_KO'], 
+  ['articulo', 'FechaPublicacionR', 2, 2, 'ADD', [{FechaPublicacionR: '12-11-2025'}], 'FechaPublicacionR_format_KO'], 
+  ['articulo', 'FechaPublicacionR', 3, 3, 'ADD', [{FechaPublicacionR: '01/01/2099'}], 'FechaPublicacionR_superiorActual_KO'], 
+  ['articulo', 'FechaPublicacionR', 4, 4, 'ADD', [{FechaPublicacionR: '20/11/2022'}], true], 
 
   // EDIT
-  ['articulo', 'FechaPublicacionR', 5, 5, 'EDIT', 'existe', [{FechaPublicacionR: ''}], 'FechaPublicacionR_vacio_KO'], 
-  ['articulo', 'FechaPublicacionR', 6, 6, 'EDIT', 'formato', [{FechaPublicacionR: '11-12-2025'}], 'FechaPublicacionR_formato_KO'], 
-  ['articulo', 'FechaPublicacionR', 7, 7, 'EDIT', 'superior_actual', [{FechaPublicacionR: '2099-12-31'}], 'FechaPublicacionR_superiorActual_KO'], 
-  ['articulo', 'FechaPublicacionR', 8, 8, 'EDIT', 'correcto', [{FechaPublicacionR: '2023-05-15'}], true], 
+  ['articulo', 'FechaPublicacionR', 5, 5, 'EDIT',  [{FechaPublicacionR: ''}], 'FechaPublicacionR_vacio_KO'], 
+  ['articulo', 'FechaPublicacionR', 6, 6, 'EDIT', [{FechaPublicacionR: '11-12-2025'}], 'FechaPublicacionR_format_KO'], 
+  ['articulo', 'FechaPublicacionR', 7, 7, 'EDIT', [{FechaPublicacionR: '01/01/2099'}], 'FechaPublicacionR_superiorActual_KO'], 
+  ['articulo', 'FechaPublicacionR', 8, 8, 'EDIT', [{FechaPublicacionR: '20/11/2022'}], true], 
 
-  ['articulo', 'FechaPublicacionR', 9, 9, 'SEARCH', 'vacio', [{FechaPublicacionR: ''}], true], 
-  ['articulo', 'FechaPublicacionR', 10, 10, 'SEARCH', 'formato', [{FechaPublicacionR: '15-05-2024'}], 'FechaPublicacionR_formato_KO'], 
-  ['articulo', 'FechaPublicacionR', 11, 11, 'SEARCH', 'correcto', [{FechaPublicacionR: '2023-04-01'}], true], 
+  ['articulo', 'FechaPublicacionR', 9, 9, 'SEARCH', [{FechaPublicacionR: ''}], true], 
+  ['articulo', 'FechaPublicacionR', 10, 10, 'SEARCH', [{FechaPublicacionR: '15-05-2024'}], 'FechaPublicacionR_format_KO'], 
+  ['articulo', 'FechaPublicacionR', 11, 11, 'SEARCH', [{FechaPublicacionR: '20/11/2022'}], true],
 
 
   //SEARCH CodigoA
@@ -941,33 +941,33 @@ let articulo_tests_fields = [
     ['articulo', 'TituloA', 39, 98, 'SEARCH', [{TituloA:'n'.repeat(101)}], 'TituloA_max_size_KO'],
     ['articulo', 'TituloA', 40 , 99, 'SEARCH', [{TituloA:'Nombre'}], true],
   
-    //ADD TitoloR 
-    ['articulo', 'TitoloR', 41, 100, 'ADD', [{TitoloR:''}], 'TitoloR_vacio_KO'],     
-    ['articulo', 'TitoloR', 42, 101, 'ADD', [{TitoloR:'abc123'}], 'TitoloR_format_KO'], 
-    ['articulo', 'TitoloR', 42, 102, 'ADD', [{TitoloR:'abcsad.'}], 'TitoloR_format_KO'],
-    ['articulo', 'TitoloR', 42, 103, 'ADD', [{TitoloR:'abc.zsad'}], 'TitoloR_format_KO'],
-    ['articulo', 'TitoloR', 42, 104, 'ADD', [{TitoloR:'(abcsfa'}], 'TitoloR_format_KO'],
-    ['articulo', 'TitoloR', 43, 105, 'ADD', [{TitoloR:'a'}], 'TitoloR_min_size_KO'], 
-    ['articulo', 'TitoloR', 44, 106, 'ADD', [{TitoloR:'n'.repeat(101)}], 'TitoloR_max_size_KO'],  
-    ['articulo', 'TitoloR', 45, 107, 'ADD', [{TitoloR:'TitoloR'}], true],
+    //ADD TituloR 
+    ['articulo', 'TituloR', 41, 100, 'ADD', [{TituloR:''}], 'TituloR_vacio_KO'],     
+    ['articulo', 'TituloR', 42, 101, 'ADD', [{TituloR:'abc123'}], 'TituloR_format_KO'], 
+    ['articulo', 'TituloR', 42, 102, 'ADD', [{TituloR:'abcsad.'}], 'TituloR_format_KO'],
+    ['articulo', 'TituloR', 42, 103, 'ADD', [{TituloR:'abc.zsad'}], 'TituloR_format_KO'],
+    ['articulo', 'TituloR', 42, 104, 'ADD', [{TituloR:'(abcsfa'}], 'TituloR_format_KO'],
+    ['articulo', 'TituloR', 43, 105, 'ADD', [{TituloR:'a'}], 'TituloR_min_size_KO'], 
+    ['articulo', 'TituloR', 44, 106, 'ADD', [{TituloR:'n'.repeat(101)}], 'TituloR_max_size_KO'],  
+    ['articulo', 'TituloR', 45, 107, 'ADD', [{TituloR:'TituloR'}], true],
+ 
+    //EDIT TituloR
+    ['articulo', 'TituloR', 46, 108, 'EDIT', [{TituloR:''}], 'TituloR_vacio_KO'],     
+    ['articulo', 'TituloR', 47, 109, 'EDIT', [{TituloR:'abc123'}], 'TituloR_format_KO'], 
+    ['articulo', 'TituloR', 47, 110, 'EDIT', [{TituloR:'abcsad.'}], 'TituloR_format_KO'],
+    ['articulo', 'TituloR', 47, 111, 'EDIT', [{TituloR:'abc.zsad'}], 'TituloR_format_KO'],
+    ['articulo', 'TituloR', 47, 112, 'EDIT', [{TituloR:'(abcsfa'}], 'TituloR_format_KO'],
+    ['articulo', 'TituloR', 48, 113, 'EDIT', [{TituloR:'a'}], 'TituloR_min_size_KO'], 
+    ['articulo', 'TituloR', 49, 114, 'EDIT', [{TituloR:'n'.repeat(101)}], 'TituloR_max_size_KO'],  
+    ['articulo', 'TituloR', 50, 115, 'EDIT', [{TituloR:'TituloR'}], true],
   
-    //EDIT TitoloR
-    ['articulo', 'TitoloR', 46, 108, 'EDIT', [{TitoloR:''}], 'TitoloR_vacio_KO'],     
-    ['articulo', 'TitoloR', 47, 109, 'EDIT', [{TitoloR:'abc123'}], 'TitoloR_format_KO'], 
-    ['articulo', 'TitoloR', 47, 110, 'EDIT', [{TitoloR:'abcsad.'}], 'TitoloR_format_KO'],
-    ['articulo', 'TitoloR', 47, 111, 'EDIT', [{TitoloR:'abc.zsad'}], 'TitoloR_format_KO'],
-    ['articulo', 'TitoloR', 47, 112, 'EDIT', [{TitoloR:'(abcsfa'}], 'TitoloR_format_KO'],
-    ['articulo', 'TitoloR', 48, 113, 'EDIT', [{TitoloR:'a'}], 'TitoloR_min_size_KO'], 
-    ['articulo', 'TitoloR', 49, 114, 'EDIT', [{TitoloR:'n'.repeat(101)}], 'TitoloR_max_size_KO'],  
-    ['articulo', 'TitoloR', 50, 115, 'EDIT', [{TitoloR:'TitoloR'}], true],
-  
-    //SEARCH TitoloR
-    ['articulo', 'TitoloR', 51, 116, 'SEARCH', [{TitoloR:'abc123'}], 'TitoloR_format_KO'], 
-    ['articulo', 'TitoloR', 51, 117, 'SEARCH', [{TitoloR:'abcsad.'}], 'TitoloR_format_KO'],
-    ['articulo', 'TitoloR', 51, 118, 'SEARCH', [{TitoloR:'abc.zsad'}], 'TitoloR_format_KO'],
-    ['articulo', 'TitoloR', 51, 119, 'SEARCH', [{TitoloR:'(abcsfa'}], 'TitoloR_format_KO'],
-    ['articulo', 'TitoloR', 52, 120, 'SEARCH', [{TitoloR:'n'.repeat(101)}], 'TitoloR_max_size_KO'],  
-    ['articulo', 'TitoloR', 53, 121, 'SEARCH', [{TitoloR:'TitoloR'}], true],
+    //SEARCH TituloR
+    ['articulo', 'TituloR', 51, 116, 'SEARCH', [{TituloR:'abc123'}], 'TituloR_format_KO'], 
+    ['articulo', 'TituloR', 51, 117, 'SEARCH', [{TituloR:'abcsad.'}], 'TituloR_format_KO'],
+    ['articulo', 'TituloR', 51, 118, 'SEARCH', [{TituloR:'abc.zsad'}], 'TituloR_format_KO'],
+    ['articulo', 'TituloR', 51, 119, 'SEARCH', [{TituloR:'(abcsfa'}], 'TituloR_format_KO'],
+    ['articulo', 'TituloR', 52, 120, 'SEARCH', [{TituloR:'n'.repeat(101)}], 'TituloR_max_size_KO'],  
+    ['articulo', 'TituloR', 53, 121, 'SEARCH', [{TituloR:'TituloR'}], true],
 
       //ADD EstadoA            
   ['articulo', 'EstadoA', 54, 122, 'ADD', [{EstadoA:''}], 'EstadoA_vacio_KO'],      
@@ -1023,23 +1023,23 @@ let articulo_tests_fields = [
   ['articulo', 'VolumenR', 82, 156, 'SEARCH', [{VolumenR:'12345'}], 'VolumenR_max_size_KO'],  
   ['articulo', 'VolumenR', 83, 157, 'SEARCH', [{VolumenR:'1234'}], true],
 
-  //ADD PagInA 84-94
-  ['articulo', 'PagInA', 84, 158, 'ADD', [{PagInA:''}], 'PagInA_vacio_KO'],      
-  ['articulo', 'PagInA', 85, 159, 'ADD', [{PagInA:'12a'}], 'PagInA_format_KO'], 
-  ['articulo', 'PagInA', 86, 160, 'ADD', [{PagInA:'12345'}], 'PagInA_max_size_KO'],           
-  ['articulo', 'PagInA', 87, 161, 'ADD', [{PagInA:'123'}], true],             
+  //ADD PagIniA 84-94
+  ['articulo', 'PagIniA', 84, 158, 'ADD', [{PagIniA:''}], 'PagIniA_vacio_KO'],      
+  ['articulo', 'PagIniA', 85, 159, 'ADD', [{PagIniA:'12a'}], 'PagIniA_format_KO'], 
+  ['articulo', 'PagIniA', 86, 160, 'ADD', [{PagIniA:'12345'}], 'PagIniA_max_size_KO'],           
+  ['articulo', 'PagIniA', 87, 161, 'ADD', [{PagIniA:'123'}], true],             
 
-  //EDIT PagInA
-  ['articulo', 'PagInA', 88, 162, 'EDIT', [{PagInA:''}], 'PagInA_vacio_KO'],      
-  ['articulo', 'PagInA', 89, 163, 'EDIT', [{PagInA:'123.'}], 'PagInA_format_KO'], 
-  ['articulo', 'PagInA', 90, 164, 'EDIT', [{PagInA:'12345'}], 'PagInA_max_size_KO'],           
-  ['articulo', 'PagInA', 91, 165, 'EDIT', [{PagInA:'123'}], true],    
+  //EDIT PagIniA
+  ['articulo', 'PagIniA', 88, 162, 'EDIT', [{PagIniA:''}], 'PagIniA_vacio_KO'],      
+  ['articulo', 'PagIniA', 89, 163, 'EDIT', [{PagIniA:'123.'}], 'PagIniA_format_KO'], 
+  ['articulo', 'PagIniA', 90, 164, 'EDIT', [{PagIniA:'12345'}], 'PagIniA_max_size_KO'],           
+  ['articulo', 'PagIniA', 91, 165, 'EDIT', [{PagIniA:'123'}], true],    
 
-  //SEARCH PagInA
-  ['articulo', 'PagInA', 92, 166, 'SEARCH', [{PagInA:'123.'}], 'PagInA_format_KO'], 
-  ['articulo', 'PagInA', 93, 167, 'SEARCH', [{PagInA:'12345'}], 'PagInA_max_size_KO'],           
-  ['articulo', 'PagInA', 94, 168, 'SEARCH', [{PagInA:'123'}], true],
-
+  //SEARCH PagIniA
+  ['articulo', 'PagIniA', 92, 166, 'SEARCH', [{PagIniA:'123.'}], 'PagIniA_format_KO'], 
+  ['articulo', 'PagIniA', 93, 167, 'SEARCH', [{PagIniA:'12345'}], 'PagIniA_max_size_KO'],           
+  ['articulo', 'PagIniA', 94, 168, 'SEARCH', [{PagIniA:'123'}], true],
+/*
   //ADD PagFinA
   ['articulo', 'PagFinA', 95, 169, 'ADD', [{PagFinA:''}], 'PagFinA_vacio_KO'],      
   ['articulo', 'PagFinA', 96, 170, 'ADD', [{PagFinA:'12a'}], 'PagFinA_format_KO'], 
@@ -1056,7 +1056,7 @@ let articulo_tests_fields = [
   ['articulo', 'PagFinA', 103, 177, 'SEARCH', [{PagFinA:'123.'}], 'PagFinA_format_KO'], 
   ['articulo', 'PagFinA', 104, 178, 'SEARCH', [{PagFinA:'12345'}], 'PagFinA_max_size_KO'],           
   ['articulo', 'PagFinA', 105, 179, 'SEARCH', [{PagFinA:'123'}], true],
-
+*/
   //BUSCAR FicheropdfA
   ['articulo', 'FicheropdfA', 120, 180, 'SEARCH', [{FicheropdfA : 'nombre con espacios.jpg'}], 'FicheropdfA_nombrepdf_format_KO'], 
   ['articulo', 'FicheropdfA', 120, 181, 'SEARCH', [{FicheropdfA : 'nombr,econ.jpg'}], 'FicheropdfA_nombrepdf_format_KO'], 
@@ -1065,289 +1065,10 @@ let articulo_tests_fields = [
   ['articulo', 'FicheropdfA', 120, 184, 'SEARCH', [{FicheropdfA : 'mbreespacios..jpg'}], 'FicheropdfA_nombrepdf_format_KO'], 
   ['articulo', 'FicheropdfA', 121, 185, 'SEARCH', [{FicheropdfA : 'n'.repeat(21)+'.jpg'}], 'FicheropdfA_nombrepdf_max_size_KO'], 
   ['articulo', 'FicheropdfA', 122, 186, 'SEARCH', [{FicheropdfA : 'nombrecorrecto.jpg'}], true]
-*/
+
   ];
-/*
-Las pruebas se crearán, para los campos del formulario que no sean input tipo file, mediante un array de nombre ‘nombreentidad_tests_fields’ que contenga:
 
-la entidad, 
-el campo, 
-el número de definición de test, 
-el número de prueba (secuencial desde 1 hasta el final)
-la acción a realizar
-valor/es a probar en array [[atributo, valor]]
-el código asociado de error/valor true de éxito
-*/
-
-/*
-let articulo_tests_fields = [
-
-  //fechaPublicacion
-  ['articulo', 'FechaPublicacionR', 1, 1, 'ADD', 'existe', [{FechaPublicacionR: ''}], 'FechaPublicacionR_vacio_KO'], 
-  ['articulo', 'FechaPublicacionR', 2, 2, 'ADD', 'formato', [{FechaPublicacionR: '12/11/2025'}], 'FechaPublicacionR_formato_KO'], // formato incorrecto
-  ['articulo', 'FechaPublicacionR', 3, 3, 'ADD', 'superior_actual', [{FechaPublicacionR: '2099-01-01'}], 'FechaPublicacionR_superiorActual_KO'], // futura
-  ['articulo', 'FechaPublicacionR', 4, 4, 'ADD', 'correcto', [{FechaPublicacionR: '2024-11-12'}], true], // correcto
-
-  // EDIT
-  ['articulo', 'FechaPublicacionR', 5, 5, 'EDIT', 'existe', [{FechaPublicacionR: ''}], 'FechaPublicacionR_vacio_KO'], 
-  ['articulo', 'FechaPublicacionR', 6, 6, 'EDIT', 'formato', [{FechaPublicacionR: '11-12-2025'}], 'FechaPublicacionR_formato_KO'], // formato incorrecto
-  ['articulo', 'FechaPublicacionR', 7, 7, 'EDIT', 'superior_actual', [{FechaPublicacionR: '2099-12-31'}], 'FechaPublicacionR_superiorActual_KO'], // futura
-  ['articulo', 'FechaPublicacionR', 8, 8, 'EDIT', 'correcto', [{FechaPublicacionR: '2023-05-15'}], true], // correcto
-
-  ['articulo', 'FechaPublicacionR', 9, 9, 'SEARCH', 'vacio', [{FechaPublicacionR: ''}], true], // permitido vacío
-  ['articulo', 'FechaPublicacionR', 10, 10, 'SEARCH', 'formato', [{FechaPublicacionR: '15-05-2024'}], 'FechaPublicacionR_formato_KO'], 
-  ['articulo', 'FechaPublicacionR', 11, 11, 'SEARCH', 'correcto', [{FechaPublicacionR: '2023-04-01'}], true] 
-
-
-   //SEARCH CodigoA
-   ['articulo', 'CodigoA', 12, 12, 'SEARCH', [{CodigoA:'abcñ'}], 'CodigoA_format_KO'],
-   ['articulo', 'CodigoA', 12, 13, 'EDIT', [{CodigoA:'12 344'}], 'CodigoA_format_KO'],
-   ['articulo', 'CodigoA', 12, 14, 'EDIT', [{CodigoA:'12.343'}], 'CodigoA_format_KO'],
-   ['articulo', 'CodigoA', 12, 15, 'EDIT', [{CodigoA:'12_343'}], 'CodigoA_format_KO'],
-   ['articulo', 'CodigoA', 12, 16, 'EDIT', [{CodigoA:'1+123'}], 'CodigoA_format_KO'],
-   ['articulo', 'CodigoA', 12, 17, 'EDIT', [{CodigoA:'AS123'}], 'CodigoA_format_KO'],
-   ['articulo', 'CodigoA', 12, 18, 'EDIT', [{CodigoA:'123A13'}], 'CodigoA_format_KO'],
-   ['articulo', 'CodigoA', 12, 19, 'EDIT', [{CodigoA:'123A'}], 'CodigoA_format_KO'],
-   ['articulo', 'CodigoA', 12, 20, 'EDIT', [{CodigoA:'12435a.'}], 'CodigoA_format_KO'],
-   ['articulo', 'CodigoA', 12, 21, 'EDIT', [{CodigoA:'acxìr2dg'}], 'CodigoA_format_KO'],
-   ['articulo', 'CodigoA', 12, 22, 'EDIT', [{CodigoA:'àc3xddg'}], 'CodigoA_format_KO'],
-   ['articulo', 'CodigoA', 12, 23, 'EDIT', [{CodigoA:'aù5xddg'}], 'CodigoA_format_KO'],
-   ['articulo', 'CodigoA', 12, 24, 'EDIT', [{CodigoA:'ac6Üxddg'}], 'CodigoA_format_KO'],
-   ['articulo', 'CodigoA', 12, 25, 'EDIT', [{CodigoA:'acï6ddg'}], 'CodigoA_format_KO'],
-   ['articulo', 'CodigoA', 12, 26, 'EDIT', [{CodigoA:'acôd6dg'}], 'CodigoA_format_KO'],
-  ['articulo', 'CodigoA', 13, 27, 'SEARCH', [{CodigoA:'12232435454646'}], 'CodigoA_max_size_KO'],
-  ['articulo', 'CodigoA', 14, 28, 'SEARCH', [{CodigoA:'12345678901'}], true],
- 
-
-  
-  //ADD AutoresA
-  ['articulo', 'AutoresA', 15, 29, 'ADD', [{AutoresA:''}], 'AutoresA_vacio_KO'],
-  ['articulo', 'AutoresA', 16, 30, 'ADD', [{AutoresA:'abc'}], 'AutoresA_min_size_KO'],
-  ['articulo', 'AutoresA', 17, 31, 'ADD', [{AutoresA: 'n'.repeat(201)}], 'AutoresA_max_size_KO'],
-  ['articulo', 'AutoresA', 18, 32, 'ADD', [{AutoresA:'12343535'}], 'AutoresA_format_KO'], 
-  ['articulo', 'AutoresA', 18, 33, 'ADD', [{AutoresA:'ab1códefgh'}], 'AutoresA_format_KO'], 
-  ['articulo', 'AutoresA', 18, 34, 'ADD', [{AutoresA:'ábcñdefgh33'}], 'AutoresA_format_KO'], 
-  ['articulo', 'AutoresA', 18, 35, 'ADD', [{AutoresA:'11abcñdéfgh'}], 'AutoresA_format_KO'], 
-  ['articulo', 'AutoresA', 18, 36, 'ADD', [{AutoresA:'.abcñdefghí'}], 'AutoresA_format_KO'], 
-  ['articulo', 'AutoresA', 18, 37, 'ADD', [{AutoresA:'abcñ.defgú'}], 'AutoresA_format_KO'], 
-  ['articulo', 'AutoresA', 18, 38, 'ADD', [{AutoresA:'àbcñdefgh.'}], 'AutoresA_format_KO'], 
-  ['articulo', 'AutoresA', 18, 39, 'ADD', [{AutoresA:'ab@cñdèfgh'}], 'AutoresA_format_KO'], 
-  ['articulo', 'AutoresA', 18, 40, 'ADD', [{AutoresA:'@abcñdefghì'}], 'AutoresA_format_KO'], 
-  ['articulo', 'AutoresA', 18, 41, 'ADD', [{AutoresA:'aòcñdefgh@'}], 'AutoresA_format_KO'],              
-  ['articulo', 'AutoresA', 18, 42, 'ADD', [{AutoresA:'abcÙ_defgh'}], 'AutoresA_format_KO'], 
-  ['articulo', 'AutoresA', 18, 43, 'ADD', [{AutoresA:'_abôcdefgh'}], 'AutoresA_format_KO'],
-  ['articulo', 'AutoresA', 18, 44, 'ADD', [{AutoresA:'abcüdefgh_'}], 'AutoresA_format_KO'],  
-  ['articulo', 'AutoresA', 19, 45, 'ADD', [{AutoresA:'AutóoresA'}], true],
-
-  //EDIT AutoresA
-  ['articulo', 'AutoresA', 20, 46, 'EDIT', [{AutoresA:''}], 'AutoresA_vacio_KO'],   
-  ['articulo', 'AutoresA', 21, 47, 'EDIT', [{AutoresA:'abc'}], 'AutoresA_min_size_KO'],
-  ['articulo', 'AutoresA', 22, 48, 'EDIT', [{AutoresA:'n'.repeat(201)}], 'AutoresA_max_size_KO'],
-  ['articulo', 'AutoresA', 23, 49, 'EDIT', [{AutoresA:'12343535'}], 'AutoresA_format_KO'], 
-  ['articulo', 'AutoresA', 23, 50, 'EDIT', [{AutoresA:'ab1códefgh'}], 'AutoresA_format_KO'], 
-  ['articulo', 'AutoresA', 23, 51, 'EDIT', [{AutoresA:'ábcñdefgh33'}], 'AutoresA_format_KO'], 
-  ['articulo', 'AutoresA', 23, 52, 'EDIT', [{AutoresA:'11abcñdéfgh'}], 'AutoresA_format_KO'], 
-  ['articulo', 'AutoresA', 23, 53, 'EDIT', [{AutoresA:'.abcñdefghí'}], 'AutoresA_format_KO'], 
-  ['articulo', 'AutoresA', 23, 54, 'EDIT', [{AutoresA:'abcñ.defgú'}], 'AutoresA_format_KO'], 
-  ['articulo', 'AutoresA', 23, 55, 'EDIT', [{AutoresA:'àbcñdefgh.'}], 'AutoresA_format_KO'], 
-  ['articulo', 'AutoresA', 23, 56, 'EDIT', [{AutoresA:'ab@cñdèfgh'}], 'AutoresA_format_KO'], 
-  ['articulo', 'AutoresA', 23, 57, 'EDIT', [{AutoresA:'@abcñdefghì'}], 'AutoresA_format_KO'], 
-  ['articulo', 'AutoresA', 23, 58, 'EDIT', [{AutoresA:'aòcñdefgh@'}], 'AutoresA_format_KO'],              
-  ['articulo', 'AutoresA', 23, 59, 'EDIT', [{AutoresA:'abcÙ_defgh'}], 'AutoresA_format_KO'], 
-  ['articulo', 'AutoresA', 23, 60, 'EDIT', [{AutoresA:'_abôcdefgh'}], 'AutoresA_format_KO'],
-  ['articulo', 'AutoresA', 23, 61, 'EDIT', [{AutoresA:'abcüdefgh_'}], 'AutoresA_format_KO'],  
-  ['articulo', 'AutoresA', 24, 62, 'EDIT', [{AutoresA:'AutoresA'}], true],
-
-  //SEARCH AutoresA
-  ['articulo', 'AutoresA', 25,63, 'SEARCH', [{AutoresA:'12343535'}], 'AutoresA_format_KO'], 
-  ['articulo', 'AutoresA', 25, 64, 'SEARCH', [{AutoresA:'ab1códefgh'}], 'AutoresA_format_KO'], 
-  ['articulo', 'AutoresA', 25, 65, 'SEARCH', [{AutoresA:'ábcñdefgh33'}], 'AutoresA_format_KO'], 
-  ['articulo', 'AutoresA', 25, 66, 'SEARCH', [{AutoresA:'11abcñdéfgh'}], 'AutoresA_format_KO'], 
-  ['articulo', 'AutoresA', 25, 67, 'SEARCH', [{AutoresA:'.abcñdefghí'}], 'AutoresA_format_KO'], 
-  ['articulo', 'AutoresA', 25, 68, 'SEARCH', [{AutoresA:'abcñ.defgú'}], 'AutoresA_format_KO'], 
-  ['articulo', 'AutoresA', 25, 69, 'SEARCH', [{AutoresA:'àbcñdefgh.'}], 'AutoresA_format_KO'], 
-  ['articulo', 'AutoresA', 25, 70 , 'SEARCH', [{AutoresA:'ab@cñdèfgh'}], 'AutoresA_format_KO'], 
-  ['articulo', 'AutoresA', 25, 71 , 'SEARCH', [{AutoresA:'@abcñdefghì'}], 'AutoresA_format_KO'], 
-  ['articulo', 'AutoresA', 25, 72 , 'SEARCH', [{AutoresA:'aòcñdefgh@'}], 'AutoresA_format_KO'],              
-  ['articulo', 'AutoresA', 25, 73 , 'SEARCH', [{AutoresA:'abc_Ùdefgh'}], 'AutoresA_format_KO'], 
-  ['articulo', 'AutoresA', 25, 74 , 'SEARCH', [{AutoresA:'_abôcdefgh'}], 'AutoresA_format_KO'],
-  ['articulo', 'AutoresA', 25, 75 , 'SEARCH', [{AutoresA:'abcüdefgh_'}], 'AutoresA_format_KO'],
-  ['articulo', 'AutoresA', 25, 76 , 'SEARCH', [{AutoresA:'n'.repeat(201)}], 'AutoresA_max_size_KO'],  
-  ['articulo', 'AutoresA', 26, 77 , 'SEARCH', [{AutoresA:'AutoresA'}], true],
-
-
-
-  //ADD TituloA                                
-  ['articulo', 'TituloA', 27, 78, 'ADD', [{TituloA:''}], 'TituloA_vacio_KO'],      
-  ['articulo', 'TituloA', 28, 79, 'ADD', [{TituloA:'abc123'}], 'TituloA_format_KO'],
-  ['articulo', 'TituloA', 28, 80, 'ADD', [{TituloA:'ab.sdff'}], 'TituloA_format_KO'],
-  ['articulo', 'TituloA', 28, 81, 'ADD', [{TituloA:'abcsds.'}], 'TituloA_format_KO'],
-  ['articulo', 'TituloA', 28, 82, 'ADD', [{TituloA:'(abcsadasf'}], 'TituloA_format_KO'],
-  ['articulo', 'TituloA', 29, 83, 'ADD', [{TituloA:'a'}], 'TituloA_min_size_KO'],
-  ['articulo', 'TituloA', 30, 84, 'ADD', [{TituloA:'n'.repeat(101)}], 'TituloA_max_size_KO'],           
-  ['articulo', 'TituloA', 31, 85, 'ADD', [{TituloA:'Nombre'}], true],  
-  
-  //EDIT TituloA                                
-  ['articulo', 'TituloA', 32, 86, 'EDIT', [{TituloA:''}], 'TituloA_vacio_KO'],      
-  ['articulo', 'TituloA', 33, 87, 'EDIT', [{TituloA:'abc123'}], 'TituloA_format_KO'],
-  ['articulo', 'TituloA', 33, 88, 'EDIT', [{TituloA:'ab.sdff'}], 'TituloA_format_KO'],
-  ['articulo', 'TituloA', 33, 89, 'EDIT', [{TituloA:'abcsds.'}], 'TituloA_format_KO'],
-  ['articulo', 'TituloA', 33, 90, 'EDIT', [{TituloA:'(abcsadasf'}], 'TituloA_format_KO'],
-  ['articulo', 'TituloA', 34, 91, 'EDIT', [{TituloA:'a'}], 'TituloA_min_size_KO'],
-  ['articulo', 'TituloA', 35, 92, 'EDIT', [{TituloA:'n'.repeat(101)}], 'TituloA_max_size_KO'],           
-  ['articulo', 'TituloA', 36, 93, 'EDIT', [{TituloA:'Nombre'}], true],  
-  
-  //SEARCH TituloA
-  ['articulo', 'TituloA', 37, 94, 'SEARCH', [{TituloA:'abc123'}], 'TituloA_format_KO'],
-  ['articulo', 'TituloA', 37, 95, 'SEARCH', [{TituloA:'ab.sdff'}], 'TituloA_format_KO'],
-  ['articulo', 'TituloA', 37, 96, 'SEARCH', [{TituloA:'abcsds.'}], 'TituloA_format_KO'],
-  ['articulo', 'TituloA', 37, 97, 'SEARCH', [{TituloA:'(abcsadasf'}], 'TituloA_format_KO'],
-  ['articulo', 'TituloA', 38, 98, 'SEARCH', [{TituloA:'n'.repeat(101)}], 'TituloA_max_size_KO'],
-  ['articulo', 'TituloA', 39 , 99, 'SEARCH', [{TituloA:'Nombre'}], true],
- 
-
-
-  //ADD TitoloR 
-  ['articulo', 'TitoloR', 40, 100, 'ADD', [{TitoloR:''}], 'TitoloR_vacio_KO'],     
-  ['articulo', 'TitoloR', 41, 101, 'ADD', [{TitoloR:'abc123'}], 'TitoloR_format_KO'], 
-  ['articulo', 'TitoloR', 41, 102, 'ADD', [{TitoloR:'abcsad.'}], 'TitoloR_format_KO'],
-  ['articulo', 'TitoloR', 41, 103, 'ADD', [{TitoloR:'abc.zsad'}], 'TitoloR_format_KO'],
-  ['articulo', 'TitoloR', 41, 104, 'ADD', [{TitoloR:'(abcsfa'}], 'TitoloR_format_KO'],
-  ['articulo', 'TitoloR', 42, 105, 'ADD', [{TitoloR:'a'}], 'TitoloR_min_size_KO'], 
-  ['articulo', 'TitoloR', 43, 106, 'ADD', [{TitoloR:'n'.repeat(101)}], 'TitoloR_max_size_KO'],  
-  ['articulo', 'TitoloR', 44, 107, 'ADD', [{TitoloR:'TitoloR'}], true],
-  
-  //EDIT TitoloR
-  ['articulo', 'TitoloR', 45, 108, 'EDIT', [{TitoloR:''}], 'TitoloR_vacio_KO'],     
-  ['articulo', 'TitoloR', 46, 109, 'EDIT', [{TitoloR:'abc123'}], 'TitoloR_format_KO'], 
-  ['articulo', 'TitoloR', 46, 110, 'EDIT', [{TitoloR:'abcsad.'}], 'TitoloR_format_KO'],
-  ['articulo', 'TitoloR', 46, 111, 'EDIT', [{TitoloR:'abc.zsad'}], 'TitoloR_format_KO'],
-  ['articulo', 'TitoloR', 46, 112, 'EDIT', [{TitoloR:'(abcsfa'}], 'TitoloR_format_KO'],
-  ['articulo', 'TitoloR', 47, 113, 'EDIT', [{TitoloR:'a'}], 'TitoloR_min_size_KO'], 
-  ['articulo', 'TitoloR', 48, 114, 'EDIT', [{TitoloR:'n'.repeat(101)}], 'TitoloR_max_size_KO'],  
-  ['articulo', 'TitoloR', 49, 115, 'EDIT', [{TitoloR:'TitoloR'}], true],
-  
-  //SEARCH TitoloR
-  ['articulo', 'TitoloR', 50, 116, 'SEARCH', [{TitoloR:'abc123'}], 'TitoloR_format_KO'], 
-  ['articulo', 'TitoloR', 50, 117, 'SEARCH', [{TitoloR:'abcsad.'}], 'TitoloR_format_KO'],
-  ['articulo', 'TitoloR', 50, 118, 'SEARCH', [{TitoloR:'abc.zsad'}], 'TitoloR_format_KO'],
-  ['articulo', 'TitoloR', 50, 119, 'SEARCH', [{TitoloR:'(abcsfa'}], 'TitoloR_format_KO'],
-  ['articulo', 'TitoloR', 51, 120, 'SEARCH', [{TitoloR:'n'.repeat(101)}], 'TitoloR_max_size_KO'],  
-  ['articulo', 'TitoloR', 52, 121, 'SEARCH', [{TitoloR:'TitoloR'}], true],
-  
-
-
-  //ADD EstadoA            
-  ['articulo', 'EstadoA', 53, 122, 'ADD', [{EstadoA:''}], 'EstadoA_vacio_KO'],      
-  ['articulo', 'EstadoA', 54, 123, 'ADD', [{EstadoA:'Envia'}], 'EstadoA_format_KO'], 
-  ['articulo', 'EstadoA', 55, 125, 'ADD', [{EstadoA:'Enviado'}], true],        
- 
-  //EDIT EstadoA            
-  ['articulo', 'EstadoA', 56, 126, 'EDIT', [{EstadoA:''}], 'EstadoA_vacio_KO'],      
-  ['articulo', 'EstadoA', 57, 127, 'EDIT', [{EstadoA:'Envia'}], 'EstadoA_format_KO'], 
-  ['articulo', 'EstadoA', 58, 128, 'EDIT', [{EstadoA:'Enviado'}], true],        
-
-  //SEARCH EstadoA            
-  ['articulo', 'EstadoA', 59, 129, 'SEARCH', [{EstadoA:'Envia'}], 'EstadoA_format_KO'], 
-  ['articulo', 'EstadoA', 60, 130, 'SEARCH', [{EstadoA:'Enviado'}], true],        
- 
-
-
-  //ADD ISSN       
-  ['articulo', 'ISSN', 61, 131, 'ADD', [{ISSN:''}], 'ISSN_vacio_KO'],       
-  ['articulo', 'ISSN', 62, 132, 'ADD', [{ISSN:'1234-234'}], 'ISSN_format_KO'], 
-  ['articulo', 'ISSN', 63, 133, 'ADD', [{ISSN:'1234-12345'}], 'ISSN_max_size_KO'],  
-  ['articulo', 'ISSN', 64, 134, 'ADD', [{ISSN:'1234-5679'}], true], 
- 
-  //EDIT ISSN       
-  ['articulo', 'ISSN', 65, 135, 'EDIT', [{ISSN:''}], 'ISSN_vacio_KO'],     
-  ['articulo', 'ISSN', 66, 136, 'EDIT', [{ISSN:'1234-234'}], 'ISSN_format_KO'], 
-  ['articulo', 'ISSN', 67, 137, 'EDIT', [{ISSN:'1234-12345'}], 'ISSN_max_size_KO'],  
-  ['articulo', 'ISSN', 68, 138, 'EDIT', [{ISSN:'1234-5679'}], true], 
-
-  //SEARCH ISSN       
-  ['articulo', 'ISSN', 69, 139, 'SEARCH', [{ISSN:''}], 'ISSN_format_KO'], 
-  ['articulo', 'ISSN', 70, 140, 'SEARCH', [{ISSN:'1234-12345'}], 'ISSN_max_size_KO'],  
-  ['articulo', 'ISSN', 71, 141, 'SEARCH', [{ISSN:'1234-5679'}], true], 
-  
-
-
-  //ADD VolumenR
-  ['articulo', 'VolumenR', 72, 142, 'ADD', [{VolumenR:''}], 'VolumenR_vacio_KO'],       
-  ['articulo', 'VolumenR', 73, 143, 'ADD', [{VolumenR:'12345'}], 'VolumenR_max_size_KO'],  
-  ['articulo', 'VolumenR', 74, 144, 'ADD', [{VolumenR:'145d'}], 'VolumenR_format_KO'], 
-  ['articulo', 'VolumenR', 74, 145, 'ADD', [{VolumenR:'15.8'}], 'VolumenR_format_KO'],
-  ['articulo', 'VolumenR', 74, 146, 'ADD', [{VolumenR:'155.'}], 'VolumenR_format_KO'],
-  ['articulo', 'VolumenR', 76, 147, 'ADD', [{VolumenR:'1234'}], true],
-  
-  //EDIT VolumenR
-  ['articulo', 'VolumenR', 77, 148, 'EDIT', [{VolumenR:''}], 'VolumenR_vacio_KO'],       
-  ['articulo', 'VolumenR', 78, 149, 'EDIT', [{VolumenR:'12345'}], 'VolumenR_max_size_KO'],  
-  ['articulo', 'VolumenR', 79, 150, 'EDIT', [{VolumenR:'145d'}], 'VolumenR_format_KO'], 
-  ['articulo', 'VolumenR', 79, 151, 'EDIT', [{VolumenR:'15.8'}], 'VolumenR_format_KO'],
-  ['articulo', 'VolumenR', 79, 152, 'EDIT', [{VolumenR:'155.'}], 'VolumenR_format_KO'],
-  ['articulo', 'VolumenR', 81, 153, 'EDIT', [{VolumenR:'1234'}], true],
-
-  //SEARCH VolumenR
-  ['articulo', 'VolumenR', 82, 156, 'SEARCH', [{VolumenR:'145d'}], 'VolumenR_format_KO'], 
-  ['articulo', 'VolumenR', 82, 157, 'SEARCH', [{VolumenR:'15.8'}], 'VolumenR_format_KO'],
-  ['articulo', 'VolumenR', 82, 158, 'SEARCH', [{VolumenR:'155.'}], 'VolumenR_format_KO'],
-  ['articulo', 'VolumenR', 83, 159, 'SEARCH', [{VolumenR:'12345'}], 'VolumenR_max_size_KO'],  
-  ['articulo', 'VolumenR', 84, 160, 'SEARCH', [{VolumenR:'1234'}], true],
-  
-
-  
-  //ADD PagInA
-  ['articulo', 'PagInA', 85, 161, 'ADD', [{PagInA:''}], 'PagInA_vacio_KO'],      
-  ['articulo', 'PagInA', 86, 162, 'ADD', [{PagInA:'12a'}], 'PagInA_format_KO'], 
-  ['articulo', 'PagInA', 88, 163, 'ADD', [{PagInA:'12345'}], 'PagInA_max_size_KO'],           
-  ['articulo', 'PagInA', 89, 164, 'ADD', [{PagInA:'123'}], true],             
-
-  //EDIT PagInA
-  ['articulo', 'PagInA', 90, 165, 'EDIT', [{PagInA:''}], 'PagInA_vacio_KO'],      
-  ['articulo', 'PagInA', 91, 166, 'EDIT', [{PagInA:'123.'}], 'PagInA_format_KO'], 
-  ['articulo', 'PagInA', 93, 167, 'EDIT', [{PagInA:'12345'}], 'PagInA_max_size_KO'],           
-  ['articulo', 'PagInA', 94, 168, 'EDIT', [{PagInA:'123'}], true],    
-
-  //SEARCH PagInA
-  ['articulo', 'PagInA', 95, 169, 'SEARCH', [{PagInA:'123.'}], 'PagInA_format_KO'], 
-  ['articulo', 'PagInA', 96, 170, 'SEARCH', [{PagInA:'12345'}], 'PagInA_max_size_KO'],           
-  ['articulo', 'PagInA', 97, 171, 'SEARCH', [{PagInA:'123'}], true],
-  
-
-//PagFinA
-  //ADD PagFinA
-  ['articulo', 'PagFinA', 98, 172, 'ADD', [{PagFinA:''}], 'PagFinA_vacio_KO'],      
-  ['articulo', 'PagFinA', 99, 173, 'ADD', [{PagFinA:'12a'}], 'PagFinA_format_KO'], 
-  ['articulo', 'PagFinA', 101, 178, 'ADD', [{PagFinA:'12345'}], 'PagFinA_max_size_KO'],           
-  ['articulo', 'PagFinA', 102, 179, 'ADD', [{PagFinA:'123'}], true],             
-
-  //EDIT PagFinA
-  ['articulo', 'PagFinA', 103, 180, 'EDIT', [{PagFinA:''}], 'PagFinA_vacio_KO'],      
-  ['articulo', 'PagFinA', 104, 190, 'EDIT', [{PagFinA:'123.'}], 'PagFinA_format_KO'], 
-  ['articulo', 'PagFinA', 106, 191, 'EDIT', [{PagFinA:'12345'}], 'PagFinA_max_size_KO'],           
-  ['articulo', 'PagFinA', 107, 192, 'EDIT', [{PagFinA:'123'}], true],    
-
-  //SEARCH PagFinA
-  ['articulo', 'PagFinA', 108, 192, 'SEARCH', [{PagFinA:'123.'}], 'PagFinA_format_KO'], 
-  ['articulo', 'PagFinA', 109, 193, 'SEARCH', [{PagFinA:'12345'}], 'PagFinA_max_size_KO'],           
-  ['articulo', 'PagFinA', 110, 194, 'SEARCH', [{PagFinA:'123'}], true],
-
- //fechapublicacion
-
-  //BUSCAR FicheropdfA
-  ['articulo', 'FicheropdfA', 111, 195, 'SEARCH', [{FicheropdfA : 'nombre con espacios.jpg'}], 'FicheropdfA_nombrepdf_format_KO'], //nombre con espacios y format pdf
-  ['articulo', 'FicheropdfA', 112, 196, 'SEARCH', [{FicheropdfA : 'nombr,econ.jpg'}], 'FicheropdfA_nombrepdf_format_KO'], //nombre con espacios y format pdf
-  ['articulo', 'FicheropdfA', 113, 197, 'SEARCH', [{FicheropdfA : 'n.ombr.jpg'}], 'FicheropdfA_nombrepdf_format_KO'], //nombre con espacios y format jpg
-  ['articulo', 'FicheropdfA', 114, 198, 'SEARCH', [{FicheropdfA : '.nombreespacios.jpg'}], 'FicheropdfA_nombrepdf_format_KO'], //nombre con espacios y format jpg
-  ['articulo', 'FicheropdfA', 115, 199, 'SEARCH', [{FicheropdfA : 'mbreespacios..jpg'}], 'FicheropdfA_nombrepdf_format_KO'], //nombre con espacios y format jpg
-  ['articulo', 'FicheropdfA', 116, 200, 'SEARCH', [{FicheropdfA : 'n'.repeat(21)+'.jpg'}], 'FicheropdfA_nombrepdf_max_size_KO'], //nombre con 41 caracteres y format jpg
-  ['articulo', 'FicheropdfA', 117, 201, 'SEARCH', [{FicheropdfA : 'nombrecorrecto.jpg'}], true]
-
-];
-
-*/
-/*
+  /*
 
 Las pruebas para tipo file se crearán mediante un array de nombre ‘nombrentidad_tests_files’ que contenga:
 

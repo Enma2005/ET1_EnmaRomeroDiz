@@ -70,9 +70,9 @@ class articulo extends EntidadAbstracta {
 				<span id="span_error_VolumenR"><a id="error_VolumenR"></a></span>
 				<br>
 	
-				<label class="label_PagIniiA">  </label>
-				<input type='text' id='PagIniiA' name='PagIniiA' ></input>
-				<span id="span_error_PagIniiA"><a id="error_PagIniiA"></a></span>
+				<label class="label_PagIniA">  </label>
+				<input type='text' id='PagIniA' name='PagIniA' ></input>
+				<span id="span_error_PagIniA"><a id="error_PagIniA"></a></span>
 				<br>
 	
 				<label class="label_PagFinA">  </label>
@@ -309,7 +309,7 @@ class articulo extends EntidadAbstracta {
 			return "PagIniA_vacio_KO";
 		}
 
-		if (!(this.max_size(4))) {
+		if (!(this.max_size_int('PagIniA',4))) {
 			this.dom.mostrar_error_campo('PagIniA', 'PagIniA_max_size_KO');
 			return "PagIniA_max_size_KO";
 		}
@@ -332,7 +332,7 @@ class articulo extends EntidadAbstracta {
 		}
 
 
-		if (!(this.validations.max_size( 4))) {
+		if (!(this.max_size_int ('PagFinA', 4))) {
 			this.dom.mostrar_error_campo( 'PagFinA_max_size_KO');
 			return "PagFinA_max_size_KO";
 		}
@@ -349,25 +349,42 @@ class articulo extends EntidadAbstracta {
 
 	// AAD fechapublicacion
 	ADD_FechaPublicacionR_validation() {
-		
-			if (!(this.validations.min_size('FechaPublicacionR', 10))) {
-				this.dom.mostrar_error_campo('FechaPublicacionR', 'FechaPublicacionR_min_size_KO');
-				return "FechaPublicacionR_min_size_KO";
-			}
+
+		const valor = document.getElementById('FechaPublicacionR').value.trim();
 	
-			if (!(this.validations.max_size('FechaPublicacionR', 10))) {
-				this.dom.mostrar_error_campo('FechaPublicacionR', 'FechaPublicacionR_max_size_KO');
-				return "FechaPublicacionR_max_size_KO";
-			}
+		// Validar campo vacío
+		if (valor === '') {
+			this.dom.mostrar_error_campo('FechaPublicacionR', 'FechaPublicacionR_vacio_KO');
+			return "FechaPublicacionR_vacio_KO";
+		}
 	
-			if (!(this.validations.format('FechaPublicacionR', '[0-9]{2,}[/][0-9]{2,}[/][0-9]{4,}'))) {
-				this.dom.mostrar_error_campo('FechaPublicacionR', 'FechaPublicacionR_format_KO');
-				return "FechaPublicacionR_format_KO";
-			}
-	 
-			this.dom.mostrar_exito_campo('FechaPublicacionR');
-			return true;
-	    
+		// Validar tamaño mínimo
+		if (!(this.validations.min_size('FechaPublicacionR', 10))) {
+			this.dom.mostrar_error_campo('FechaPublicacionR', 'FechaPublicacionR_min_size_KO');
+			return "FechaPublicacionR_min_size_KO";
+		}
+	
+		// Validar tamaño máximo
+		if (!(this.validations.max_size('FechaPublicacionR', 10))) {
+			this.dom.mostrar_error_campo('FechaPublicacionR', 'FechaPublicacionR_max_size_KO');
+			return "FechaPublicacionR_max_size_KO";
+		}
+	
+		// Validar formato (dd/mm/yyyy)
+		if (!(this.validations.format('FechaPublicacionR', '^[0-9]{2}-[0-9]{2}-[0-9]{4}$'))) {
+			this.dom.mostrar_error_campo('FechaPublicacionR', 'FechaPublicacionR_format_KO');
+			return "FechaPublicacionR_format_KO";
+		}
+
+		if(!(this.fechaNoSuperiorActual( 'FechaPublicacionR'))){
+			this.dom.mostrar_error_campo('FechaPublicacionR', 'FechaPublicacionR_superiorActual_KO');
+			return "FechaPublicacionR_superiorActual_KO";
+		}
+		//validar fecha actual
+	
+		// Todo correcto
+		this.dom.mostrar_exito_campo('FechaPublicacionR');
+		return true;
 	}
 	
 
@@ -398,11 +415,12 @@ class articulo extends EntidadAbstracta {
 			this.dom.mostrar_error_campo('nuevo_FicheropdfA', 'nuevo_FicheropdfA_format_KO');
 			return "nuevo_FicheropdfA_format_KO";
 		}
-		if (!(this.validations.format_name_file('nuevo_FicheropdfA', '^[A-Za-z0-9áéíóúüñçÁÉÍÓÚÜÑÇ]\.pdf$'))) {
+		const regex = /^[A-Za-z0-9áéíóúüñçÁÉÍÓÚÜÑÇ]+\.pdf$/;
+		if (!regex.test(valor)) {
 			this.dom.mostrar_error_campo('nuevo_FicheropdfA', 'nuevo_FicheropdfA_nombrePfd_format_KO');
 			return "nuevo_FicheropdfA_nombrePfd_format_KO";
 		}
-
+	
 		this.dom.mostrar_exito_campo('nuevo_FicheropdfA');
 		return true;
 
@@ -439,7 +457,7 @@ class articulo extends EntidadAbstracta {
 
 	}
 
-
+	EDIT_CodigoA_validation() {return true}
 
 	EDIT_AutoresA_validation() {
 		if (!(this.not_empty('AutoresA'))) {
@@ -598,7 +616,7 @@ class articulo extends EntidadAbstracta {
 			return "PagIniA_vacio_KO";
 		}
 
-		if (!(this.max_size(4))) {
+		if (!(this.max_size_int('PagIniA',4))) {
 			this.dom.mostrar_error_campo('PagIniA', 'PagIniA_max_size_KO');
 			return "PagIniA_max_size_KO";
 		}
@@ -621,7 +639,7 @@ class articulo extends EntidadAbstracta {
 		}
 
 
-		if (!(this.validations.max_size( 4))) {
+		if (!(this.max_size_int( 'PagFinA', 4))) {
 			this.dom.mostrar_error_campo( 'PagFinA_max_size_KO');
 			return "PagFinA_max_size_KO";
 		}
@@ -638,25 +656,41 @@ class articulo extends EntidadAbstracta {
 	}
 
 		EDIT_FechaPublicacionR_validation() {
-			if (!(this.validations.min_size('FechaPublicacionR', 10))) {
-				this.dom.mostrar_error_campo('FechaPublicacionR', 'FechaPublicacionR_min_size_KO');
-				return "FechaPublicacionR_min_size_KO";
-			}
+			const valor = document.getElementById('FechaPublicacionR').value.trim();
 	
-			if (!(this.validations.max_size('FechaPublicacionR', 10))) {
-				this.dom.mostrar_error_campo('FechaPublicacionR', 'FechaPublicacionR_max_size_KO');
-				return "FechaPublicacionR_max_size_KO";
-			}
+		// Validar campo vacío
+		if (valor === '') {
+			this.dom.mostrar_error_campo('FechaPublicacionR', 'FechaPublicacionR_vacio_KO');
+			return "FechaPublicacionR_vacio_KO";
+		}
 	
-			if (!(this.validations.format('FechaPublicacionR', '[0-9]{2,}[/][0-9]{2,}[/][0-9]{4,}'))) {
-				this.dom.mostrar_error_campo('FechaPublicacionR', 'FechaPublicacionR_format_KO');
-				return "FechaPublicacionR_format_KO";
-			}
-	 
-			this.dom.mostrar_exito_campo('FechaPublicacionR');
-			return true;
-	    }
+		// Validar tamaño mínimo
+		if (!(this.validations.min_size('FechaPublicacionR', 10))) {
+			this.dom.mostrar_error_campo('FechaPublicacionR', 'FechaPublicacionR_min_size_KO');
+			return "FechaPublicacionR_min_size_KO";
+		}
 	
+		// Validar tamaño máximo
+		if (!(this.validations.max_size('FechaPublicacionR', 10))) {
+			this.dom.mostrar_error_campo('FechaPublicacionR', 'FechaPublicacionR_max_size_KO');
+			return "FechaPublicacionR_max_size_KO";
+		}
+	
+		// Validar formato (dd/mm/yyyy)
+		if (!(this.validations.format('FechaPublicacionR', '^[0-9]{2}-[0-9]{2}-[0-9]{4}$'))) {
+			this.dom.mostrar_error_campo('FechaPublicacionR', 'FechaPublicacionR_format_KO');
+			return "FechaPublicacionR_format_KO";
+		}
+
+		if(!(this.fechaNoSuperiorActual( 'FechaPublicacionR'))){
+			this.dom.mostrar_error_campo('FechaPublicacionR', 'FechaPublicacionR_superiorActual_KO');
+			return "FechaPublicacionR_superiorActual_KO";
+		}
+	
+		// Todo correcto
+		this.dom.mostrar_exito_campo('FechaPublicacionR');
+		return true;
+	}
 
 	EDIT_nuevo_FicheropdfA_validation() {
 
@@ -675,10 +709,12 @@ class articulo extends EntidadAbstracta {
 			return "nuevo_FicheropdfA_format_KO";
 		}
 
-		if (!(this.validations.format_name_file('nuevo_FicheropdfA', '^[A-Za-z0-9áéíóúüñçÁÉÍÓÚÜÑÇ]{1,20}\.pdf$'))) {
+		const regex = /^[A-Za-z0-9áéíóúüñçÁÉÍÓÚÜÑÇ]+\.pdf$/;
+		if (!regex.test(valor)) {
 			this.dom.mostrar_error_campo('nuevo_FicheropdfA', 'nuevo_FicheropdfA_nombrePfd_format_KO');
 			return "nuevo_FicheropdfA_nombrePfd_format_KO";
 		}
+		
 
 		if (!(this.min_size_nombrePdf(5))) {
 			this.dom.mostrar_error_campo('nuevo_FicheropdfA', 'nuevo_FicheropdfA_nombrePfd_min_size_KO');
@@ -699,7 +735,7 @@ class articulo extends EntidadAbstracta {
 	EDIT_submit_articulo() {
 
 		let result = (
-			
+			(this.EDIT_CodigoA_validation())&
 			(this.EDIT_AutoresA_validation()) &
 			(this.EDIT_TituloA_validation()) &
 			(this.EDIT_TituloR_validation()) &
@@ -722,7 +758,7 @@ class articulo extends EntidadAbstracta {
 
 	SEARCH_CodigoA_validation() {
 
-		if (!(this.validations.max_size('CodigoA', 11))) {
+		if (!(this.max_size_int('CodigoA', 11))) {
 			this.dom.mostrar_error_campo('CodigoA', 'CodigoA_max_size_KO');
 			return "CodigoA_max_size_KO";
 		}
@@ -882,7 +918,7 @@ class articulo extends EntidadAbstracta {
 	SEARCH_PagIniA_validation() {
 
 
-		if (!(this.max_size(4))) {
+		if (!(this.max_size_int('PagIniA',4))) {
 			this.dom.mostrar_error_campo('PagIniA', 'PagIniA_max_size_KO');
 			return "PagIniA_max_size_KO";
 		}
@@ -915,13 +951,13 @@ class articulo extends EntidadAbstracta {
 
 	SEARCH_PagFinA_validation() {
 
-		if (!(this.validations.max_size( 4))) {
+		if (!(this.max_size_int( 'PagFinA', 4))) {
 			this.dom.mostrar_error_campo( 'PagFinA_max_size_KO');
 			return "PagFinA_max_size_KO";
 		}
 
 		if (!(this.validations.format( '^[0-9]*$'))) {
-			this.dom.mostrar_error_campo( 'PagFinA_format_KO');
+			this.dom.mostrar_error ('PagFinA','PagFinA_format_KO');
 			return "PagFinA_format_KO";
 		}
 
@@ -930,7 +966,7 @@ class articulo extends EntidadAbstracta {
 
 	}
 
-	SEARCH_FechaPublicacionR_validacion(valor) {
+	SEARCH_FechaPublicacionR_validation(valor) {
 		if (!valor) return true; // Se permite vacío en búsqueda
 	
 		const formatoFecha = /^\d{4}-\d{2}-\d{2}$/;
@@ -942,22 +978,27 @@ class articulo extends EntidadAbstracta {
 		return fecha.getFullYear() === anio && fecha.getMonth() === mes - 1 && fecha.getDate() === dia;
 	}
 
-	SEARCH_FicheroPdfA_validation() {
+	SEARCH_FicheropdfA_validation() {
 
-		if (!(this.validations.format( '^[A-Za-z0-9áéíóúüñçÁÉÍÓÚÜÑÇ]{1,20}\.pdf$'))) {
-			this.dom.mostrar_error_campo( 'FicheroPdfA_nombrePfd_format_KO');
-			return "FicheroPdfA_nombrePfd_format_KO";
+		const valor = document.getElementById('FicheropdfA').value;
+	
+		// Validación de formato del nombre del PDF
+		const regex = /^[A-Za-z0-9áéíóúüñçÁÉÍÓÚÜÑÇ]+\.pdf$/;
+		if (!regex.test(valor)) {
+			this.dom.mostrar_error_campo('FicheropdfA', 'FicheropdfA_nombrePfd_format_KO');
+			return "FicheropdfA_nombrePfd_format_KO";
 		}
-
-		if (!(this.validations.max_size( 40))) {
-			this.dom.mostrar_error_campo( 'FicheroPdfA_nombrePfd_max_size_KO');
-			return "FicheroPdfA_nombrePfd_max_size_KO";
+	
+		// Validación de tamaño máximo del nombre
+		if (!(this.validations.max_size('FicheropdfA', 40))) {
+			this.dom.mostrar_error_campo('FicheropdfA', 'FicheropdfA_nombrePfd_max_size_KO');
+			return "FicheropdfA_nombrePfd_max_size_KO";
 		}
-
-		this.dom.mostrar_exito_campo('FicheroPdfA' );
+	
+		this.dom.mostrar_exito_campo('FicheropdfA');
 		return true;
 	}
-
+	
 
 	SEARCH_submit_articulo() {
 
@@ -971,8 +1012,8 @@ class articulo extends EntidadAbstracta {
 			(this.SEARCH_VolumenR_validation()) &
 			(this.SEARCH_PagIniA_validation()) &
 			(this.SEARCH_PagFinA_validation()) &
-			(this.SEARCH_FechaPublicacionR_validacion())&
-			(this.SEARCH_FicheroPdfA_validation())
+			(this.SEARCH_FechaPublicacionR_validation())&
+			(this.SEARCH_FicheropdfA_validation())
 
 		)
 
@@ -1262,18 +1303,22 @@ class articulo extends EntidadAbstracta {
 
 	}
 
-	fechaNoSuperiorActual(valor) {
+	fechaNoSuperiorActual(nombreCampo) {
+		// Obtener el valor del input por su ID
+		const valor = document.getElementById(nombreCampo)?.value.trim();
+		
 		if (!valor) return false;
 	
 		const fecha = new Date(valor);
 		const hoy = new Date();
 	
-		// Poner horas a 00:00 para comparar solo fecha
+		// Poner horas a 00:00 para comparar solo la fecha
 		fecha.setHours(0, 0, 0, 0);
 		hoy.setHours(0, 0, 0, 0);
 	
 		return fecha <= hoy;
 	}
+	
 
 	isoToDDMMYYYY(valor) {
 		// Si el valor es nulo, vacío o no es string, devolvemos cadena vacía
@@ -1302,5 +1347,21 @@ class articulo extends EntidadAbstracta {
 	
 		return `${dia}/${mes}/${year}`;
 	}
+	 
 	
+	max_size_int(nombreCampo, maximo) {
+		// Obtiene el valor del campo por su id
+		let valor = document.getElementById(nombreCampo)?.value;
+	
+		// Verifica que exista el campo y que tenga un valor numérico válido
+		if (valor === undefined || valor === null || valor.trim() === '' || isNaN(valor)) {
+			return false;
+		}
+	
+		// Convierte a número entero
+		valor = parseInt(valor, 10);
+	
+		// Devuelve true si el número tiene como máximo 'maximo' dígitos
+		return valor.toString().length <= maximo;
+	}
 }
