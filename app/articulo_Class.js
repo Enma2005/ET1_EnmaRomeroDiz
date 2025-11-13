@@ -174,23 +174,23 @@ class articulo extends EntidadAbstracta {
 
 	ADD_TituloA_validation() {
 		if (!(this.not_empty('TituloA'))) {
-			this.dom.mostrar_error_campo('TituloA', 'tituloA_vacio_KO');
-			return "tituloA_vacio_KO";
+			this.dom.mostrar_error_campo('TituloA', 'TituloA_vacio_KO');
+			return "TituloA_vacio_KO";
 		}
 
 		if (!(this.validations.min_size('TituloA', 2))) {
-			this.dom.mostrar_error_campo('TituloA', 'tituloA_min_size_KO');
-			return "tituloA_min_size_KO";
+			this.dom.mostrar_error_campo('TituloA', 'TituloA_min_size_KO');
+			return "TituloA_min_size_KO";
 		}
 
 		if (!(this.validations.max_size('TituloA', 100))) {
-			this.dom.mostrar_error_campo('TituloA', 'tituloA_max_size_KO');
-			return "tituloA_max_size_KO";
+			this.dom.mostrar_error_campo('TituloA', 'TituloA_max_size_KO');
+			return "TituloA_max_size_KO";
 		}
 
 		if (!(this.validations.format('TituloA', '^[A-Za-zÁÉÍÓÚÜÑñáéíóúü ]+$'))) {
-			this.dom.mostrar_error_campo('TituloA', 'tituloA_format_KO');
-			return "tituloA_format_KO";
+			this.dom.mostrar_error_campo('TituloA', 'TituloA_format_KO');
+			return "TituloA_format_KO";
 		}
 
 		this.dom.mostrar_exito_campo('TituloA');
@@ -254,15 +254,11 @@ class articulo extends EntidadAbstracta {
 			return "ISSN_vacio_KO";
 		}
 
-		if (!this.validations.min_size(id, 9)) {
-			this.dom.mostrar_error_campo(id, "ISSN_min_size_KO");
-			return "ISSN_min_size_KO";
-		}
 		if (!this.validations.max_size(id, 9)) {
 			this.dom.mostrar_error_campo(id, "ISSN_max_size_KO");
 			return "ISSN_max_size_KO";
 		}
-		if (!this.validations.format(id, "^\d{4}-\d{3}[\dX]$")) {
+		if (!this.validations.format(id, "^[0-9]{4}-[0-9]{3}[0-9X]$")) {
 			this.dom.mostrar_error_campo(id, "ISSN_format_KO");
 			return "ISSN_format_KO";
 		}
@@ -304,41 +300,46 @@ class articulo extends EntidadAbstracta {
 
 	ADD_PagIniA_validation() {
 
-		if (!(this.not_empty('PagIniA'))) {
-			this.dom.mostrar_error_campo('PagIniA', 'PagIniA_vacio_KO');
-			return "PagIniA_vacio_KO";
-		}
-
-		if (!(this.max_size_int('PagIniA',4))) {
-			this.dom.mostrar_error_campo('PagIniA', 'PagIniA_max_size_KO');
-			return "PagIniA_max_size_KO";
-		}
-
-		if (!(this.validations.format('PagIniA', '^[0-9]+$'))) {
-			this.dom.mostrar_error_campo('PagIniA', 'PagIniA_format_KO');
-			return "PagIniA_format_KO";
-		}
-
-		this.dom.mostrar_exito_campo('PagIniA');
-		return true;
+			if (!(this.not_empty('PagIniA'))) {
+				this.dom.mostrar_error_campo('PagIniA', 'PagIniA_vacio_KO');
+				return "PagIniA_vacio_KO";
+			}
+	
+			if (!(this.max_size_int('PagIniA',4))) {
+				this.dom.mostrar_error_campo('PagIniA', 'PagIniA_max_size_KO');
+				return "PagIniA_max_size_KO";
+			}
+	
+			if (!(this.validations.format('PagIniA', '^[0-9]+$'))) {
+				this.dom.mostrar_error_campo('PagIniA', 'PagIniA_format_KO');
+				return "PagIniA_format_KO";
+			}
+	
+			this.dom.mostrar_exito_campo('PagIniA');
+			return true;
+	
+		
 
 	}
+
+	
+	
 
 	ADD_PagFinA_validation() {
 
 		if (!(this.not_empty('PagFinA'))) {
-			this.dom.mostrar_error_campo( 'PagFinA_vacio_KO');
+			this.dom.mostrar_error_campo( 'PagFinA','PagFinA_vacio_KO');
 			return "PagFinA_vacio_KO";
 		}
 
 
 		if (!(this.max_size_int ('PagFinA', 4))) {
-			this.dom.mostrar_error_campo( 'PagFinA_max_size_KO');
+			this.dom.mostrar_error_campo( 'PagFinA' ,'PagFinA_max_size_KO');
 			return "PagFinA_max_size_KO";
 		}
 
-		if (!(this.validations.format( '^[0-9]$'))) {
-			this.dom.mostrar_error_campo( 'PagFinA_format_KO');
+		if (!(this.validations.format( 'PagFinA','^[0-9]$'))) {
+			this.dom.mostrar_error_campo( 'PagFinA' ,'PagFinA_max_size_KO');
 			return "PagFinA_format_KO";
 		}
 
@@ -371,7 +372,7 @@ class articulo extends EntidadAbstracta {
 		}
 	
 		// Validar formato (dd/mm/yyyy)
-		if (!(this.validations.format('FechaPublicacionR', '^[0-9]{2}-[0-9]{2}-[0-9]{4}$'))) {
+		if (!(this.validations.format('FechaPublicacionR', '^[0-9]{2}/[0-9]{2}/[0-9]{4}$'))) {
 			this.dom.mostrar_error_campo('FechaPublicacionR', 'FechaPublicacionR_format_KO');
 			return "FechaPublicacionR_format_KO";
 		}
@@ -399,27 +400,29 @@ class articulo extends EntidadAbstracta {
 			this.dom.mostrar_error_campo('nuevo_FicheropdfA', 'nuevo_FicheropdfA_max_size_KO');
 			return "nuevo_FicheropdfA_max_size_KO";
 		}
+		const valor = document.getElementById('FicheropdfA').value;
 
-
-		if (!(this.min_size_nombrePdf(5))) {
-			this.dom.mostrar_error_campo('nuevo_FicheropdfA', 'nuevo_tituloAfoto_min_size_KO');
-			return "nuevo_FicheropdfA_nombrePfd_min_size_KO";
+		const regex = /^[A-Za-z0-9áéíóúüñçÁÉÍÓÚÜÑÇ]+\\.pdf$/;
+		if (!regex.test(valor)) {
+			this.dom.mostrar_error_campo('nuevo_FicheropdfA', 'nuevo_FicheropdfA_nombrepdf_format_KO');
+			return "nuevo_FicheropdfA_nombrepdf_format_KO";
 		}
 
-		if (!(this.max_size(40))) {
-			this.dom.mostrar_error_campo('nuevo_FicheropdfA', 'nuevo_FicheropdfA_nombrePfd_max_size_KO');
-			return "nuevo_FicheropdfA_nombrePfd_max_size_KO";
+		if (!(this.min_size_nombrepdf(5))) {
+			this.dom.mostrar_error_campo('nuevo_FicheropdfA', 'nuevo_TituloAfoto_min_size_KO');
+			return "nuevo_FicheropdfA_nombrepdf_min_size_KO";
 		}
 
-		if (!(this.validations.type_file('nuevo_FicheropdfA', ['aplication/pdf']))) {
+		if (!(this.max_size_nombrepdf(20))) {
+			this.dom.mostrar_error_campo('nuevo_FicheropdfA', 'nuevo_FicheropdfA_nombrepdf_max_size_KO');
+			return "nuevo_FicheropdfA_nombrepdf_max_size_KO";
+		}
+
+		if (!(this.validations.type_file('nuevo_FicheropdfA', ['application/pdf']))) {
 			this.dom.mostrar_error_campo('nuevo_FicheropdfA', 'nuevo_FicheropdfA_format_KO');
 			return "nuevo_FicheropdfA_format_KO";
 		}
-		const regex = /^[A-Za-z0-9áéíóúüñçÁÉÍÓÚÜÑÇ]+\.pdf$/;
-		if (!regex.test(valor)) {
-			this.dom.mostrar_error_campo('nuevo_FicheropdfA', 'nuevo_FicheropdfA_nombrePfd_format_KO');
-			return "nuevo_FicheropdfA_nombrePfd_format_KO";
-		}
+	
 	
 		this.dom.mostrar_exito_campo('nuevo_FicheropdfA');
 		return true;
@@ -457,7 +460,7 @@ class articulo extends EntidadAbstracta {
 
 	}
 
-	EDIT_CodigoA_validation() {return true}
+	
 
 	EDIT_AutoresA_validation() {
 		if (!(this.not_empty('AutoresA'))) {
@@ -488,23 +491,23 @@ class articulo extends EntidadAbstracta {
 	EDIT_TituloA_validation() {
 
 		if (!(this.not_empty('TituloA'))) {
-			this.dom.mostrar_error_campo('TituloA', 'tituloA_vacio_KO');
-			return "tituloA_vacio_KO";
+			this.dom.mostrar_error_campo('TituloA', 'TituloA_vacio_KO');
+			return "TituloA_vacio_KO";
 		}
 
 		if (!(this.validations.min_size('TituloA', 2))) {
-			this.dom.mostrar_error_campo('TituloA', 'tituloA_min_size_KO');
-			return "tituloA_min_size_KO";
+			this.dom.mostrar_error_campo('TituloA', 'TituloA_min_size_KO');
+			return "TituloA_min_size_KO";
 		}
 
 		if (!(this.validations.max_size('TituloA', 100))) {
-			this.dom.mostrar_error_campo('TituloA', 'tituloA_max_size_KO');
-			return "tituloA_max_size_KO";
+			this.dom.mostrar_error_campo('TituloA', 'TituloA_max_size_KO');
+			return "TituloA_max_size_KO";
 		}
 
 		if (!(this.validations.format('TituloA', '^[A-Za-zÁÉÍÓÚÜÑñáéíóúü ]+$'))) {
-			this.dom.mostrar_error_campo('TituloA', 'tituloA_format_KO');
-			return "tituloA_format_KO";
+			this.dom.mostrar_error_campo('TituloA', 'TituloA_format_KO');
+			return "TituloA_format_KO";
 		}
 
 		this.dom.mostrar_exito_campo('TituloA');
@@ -567,10 +570,6 @@ class articulo extends EntidadAbstracta {
 			return "ISSN_vacio_KO";
 		}
 
-		if (!this.validations.min_size(id, 9)) {
-			this.dom.mostrar_error_campo(id, "ISSN_min_size_KO");
-			return "ISSN_min_size_KO";
-		}
 		if (!this.validations.max_size(id, 9)) {
 			this.dom.mostrar_error_campo(id, "ISSN_max_size_KO");
 			return "ISSN_max_size_KO";
@@ -634,19 +633,19 @@ class articulo extends EntidadAbstracta {
 	EDIT_PagFinA_validation() {
 
 		if (!(this.not_empty('PagFinA'))) {
-			this.dom.mostrar_error_campo( 'PagFinA_vacio_KO');
+			this.dom.mostrar_error_campo( 'PagFinA','PagFinA_vacio_KO');
 			return "PagFinA_vacio_KO";
 		}
 
 
 		if (!(this.max_size_int( 'PagFinA', 4))) {
-			this.dom.mostrar_error_campo( 'PagFinA_max_size_KO');
+			this.dom.mostrar_error_campo( 'PagFinA','PagFinA_max_size_KO');
 			return "PagFinA_max_size_KO";
 		}
 
 
-		if (!(this.validations.format( '^[0-9]+$'))) {
-			this.dom.mostrar_error_campo( 'PagFinA_format_KO');
+		if (!(this.validations.format( 'PagFinA', '^[0-9]+$'))) {
+			this.dom.mostrar_error_campo( 'PagFinA' ,'PagFinA_max_size_KO');
 			return "PagFinA_format_KO";
 		}
 
@@ -677,7 +676,7 @@ class articulo extends EntidadAbstracta {
 		}
 	
 		// Validar formato (dd/mm/yyyy)
-		if (!(this.validations.format('FechaPublicacionR', '^[0-9]{2}-[0-9]{2}-[0-9]{4}$'))) {
+		if (!(this.validations.format('FechaPublicacionR', '^[0-9]{2}/[0-9]{2}/[0-9]{4}$'))) {
 			this.dom.mostrar_error_campo('FechaPublicacionR', 'FechaPublicacionR_format_KO');
 			return "FechaPublicacionR_format_KO";
 		}
@@ -699,32 +698,33 @@ class articulo extends EntidadAbstracta {
 			return "nuevo_FicheropdfA_vacio_KO";
 		}
 
-		if (!(this.validations.max_size_file('nuevo_FicheropdfA', 20))) {
+		if (!(this.validations.max_size_file('nuevo_FicheropdfA', 20000000))) {
 			this.dom.mostrar_error_campo('nuevo_FicheropdfA', 'nuevo_FicheropdfA_max_size_KO');
 			return "nuevo_FicheropdfA_max_size_KO";
 		}
 
-		if (!(this.validations.type_file('nuevo_FicheropdfA', ['aplication/pdf']))) {
+		if (!(this.validations.type_file('nuevo_FicheropdfA', ['application/pdf']))) {
 			this.dom.mostrar_error_campo('nuevo_FicheropdfA', 'nuevo_FicheropdfA_format_KO');
 			return "nuevo_FicheropdfA_format_KO";
 		}
+		if (!(this.min_size_nombrepdf(5))) {
+			this.dom.mostrar_error_campo('nuevo_FicheropdfA', 'nuevo_FicheropdfA_nombrepdf_min_size_KO');
+			return "nuevo_FicheropdfA_nombrepdf_min_size_KO";
+		}
 
-		const regex = /^[A-Za-z0-9áéíóúüñçÁÉÍÓÚÜÑÇ]+\.pdf$/;
+		if (!(this.max_size_nombrepdf(21))) {
+			this.dom.mostrar_error_campo('nuevo_FicheropdfA', 'nuevo_FicheropdfA_nombrepdf_max_size_KO');
+			return "nuevo_FicheropdfA_nombrepdf_max_size_KO";
+		}
+
+		const valor = document.getElementById('FicheropdfA').value;
+
+		const regex = /^[A-Za-z0-9áéíóúüñçÁÉÍÓÚÜÇ]+\\.pdf$/;
 		if (!regex.test(valor)) {
-			this.dom.mostrar_error_campo('nuevo_FicheropdfA', 'nuevo_FicheropdfA_nombrePfd_format_KO');
-			return "nuevo_FicheropdfA_nombrePfd_format_KO";
+			this.dom.mostrar_error_campo('nuevo_FicheropdfA', 'nuevo_FicheropdfA_nombrepdf_format_KO');
+			return "nuevo_FicheropdfA_nombrepdf_format_KO";
 		}
 		
-
-		if (!(this.min_size_nombrePdf(5))) {
-			this.dom.mostrar_error_campo('nuevo_FicheropdfA', 'nuevo_FicheropdfA_nombrePfd_min_size_KO');
-			return "nuevo_FicheropdfA_nombrePfd_min_size_KO";
-		}
-
-		if (!(this.max_size(40))) {
-			this.dom.mostrar_error_campo('nuevo_FicheropdfA', 'nuevo_FicheropdfA_nombrePfd_max_size_KO');
-			return "nuevo_FicheropdfA_nombrePfd_max_size_KO";
-		}
 
 		this.dom.mostrar_exito_campo('nuevo_FicheropdfA');
 		return true;
@@ -758,14 +758,15 @@ class articulo extends EntidadAbstracta {
 
 	SEARCH_CodigoA_validation() {
 
-		if (!(this.max_size_int('CodigoA', 11))) {
-			this.dom.mostrar_error_campo('CodigoA', 'CodigoA_max_size_KO');
-			return "CodigoA_max_size_KO";
-		}
-
+		
 		if (!(this.validations.format('CodigoA', '^[0-9]*$'))) {
 			this.dom.mostrar_error_campo('CodigoA', 'CodigoA_format_KO');
 			return "CodigoA_format_KO";
+		}
+
+		if (!(this.max_size_int('CodigoA', 11))) {
+			this.dom.mostrar_error_campo('CodigoA', 'CodigoA_max_size_KO');
+			return "CodigoA_max_size_KO";
 		}
 
 		this.dom.mostrar_exito_campo('CodigoA');
@@ -793,13 +794,13 @@ class articulo extends EntidadAbstracta {
 	SEARCH_TituloA_validation() {
 
 		if (!(this.validations.max_size('TituloA', 100))) {
-			this.dom.mostrar_error_campo('TituloA', 'tituloA_max_size_KO');
-			return "tituloA_max_size_KO";
+			this.dom.mostrar_error_campo('TituloA', 'TituloA_max_size_KO');
+			return "TituloA_max_size_KO";
 		}
 
 		if (!(this.validations.format('TituloA', '^[A-Za-zÁÉÍÓÚÜÑñáéíóúü ]*$'))) {
-			this.dom.mostrar_error_campo('TituloA', 'tituloA_format_KO');
-			return "tituloA_format_KO";
+			this.dom.mostrar_error_campo('TituloA', 'TituloA_format_KO');
+			return "TituloA_format_KO";
 		}
 
 		this.dom.mostrar_exito_campo('TituloA');
@@ -828,70 +829,38 @@ class articulo extends EntidadAbstracta {
 		const id = 'EstadoA';
 		const el = document.getElementById(id);
 		if (!el) return true; // si no existe el campo, no validamos nada
-
-		let values = []; // aquí guardaremos los valores a comprobar
-
-		// 1) Obtener valores según el tipo de control
+	
+		// pre-normalizar lista permitida a mayúsculas para comparación case-insensitive
+		const allowedUpper = allowed.map(a => String(a).toUpperCase());
+	
+		let values = []; // valores a comprobar
+	
+		// Si es select múltiple recoger selectedOptions
 		if (el.tagName === 'SELECT' && el.multiple) {
-			// Si es un select múltiple, recoger todas las opciones seleccionadas
-			for (let i = 0; i < el.selectedOptions.length; i++) {
-				let opcion = el.selectedOptions[i];
-				let valor = opcion.value ? opcion.value.trim() : '';
-				values.push(valor);
-			}
+			values = Array.from(el.selectedOptions).map(o => (o.value || '').trim()).filter(v => v !== '');
 		} else {
-			// Si es un input de texto
-			let raw = el.value ? el.value.trim() : '';
-			if (raw === '') return true; // si está vacío, no pasa nada (campo opcional)
-
-			// separar los valores por comas y limpiar espacios
-			let partes = raw.split(',');
-			values = [];
-			for (let i = 0; i < partes.length; i++) {
-				let texto = partes[i].trim();
-				if (texto !== '') values.push(texto);
+			// para input/textarea o select simple usamos el value
+			let raw = (el.value || '').trim();
+			if (raw === '') return true; // vacío permitido en búsqueda
+	
+			// permitir entradas separadas por comas (p. ej. "Enviado,Publicado")
+			values = raw.split(',').map(s => s.trim()).filter(v => v !== '');
+		}
+	
+		// Normalizar valores a mayúsculas y comprobar
+		for (let v of values) {
+			const up = v.toUpperCase();
+			if (!allowedUpper.includes(up)) {
+				this.dom.mostrar_error_campo(id, 'EstadoA_format_KO');
+				return 'EstadoA_format_KO';
 			}
 		}
-
-		// 2) Pasar todo a mayúsculas
-		let norm = [];
-		for (let i = 0; i < values.length; i++) {
-			let valor = values[i].toUpperCase();
-			norm.push(valor);
-		}
-		if (norm.length === 0) return true; // si no hay nada, se acepta
-
-		// 3) Comprobar si todos los valores son válidos
-		let valido = true;
-		for (let i = 0; i < norm.length; i++) {
-			let valor = norm[i];
-			let permitido = false;
-
-			// buscar si el valor está en la lista de permitidos
-			for (let j = 0; j < allowed.length; j++) {
-				if (valor === allowed[j]) {
-					permitido = true;
-					break;
-				}
-			}
-
-			// si alguno no está permitido, marcar error
-			if (!permitido) {
-				valido = false;
-				break;
-			}
-		}
-
-		// 4) Mostrar resultado
-		if (!valido) {
-			this.dom.mostrar_error_campo(id, 'EstadoA_format_KO');
-			return 'EstadoA_format_KO';
-		}
-
+	
+		// Si llegamos aquí, todos los valores son válidos
 		this.dom.mostrar_exito_campo(id);
 		return true;
 	}
-
+	
 
 	SEARCH_ISSN_validation() {
 
@@ -901,7 +870,7 @@ class articulo extends EntidadAbstracta {
 			this.dom.mostrar_error_campo(id, "ISSN_max_size_KO");
 			return "ISSN_max_size_KO";
 		}
-		if (!this.validations.format(id, "^[0-9]+$")) {
+		if (!this.validations.format(id, "^[0-9A-Z-]*$")) {
 			this.dom.mostrar_error_campo(id, "ISSN_format_KO");
 			return "ISSN_format_KO";
 		}
@@ -952,12 +921,12 @@ class articulo extends EntidadAbstracta {
 	SEARCH_PagFinA_validation() {
 
 		if (!(this.max_size_int( 'PagFinA', 4))) {
-			this.dom.mostrar_error_campo( 'PagFinA_max_size_KO');
+			this.dom.mostrar_error_campo( 'PagFinA','PagFinA_max_size_KO');
 			return "PagFinA_max_size_KO";
 		}
 
-		if (!(this.validations.format( '^[0-9]*$'))) {
-			this.dom.mostrar_error ('PagFinA','PagFinA_format_KO');
+		if (!(this.validations.format( 'PagFinA','^[0-9]*$'))) {
+			this.dom.mostrar_error_campo('PagFinA','PagFinA_format_KO');
 			return "PagFinA_format_KO";
 		}
 
@@ -969,7 +938,7 @@ class articulo extends EntidadAbstracta {
 	SEARCH_FechaPublicacionR_validation(valor) {
 		if (!valor) return true; // Se permite vacío en búsqueda
 	
-		const formatoFecha = /^\d{4}-\d{2}-\d{2}$/;
+		const formatoFecha = /^[0-9/]*$/;
 		if (!formatoFecha.test(valor)) return false;
 	
 		// Comprobamos que la fecha sea válida
@@ -981,20 +950,20 @@ class articulo extends EntidadAbstracta {
 	SEARCH_FicheropdfA_validation() {
 
 		const valor = document.getElementById('FicheropdfA').value;
+		if (!(this.max_size_nombrepdf( 40))) {
+			this.dom.mostrar_error_campo('FicheropdfA', 'FicheropdfA_nombrepdf_max_size_KO');
+			return "FicheropdfA_nombrepdf_max_size_KO";
+		}
 	
 		// Validación de formato del nombre del PDF
 		const regex = /^[A-Za-z0-9áéíóúüñçÁÉÍÓÚÜÑÇ]+\.pdf$/;
 		if (!regex.test(valor)) {
-			this.dom.mostrar_error_campo('FicheropdfA', 'FicheropdfA_nombrePfd_format_KO');
-			return "FicheropdfA_nombrePfd_format_KO";
+			this.dom.mostrar_error_campo('FicheropdfA', 'FicheropdfA_nombrepdf_format_KO');
+			return "FicheropdfA_nombrepdf_format_KO";
 		}
 	
 		// Validación de tamaño máximo del nombre
-		if (!(this.validations.max_size('FicheropdfA', 40))) {
-			this.dom.mostrar_error_campo('FicheropdfA', 'FicheropdfA_nombrePfd_max_size_KO');
-			return "FicheropdfA_nombrePfd_max_size_KO";
-		}
-	
+		
 		this.dom.mostrar_exito_campo('FicheropdfA');
 		return true;
 	}
@@ -1062,12 +1031,12 @@ class articulo extends EntidadAbstracta {
 
 	createForm_EDIT(fila) {
 
-        // limpiar poner titulo y poner visible el formulario
+        // limpiar poner Titulo y poner visible el formulario
         document.getElementById('contenedor_IU_form').innerHTML = this.manual_form_creation();
         this.dom.show_element('Div_IU_form', 'block');
 
-        this.dom.remove_class_value('class_contenido_titulo_form', 'text_contenido_titulo_form');
-        this.dom.assign_class_value('class_contenido_titulo_form', 'text_contenido_titulo_form_EDIT');
+        this.dom.remove_class_value('class_contenido_Titulo_form', 'text_contenido_Titulo_form');
+        this.dom.assign_class_value('class_contenido_Titulo_form', 'text_contenido_Titulo_form_EDIT');
 
         // rellenar onsubmit y action
         this.dom.assign_property_value('form_iu', 'onsubmit', 'return entidad.EDIT_submit_' + this.nombreentidad);
@@ -1101,8 +1070,8 @@ class articulo extends EntidadAbstracta {
         // limpiar y poner visible el formulario
         document.getElementById('contenedor_IU_form').innerHTML = this.manual_form_creation();
         this.dom.show_element('Div_IU_form', 'block');
-        this.dom.remove_class_value('class_contenido_titulo_form', 'text_contenido_titulo_form');
-        this.dom.assign_class_value('class_contenido_titulo_form', 'text_contenido_titulo_form_DELETE');
+        this.dom.remove_class_value('class_contenido_Titulo_form', 'text_contenido_Titulo_form');
+        this.dom.assign_class_value('class_contenido_Titulo_form', 'text_contenido_Titulo_form_DELETE');
 
         // rellenar y action
         this.dom.assign_property_value('form_iu', 'action', 'javascript:entidad.DELETE();');
@@ -1128,8 +1097,8 @@ class articulo extends EntidadAbstracta {
         // limpiar y poner visible el formulario
         document.getElementById('contenedor_IU_form').innerHTML = this.manual_form_creation();
         this.dom.show_element('Div_IU_form', 'block');
-        this.dom.remove_class_value('class_contenido_titulo_form', 'text_contenido_titulo_form');
-        this.dom.assign_class_value('class_contenido_titulo_form', 'text_contenido_titulo_form_SHOWCURRENT');
+        this.dom.remove_class_value('class_contenido_Titulo_form', 'text_contenido_Titulo_form');
+        this.dom.assign_class_value('class_contenido_Titulo_form', 'text_contenido_Titulo_form_SHOWCURRENT');
 
         // rellenar y action
         //this.dom.assign_property_value('form_iu', 'action', 'javascript:entidad.DELETE();');
@@ -1155,13 +1124,13 @@ class articulo extends EntidadAbstracta {
 
     createForm_ADD() {
 
-        // poner titulo al formulario
+        // poner Titulo al formulario
 
         // limpiar y poner visible el formulario
         document.getElementById('contenedor_IU_form').innerHTML = this.manual_form_creation();
         this.dom.show_element('Div_IU_form', 'block');
-        this.dom.remove_class_value('class_contenido_titulo_form', 'text_contenido_titulo_form');
-        this.dom.assign_class_value('class_contenido_titulo_form', 'text_contenido_titulo_form_ADD');
+        this.dom.remove_class_value('class_contenido_Titulo_form', 'text_contenido_Titulo_form');
+        this.dom.assign_class_value('class_contenido_Titulo_form', 'text_contenido_Titulo_form_ADD');
 
         // poner onsubmit
         this.dom.assign_property_value('form_iu', 'onsubmit', 'return entidad.ADD_submit_' + this.nombreentidad + '()');
@@ -1190,13 +1159,13 @@ class articulo extends EntidadAbstracta {
 
     createForm_SEARCH() {
 
-        // poner titulo al formulario
+        // poner Titulo al formulario
 
         // limpiar y poner visible el formulario
         document.getElementById('contenedor_IU_form').innerHTML = this.manual_form_creation();
         this.dom.show_element('Div_IU_form', 'block');
-        this.dom.remove_class_value('class_contenido_titulo_form', 'text_contenido_titulo_form');
-        this.dom.assign_class_value('class_contenido_titulo_form', 'text_contenido_titulo_form_SEARCH');
+        this.dom.remove_class_value('class_contenido_Titulo_form', 'text_contenido_Titulo_form');
+        this.dom.assign_class_value('class_contenido_Titulo_form', 'text_contenido_Titulo_form_SEARCH');
 
         // poner onsubmit
         this.dom.assign_property_value('form_iu', 'onsubmit', 'return entidad.SEARCH_submit_' + this.nombreentidad);
@@ -1255,42 +1224,33 @@ class articulo extends EntidadAbstracta {
 
 	
 	
-
-	min_size_nombrePdf(minsize) {
-		let objfile = document.getElementById("nuevo_FicheropdfA");
-		
-		// Comprobamos que haya un archivo seleccionado
-		if (!objfile || !objfile.files || objfile.files.length === 0) {
-			return false;
-		}
+	min_size_nombrepdf(nombreCampo, minsize) {
+		const objfile = document.getElementById(nombreCampo);
+		if (!objfile || !objfile.files || objfile.files.length === 0) return false;
 	
-		// Tomamos el nombre del archivo
-		let valor = objfile.files[0].name;
+		const valor = objfile.files[0].name.trim().toLowerCase();
+		if (!valor.endsWith(".pdf")) return false;
 	
-		// Eliminamos los espacios al inicio y final por si acaso
-		valor = valor.trim();
+		const nombreSinExtension = valor.slice(0, -4);
 	
-		// Comprobamos que termina en .pdf (ignorando mayúsculas)
-		if (!valor.toLowerCase().endsWith(".pdf")) {
-			return false;
-		}
-	
-		// Obtenemos solo el nombre antes de ".pdf"
-		let nombreSinExtension = valor.slice(0, -4);
-	
-		// Si hay un punto dentro del nombre, no es válido (por ejemplo: art.iculo.pdf)
-		if (nombreSinExtension.includes(".")) {
-			return false;
-		}
-	
-		// Comprobamos que el nombre (sin extensión) tenga al menos 'minsize' caracteres
-		if (nombreSinExtension.length < minsize) {
-			return false;
-		}
-	
-		return true;
+		// Comprobamos longitud mínima
+		return nombreSinExtension.length >= minsize;
 	}
-
+	
+	max_size_nombrepdf(nombreCampo, maxsize) {
+		const objfile = document.getElementById(nombreCampo);
+		if (!objfile || !objfile.files || objfile.files.length === 0) return false;
+	
+		const valor = objfile.files[0].name.trim().toLowerCase();
+		if (!valor.endsWith(".pdf")) return false;
+	
+		const nombreSinExtension = valor.slice(0, -4);
+	
+		// Comprobamos longitud máxima
+		return nombreSinExtension.length <= maxsize;
+	}
+	
+	
 	not_empty(nombre) {
 		let objfile = document.getElementById(nombre).value;
 
@@ -1302,22 +1262,35 @@ class articulo extends EntidadAbstracta {
 		}
 
 	}
-
 	fechaNoSuperiorActual(nombreCampo) {
-		// Obtener el valor del input por su ID
 		const valor = document.getElementById(nombreCampo)?.value.trim();
-		
 		if (!valor) return false;
 	
-		const fecha = new Date(valor);
-		const hoy = new Date();
+		let dia, mes, anio;
 	
-		// Poner horas a 00:00 para comparar solo la fecha
+		// Detectar formato español dd/mm/yyyy
+		if (/^\d{2}\/\d{2}\/\d{4}$/.test(valor)) {
+			[dia, mes, anio] = valor.split('/');
+		}
+		// Detectar formato ISO yyyy-mm-dd
+		else if (/^\d{4}-\d{2}-\d{2}$/.test(valor)) {
+			[anio, mes, dia] = valor.split('-');
+		}
+		else {
+			return false; // formato no válido
+		}
+	
+		const fecha = new Date(`${anio}-${mes}-${dia}`);
+		if (isNaN(fecha)) return false;
+	
+		const hoy = new Date();
 		fecha.setHours(0, 0, 0, 0);
 		hoy.setHours(0, 0, 0, 0);
 	
 		return fecha <= hoy;
 	}
+	
+	
 	
 
 	isoToDDMMYYYY(valor) {

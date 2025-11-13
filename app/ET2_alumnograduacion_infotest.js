@@ -623,7 +623,7 @@ el mensaje de respuesta asociado al resultado. (en el mismo idioma para todos lo
 
 
 let articulo_def_tests = [
-  //CodigoA
+
 
   ['articulo', 'FechaPublicacionR', 'input', 1, 'Validar que el campo esté vacío.', 'ADD', 'FechaPublicacionR_vacio_KO', 'La fecha de publicación no puede estar vacía.'],
   ['articulo', 'FechaPublicacionR', 'input', 2, 'Validar que el formato de la fecha sea incorrecto (no cumple YYYY-MM-DD).', 'ADD', 'FechaPublicacionR_format_KO', 'El formato de la fecha debe ser YYYY-MM-DD.'],
@@ -773,7 +773,7 @@ let articulo_def_tests = [
   ['articulo', 'PagIniA', 'input',  92, 'Validar que el campo este vacio o compuesto por numeros', 'SEARCH', 'PagIniA_format_KO', 'No se admiten caracteres que no números.'],
   ['articulo', 'PagIniA', 'input',  93, 'Validar que el campo tenga un maximo de 4 caracteres', 'SEARCH', 'PagIniA_max_size_KO', 'Máximo 4 caracteres.'],
   ['articulo', 'PagIniA', 'input',  94, 'Validar que el campo sea correcto', 'SEARCH', true, 'Correcto.'],
-/*
+
   //PagFinA
   ['articulo', 'PagFinA', 'input', 95, 'Validar que el campo no este vacio', 'ADD', 'PagFinA_vacio_KO', 'Complete el campo'],
   ['articulo', 'PagFinA', 'input', 96, 'Validar que el campo este compuesto por numeros', 'ADD', 'PagFinA_format_KO', 'No se admiten caracteres que no números.'],
@@ -790,10 +790,10 @@ let articulo_def_tests = [
   ['articulo', 'PagFinA', 'input', 103, 'Validar que el campo este vacio o compuesto por numeros', 'SEARCH', 'PagFinA_format_KO', 'No se admiten caracteres que no números.'],
   ['articulo', 'PagFinA', 'input', 104, 'Validar que el campo tenga un maximo de 4 caracteres', 'SEARCH', 'PagFinA_max_size_KO', 'Máximo 4 caracteres.'],
   ['articulo', 'PagFinA', 'input', 105, 'Validar que el campo sea correcto', 'SEARCH', true, 'Correcto.'],
-*/
+
   //ADD FicheropdfA
   ['articulo', 'nuevo_FicheropdfA', 'inputfile' ,106, 'Validar que el campo no este vacio', 'ADD', 'nuevo_FicheropdfA_vacio_KO', 'Complete el campo'],
-  ['articulo', 'nuevo_FicheropdfA', 'inputfile' ,107, 'Validar que el campo tenga un nombre con solo alfabeticos sin espacios ni puntos antes de la extension', 'ADD', 'nuevo_FicheropdfA_nombrepdf_format_KO', 'El format deben ser alfabeticos sin espacios ni puntos antes de la extension (arc.hivo.pdf estaria mal).'],
+  ['articulo', 'nuevo_FicheropdfA', 'inputfile' ,107, 'Validar que el campo tenga un nombre con solo alfabeticos sin espacios ni puntos antes de la extension', 'ADD', 'nuevo_FicheropdfA_nombrepdf_format_KO', 'El format deben ser alfabeticos sin espacios'],
   ['articulo', 'nuevo_FicheropdfA', 'inputfile' ,108, 'Validar que el campo tenga un nombre con un minimo de 1 caracter mas la extension (total 5)', 'ADD', 'nuevo_FicheropdfA_nombrepdf_min_size_KO', 'El nombre debe contener minimo de 1 caracter mas la extension (total 4).'],
   ['articulo', 'nuevo_FicheropdfA', 'inputfile' ,109, 'Validar que el campo tenga un nombre con un maximo de 20 caracteres', 'ADD', 'nuevo_FicheropdfA_nombrepdf_max_size_KO', 'El nombre debe contener maximo de 20 caracteres.'],
   ['articulo', 'nuevo_FicheropdfA', 'inputfile' ,110, 'Validar que el campo sea un pdf', 'ADD', 'nuevo_FicheropdfA_format_KO', 'El format debe ser pdf.'],
@@ -802,7 +802,7 @@ let articulo_def_tests = [
 
   //EDITAR FicheropdfA
   ['articulo', 'nuevo_FicheropdfA', 'inputfile' ,113, 'Validar que el campo no este vacio', 'EDIT', 'nuevo_FicheropdfA_vacio_KO', 'Complete el campo'],
-  ['articulo', 'nuevo_FicheropdfA', 'inputfile' ,114, 'Validar que el campo tenga un nombre con solo alfabeticos sin espacios ni puntos antes de la extension', 'EDIT', 'nuevo_FicheropdfA_nombrepdf_format_KO', 'El format deben ser alfabeticos sin espacios ni puntos antes de la extension (arc.hivo.pdf estaria mal).'],
+  ['articulo', 'nuevo_FicheropdfA', 'inputfile' ,114, 'Validar que el campo tenga un nombre con solo alfabeticos sin espacios ni puntos antes de la extension', 'EDIT', 'nuevo_FicheropdfA_nombrepdf_format_KO', 'El format deben ser alfabeticos sin espacios'],
   ['articulo', 'nuevo_FicheropdfA', 'inputfile' ,115, 'Validar que el campo tenga un nombre con un minimo de 1 caracter mas la extension (total 5)', 'EDIT', 'nuevo_FicheropdfA_nombrepdf_min_size_KO', 'El nombre debe contener un minimo 1 caracter mas la extension (total 4)..'],
   ['articulo', 'nuevo_FicheropdfA', 'inputfile' ,116, 'Validar que el campo tenga un nombre con un maximo de 20 caracteres', 'EDIT', 'nuevo_FicheropdfA_nombrepdf_max_size_KO', 'El nombre debe contener maximo de 20 caracteres.'],
   ['articulo', 'nuevo_FicheropdfA', 'inputfile' ,117, 'Validar que el campo sea un pdf', 'EDIT', 'nuevo_FicheropdfA_format_KO', 'El format debe ser pdf.'],
@@ -810,7 +810,7 @@ let articulo_def_tests = [
   ['articulo', 'nuevo_FicheropdfA', 'inputfile' ,119, 'Validar que el campo sea correcto', 'EDIT', true, 'Correcto.'],
 
   //BUSQUEDA FicheropdfA
-  ['articulo', 'FicheropdfA', 'input' ,120, 'Validar que el campo este vacio o tenga un nombre con solo alfabeticos sin espacios ni puntos antes de la extension', 'SEARCH', 'FicheropdfA_nombrepdf_format_KO', 'El format deben ser alfabeticos sin espacios ni puntos antes de la extension (arc.hivo.pdf estaria mal).'],
+  ['articulo', 'FicheropdfA', 'input' ,120, 'Validar que el campo este vacio o tenga un nombre con solo alfabeticos sin espacios ni puntos antes de la extension', 'SEARCH', 'FicheropdfA_nombrepdf_format_KO', 'El format deben ser alfabeticos sin espacios'],
   ['articulo', 'FicheropdfA', 'input' ,121, 'Validar que el campo tenga un nombre con un maximo de 20 caracteres', 'SEARCH', 'FicheropdfA_nombrepdf_max_size_KO', 'El nombre debe contener maximo de 20 caracteres.'],
   ['articulo', 'FicheropdfA', 'input' ,122, 'Validar que el campo sea correcto', 'SEARCH', true, 'Correcto.'],
 
@@ -834,26 +834,26 @@ let articulo_tests_fields = [
   ['articulo', 'FechaPublicacionR', 8, 8, 'EDIT', [{FechaPublicacionR: '20/11/2022'}], true], 
 
   ['articulo', 'FechaPublicacionR', 9, 9, 'SEARCH', [{FechaPublicacionR: ''}], true], 
-  ['articulo', 'FechaPublicacionR', 10, 10, 'SEARCH', [{FechaPublicacionR: '15-05-2024'}], 'FechaPublicacionR_format_KO'], 
+  ['articulo', 'FechaPublicacionR', 10, 10, 'SEARCH', [{FechaPublicacionR: '11-12-2025'}], 'FechaPublicacionR_format_KO'], 
   ['articulo', 'FechaPublicacionR', 11, 11, 'SEARCH', [{FechaPublicacionR: '20/11/2022'}], true],
 
 
   //SEARCH CodigoA
   ['articulo', 'CodigoA', 12, 12, 'SEARCH', [{CodigoA:'abcñ'}], 'CodigoA_format_KO'],
-  ['articulo', 'CodigoA', 12, 13, 'EDIT', [{CodigoA:'12 344'}], 'CodigoA_format_KO'],
-  ['articulo', 'CodigoA', 12, 14, 'EDIT', [{CodigoA:'12.343'}], 'CodigoA_format_KO'],
-  ['articulo', 'CodigoA', 12, 15, 'EDIT', [{CodigoA:'12_343'}], 'CodigoA_format_KO'],
-  ['articulo', 'CodigoA', 12, 16, 'EDIT', [{CodigoA:'1+123'}], 'CodigoA_format_KO'],
-  ['articulo', 'CodigoA', 12, 17, 'EDIT', [{CodigoA:'AS123'}], 'CodigoA_format_KO'],
-  ['articulo', 'CodigoA', 12, 18, 'EDIT', [{CodigoA:'123A13'}], 'CodigoA_format_KO'],
-  ['articulo', 'CodigoA', 12, 19, 'EDIT', [{CodigoA:'123A'}], 'CodigoA_format_KO'],
-  ['articulo', 'CodigoA', 12, 20, 'EDIT', [{CodigoA:'12435a.'}], 'CodigoA_format_KO'],
-  ['articulo', 'CodigoA', 12, 21, 'EDIT', [{CodigoA:'acxìr2dg'}], 'CodigoA_format_KO'],
-  ['articulo', 'CodigoA', 12, 22, 'EDIT', [{CodigoA:'àc3xddg'}], 'CodigoA_format_KO'],
-  ['articulo', 'CodigoA', 12, 23, 'EDIT', [{CodigoA:'aù5xddg'}], 'CodigoA_format_KO'],
-  ['articulo', 'CodigoA', 12, 24, 'EDIT', [{CodigoA:'ac6Üxddg'}], 'CodigoA_format_KO'],
-  ['articulo', 'CodigoA', 12, 25, 'EDIT', [{CodigoA:'acï6ddg'}], 'CodigoA_format_KO'],
-  ['articulo', 'CodigoA', 12, 26, 'EDIT', [{CodigoA:'acôd6dg'}], 'CodigoA_format_KO'],
+  ['articulo', 'CodigoA', 12, 13, 'SEARCH', [{CodigoA:'12 344'}], 'CodigoA_format_KO'],
+  ['articulo', 'CodigoA', 12, 14, 'SEARCH', [{CodigoA:'12.343'}], 'CodigoA_format_KO'],
+  ['articulo', 'CodigoA', 12, 15, 'SEARCH', [{CodigoA:'12_343'}], 'CodigoA_format_KO'],
+  ['articulo', 'CodigoA', 12, 16, 'SEARCH', [{CodigoA:'1+123'}], 'CodigoA_format_KO'],
+  ['articulo', 'CodigoA', 12, 17, 'SEARCH', [{CodigoA:'AS123'}], 'CodigoA_format_KO'],
+  ['articulo', 'CodigoA', 12, 18, 'SEARCH', [{CodigoA:'123A13'}], 'CodigoA_format_KO'],
+  ['articulo', 'CodigoA', 12, 19, 'SEARCH', [{CodigoA:'123A'}], 'CodigoA_format_KO'],
+  ['articulo', 'CodigoA', 12, 20, 'SEARCH', [{CodigoA:'12435a.'}], 'CodigoA_format_KO'],
+  ['articulo', 'CodigoA', 12, 21, 'SEARCH', [{CodigoA:'acxìr2dg'}], 'CodigoA_format_KO'],
+  ['articulo', 'CodigoA', 12, 22, 'SEARCH', [{CodigoA:'àc3xddg'}], 'CodigoA_format_KO'],
+  ['articulo', 'CodigoA', 12, 23, 'SEARCH', [{CodigoA:'aù5xddg'}], 'CodigoA_format_KO'],
+  ['articulo', 'CodigoA', 12, 24, 'SEARCH', [{CodigoA:'ac6Üxddg'}], 'CodigoA_format_KO'],
+  ['articulo', 'CodigoA', 12, 25, 'SEARCH', [{CodigoA:'acï6ddg'}], 'CodigoA_format_KO'],
+  ['articulo', 'CodigoA', 12, 26, 'SEARCH', [{CodigoA:'acôd6dg'}], 'CodigoA_format_KO'],
   ['articulo', 'CodigoA', 13, 27, 'SEARCH', [{CodigoA:'12232435454646'}], 'CodigoA_max_size_KO'],
   ['articulo', 'CodigoA', 14, 28, 'SEARCH', [{CodigoA:'12345678901'}], true],
 
@@ -985,13 +985,13 @@ let articulo_tests_fields = [
 
   //ADD ISSN       
   ['articulo', 'ISSN', 62, 130, 'ADD', [{ISSN:''}], 'ISSN_vacio_KO'],       
-  ['articulo', 'ISSN', 63, 131, 'ADD', [{ISSN:'1234-234'}], 'ISSN_format_KO'], 
+  ['articulo', 'ISSN', 63, 131, 'ADD', [{ISSN:'1234-5678'}], 'ISSN_format_KO'], 
   ['articulo', 'ISSN', 64, 132, 'ADD', [{ISSN:'1234-12345'}], 'ISSN_max_size_KO'],  
   ['articulo', 'ISSN', 65, 133, 'ADD', [{ISSN:'1234-5679'}], true], 
 
   //EDIT ISSN       
   ['articulo', 'ISSN', 66, 134, 'EDIT', [{ISSN:''}], 'ISSN_vacio_KO'],     
-  ['articulo', 'ISSN', 67, 135, 'EDIT', [{ISSN:'1234-234'}], 'ISSN_format_KO'], 
+  ['articulo', 'ISSN', 67, 135, 'EDIT', [{ISSN:'1234-2348'}], 'ISSN_format_KO'], 
   ['articulo', 'ISSN', 68, 136, 'EDIT', [{ISSN:'1234-12345'}], 'ISSN_max_size_KO'],  
   ['articulo', 'ISSN', 69, 137, 'EDIT', [{ISSN:'1234-5679'}], true], 
 
@@ -1025,7 +1025,7 @@ let articulo_tests_fields = [
 
   //ADD PagIniA 84-94
   ['articulo', 'PagIniA', 84, 158, 'ADD', [{PagIniA:''}], 'PagIniA_vacio_KO'],      
-  ['articulo', 'PagIniA', 85, 159, 'ADD', [{PagIniA:'12a'}], 'PagIniA_format_KO'], 
+  ['articulo', 'PagIniA', 85, 159, 'ADD', [{PagIniA:'123.'}], 'PagIniA_format_KO'], 
   ['articulo', 'PagIniA', 86, 160, 'ADD', [{PagIniA:'12345'}], 'PagIniA_max_size_KO'],           
   ['articulo', 'PagIniA', 87, 161, 'ADD', [{PagIniA:'123'}], true],             
 
@@ -1039,7 +1039,7 @@ let articulo_tests_fields = [
   ['articulo', 'PagIniA', 92, 166, 'SEARCH', [{PagIniA:'123.'}], 'PagIniA_format_KO'], 
   ['articulo', 'PagIniA', 93, 167, 'SEARCH', [{PagIniA:'12345'}], 'PagIniA_max_size_KO'],           
   ['articulo', 'PagIniA', 94, 168, 'SEARCH', [{PagIniA:'123'}], true],
-/*
+
   //ADD PagFinA
   ['articulo', 'PagFinA', 95, 169, 'ADD', [{PagFinA:''}], 'PagFinA_vacio_KO'],      
   ['articulo', 'PagFinA', 96, 170, 'ADD', [{PagFinA:'12a'}], 'PagFinA_format_KO'], 
@@ -1056,7 +1056,7 @@ let articulo_tests_fields = [
   ['articulo', 'PagFinA', 103, 177, 'SEARCH', [{PagFinA:'123.'}], 'PagFinA_format_KO'], 
   ['articulo', 'PagFinA', 104, 178, 'SEARCH', [{PagFinA:'12345'}], 'PagFinA_max_size_KO'],           
   ['articulo', 'PagFinA', 105, 179, 'SEARCH', [{PagFinA:'123'}], true],
-*/
+
   //BUSCAR FicheropdfA
   ['articulo', 'FicheropdfA', 120, 180, 'SEARCH', [{FicheropdfA : 'nombre con espacios.jpg'}], 'FicheropdfA_nombrepdf_format_KO'], 
   ['articulo', 'FicheropdfA', 120, 181, 'SEARCH', [{FicheropdfA : 'nombr,econ.jpg'}], 'FicheropdfA_nombrepdf_format_KO'], 
@@ -1087,27 +1087,19 @@ let articulo_tests_files = [
   
   ['articulo', 'nuevo_FicheropdfA', 106, 1, 'ADD', 'existe', [], 'nuevo_FicheropdfA_vacio_KO'], 
   ['articulo', 'nuevo_FicheropdfA', 107, 2, 'ADD', 'format_name_file', [{format_name_file : 'nombre con espacios.pdf'},{type_file: 'application/pdf'},{max_size_file:19}], 'nuevo_FicheropdfA_nombrepdf_format_KO'], //nombre con espacios y format pdf
-  ['articulo', 'nuevo_FicheropdfA', 107, 3, 'ADD', 'format_name_file', [{format_name_file :  'nombr,econ.pdf'},{type_file: 'application/pdf'},{max_size_file:19}], 'nuevo_FicheropdfA_nombrepdf_format_KO'], //nombre con espacios y format jpg
-  ['articulo', 'nuevo_FicheropdfA', 107, 4, 'ADD','format_name_file', [{format_name_file : 'n.ombr.pdf'},{type_file: 'application/pdf'},{max_size_file:19}], 'nuevo_FicheropdfA_nombrepdf_format_KO'], //nombre con espacios y format jpg
-  ['articulo', 'nuevo_FicheropdfA', 107, 5, 'ADD','format_name_file', [{format_name_file : '.nombreespacios.pdf'},{type_file: 'application/pdf'},{max_size_file:19}], 'nuevo_FicheropdfA_nombrepdf_format_KO'], //nombre con espacios y format jpg
-  ['articulo', 'nuevo_FicheropdfA', 107, 6, 'ADD','format_name_file', [{format_name_file : 'nombreespacios..pdf'},{type_file: 'application/pdf'},{max_size_file:19}], 'nuevo_FicheropdfA_nombrepdf_format_KO'], //nombre con espacios y format jpg
-  ['articulo', 'nuevo_FicheropdfA', 108, 7, 'ADD','format_name_file', [{format_name_file : '.pdf'},{type_file: 'application/pdf'},{max_size_file:19}], 'nuevo_FicheropdfA_nombrepdf_min_size_KO'], 
-  ['articulo', 'nuevo_FicheropdfA', 109, 8, 'ADD','format_name_file', [{format_name_file : 'n'.repeat(21)+'.pdf'},{type_file: 'application/pdf'},{max_size_file:19}], 'nuevo_FicheropdfA_nombrepdf_max_size_KO'], //nombre con 41 caracteres y format jpg
-  ['articulo', 'nuevo_FicheropdfA', 110, 9, 'ADD', 'type_file', [{format_name_file: 'foto.pdf'},{type_file: 'image/jpg'},{max_size_file:19}], 'nuevo_FicheropdfA_format_KO'], //format jpg
-  ['articulo', 'nuevo_FicheropdfA', 111, 10, 'ADD', 'max_size_file', [{format_name_file: 'fomkjskdkto.pdf'},{type_file: 'application/pdf'},{max_size_file:21000000}], 'nuevo_FicheropdfA_max_size_KO'], //20MB
-  ['articulo', 'nuevo_FicheropdfA', 112, 11, 'ADD','correcto', [{format_name_file: 'nombrecorrecto.pdf'},{type_file: 'application/pdf'},{max_size_file:19}], true], //correcto 
+  ['articulo', 'nuevo_FicheropdfA', 108, 3, 'ADD','format_name_file', [{format_name_file : '.pdf'},{type_file: 'application/pdf'},{max_size_file:19}], 'nuevo_FicheropdfA_nombrepdf_min_size_KO'], 
+  ['articulo', 'nuevo_FicheropdfA', 109, 4, 'ADD','format_name_file', [{format_name_file : 'n'.repeat(21)+'.pdf'},{type_file: 'application/pdf'},{max_size_file:19}], 'nuevo_FicheropdfA_nombrepdf_max_size_KO'], //nombre con 41 caracteres y format jpg
+  ['articulo', 'nuevo_FicheropdfA', 110, 5, 'ADD', 'type_file', [{format_name_file: 'foto.pdf'},{type_file: 'image/jpg'},{max_size_file:19}], 'nuevo_FicheropdfA_format_KO'], //format jpg
+  ['articulo', 'nuevo_FicheropdfA', 111, 6, 'ADD', 'max_size_file', [{format_name_file: 'fomkjskdkto.pdf'},{type_file: 'application/pdf'},{max_size_file:21000000}], 'nuevo_FicheropdfA_max_size_KO'], //20MB
+  ['articulo', 'nuevo_FicheropdfA', 112, 7, 'ADD','correcto', [{format_name_file: 'nombrecorrecto.pdf'},{type_file: 'application/pdf'},{max_size_file:19}], true], //correcto 
  
   //EDITAR FicheropdfA
-  ['articulo', 'nuevo_FicheropdfA', 113, 12, 'EDIT', 'existe', [], 'nuevo_FicheropdfA_vacio_KO'], 
-  ['articulo', 'nuevo_FicheropdfA', 114, 13, 'EDIT','format_name_file', [{format_name_file : 'nombre con espacios.pdf'},{type_file: 'application/pdf'},{max_size_file:19}], 'nuevo_FicheropdfA_nombrepdf_format_KO'], //nombre con espacios y format pdf
-  ['articulo', 'nuevo_FicheropdfA', 114, 14, 'EDIT','format_name_file', [{format_name_file : 'nombreconñ.pdf'},{type_file: 'application/pdf'},{max_size_file:19}], 'nuevo_FicheropdfA_nombrepdf_format_KO'], //nombre con espacios y format pdf
-  ['articulo', 'nuevo_FicheropdfA', 114, 15, 'EDIT','format_name_file', [{format_name_file : 'n.ombr.pdf'},{type_file: 'application/pdf'},{max_size_file:19}], 'nuevo_FicheropdfA_nombrepdf_format_KO'], //nombre con espacios y format jpg
-  ['articulo', 'nuevo_FicheropdfA', 114, 16, 'EDIT','format_name_file', [{format_name_file : '.nombreespacios.pdf'},{type_file: 'application/pdf'},{max_size_file:19}], 'nuevo_FicheropdfA_nombrepdf_format_KO'], //nombre con espacios y format jpg
-  ['articulo', 'nuevo_FicheropdfA', 114, 17, 'EDIT','format_name_file', [{format_name_file : 'nombreespacios..pdf'},{type_file: 'application/pdf'},{max_size_file:19}], 'nuevo_FicheropdfA_nombrepdf_format_KO'], //nombre con espacios y format jpg
-  ['articulo', 'nuevo_FicheropdfA', 115, 18, 'EDIT','format_name_file', [{format_name_file : '.pdf'},{type_file: 'application/pdf'},{max_size_file:19}], 'nuevo_FicheropdfA_nombrepdf_min_size_KO'], 
-  ['articulo', 'nuevo_FicheropdfA', 116, 19, 'EDIT','format_name_file', [{format_name_file : 'n'.repeat(21)+'.pdf'},{type_file: 'application/pdf'},{max_size_file:19}], 'nuevo_FicheropdfA_nombrepdf_max_size_KO'], //nombre con 41 caracteres y format jpg
-  ['articulo', 'nuevo_FicheropdfA', 117, 20, 'EDIT', 'type_file', [{format_name_file: 'foto.pdf'},{type_file: 'image/jpg'},{max_size_file:19}], 'nuevo_FicheropdfA_format_KO'], //format jpg
-  ['articulo', 'nuevo_FicheropdfA', 118, 21, 'EDIT', 'max_size_file', [{format_name_file: 'foto.pdf'},{type_file: 'application/pdf'},{max_size_file:21000000}], 'nuevo_FicheropdfA_max_size_KO'], //20MB
-  ['articulo', 'nuevo_FicheropdfA', 119, 22, 'EDIT', 'correcto',[{format_name_file: 'nombrecorrecto.pdf'},{type_file: 'application/pdf'},{max_size_file:19}], true], //correcto 
+  ['articulo', 'nuevo_FicheropdfA', 113, 8, 'EDIT', 'existe', [], 'nuevo_FicheropdfA_vacio_KO'], 
+  ['articulo', 'nuevo_FicheropdfA', 114, 9, 'EDIT','format_name_file', [{format_name_file : 'nombre con espacios.pdf'},{type_file: 'application/pdf'},{max_size_file:19}], 'nuevo_FicheropdfA_nombrepdf_format_KO'], //nombre con espacios y format pdf
+  ['articulo', 'nuevo_FicheropdfA', 115, 10, 'EDIT','format_name_file', [{format_name_file : '.pdf'},{type_file: 'application/pdf'},{max_size_file:19}], 'nuevo_FicheropdfA_nombrepdf_min_size_KO'], 
+  ['articulo', 'nuevo_FicheropdfA', 116, 11, 'EDIT','format_name_file', [{format_name_file : 'n'.repeat(21)+'.pdf'},{type_file: 'application/pdf'},{max_size_file:19}], 'nuevo_FicheropdfA_nombrepdf_max_size_KO'], //nombre con 41 caracteres y format jpg
+  ['articulo', 'nuevo_FicheropdfA', 117, 12, 'EDIT', 'type_file', [{format_name_file: 'foto.pdf'},{type_file: 'image/jpg'},{max_size_file:19}], 'nuevo_FicheropdfA_format_KO'], //format jpg
+  ['articulo', 'nuevo_FicheropdfA', 118, 13, 'EDIT', 'max_size_file', [{format_name_file: 'foto.pdf'},{type_file: 'application/pdf'},{max_size_file:21000000}], 'nuevo_FicheropdfA_max_size_KO'], //20MB
+  ['articulo', 'nuevo_FicheropdfA', 119, 14, 'EDIT', 'correcto',[{format_name_file: 'nombrecorrecto.pdf'},{type_file: 'application/pdf'},{max_size_file:19}], true], //correcto 
 
   ];

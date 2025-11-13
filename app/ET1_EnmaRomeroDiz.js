@@ -1,1 +1,0 @@
-let datosgenerales= Array('Romero Diz Enma', ET1, 30);

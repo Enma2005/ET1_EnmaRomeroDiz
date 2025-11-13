@@ -1,0 +1,21 @@
+DEFINICION DE FORMATOS PERMITIDOS PARA UBICACION
+
+IDSITE->     Caracteres numéricos. Tamaño máximo 11, mínimo 1. No puede ser nulo.
+
+SITELATITUD->  Valor decimal con hasta 6 cifras decimales. Rango permitido según WGS84: -90.000000 a 90.000000. No puede ser nulo.
+
+SITELONGITUD-> Valor decimal con hasta 6 cifras decimales. Rango permitido según WGS84: -180.000000 a 180.000000. No puede ser nulo.
+
+SITEALTITUDE-> Caracteres numéricos. Máximo 4 caracteres, mínimo 1. No puede ser nulo.
+
+SITELOCALITY-> Caracteres alfabéticos incluidos tildes, mayúsculas, ñ y ç. Tamaño máximo 40, mínimo 2. No puede ser nulo.
+
+SITEPROVIDERLOGIN-> Caracteres alfanuméricos, guiones bajos o puntos. Tamaño máximo 30, mínimo 4. No puede ser nulo.
+
+SITENORTHPHOTO-> Nombre del fichero como máximo 50 caracteres alfanuméricos y extensión incluida. No se admiten espacios, pero sí ñ y acentos. No puede ser nulo.
+
+SITESOUTHPHOTO-> Nombre del fichero como máximo 50 caracteres alfanuméricos y extensión incluida. No se admiten espacios, pero sí ñ y acentos. No puede ser nulo.
+
+SITEEASTPHOTO-> Nombre del fichero como máximo 50 caracteres alfanuméricos y extensión incluida. No se admiten espacios, pero sí ñ y acentos. No puede ser nulo.
+
+SITEWESTPHOTO-> Nombre del fichero como máximo 50 caracteres alfanuméricos y extensión incluida. No se admiten espacios, pero sí ñ y acentos. No puede ser nulo.
