@@ -32,21 +32,21 @@ class alumnograduacion extends EntidadAbstracta {
 	 */
 	manual_form_creation() {
 		var form_content = `
-			<form id = 'form_iu'  action="http://193.147.87.202/procesaform.php" method="POST" enctype="multipart/form-data" onsubmit="return entidad.ADD_submit_alumnograduacion();">
+			<form id = 'form_iu'  action="http://193.147.87.202/procesaform.php" method="POST" enctype="multipart/form-data" >
 
 			
 			<label class="label_alumnograduacion_login">Login</label>
-			<input type='text' id='alumnograduacion_login' name='alumnograduacion_login' onblur=" return entidad.ADD_alumnograduacion_login_validation();"></input>
+			<input type='text' id='alumnograduacion_login' name='alumnograduacion_login' ></input>
 			<span id="span_error_alumnograduacion_login" ><a id="error_alumnograduacion_login"></a></span>
 			<br>
 
 			<label class="label_alumnograduacion_password">Password</label>
-			<input type='text' id='alumnograduacion_password' name='alumnograduacion_password' onblur=" return entidad.ADD_alumnograduacion_password_validation();"></input>
+			<input type='text' id='alumnograduacion_password' name='alumnograduacion_password' ></input>
 			<span id="span_error_alumnograduacion_password" ><a id="error_alumnograduacion_password"></a></span>
 			<br>
 			
 			<label class="label_alumnograduacion_nombre">Nombre</label>
-			<input type='text' id='alumnograduacion_nombre' name='alumnograduacion_nombre' onblur=" return entidad.ADD_alumnograduacion_nombre_validation();"></input>
+			<input type='text' id='alumnograduacion_nombre' name='alumnograduacion_nombre' ></input>
 			<span id="span_error_alumnograduacion_nombre" ><a id="error_alumnograduacion_nombre"></a></span>
 			<br>
 			
@@ -68,7 +68,7 @@ class alumnograduacion extends EntidadAbstracta {
 			<br>
 			
 			<label class="label_alumnograduacion_dni">DNI</label>
-			<input type='text' id='alumnograduacion_dni' name='alumnograduacion_dni' onblur=" return entidad.ADD_alumnograduacion_dni_validation();"></input>
+			<input type='text' id='alumnograduacion_dni' name='alumnograduacion_dni' ></input>
 			<span id="span_error_alumnograduacion_dni"><a id="error_alumnograduacion_dni"></a></span>
 			<br>
 			
@@ -374,7 +374,7 @@ class alumnograduacion extends EntidadAbstracta {
 			return "nuevo_alumnograduacion_fotoacto_vacio_KO";
 		}
 
-		if (!(this.validations.max_size_file('nuevo_alumnograduacion_fotoacto', 20))) {
+		if (!(this.validations.max_size_file('nuevo_alumnograduacion_fotoacto', 20000000))) {
 			this.dom.mostrar_error_campo('nuevo_alumnograduacion_fotoacto', 'nuevo_alumnograduacion_fotoacto_max_size_KO');
 			return "nuevo_alumnograduacion_fotoacto_max_size_KO";
 		}
@@ -675,7 +675,7 @@ class alumnograduacion extends EntidadAbstracta {
 			return "nuevo_alumnograduacion_fotoacto_vacio_KO";
 		}
 
-		if (!(this.validations.max_size_file('nuevo_alumnograduacion_fotoacto', 20))) {
+		if (!(this.validations.max_size_file('nuevo_alumnograduacion_fotoacto', 20000000))) {
 			this.dom.mostrar_error_campo('nuevo_alumnograduacion_fotoacto', 'nuevo_alumnograduacion_fotoacto_max_size_KO');
 			return "nuevo_alumnograduacion_fotoacto_max_size_KO";
 		}
@@ -1026,10 +1026,7 @@ class alumnograduacion extends EntidadAbstracta {
 		this.dom.assign_property_value('form_iu', 'action', 'javascript:entidad.EDIT();');
 
 		//activar el link al fichero
-		this.dom.assign_property_value('link_foto_persona', 'href', 'http://193.147.87.202/ET2/filesuploaded/files_foto_persona/' + fila.foto_persona);
-
-		// modificar presentacion (en este caso concreto para fecha)
-		fila.fechaNacimiento_persona = this.mostrarcambioatributo('fechaNacimiento_persona', fila.fechaNacimiento_persona);
+		this.dom.assign_property_value('link_alumnograduacion_fotoacto', 'href', 'http://193.147.87.202/ET2/filesuploaded/files_alumnograduacion_fotoacto/' + fila.alumnograduacion_fotoacto);
 
 		// rellenar valores
 		this.dom.rellenarvaloresform(fila);
@@ -1039,7 +1036,7 @@ class alumnograduacion extends EntidadAbstracta {
 
 		// poner inactivos los campos correspondientes
 		this.dom.assign_property_value('dni', 'readonly', 'true');
-		this.dom.assign_property_value('foto_persona', 'readonly', 'true');
+		this.dom.assign_property_value('alumnograduacion_fotoacto', 'readonly', 'true');
 
 		// colocar boton de submit
 		this.dom.colocarboton('EDIT');
@@ -1060,12 +1057,9 @@ class alumnograduacion extends EntidadAbstracta {
 		// rellenar y action
 		this.dom.assign_property_value('form_iu', 'action', 'javascript:entidad.DELETE();');
 
-		// poner no visible el campo nuevo_foto_persona (solo se puede ver el nombre de fichero)
-		this.dom.hide_element_form('nuevo_foto_persona');
-		this.dom.assign_property_value('link_foto_persona', 'href', 'http://193.147.87.202/ET2/filesuploaded/files_foto_persona/' + fila.foto_persona);
-
-		// modificar presentacion (en este caso concreto para fecha)
-		fila.fechaNacimiento_persona = this.mostrarcambioatributo('fechaNacimiento_persona', fila.fechaNacimiento_persona);
+		// poner no visible el campo nuevo_alumnograduacion_fotoacto (solo se puede ver el nombre de fichero)
+		this.dom.hide_element_form('nuevo_alumnograduacion_fotoacto');
+		this.dom.assign_property_value('link_alumnograduacion_fotoacto', 'href', 'http://193.147.87.202/ET2/filesuploaded/files_alumnograduacion_fotoacto/' + fila.alumnograduacion_fotoacto);
 
 		// rellenar valores
 		this.dom.rellenarvaloresform(fila);
@@ -1089,12 +1083,9 @@ class alumnograduacion extends EntidadAbstracta {
 		// rellenar y action
 		//this.dom.assign_property_value('form_iu', 'action', 'javascript:entidad.DELETE();');
 
-		// poner no visible el campo nuevo_foto_persona (solo se puede ver el nombre de fichero)
-		this.dom.hide_element_form('nuevo_foto_persona');
-		this.dom.assign_property_value('link_foto_persona', 'href', 'http://193.147.87.202/ET2/filesuploaded/files_foto_persona/' + fila.foto_persona);
-
-		// modificar presentacion (en este caso concreto para fecha)
-		fila.fechaNacimiento_persona = this.mostrarcambioatributo('fechaNacimiento_persona', fila.fechaNacimiento_persona);
+		// poner no visible el campo nuevo_alumnograduacion_fotoacto (solo se puede ver el nombre de fichero)
+		this.dom.hide_element_form('nuevo_alumnograduacion_fotoacto');
+		this.dom.assign_property_value('link_alumnograduacion_fotoacto', 'href', 'http://193.147.87.202/ET2/filesuploaded/files_alumnograduacion_fotoacto/' + fila.alumnograduacion_fotoacto);
 
 		// rellenar valores
 		this.dom.rellenarvaloresform(fila);
@@ -1125,9 +1116,9 @@ class alumnograduacion extends EntidadAbstracta {
 		// poner action
 		this.dom.assign_property_value('form_iu', 'action', 'javascript:entidad.ADD();');
 
-		// poner no visible el campo foto_persona (solo se puede subir fichero)
-		this.dom.hide_element_form('foto_persona');
-		this.dom.hide_element('link_foto_persona');
+		// poner no visible el campo alumnograduacion_fotoacto (solo se puede subir fichero)
+		this.dom.hide_element_form('alumnograduacion_fotoacto');
+		this.dom.hide_element('link_alumnograduacion_fotoacto');
 
 		// rellenar valores
 		// en ADD no hay valores que rellenar
@@ -1160,9 +1151,9 @@ class alumnograduacion extends EntidadAbstracta {
 		// poner action
 		this.dom.assign_property_value('form_iu', 'action', 'javascript:entidad.SEARCH();');
 
-		// poner no visible el campo foto_persona (solo se puede subir fichero)
-		this.dom.hide_element_form('nuevo_foto_persona');
-		this.dom.hide_element('link_foto_persona');
+		// poner no visible el campo alumnograduacion_fotoacto (solo se puede subir fichero)
+		this.dom.hide_element_form('nuevo_alumnograduacion_fotoacto');
+		this.dom.hide_element('link_alumnograduacion_fotoacto');
 
 		// reemplazar enumerados por texto
 		// titulacion_persona que es un select
@@ -1205,10 +1196,10 @@ class alumnograduacion extends EntidadAbstracta {
 
 				return day + '/' + month + '/' + year;
 				break;
-			case 'foto_persona':
+			case 'alumnograduacion_fotoacto':
 				var link = 'error';
 				if (valorentrada !== '') {
-					link = valorentrada + `  <a class="link_foto_persona" href="http://193.147.87.202/ET2/filesuploaded/files_foto_persona/` + valorentrada + `"><img src="./iconos/FILE.png" /></a>`;
+					link = valorentrada + `  <a class="link_alumnograduacion_fotoacto" href="http://193.147.87.202/ET2/filesuploaded/files_alumnograduacion_fotoacto/` + valorentrada + `"><img src="./iconos/FILE.png" /></a>`;
 				}
 				return link;
 				break;
