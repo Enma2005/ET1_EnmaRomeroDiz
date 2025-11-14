@@ -557,7 +557,7 @@ let alumnograduacion_tests_files = [
   ['alumnograduacion', 'nuevo_alumnograduacion_fotoacto', 111, 7, 'ADD', 'format_name_file', [{ format_name_file: 'j.jpg' }, { type_file: 'image/jpeg' }, { max_size_file: 19 }], 'nuevo_alumnograduacion_fotoacto_nombrefoto_min_size_KO'],
   ['alumnograduacion', 'nuevo_alumnograduacion_fotoacto', 112, 8, 'ADD', 'format_name_file', [{ format_name_file: 'n'.repeat(41) + '.jpg' }, { type_file: 'image/jpeg' }, { max_size_file: 19 }], 'nuevo_alumnograduacion_fotoacto_nombrefoto_max_size_KO'], //nombre con 41 caracteres y format jpg
   ['alumnograduacion', 'nuevo_alumnograduacion_fotoacto', 113, 9, 'ADD', 'type_file', [{ format_name_file: 'foto.pdf' }, { type_file: 'pdf' }, { max_size_file: 19 }], 'nuevo_alumnograduacion_fotoacto_format_KO'], //format jpg
-  ['alumnograduacion', 'nuevo_alumnograduacion_fotoacto', 114, 10, 'ADD', 'max_size_file', [{ format_name_file: 'fomkjskdkto.jpg' }, { type_file: 'image/jpeg' }, { max_size_file: 21000000000 }], 'nuevo_alumnograduacion_fotoacto_max_size_KO'], //20MB
+  ['alumnograduacion', 'nuevo_alumnograduacion_fotoacto', 114, 10, 'ADD', 'max_size_file', [{ format_name_file: 'fomkjskdkto.jpg' }, { type_file: 'image/jpeg' }, { max_size_file: 21000000 }], 'nuevo_alumnograduacion_fotoacto_max_size_KO'], //20MB
   ['alumnograduacion', 'nuevo_alumnograduacion_fotoacto', 115, 11, 'ADD', 'correcto', [{ format_name_file: 'nombrecorrecto.jpg' }, { type_file: 'image/jpeg' }, { max_size_file: 19 }], true], //correcto 
 
   //EDITAR FOTOACTO
@@ -570,7 +570,7 @@ let alumnograduacion_tests_files = [
   ['alumnograduacion', 'nuevo_alumnograduacion_fotoacto', 118, 18, 'EDIT', 'format_name_file', [{ format_name_file: 'n.jpg' }, { type_file: 'image/jpeg' }, { max_size_file: 19 }], 'nuevo_alumnograduacion_fotoacto_nombrefoto_min_size_KO'],
   ['alumnograduacion', 'nuevo_alumnograduacion_fotoacto', 119, 19, 'EDIT', 'format_name_file', [{ format_name_file: 'n'.repeat(41) + '.jpg' }, { type_file: 'image/jpeg' }, { max_size_file: 19 }], 'nuevo_alumnograduacion_fotoacto_nombrefoto_max_size_KO'], //nombre con 41 caracteres y format jpg
   ['alumnograduacion', 'nuevo_alumnograduacion_fotoacto', 120, 20, 'EDIT', 'type_file', [ { format_name_file: 'foto.pdf' }, { type_file: 'pdf' }, { max_size_file: 19 }], 'nuevo_alumnograduacion_fotoacto_format_KO'], //format jpg
-  ['alumnograduacion', 'nuevo_alumnograduacion_fotoacto', 121, 21, 'EDIT', 'max_size_file', [{ format_name_file: 'foto.jpg' }, { type_file: 'image/jpeg' }, { max_size_file: 21000000000 }], 'nuevo_alumnograduacion_fotoacto_max_size_KO'], //20MB
+  ['alumnograduacion', 'nuevo_alumnograduacion_fotoacto', 121, 21, 'EDIT', 'max_size_file', [{ format_name_file: 'foto.jpg' }, { type_file: 'image/jpeg' }, { max_size_file: 21000000 }], 'nuevo_alumnograduacion_fotoacto_max_size_KO'], //20MB
   ['alumnograduacion', 'nuevo_alumnograduacion_fotoacto', 122, 22, 'EDIT', 'correcto', [{ format_name_file: 'nombrecorrecto.jpg' }, { type_file: 'image/jpeg' }, { max_size_file: 19 }], true], //correcto 
 
 ];
