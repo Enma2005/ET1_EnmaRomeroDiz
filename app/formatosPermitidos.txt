@@ -1,0 +1,79 @@
+ALUMNOGRADUACION-------------------------------------------------------------------------------------------------------------------------------------------
+
+    alumnograduacion_login
+            alfabéticos sin acentos ni ñ, min 4 max 15
+    alumnograduacion_password
+            alfabéticos y espacios sin acentos ni ñ, min 8 max 100
+    alumnograduacion_nombre
+            alfabéticos con acentos, ñ y espacios, min 2 max 25
+    alumnograduacion_apellidos
+            alfabéticos con acentos, ñ y espacios, min 2 max 35
+    alumnograduacion_titulacion
+            valores posibles: 'GREI','GRIA','MEI','MIA','PCEO'
+    alumnograduacion_dni
+            formato nif o nie con letras válidas para los números
+    alumnograduacion_telefono
+            9 dígitos (0-9)
+    alumnograduacion_direccion
+            alfanuméricos con acentos y ñ y espacios
+    alumnograduacion_email  
+            formato email
+    alumnograduacion_fotoacto
+            alfabéticos (sin acentos ni ñ ni espacios) y “.”. Min 7 max 100. Sólo jpg y tamaño de fichero menor de 2.000.000 bytes.
+
+
+ARTICULO-------------------------------------------------------------------------------------------------------------------------------------------
+
+    CODIGOA->   11 numéricos. 
+                Tamaño máximo y mínimo 11 caracteres. No puede ser nulo.
+
+    AUTORESA->  Caracteres alfabeticos incluidos tildes, mayusculas, ñ y ç. 
+                Tamaño máximo 200 y mínimo 4 caracteres. No puede ser nulo. 
+
+    TITULOA->   Caracteres alfabeticos incluidos tildes, mayusculas, ñ y ç. 
+                Tamaño mínimo 2 caracterees y máximo 100. No puede ser nulo.
+
+    TITULOR->   Caracteres alfabeticos incluidos tildes, mayusculas, ñ y ç.
+                Tamaño mínimo 2 caracterees y máximo 100. No puede ser nulo.
+
+    ISSN->      Código numérico de la forma nnnn-nnnn cuyo ultimo digito sea un caracter de comprobación.
+                El último carácter puede ser un dígito (0–9) o la letra X (mayúscula), que representa el valor 10 en el cálculo del dígito de control. 
+                No puede ser nulo.
+
+    VOLUMENR->  Caracteres numéricos. Máximo 4 caracteres mínimo 1. No puede ser nulo.
+
+    PAGINA->    Caracteres numéricos. Máximo 4 caracteres mínimo 1. No puede ser nulo.
+
+    PAGFUNA->   Caracteres numéricos. Máximo 4 caracteres mínimo 1. No puede ser nulo.
+
+    FECHAPUBLICACIONR-> De la forma nnnn-nn-nn todos ellos caracteres numéricos. No puede ser nulo.
+
+    FICHEROPDFA->       Nombre del fichero como máximo 20 caracteres alfanuméricos y como mínimo 1 y la extension (4 en total). 
+                        No se admiten espacios pero si ñ y acentos. 
+                        No puede ser nulo.
+
+    ESTADOA->   Valores posibles: 'Enviado','Revision','Publicado'. No puede ser nulo.
+
+
+UBICACION-------------------------------------------------------------------------------------------------------------------------------------------
+
+
+    IDSITE->     Caracteres numéricos. Tamaño máximo 11, mínimo 1. No puede ser nulo.
+
+    SITELATITUD->  Valor decimal con hasta 6 cifras decimales. Rango permitido según WGS84: -90.000000 a 90.000000. No puede ser nulo.
+
+    SITELONGITUD-> Valor decimal con hasta 6 cifras decimales. Rango permitido según WGS84: -180.000000 a 180.000000. No puede ser nulo.
+
+    SITEALTITUDE-> Caracteres numéricos. Máximo 4 caracteres, mínimo 1. No puede ser nulo.
+
+    SITELOCALITY-> Caracteres alfabéticos incluidos tildes, mayúsculas, ñ y ç. Tamaño máximo 40, mínimo 2. No puede ser nulo.
+
+    SITEPROVIDERLOGIN-> Caracteres alfanuméricos, guiones bajos o puntos. Tamaño máximo 30, mínimo 4. No puede ser nulo.
+
+    SITENORTHPHOTO-> Nombre del fichero como máximo 50 caracteres alfanuméricos y extensión incluida. No se admiten espacios, pero sí ñ y acentos. No puede ser nulo. Deben ser pngs de  menos de maximo 20MB.
+
+    SITESOUTHPHOTO-> Nombre del fichero como máximo 50 caracteres alfanuméricos y extensión incluida. No se admiten espacios, pero sí ñ y acentos. No puede ser nulo. Deben ser pngs de  menos de maximo 20MB.
+
+    SITEEASTPHOTO-> Nombre del fichero como máximo 50 caracteres alfanuméricos y extensión incluida. No se admiten espacios, pero sí ñ y acentos. No puede ser nulo. Deben ser pngs de  menos de maximo 20MB.
+
+    SITEWESTPHOTO-> Nombre del fichero como máximo 50 caracteres alfanuméricos y extensión incluida. No se admiten espacios, pero sí ñ y acentos. No puede ser nulo. Deben ser pngs de  menos de maximo 20MB.
