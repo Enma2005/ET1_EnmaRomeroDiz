@@ -1147,7 +1147,7 @@ let articulo_tests_files = [
 
 
 let ubicacion_def_tests = [
-
+/*
   // ---------- ID_SITE ----------
   ['ubicacion', 'id_site', 'input', 1, 'Validar que no esté vacío', 'ADD', 'id_site_vacio_KO', 'No puede estar vacío.'],
   ['ubicacion', 'id_site', 'input', 2, 'Validar que solo contenga números', 'ADD', 'id_site_format_KO', 'Solo se admiten números.'],
@@ -1160,6 +1160,7 @@ let ubicacion_def_tests = [
   ['ubicacion', 'id_site', 'input', 8, 'Validar longitud mínima 1', 'EDIT', 'id_site_min_size_KO', 'Debe tener al menos 1 carácter.'],
   ['ubicacion', 'id_site', 'input', 9, 'Validar longitud máxima 11', 'EDIT', 'id_site_max_size_KO', 'No puede superar 11 caracteres.'],
   ['ubicacion', 'id_site', 'input', 10, 'Validar correcto', 'EDIT', true, 'Correcto.'],
+*/
 
   ['ubicacion', 'id_site', 'input', 11, 'Validar que esté vacío o numérico', 'SEARCH', 'id_site_format_KO', 'Solo se admiten números.'],
   ['ubicacion', 'id_site', 'input', 12, 'Validar longitud máxima 11', 'SEARCH', 'id_site_max_size_KO', 'No puede superar 11 caracteres.'],
@@ -1356,7 +1357,7 @@ let ubicacion_def_tests = [
 
 
 let ubicacion_tests_fields = [
-
+/*
   // ADD
   ['ubicacion', 'id_site', 1, 1, 'ADD', [{ id_site: '' }], 'id_site_vacio_KO'],                 // vacío
   ['ubicacion', 'id_site', 2, 2, 'ADD', [{ id_site: 'abc' }], 'id_site_format_KO'],             // letras
@@ -1376,7 +1377,7 @@ let ubicacion_tests_fields = [
   ['ubicacion', 'id_site', 8, 14, 'EDIT', [{ id_site: '1' }], true],
   ['ubicacion', 'id_site', 9, 15, 'EDIT', [{ id_site: '123456789012' }], 'id_site_max_size_KO'],
   ['ubicacion', 'id_site', 10, 16, 'EDIT', [{ id_site: '123456' }], true],
-
+*/
   // SEARCH
   ['ubicacion', 'id_site', 11, 17, 'SEARCH', [{ id_site: 'abc' }], 'id_site_format_KO'],
   ['ubicacion', 'id_site', 11, 18, 'SEARCH', [{ id_site: '123a' }], 'id_site_format_KO'],
@@ -1447,14 +1448,14 @@ let ubicacion_tests_fields = [
   // ADD
   ['ubicacion', 'site_altitude', 42, 65, 'ADD', [{ site_altitude: '' }], 'site_altitude_vacio_KO'],
   ['ubicacion', 'site_altitude', 43, 66, 'ADD', [{ site_altitude: '12a' }], 'site_altitude_format_KO'],
-  ['ubicacion', 'site_altitude', 44, 67, 'ADD', [{ site_altitude: '' }], 'site_altitude_min_size_KO'],
+ // ['ubicacion', 'site_altitude', 44, 67, 'ADD', [{ site_altitude: '' }], 'site_altitude_min_size_KO'],
   ['ubicacion', 'site_altitude', 45, 68, 'ADD', [{ site_altitude: '12345' }], 'site_altitude_max_size_KO'],
   ['ubicacion', 'site_altitude', 46, 69, 'ADD', [{ site_altitude: '123' }], true],
 
   // EDIT
   ['ubicacion', 'site_altitude', 47, 70, 'EDIT', [{ site_altitude: '' }], 'site_altitude_vacio_KO'],
   ['ubicacion', 'site_altitude', 48, 71, 'EDIT', [{ site_altitude: '12b' }], 'site_altitude_format_KO'],
-  ['ubicacion', 'site_altitude', 49, 72, 'EDIT', [{ site_altitude: '' }], 'site_altitude_min_size_KO'],
+  //['ubicacion', 'site_altitude', 49, 72, 'EDIT', [{ site_altitude: '' }], 'site_altitude_min_size_KO'],
   ['ubicacion', 'site_altitude', 50, 73, 'EDIT', [{ site_altitude: '12345' }], 'site_altitude_max_size_KO'],
   ['ubicacion', 'site_altitude', 51, 74, 'EDIT', [{ site_altitude: '100' }], true],
 

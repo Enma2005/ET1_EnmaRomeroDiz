@@ -126,6 +126,37 @@ class ubicacion extends EntidadAbstracta {
     
         return form_content;
     }
+
+    ADD_id_site_validation() {
+
+        // No puede estar vacío
+        if (!(this.not_empty('id_site'))) {
+            this.dom.mostrar_error_campo('id_site', 'id_site_vacio_KO');
+            return "id_site_vacio_KO";
+        }
+    
+        // Solo números
+        if (!(this.validations.format('id_site', '^[0-9]+$'))) {
+            this.dom.mostrar_error_campo('id_site', 'id_site_format_KO');
+            return "id_site_format_KO";
+        }
+    
+        // Tamaño mínimo 1
+        if (!(this.min_size('id_site', 1))) {
+            this.dom.mostrar_error_campo('id_site', 'id_site_min_size_KO');
+            return "id_site_min_size_KO";
+        }
+    
+        // Tamaño máximo 11
+        if (!(this.max_size('id_site', 11))) {
+            this.dom.mostrar_error_campo('id_site', 'id_site_max_size_KO');
+            return "id_site_max_size_KO";
+        }
+    
+        this.dom.mostrar_exito_campo('id_site');
+        return true;
+    }
+    
     ADD_site_latitud_validation() {
 
         // No vacío
@@ -282,7 +313,7 @@ class ubicacion extends EntidadAbstracta {
         return true;
     }
     
-    ADD_nuevo_site_north_photo_validation() {
+    ADD_site_north_photo_validation() {
 
         if (!(this.validations.not_exist_file('nuevo_site_north_photo'))) {
             this.dom.mostrar_error_campo('nuevo_site_north_photo', 'nuevo_site_north_photo_vacio_KO');
@@ -313,7 +344,7 @@ class ubicacion extends EntidadAbstracta {
         return true;
     }
 
-    ADD_nuevo_site_south_photo_validation() {
+    ADD_site_south_photo_validation() {
 
         if (!(this.validations.not_exist_file('nuevo_site_south_photo'))) {
             this.dom.mostrar_error_campo('nuevo_site_south_photo', 'nuevo_site_south_photo_vacio_KO');
@@ -344,7 +375,7 @@ class ubicacion extends EntidadAbstracta {
         return true;
     }
 
-    ADD_nuevo_site_east_photo_validation() {
+    ADD_site_east_photo_validation() {
 
         if (!(this.validations.not_exist_file('nuevo_site_east_photo'))) {
             this.dom.mostrar_error_campo('nuevo_site_east_photo', 'nuevo_site_east_photo_vacio_KO');
@@ -376,7 +407,7 @@ class ubicacion extends EntidadAbstracta {
     }
 
 
-    ADD_nuevo_site_west_photo_validation() {
+    ADD_site_west_photo_validation() {
 
         if (!(this.validations.not_exist_file('nuevo_site_west_photo'))) {
             this.dom.mostrar_error_campo('nuevo_site_west_photo', 'nuevo_site_west_photo_vacio_KO');
@@ -408,18 +439,19 @@ class ubicacion extends EntidadAbstracta {
     }
     
     
-    ADD_submit_site() {
+    ADD_submit_ubicacion() {
 
         let result = (
+            (this.ADD_id_site_validation()) &
             (this.ADD_site_latitud_validation()) &
             (this.ADD_site_longitud_validation()) &
             (this.ADD_site_altitude_validation()) &
             (this.ADD_site_locality_validation()) &
             (this.ADD_site_provider_login_validation()) &
-            (this.ADD_nuevo_site_north_photo_validation()) &
-            (this.ADD_nuevo_site_south_photo_validation()) &
-            (this.ADD_nuevo_site_east_photo_validation()) &
-            (this.ADD_nuevo_site_west_photo_validation())
+            (this.ADD_site_north_photo_validation()) &
+            (this.ADD_site_south_photo_validation()) &
+            (this.ADD_site_east_photo_validation()) &
+            (this.ADD_site_west_photo_validation())
         );
     
         result = Boolean(result);
@@ -440,7 +472,10 @@ class ubicacion extends EntidadAbstracta {
 
 
 
-
+    EDIT_id_site_validation(){
+        ADD_id_site_validation();
+        
+    }
 
     EDIT_site_latitud_validation() {
        this.ADD_site_latitud_validationtitude_validation();  
@@ -464,35 +499,36 @@ class ubicacion extends EntidadAbstracta {
         this.ADD_site_provider_login_validation();
     }    
 
-    EDIT_nuevo_site_north_photo_validation(){
-       this.ADD_nuevo_site_north_photo_validation();
+    EDIT_site_north_photo_validation(){
+       this.ADD_site_north_photo_validation();
     }
 
-    EDIT_nuevo_site_south_photo_validation(){
-        this.ADD_nuevo_site_south_photo_validation();
+    EDIT_site_south_photo_validation(){
+        this.ADD_site_south_photo_validation();
     }
 
-    EDIT_nuevo_site_east_photo_validation() {
-        this.ADD_nuevo_site_east_photo_validation();
+    EDIT_site_east_photo_validation() {
+        this.ADD_site_east_photo_validation();
     }
 
-    EDIT_nuevo_site_west_photo_validation() {
-        this.ADD_nuevo_site_west_photo_validation();
+    EDIT_site_west_photo_validation() {
+        this.ADD_site_west_photo_validation();
     }
 
 
-    EDIT_submit_site() {
+    EDIT_submit_ubicacion() {
 
         let result = (
+            (this.EDIT_id_site_validation()) &
             (this.EDIT_site_latitud_validation()) &
             (this.EDIT_site_longitud_validation()) &
             (this.EDIT_site_altitude_validation()) &
             (this.EDIT_site_locality_validation()) &
             (this.EDIT_site_provider_login_validation()) &
-            (this.EDIT_nuevo_site_north_photo_validation()) &
-            (this.EDIT_nuevo_site_south_photo_validation()) &
-            (this.EDIT_nuevo_site_east_photo_validation()) &
-            (this.EDIT_nuevo_site_west_photo_validation())
+            (this.EDIT_site_north_photo_validation()) &
+            (this.EDIT_site_south_photo_validation()) &
+            (this.EDIT_site_east_photo_validation()) &
+            (this.EDIT_site_west_photo_validation())
         );
     
         result = Boolean(result);
@@ -712,7 +748,7 @@ class ubicacion extends EntidadAbstracta {
         return true;
     }
     
-    SEARCH_submit_site() {
+    SEARCH_submit_ubicacion() {
 
         let result = (
             (this.SEARCH_site_latitud_validation()) &
@@ -806,53 +842,34 @@ class ubicacion extends EntidadAbstracta {
     ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-
-
-    mostrarcambioatributo_site(atributo, valoratributo) {
-        if (!valoratributo) return `<a class="no_file_found"></a>`;
+    mostrarcambioatributo(clave, valor) {
+        // Fotos: mostrar con icono y link si hay valor
+        if (clave === 'site_north_photo' || clave === 'site_south_photo' ||
+            clave === 'site_east_photo' || clave === 'site_west_photo') {
     
-        let urlBase = 'http://193.147.87.202/ET2/filesuploaded/sites/';
-        let id = '';
-        let url = '';
+            if (!valor) return `<a class="no_file_found"></a>`;
     
-        switch (atributo) {
-            case 'site_north_photo':
-                id = `link_site_north_photo_${valoratributo}`;
-                url = urlBase + valoratributo;
-                break;
-            case 'site_south_photo':
-                id = `link_site_south_photo_${valoratributo}`;
-                url = urlBase + valoratributo;
-                break;
-            case 'site_east_photo':
-                id = `link_site_east_photo_${valoratributo}`;
-                url = urlBase + valoratributo;
-                break;
-            case 'site_west_photo':
-                id = `link_site_west_photo_${valoratributo}`;
-                url = urlBase + valoratributo;
-                break;
-            case 'site_latitud':
-            case 'site_longitud':
-            case 'site_altitude':
-            case 'site_locality':
-            case 'site_provider_login':
-                // Para otros atributos simplemente devolver el valor
-                return valoratributo;
-            default:
-                // Si no es un atributo esperado, devolver el valor tal cual
-                return valoratributo;
+            const id = `link_${clave}_${valor}`;
+            const url = `http://193.147.87.202/ET2/filesuploaded/files_${clave}/${valor}`;
+    
+            return `
+                <a id="${id}" href="${url}" target="_blank">
+                    <img src="./iconos/FILE.png" alt="Archivo" />
+                </a>
+            `;
         }
     
-        return `
-            <a id="${id}" href="${url}" target="_blank">
-                <img src="./iconos/FILE.png" alt="Archivo" />
-            </a>
-        `;
+        // Fechas (si tuvieras alguna, ejemplo site_fecha)
+        if (clave === 'site_fecha') {
+            return this.isoToDDMMYYYY(valor); // conviertes de ISO a DD/MM/YYYY
+        }
+    
+        // Por defecto, devolver el valor tal cual
+        return valor;
     }
+ 
     
-    
-    createForm_ADD_site() {
+    createForm_ADD() {
 
         // limpiar y poner visible el formulario
         document.getElementById('contenedor_IU_form').innerHTML = this.manual_form_creation();
@@ -861,7 +878,7 @@ class ubicacion extends EntidadAbstracta {
         this.dom.assign_class_value('class_contenido_Titulo_form', 'text_contenido_Titulo_form_ADD');
     
         // poner onsubmit y action
-        this.dom.assign_property_value('form_iu', 'onsubmit', 'return entidad.ADD_submit_site()');
+        this.dom.assign_property_value('form_iu', 'onsubmit', 'return entidad.ADD_submit_ubicacion()');
         this.dom.assign_property_value('form_iu', 'action', 'javascript:entidad.ADD();');
     
         // ocultar elementos de solo visualización o autogenerados
@@ -879,7 +896,7 @@ class ubicacion extends EntidadAbstracta {
         setLang();
     }
     
-    createForm_EDIT_site(fila) {
+    createForm_EDIT(fila) {
     
         // limpiar y poner visible el formulario
         document.getElementById('contenedor_IU_form').innerHTML = this.manual_form_creation();
@@ -888,7 +905,7 @@ class ubicacion extends EntidadAbstracta {
         this.dom.assign_class_value('class_contenido_Titulo_form', 'text_contenido_Titulo_form_EDIT');
     
         // onsubmit y action
-        this.dom.assign_property_value('form_iu', 'onsubmit', 'return entidad.EDIT_submit_site()');
+        this.dom.assign_property_value('form_iu', 'onsubmit', 'return entidad.EDIT_submit_ubicacion()');
         this.dom.assign_property_value('form_iu', 'action', 'javascript:entidad.EDIT();');
     
         // rellenar valores
@@ -912,7 +929,7 @@ class ubicacion extends EntidadAbstracta {
         setLang();
     }
     
-    createForm_DELETE_site(fila) {
+    createForm_DELETE(fila) {
     
         // limpiar y poner visible el formulario
         document.getElementById('contenedor_IU_form').innerHTML = this.manual_form_creation();
@@ -941,7 +958,7 @@ class ubicacion extends EntidadAbstracta {
         setLang();
     }
     
-    createForm_SHOWCURRENT_site(fila) {
+    createForm_SHOWCURRENT(fila) {
     
         // limpiar y poner visible el formulario
         document.getElementById('contenedor_IU_form').innerHTML = this.manual_form_creation();
@@ -964,8 +981,8 @@ class ubicacion extends EntidadAbstracta {
         setLang();
     }
     
-    createForm_SEARCH_site() {
-    
+    createForm_SEARCH() {
+
         // limpiar y poner visible el formulario
         document.getElementById('contenedor_IU_form').innerHTML = this.manual_form_creation();
         this.dom.show_element('Div_IU_form', 'block');
@@ -973,7 +990,7 @@ class ubicacion extends EntidadAbstracta {
         this.dom.assign_class_value('class_contenido_Titulo_form', 'text_contenido_Titulo_form_SEARCH');
     
         // onsubmit y action
-        this.dom.assign_property_value('form_iu', 'onsubmit', 'return entidad.SEARCH_submit_site()');
+        this.dom.assign_property_value('form_iu', 'onsubmit', 'return entidad.SEARCH_submit_ubicacion()');
         this.dom.assign_property_value('form_iu', 'action', 'javascript:entidad.SEARCH();');
     
         // ocultar links de fotos
@@ -992,5 +1009,5 @@ class ubicacion extends EntidadAbstracta {
     }
     
 
-    
+
 }
