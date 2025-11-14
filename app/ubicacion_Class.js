@@ -4,10 +4,10 @@ class ubicacion extends EntidadAbstracta {
 
 		super();
 
-		this.columnasamostrar = ['id_site', 'site_provider_login'],
-			this.mostrarespecial = ['site_north_photo', 'site_west_photo'];
-		this.nombreentidad = 'ubicacion';
-
+        this.columnasamostrar = ['id_site', 'site_provider_login'];
+        this.mostrarespecial = ['site_north_photo', 'site_west_photo', 'site_east_photo', 'site_south_photo'];
+        this.nombreentidad = 'ubicacion';
+        
 		// definicion de los atributos del formulario (Necesario para test de unidad)
 		this.attributes = [
 			'id_site',
@@ -128,30 +128,6 @@ class ubicacion extends EntidadAbstracta {
     }
 
     ADD_id_site_validation() {
-
-        // No puede estar vacío
-        if (!(this.not_empty('id_site'))) {
-            this.dom.mostrar_error_campo('id_site', 'id_site_vacio_KO');
-            return "id_site_vacio_KO";
-        }
-    
-        // Solo números
-        if (!(this.validations.format('id_site', '^[0-9]+$'))) {
-            this.dom.mostrar_error_campo('id_site', 'id_site_format_KO');
-            return "id_site_format_KO";
-        }
-    
-        // Tamaño mínimo 1
-        if (!(this.min_size('id_site', 1))) {
-            this.dom.mostrar_error_campo('id_site', 'id_site_min_size_KO');
-            return "id_site_min_size_KO";
-        }
-    
-        // Tamaño máximo 11
-        if (!(this.max_size('id_site', 11))) {
-            this.dom.mostrar_error_campo('id_site', 'id_site_max_size_KO');
-            return "id_site_max_size_KO";
-        }
     
         this.dom.mostrar_exito_campo('id_site');
         return true;
@@ -164,6 +140,12 @@ class ubicacion extends EntidadAbstracta {
             this.dom.mostrar_error_campo('site_latitud', 'site_latitud_vacio_KO');
             return "site_latitud_vacio_KO";
         }
+        const valor = document.getElementById('site_latitud').value;
+           // Comprobar número total de decimales
+           if (!this.valid_decimals(valor)) {
+            this.dom.mostrar_error_campo('site_latitud', 'site_latitud_decimals_KO');
+            return "site_latitud_decimals_KO";
+        }
     
         // Formato decimal con signo y hasta 6 decimales
         if (!(this.validations.format('site_latitud', '^-?[0-9]{1,9}(\\.[0-9]{1,6})?$'))) {
@@ -171,18 +153,12 @@ class ubicacion extends EntidadAbstracta {
             return "site_latitud_format_KO";
         }
     
-        const valor = document.getElementById('site_latitud').value;
     
-        // Comprobar número total de decimales
-        if (!this.valid_latitud_decimals(valor)) {
-            this.dom.mostrar_error_campo('site_latitud', 'site_latitud_decimales_KO');
-            return "site_latitud_decimales_KO";
-        }
-    
+     
         // Comprobar rango WGS84 adicional
-        if (!this.valid_latitud_rango(valor,-90,90)) {
-            this.dom.mostrar_error_campo('site_latitud', 'site_latitud_rango_KO');
-            return "site_latitud_rango_KO";
+        if (!this.valid_rango(valor,-90,90)) {
+            this.dom.mostrar_error_campo('site_latitud', 'site_latitud_range_KO');
+            return "site_latitud_range_KO";
         }
     
         this.dom.mostrar_exito_campo('site_latitud');
@@ -198,6 +174,14 @@ class ubicacion extends EntidadAbstracta {
             this.dom.mostrar_error_campo('site_longitud', 'site_longitud_vacio_KO');
             return "site_longitud_vacio_KO";
         }
+        const valor = document.getElementById('site_longitud').value;
+
+        if (!this.valid_decimals(valor)) {
+            // reutilizas la misma función de decimales, sirve igual
+            this.dom.mostrar_error_campo('site_longitud', 'site_longitud_decimals_KO');
+            return "site_longitud_decimals_KO";
+        }
+    
     
         // Formato decimal con signo y hasta 6 decimales
         if (!(this.validations.format('site_longitud', '^-?[0-9]{1,9}(\\.[0-9]{1,6})?$'))) {
@@ -205,20 +189,14 @@ class ubicacion extends EntidadAbstracta {
             return "site_longitud_format_KO";
         }
     
-        const valor = document.getElementById('site_longitud').value;
     
         // Comprobar número total de decimales
-        if (!this.valid_latitud_decimals(valor)) {
-            // reutilizas la misma función de decimales, sirve igual
-            this.dom.mostrar_error_campo('site_longitud', 'site_longitud_decimales_KO');
-            return "site_longitud_decimales_KO";
-        }
-    
+      
         // Comprobar rango WGS84 (-180 a 180)
-        if (!this.valid_latitud_rango(valor, -180, 180)) {
+        if (!this.valid_rango(valor, -180, 180)) {
             // también reutilizas la función de rango
-            this.dom.mostrar_error_campo('site_longitud', 'site_longitud_rango_KO');
-            return "site_longitud_rango_KO";
+            this.dom.mostrar_error_campo('site_longitud', 'site_longitud_range_KO');
+            return "site_longitud_range_KO";
         }
     
         this.dom.mostrar_exito_campo('site_longitud');
@@ -313,128 +291,149 @@ class ubicacion extends EntidadAbstracta {
         return true;
     }
     
-    ADD_site_north_photo_validation() {
+    ADD_nuevo_site_north_photo_validation() {
 
         if (!(this.validations.not_exist_file('nuevo_site_north_photo'))) {
             this.dom.mostrar_error_campo('nuevo_site_north_photo', 'nuevo_site_north_photo_vacio_KO');
             return "nuevo_site_north_photo_vacio_KO";
         }
-    
+
+        if (!(this.validations.type_file('nuevo_site_north_photo', ['image/jpeg']))) {
+            this.dom.mostrar_error_campo('nuevo_site_north_photo', 'nuevo_site_north_photo_format_KO');
+            return "nuevo_site_north_photo_format_KO";
+        }
+
         if (!(this.validations.max_size_file('nuevo_site_north_photo', 20000000))) {
             this.dom.mostrar_error_campo('nuevo_site_north_photo', 'nuevo_site_north_photo_max_size_KO');
             return "nuevo_site_north_photo_max_size_KO";
         }
     
-        if (!(this.validations.format_name_file('nuevo_site_north_photo', '^[A-Za-z0-9ñÑáéíóúÁÉÍÓÚüÜçÇ._-]+$'))) {
-            this.dom.mostrar_error_campo('nuevo_site_north_photo', 'nuevo_site_north_photo_format_KO');
-            return "nuevo_site_north_photo_format_KO";
+        if (!(this.validations.format_name_file('nuevo_site_north_photo', '^[A-Za-z0-9ñÑáéíóúÁÉÍÓÚüÜçÇ.]+$'))) {
+            this.dom.mostrar_error_campo('nuevo_site_north_photo', 'nuevo_site_north_photo_nombrefoto_format_KO');
+            return "nuevo_site_north_photo_nombrefoto_format_KO";
         }
     
         if (!(this.min_size_file_name('nuevo_site_north_photo', 1))) {
-            this.dom.mostrar_error_campo('nuevo_site_north_photo', 'nuevo_site_north_photo_min_size_KO');
-            return "nuevo_site_north_photo_min_size_KO";
+            this.dom.mostrar_error_campo('nuevo_site_north_photo', 'nuevo_site_north_photo_nombrefoto_min_size_KO');
+            return "nuevo_site_north_photo_nombrefoto_min_size_KO";
         }
-    
+        
         if (!(this.max_size_file_name('nuevo_site_north_photo', 50))) {
-            this.dom.mostrar_error_campo('nuevo_site_north_photo', 'nuevo_site_north_photo_max_size_KO');
-            return "nuevo_site_north_photo_max_size_KO";
+            this.dom.mostrar_error_campo('nuevo_site_north_photo', 'nuevo_site_north_photo_nombrefoto_max_size_KO');
+            return "nuevo_site_north_photo_nombrefoto_max_size_KO";
         }
     
         this.dom.mostrar_exito_campo('nuevo_site_north_photo');
         return true;
     }
 
-    ADD_site_south_photo_validation() {
+    ADD_nuevo_site_south_photo_validation() {
 
         if (!(this.validations.not_exist_file('nuevo_site_south_photo'))) {
             this.dom.mostrar_error_campo('nuevo_site_south_photo', 'nuevo_site_south_photo_vacio_KO');
             return "nuevo_site_south_photo_vacio_KO";
         }
-    
+
+        if (!(this.validations.type_file('nuevo_site_south_photo', ['image/jpeg']))) {
+            this.dom.mostrar_error_campo('nuevo_site_south_photo', 'nuevo_site_south_photo_format_KO');
+            return "nuevo_site_south_photo_format_KO";
+        }
+
         if (!(this.validations.max_size_file('nuevo_site_south_photo', 20000000))) {
             this.dom.mostrar_error_campo('nuevo_site_south_photo', 'nuevo_site_south_photo_max_size_KO');
             return "nuevo_site_south_photo_max_size_KO";
         }
     
-        if (!(this.validations.format_name_file('nuevo_site_south_photo', '^[A-Za-z0-9ñÑáéíóúÁÉÍÓÚüÜçÇ._-]+$'))) {
-            this.dom.mostrar_error_campo('nuevo_site_south_photo', 'nuevo_site_south_photo_format_KO');
-            return "nuevo_site_south_photo_format_KO";
+        if (!(this.validations.format_name_file('nuevo_site_south_photo', '^[A-Za-z0-9ñÑáéíóúÁÉÍÓÚüÜçÇ.]+$'))) {
+            this.dom.mostrar_error_campo('nuevo_site_south_photo', 'nuevo_site_south_photo_nombrefoto_format_KO');
+            return "nuevo_site_south_photo_nombrefoto_format_KO";
         }
     
         if (!(this.min_size_file_name('nuevo_site_south_photo', 1))) {
-            this.dom.mostrar_error_campo('nuevo_site_south_photo', 'nuevo_site_south_photo_min_size_KO');
-            return "nuevo_site_south_photo_min_size_KO";
+            this.dom.mostrar_error_campo('nuevo_site_south_photo', 'nuevo_site_south_photo_nombrefoto_min_size_KO');
+            return "nuevo_site_south_photo_nombrefoto_min_size_KO";
         }
-    
+        
         if (!(this.max_size_file_name('nuevo_site_south_photo', 50))) {
-            this.dom.mostrar_error_campo('nuevo_site_south_photo', 'nuevo_site_south_photo_max_size_KO');
-            return "nuevo_site_south_photo_max_size_KO";
+            this.dom.mostrar_error_campo('nuevo_site_south_photo', 'nuevo_site_south_photo_nombrefoto_max_size_KO');
+            return "nuevo_site_south_photo_nombrefoto_max_size_KO";
         }
     
-        this.dom.mostrar_exito_campo('nuevo_site_south_photo');
+        this.dom.mostrar_exito_campo('nuevo_site_north_photo');
         return true;
+    
     }
 
-    ADD_site_east_photo_validation() {
+    ADD_nuevo_site_east_photo_validation() {
 
         if (!(this.validations.not_exist_file('nuevo_site_east_photo'))) {
             this.dom.mostrar_error_campo('nuevo_site_east_photo', 'nuevo_site_east_photo_vacio_KO');
             return "nuevo_site_east_photo_vacio_KO";
         }
-    
+
+        if (!(this.validations.type_file('nuevo_site_east_photo', ['image/jpeg']))) {
+            this.dom.mostrar_error_campo('nuevo_site_east_photo', 'nuevo_site_east_photo_format_KO');
+            return "nuevo_site_east_photo_format_KO";
+        }
+
         if (!(this.validations.max_size_file('nuevo_site_east_photo', 20000000))) {
             this.dom.mostrar_error_campo('nuevo_site_east_photo', 'nuevo_site_east_photo_max_size_KO');
             return "nuevo_site_east_photo_max_size_KO";
         }
     
-        if (!(this.validations.format_name_file('nuevo_site_east_photo', '^[A-Za-z0-9ñÑáéíóúÁÉÍÓÚüÜçÇ._-]+$'))) {
-            this.dom.mostrar_error_campo('nuevo_site_east_photo', 'nuevo_site_east_photo_format_KO');
-            return "nuevo_site_east_photo_format_KO";
+        if (!(this.validations.format_name_file('nuevo_site_east_photo', '^[A-Za-z0-9ñÑáéíóúÁÉÍÓÚüÜçÇ.]+$'))) {
+            this.dom.mostrar_error_campo('nuevo_site_east_photo', 'nuevo_site_east_photo_nombrefoto_format_KO');
+            return "nuevo_site_east_photo_nombrefoto_format_KO";
         }
     
         if (!(this.min_size_file_name('nuevo_site_east_photo', 1))) {
-            this.dom.mostrar_error_campo('nuevo_site_east_photo', 'nuevo_site_east_photo_min_size_KO');
-            return "nuevo_site_east_photo_min_size_KO";
+            this.dom.mostrar_error_campo('nuevo_site_east_photo', 'nuevo_site_east_photo_nombrefoto_min_size_KO');
+            return "nuevo_site_east_photo_nombrefoto_min_size_KO";
         }
-    
+        
         if (!(this.max_size_file_name('nuevo_site_east_photo', 50))) {
-            this.dom.mostrar_error_campo('nuevo_site_east_photo', 'nuevo_site_east_photo_max_size_KO');
-            return "nuevo_site_east_photo_max_size_KO";
+            this.dom.mostrar_error_campo('nuevo_site_east_photo', 'nuevo_site_east_photo_nombrefoto_max_size_KO');
+            return "nuevo_site_east_photo_nombrefoto_max_size_KO";
         }
     
-        this.dom.mostrar_exito_campo('nuevo_site_east_photo');
+        this.dom.mostrar_exito_campo('nuevo_site_north_photo');
         return true;
     }
 
 
-    ADD_site_west_photo_validation() {
+    ADD_nuevo_site_west_photo_validation() {
 
         if (!(this.validations.not_exist_file('nuevo_site_west_photo'))) {
             this.dom.mostrar_error_campo('nuevo_site_west_photo', 'nuevo_site_west_photo_vacio_KO');
             return "nuevo_site_west_photo_vacio_KO";
         }
-    
+
+        if (!(this.validations.type_file('nuevo_site_west_photo', ['image/jpeg']))) {
+            this.dom.mostrar_error_campo('nuevo_site_west_photo', 'nuevo_site_west_photo_format_KO');
+            return "nuevo_site_west_photo_format_KO";
+        }
+
         if (!(this.validations.max_size_file('nuevo_site_west_photo', 20000000))) {
             this.dom.mostrar_error_campo('nuevo_site_west_photo', 'nuevo_site_west_photo_max_size_KO');
             return "nuevo_site_west_photo_max_size_KO";
         }
     
-        if (!(this.validations.format_name_file('nuevo_site_west_photo', '^[A-Za-z0-9ñÑáéíóúÁÉÍÓÚüÜçÇ._-]+$'))) {
-            this.dom.mostrar_error_campo('nuevo_site_west_photo', 'nuevo_site_west_photo_format_KO');
-            return "nuevo_site_west_photo_format_KO";
+        if (!(this.validations.format_name_file('nuevo_site_west_photo', '^[A-Za-z0-9ñÑáéíóúÁÉÍÓÚüÜçÇ.]+$'))) {
+            this.dom.mostrar_error_campo('nuevo_site_west_photo', 'nuevo_site_west_photo_nombrefoto_format_KO');
+            return "nuevo_site_west_photo_nombrefoto_format_KO";
         }
     
         if (!(this.min_size_file_name('nuevo_site_west_photo', 1))) {
-            this.dom.mostrar_error_campo('nuevo_site_west_photo', 'nuevo_site_west_photo_min_size_KO');
-            return "nuevo_site_west_photo_min_size_KO";
+            this.dom.mostrar_error_campo('nuevo_site_west_photo', 'nuevo_site_west_photo_nombrefoto_min_size_KO');
+            return "nuevo_site_west_photo_nombrefoto_min_size_KO";
         }
-    
+        
         if (!(this.max_size_file_name('nuevo_site_west_photo', 50))) {
-            this.dom.mostrar_error_campo('nuevo_site_west_photo', 'nuevo_site_west_photo_max_size_KO');
-            return "nuevo_site_west_photo_max_size_KO";
+            this.dom.mostrar_error_campo('nuevo_site_west_photo', 'nuevo_site_west_photo_nombrefoto_max_size_KO');
+            return "nuevo_site_west_photo_nombrefoto_max_size_KO";
         }
     
-        this.dom.mostrar_exito_campo('nuevo_site_west_photo');
+        this.dom.mostrar_exito_campo('nuevo_site_north_photo');
         return true;
     }
     
@@ -448,10 +447,10 @@ class ubicacion extends EntidadAbstracta {
             (this.ADD_site_altitude_validation()) &
             (this.ADD_site_locality_validation()) &
             (this.ADD_site_provider_login_validation()) &
-            (this.ADD_site_north_photo_validation()) &
-            (this.ADD_site_south_photo_validation()) &
-            (this.ADD_site_east_photo_validation()) &
-            (this.ADD_site_west_photo_validation())
+            (this.ADD_nuevo_site_north_photo_validation()) &
+            (this.ADD_nuevo_site_south_photo_validation()) &
+            (this.ADD_nuevo_site_east_photo_validation()) &
+            (this.ADD_nuevo_site_west_photo_validation())
         );
     
         result = Boolean(result);
@@ -473,46 +472,46 @@ class ubicacion extends EntidadAbstracta {
 
 
     EDIT_id_site_validation(){
-        ADD_id_site_validation();
+     return this.ADD_id_site_validation();
         
     }
 
     EDIT_site_latitud_validation() {
-       this.ADD_site_latitud_validationtitude_validation();  
+       return this.ADD_site_latitud_validation();  
     }
     
 
     EDIT_site_longitud_validation() {
-        this.ADD_site_longitud_validation();
+        return this.ADD_site_longitud_validation();
     }
 
 
     EDIT_site_altitude_validation() {
-        this.ADD_site_altitude_validation();
+        return this.ADD_site_altitude_validation();
     }
 
     EDIT_site_locality_validation(){
-        this.ADD_site_locality_validation();
+        return this.ADD_site_locality_validation();
     }
 
     EDIT_site_provider_login_validation(){
-        this.ADD_site_provider_login_validation();
+        return this.ADD_site_provider_login_validation();
     }    
 
-    EDIT_site_north_photo_validation(){
-       this.ADD_site_north_photo_validation();
+    EDIT_nuevo_site_north_photo_validation(){
+       return this.ADD_nuevo_site_north_photo_validation();
     }
 
-    EDIT_site_south_photo_validation(){
-        this.ADD_site_south_photo_validation();
+    EDIT_nuevo_site_south_photo_validation(){
+        return this.ADD_nuevo_site_south_photo_validation();
     }
 
-    EDIT_site_east_photo_validation() {
-        this.ADD_site_east_photo_validation();
+    EDIT_nuevo_site_east_photo_validation() {
+        return this.ADD_nuevo_site_east_photo_validation();
     }
 
-    EDIT_site_west_photo_validation() {
-        this.ADD_site_west_photo_validation();
+    EDIT_nuevo_site_west_photo_validation() {
+        return this.ADD_nuevo_site_west_photo_validation();
     }
 
 
@@ -525,10 +524,10 @@ class ubicacion extends EntidadAbstracta {
             (this.EDIT_site_altitude_validation()) &
             (this.EDIT_site_locality_validation()) &
             (this.EDIT_site_provider_login_validation()) &
-            (this.EDIT_site_north_photo_validation()) &
-            (this.EDIT_site_south_photo_validation()) &
-            (this.EDIT_site_east_photo_validation()) &
-            (this.EDIT_site_west_photo_validation())
+            (this.EDIT_nuevo_site_north_photo_validation()) &
+            (this.EDIT_nuevo_site_south_photo_validation()) &
+            (this.EDIT_nuevo_site_east_photo_validation()) &
+            (this.EDIT_nuevo_site_west_photo_validation())
         );
     
         result = Boolean(result);
@@ -572,10 +571,20 @@ class ubicacion extends EntidadAbstracta {
     SEARCH_site_latitud_validation() {
 
         // Si está vacío, está bien
-        if (this.is_empty('site_latitud')) {
+        if (! this.not_empty('site_latitud')) {
             this.dom.mostrar_exito_campo('site_latitud');
             return true;
         }
+
+        
+        const valor = document.getElementById('site_latitud').value;
+
+            // Comprobar número total de decimales
+            if (!this.valid_decimals(valor)) {
+                this.dom.mostrar_error_campo('site_latitud', 'site_latitud_decimals_KO');
+                return "site_latitud_decimals_KO";
+            }
+        
     
         // Formato decimal hasta 6 decimales
         if (!(this.validations.format('site_latitud', '^-?[0-9]{0,9}(\\.[0-9]{0,6})?$'))) {
@@ -583,6 +592,13 @@ class ubicacion extends EntidadAbstracta {
             return "site_latitud_format_KO";
         }
     
+
+         // Comprobar rango WGS84 adicional
+         if (!this.valid_rango(valor,-90,90)) {
+            this.dom.mostrar_error_campo('site_latitud', 'site_latitud_range_KO');
+            return "site_latitud_range_KO";
+        }
+
         this.dom.mostrar_exito_campo('site_latitud');
         return true;
     }
@@ -590,14 +606,30 @@ class ubicacion extends EntidadAbstracta {
 
     SEARCH_site_longitud_validation() {
 
-        if (this.is_empty('site_longitud')) {
+        if (! this.not_empty('site_longitud')) {
             this.dom.mostrar_exito_campo('site_longitud');
             return true;
         }
+        const valor = document.getElementById('site_longitud').value;
+
+
+          // Comprobar número total de decimales
+          if (!this.valid_decimals(valor)) {
+            this.dom.mostrar_error_campo('site_longitud', 'site_longitud_decimals_KO');
+            return "site_longitud_decimals_KO";
+        }
+    
     
         if (!(this.validations.format('site_longitud', '^-?[0-9]{0,9}(\\.[0-9]{0,6})?$'))) {
             this.dom.mostrar_error_campo('site_longitud', 'site_longitud_format_KO');
             return "site_longitud_format_KO";
+        }
+
+
+         // Comprobar rango WGS84 adicional
+         if (!this.valid_rango(valor,-180, 180)) {
+            this.dom.mostrar_error_campo('site_longitud', 'site_longitud_range_KO');
+            return "site_longitud_range_KO";
         }
     
         this.dom.mostrar_exito_campo('site_longitud');
@@ -606,7 +638,7 @@ class ubicacion extends EntidadAbstracta {
     
     SEARCH_site_altitude_validation() {
 
-        if (this.is_empty('site_altitude')) {
+        if (! this.not_empty('site_altitude')) {
             this.dom.mostrar_exito_campo('site_altitude');
             return true;
         }
@@ -677,13 +709,13 @@ class ubicacion extends EntidadAbstracta {
         if (!valor) return true;
     
         if (!(this.validations.format('site_north_photo', '^[A-Za-z0-9ñÑáéíóúÁÉÍÓÚüÜçÇ._-]*$'))) {
-            this.dom.mostrar_error_campo('site_north_photo', 'site_north_photo_format_KO');
-            return "site_north_photo_format_KO";
+            this.dom.mostrar_error_campo('site_north_photo', 'site_north_photo_nombrefoto_format_KO');
+            return "site_north_photo_nombrefoto_format_KO";
         }
     
         if (!(this.validations.max_size('site_north_photo', 50))) {
-            this.dom.mostrar_error_campo('site_north_photo', 'site_north_photo_max_size_KO');
-            return "site_north_photo_max_size_KO";
+            this.dom.mostrar_error_campo('site_north_photo', 'site_north_photo_nombrefoto_max_size_KO');
+            return "site_north_photo_nombrefoto_max_size_KO";
         }
     
         this.dom.mostrar_exito_campo('site_north_photo');
@@ -697,13 +729,13 @@ class ubicacion extends EntidadAbstracta {
         if (!valor) return true;
     
         if (!(this.validations.format('site_south_photo', '^[A-Za-z0-9ñÑáéíóúÁÉÍÓÚüÜçÇ._-]*$'))) {
-            this.dom.mostrar_error_campo('site_south_photo', 'site_south_photo_format_KO');
-            return "site_south_photo_format_KO";
+            this.dom.mostrar_error_campo('site_south_photo', 'site_south_photo_nombrefoto_format_KO');
+            return "site_south_photo_nombrefoto_format_KO";
         }
     
         if (!(this.validations.max_size('site_south_photo', 50))) {
-            this.dom.mostrar_error_campo('site_south_photo', 'site_south_photo_max_size_KO');
-            return "site_south_photo_max_size_KO";
+            this.dom.mostrar_error_campo('site_south_photo', 'site_south_photo_nombrefoto_max_size_KO');
+            return "site_south_photo_nombrefoto_max_size_KO";
         }
     
         this.dom.mostrar_exito_campo('site_south_photo');
@@ -716,13 +748,13 @@ class ubicacion extends EntidadAbstracta {
         if (!valor) return true;
     
         if (!(this.validations.format('site_east_photo', '^[A-Za-z0-9ñÑáéíóúÁÉÍÓÚüÜçÇ._-]*$'))) {
-            this.dom.mostrar_error_campo('site_east_photo', 'site_east_photo_format_KO');
-            return "site_east_photo_format_KO";
+            this.dom.mostrar_error_campo('site_east_photo', 'site_east_photo_nombrefoto_format_KO');
+            return "site_east_photo_nombrefoto_format_KO";
         }
     
         if (!(this.validations.max_size('site_east_photo', 50))) {
-            this.dom.mostrar_error_campo('site_east_photo', 'site_east_photo_max_size_KO');
-            return "site_east_photo_max_size_KO";
+            this.dom.mostrar_error_campo('site_east_photo', 'site_east_photo_nombrefoto_max_size_KO');
+            return "site_east_photo_nombrefoto_max_size_KO";
         }
     
         this.dom.mostrar_exito_campo('site_east_photo');
@@ -735,13 +767,13 @@ class ubicacion extends EntidadAbstracta {
         if (!valor) return true;
     
         if (!(this.validations.format('site_west_photo', '^[A-Za-z0-9ñÑáéíóúÁÉÍÓÚüÜçÇ._-]*$'))) {
-            this.dom.mostrar_error_campo('site_west_photo', 'site_west_photo_format_KO');
-            return "site_west_photo_format_KO";
+            this.dom.mostrar_error_campo('site_west_photo', 'site_west_photo_nombrefoto_format_KO');
+            return "site_west_photo_nombrefoto_format_KO";
         }
     
         if (!(this.validations.max_size('site_west_photo', 50))) {
-            this.dom.mostrar_error_campo('site_west_photo', 'site_west_photo_max_size_KO');
-            return "site_west_photo_max_size_KO";
+            this.dom.mostrar_error_campo('site_west_photo', 'site_west_photo_nombrefoto_max_size_KO');
+            return "site_west_photo_nombrefoto_max_size_KO";
         }
     
         this.dom.mostrar_exito_campo('site_west_photo');
@@ -802,13 +834,19 @@ class ubicacion extends EntidadAbstracta {
 		return valor.toString().length <= maximo;
 	}
 
-    valid_latitud_decimals(valor) {
+    valid_decimals(valor) {
+        // Asegurarse de que sea una cadena
+        valor = String(valor);
+    
+        // Separar parte entera y decimal
         if (valor.includes('.')) {
             const decimales = valor.split('.')[1];
-            return decimales.length <= 6; 
+            return decimales.length <= 6;
         }
+        
         return true; // no hay decimales → correcto
     }
+    
    
 
     valid_rango(valor,min, max) {
@@ -831,6 +869,40 @@ class ubicacion extends EntidadAbstracta {
 		}
 
 	}
+
+    // Comprueba tamaño mínimo de archivo en KB
+// Comprueba tamaño mínimo del nombre del archivo (sin extensión)
+min_size_file_name(id, minLength) {
+    const input = document.getElementById(id);
+    if (!input || !input.files || input.files.length === 0) return false;
+
+    const fileName = input.files[0].name;
+    const nameWithoutExt = fileName.replace(/\.[^/.]+$/, ""); // quitar extensión
+    return nameWithoutExt.length >= minLength;
+}
+
+// Comprueba tamaño máximo del nombre del archivo (sin extensión)
+max_size_file_name(id, maxLength) {
+    const input = document.getElementById(id);
+    if (!input || !input.files || input.files.length === 0) return false;
+
+    const fileName = input.files[0].name;
+    const nameWithoutExt = fileName.replace(/\.[^/.]+$/, ""); // quitar extensión
+    return nameWithoutExt.length <= maxLength;
+}
+
+// Comprueba que sea
+is_jpeg_file(id) {
+    const input = document.getElementById(id);
+    if (!input || !input.files || input.files.length === 0) return false;
+
+    const file = input.files[0];
+    const extension = file.name.split('.').pop().toLowerCase();
+    return extension === 'jpeg';
+}
+
+
+
 
 
        /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////

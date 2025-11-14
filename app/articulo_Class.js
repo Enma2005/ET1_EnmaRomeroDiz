@@ -145,6 +145,10 @@ class articulo extends EntidadAbstracta {
 
 	/* Validaciones para ADD/EDIT */
 
+	ADD_CodigoA_validation(){
+		this.dom.mostrar_exito_campo('CodigoA');
+		return true;
+	}
 
 	ADD_AutoresA_validation() {
 		if (!(this.not_empty('AutoresA'))) {
@@ -434,7 +438,7 @@ class articulo extends EntidadAbstracta {
 	ADD_submit_articulo() {
 
 		let result = (
-
+			(this.ADD_CodigoA_validation()) &
 			(this.ADD_AutoresA_validation()) &
 			(this.ADD_TituloA_validation()) &
 			(this.ADD_TituloR_validation()) &
@@ -455,7 +459,9 @@ class articulo extends EntidadAbstracta {
 
 	}
 
-
+	EDIT_CodigoA_validation(){
+		return true;
+	}
 
 	EDIT_AutoresA_validation() {
 		if (!(this.not_empty('AutoresA'))) {

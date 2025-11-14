@@ -12,10 +12,10 @@ SITELOCALITY-> Caracteres alfabéticos incluidos tildes, mayúsculas, ñ y ç. T
 
 SITEPROVIDERLOGIN-> Caracteres alfanuméricos, guiones bajos o puntos. Tamaño máximo 30, mínimo 4. No puede ser nulo.
 
-SITENORTHPHOTO-> Nombre del fichero como máximo 50 caracteres alfanuméricos y extensión incluida. No se admiten espacios, pero sí ñ y acentos. No puede ser nulo.
+SITENORTHPHOTO-> Nombre del fichero como máximo 50 caracteres alfanuméricos y extensión incluida. No se admiten espacios, pero sí ñ y acentos. No puede ser nulo. Deben ser pngs de  menos de maximo 20MB.
 
-SITESOUTHPHOTO-> Nombre del fichero como máximo 50 caracteres alfanuméricos y extensión incluida. No se admiten espacios, pero sí ñ y acentos. No puede ser nulo.
+SITESOUTHPHOTO-> Nombre del fichero como máximo 50 caracteres alfanuméricos y extensión incluida. No se admiten espacios, pero sí ñ y acentos. No puede ser nulo. Deben ser pngs de  menos de maximo 20MB.
 
-SITEEASTPHOTO-> Nombre del fichero como máximo 50 caracteres alfanuméricos y extensión incluida. No se admiten espacios, pero sí ñ y acentos. No puede ser nulo.
+SITEEASTPHOTO-> Nombre del fichero como máximo 50 caracteres alfanuméricos y extensión incluida. No se admiten espacios, pero sí ñ y acentos. No puede ser nulo. Deben ser pngs de  menos de maximo 20MB.
 
-SITEWESTPHOTO-> Nombre del fichero como máximo 50 caracteres alfanuméricos y extensión incluida. No se admiten espacios, pero sí ñ y acentos. No puede ser nulo.
+SITEWESTPHOTO-> Nombre del fichero como máximo 50 caracteres alfanuméricos y extensión incluida. No se admiten espacios, pero sí ñ y acentos. No puede ser nulo. Deben ser pngs de  menos de maximo 20MB.

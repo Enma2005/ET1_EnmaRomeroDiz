@@ -1149,206 +1149,206 @@ let articulo_tests_files = [
 let ubicacion_def_tests = [
 /*
   // ---------- ID_SITE ----------
-  ['ubicacion', 'id_site', 'input', 1, 'Validar que no esté vacío', 'ADD', 'id_site_vacio_KO', 'No puede estar vacío.'],
-  ['ubicacion', 'id_site', 'input', 2, 'Validar que solo contenga números', 'ADD', 'id_site_format_KO', 'Solo se admiten números.'],
-  ['ubicacion', 'id_site', 'input', 3, 'Validar longitud mínima 1', 'ADD', 'id_site_min_size_KO', 'Debe tener al menos 1 carácter.'],
-  ['ubicacion', 'id_site', 'input', 4, 'Validar longitud máxima 11', 'ADD', 'id_site_max_size_KO', 'No puede superar 11 caracteres.'],
-  ['ubicacion', 'id_site', 'input', 5, 'Validar correcto', 'ADD', true, 'Correcto.'],
+  ["ubicacion", 'id_site', 'input', 1, 'Validar que no esté vacío', 'ADD', 'id_site_vacio_KO', 'No puede estar vacío.'],
+  ["ubicacion", 'id_site', 'input', 2, 'Validar que solo contenga números', 'ADD', 'id_site_format_KO', 'Solo se admiten números.'],
+  ["ubicacion", 'id_site', 'input', 3, 'Validar longitud mínima 1', 'ADD', 'id_site_min_size_KO', 'Debe tener al menos 1 carácter.'],
+  ["ubicacion", 'id_site', 'input', 4, 'Validar longitud máxima 11', 'ADD', 'id_site_max_size_KO', 'No puede superar 11 caracteres.'],
+  ["ubicacion", 'id_site', 'input', 5, 'Validar correcto', 'ADD', true, 'Correcto.'],
 
-  ['ubicacion', 'id_site', 'input', 6, 'Validar que no esté vacío', 'EDIT', 'id_site_vacio_KO', 'No puede estar vacío.'],
-  ['ubicacion', 'id_site', 'input', 7, 'Validar que solo contenga números', 'EDIT', 'id_site_format_KO', 'Solo se admiten números.'],
-  ['ubicacion', 'id_site', 'input', 8, 'Validar longitud mínima 1', 'EDIT', 'id_site_min_size_KO', 'Debe tener al menos 1 carácter.'],
-  ['ubicacion', 'id_site', 'input', 9, 'Validar longitud máxima 11', 'EDIT', 'id_site_max_size_KO', 'No puede superar 11 caracteres.'],
-  ['ubicacion', 'id_site', 'input', 10, 'Validar correcto', 'EDIT', true, 'Correcto.'],
+  ["ubicacion", 'id_site', 'input', 6, 'Validar que no esté vacío', 'EDIT', 'id_site_vacio_KO', 'No puede estar vacío.'],
+  ["ubicacion", 'id_site', 'input', 7, 'Validar que solo contenga números', 'EDIT', 'id_site_format_KO', 'Solo se admiten números.'],
+  ["ubicacion", 'id_site', 'input', 8, 'Validar longitud mínima 1', 'EDIT', 'id_site_min_size_KO', 'Debe tener al menos 1 carácter.'],
+  ["ubicacion", 'id_site', 'input', 9, 'Validar longitud máxima 11', 'EDIT', 'id_site_max_size_KO', 'No puede superar 11 caracteres.'],
+  ["ubicacion", 'id_site', 'input', 10, 'Validar correcto', 'EDIT', true, 'Correcto.'],
 */
 
-  ['ubicacion', 'id_site', 'input', 11, 'Validar que esté vacío o numérico', 'SEARCH', 'id_site_format_KO', 'Solo se admiten números.'],
-  ['ubicacion', 'id_site', 'input', 12, 'Validar longitud máxima 11', 'SEARCH', 'id_site_max_size_KO', 'No puede superar 11 caracteres.'],
-  ['ubicacion', 'id_site', 'input', 13, 'Validar correcto', 'SEARCH', true, 'Correcto.'],
+  ["ubicacion", 'id_site', 'input', 11, 'Validar que esté vacío o numérico', 'SEARCH', 'id_site_format_KO', 'Solo se admiten números.'],
+  ["ubicacion", 'id_site', 'input', 12, 'Validar longitud máxima 11', 'SEARCH', 'id_site_max_size_KO', 'No puede superar 11 caracteres.'],
+  ["ubicacion", 'id_site', 'input', 13, 'Validar correcto', 'SEARCH', true, 'Correcto.'],
 
   // ---------- SITE_LATITUD ----------
-  ['ubicacion', 'site_latitud', 'input', 14, 'Validar que no esté vacío', 'ADD', 'site_latitud_vacio_KO', 'No puede estar vacío.'],
-  ['ubicacion', 'site_latitud', 'input', 15, 'Validar que sea numérico', 'ADD', 'site_latitud_format_KO', 'Formato inválido, solo números.'],
-  ['ubicacion', 'site_latitud', 'input', 16, 'Validar valor entre -90 y 90', 'ADD', 'site_latitud_range_KO', 'Latitud inválida.'],
-  ['ubicacion', 'site_latitud', 'input', 17, 'Validar máximo 6 decimales', 'ADD', 'site_latitud_decimals_KO', 'Máximo 6 decimales permitidos.'],
-  ['ubicacion', 'site_latitud', 'input', 18, 'Validar correcto', 'ADD', true, 'Correcto.'],
+  ["ubicacion", 'site_latitud', 'input', 14, 'Validar que no esté vacío', 'ADD', 'site_latitud_vacio_KO', 'No puede estar vacío.'],
+  ["ubicacion", 'site_latitud', 'input', 15, 'Validar que sea numérico', 'ADD', 'site_latitud_format_KO', 'Formato inválido, solo números.'],
+  ["ubicacion", 'site_latitud', 'input', 16, 'Validar valor entre -90 y 90', 'ADD', 'site_latitud_range_KO', 'Latitud inválida.'],
+  ["ubicacion", 'site_latitud', 'input', 17, 'Validar máximo 6 decimales', 'ADD', 'site_latitud_decimals_KO', 'Máximo 6 decimales permitidos.'],
+  ["ubicacion", 'site_latitud', 'input', 18, 'Validar correcto', 'ADD', true, 'Correcto.'],
 
-  ['ubicacion', 'site_latitud', 'input', 19, 'Validar que no esté vacío', 'EDIT', 'site_latitud_vacio_KO', 'No puede estar vacío.'],
-  ['ubicacion', 'site_latitud', 'input', 20, 'Validar que sea numérico', 'EDIT', 'site_latitud_format_KO', 'Formato inválido, solo números.'],
-  ['ubicacion', 'site_latitud', 'input', 21, 'Validar valor entre -90 y 90', 'EDIT', 'site_latitud_range_KO', 'Latitud inválida.'],
-  ['ubicacion', 'site_latitud', 'input', 22, 'Validar máximo 6 decimales', 'EDIT', 'site_latitud_decimals_KO', 'Máximo 6 decimales permitidos.'],
-  ['ubicacion', 'site_latitud', 'input', 23, 'Validar correcto', 'EDIT', true, 'Correcto.'],
+  ["ubicacion", 'site_latitud', 'input', 19, 'Validar que no esté vacío', 'EDIT', 'site_latitud_vacio_KO', 'No puede estar vacío.'],
+  ["ubicacion", 'site_latitud', 'input', 20, 'Validar que sea numérico', 'EDIT', 'site_latitud_format_KO', 'Formato inválido, solo números.'],
+  ["ubicacion", 'site_latitud', 'input', 21, 'Validar valor entre -90 y 90', 'EDIT', 'site_latitud_range_KO', 'Latitud inválida.'],
+  ["ubicacion", 'site_latitud', 'input', 22, 'Validar máximo 6 decimales', 'EDIT', 'site_latitud_decimals_KO', 'Máximo 6 decimales permitidos.'],
+  ["ubicacion", 'site_latitud', 'input', 23, 'Validar correcto', 'EDIT', true, 'Correcto.'],
 
-  ['ubicacion', 'site_latitud', 'input', 24, 'Validar que esté vacío o numérico', 'SEARCH', 'site_latitud_format_KO', 'Formato inválido, solo números.'],
-  ['ubicacion', 'site_latitud', 'input', 25, 'Validar valor entre -90 y 90', 'SEARCH', 'site_latitud_range_KO', 'Latitud inválida.'],
-  ['ubicacion', 'site_latitud', 'input', 26, 'Validar máximo 6 decimales', 'SEARCH', 'site_latitud_decimals_KO', 'Máximo 6 decimales permitidos.'],
-  ['ubicacion', 'site_latitud', 'input', 27, 'Validar correcto', 'SEARCH', true, 'Correcto.'],
+  ["ubicacion", 'site_latitud', 'input', 24, 'Validar que esté vacío o numérico', 'SEARCH', 'site_latitud_format_KO', 'Formato inválido, solo números.'],
+  ["ubicacion", 'site_latitud', 'input', 25, 'Validar valor entre -90 y 90', 'SEARCH', 'site_latitud_range_KO', 'Latitud inválida.'],
+  ["ubicacion", 'site_latitud', 'input', 26, 'Validar máximo 6 decimales', 'SEARCH', 'site_latitud_decimals_KO', 'Máximo 6 decimales permitidos.'],
+  ["ubicacion", 'site_latitud', 'input', 27, 'Validar correcto', 'SEARCH', true, 'Correcto.'],
 
   // ---------- SITE_LONGITUD ----------
-  ['ubicacion', 'site_longitud', 'input', 28, 'Validar que no esté vacío', 'ADD', 'site_longitud_vacio_KO', 'No puede estar vacío.'],
-  ['ubicacion', 'site_longitud', 'input', 29, 'Validar que sea numérico', 'ADD', 'site_longitud_format_KO', 'Formato inválido, solo números.'],
-  ['ubicacion', 'site_longitud', 'input', 30, 'Validar valor entre -180 y 180', 'ADD', 'site_longitud_range_KO', 'Longitud inválida.'],
-  ['ubicacion', 'site_longitud', 'input', 31, 'Validar máximo 6 decimales', 'ADD', 'site_longitud_decimals_KO', 'Máximo 6 decimales permitidos.'],
-  ['ubicacion', 'site_longitud', 'input', 32, 'Validar correcto', 'ADD', true, 'Correcto.'],
+  ["ubicacion", 'site_longitud', 'input', 28, 'Validar que no esté vacío', 'ADD', 'site_longitud_vacio_KO', 'No puede estar vacío.'],
+  ["ubicacion", 'site_longitud', 'input', 29, 'Validar que sea numérico', 'ADD', 'site_longitud_format_KO', 'Formato inválido, solo números.'],
+  ["ubicacion", 'site_longitud', 'input', 30, 'Validar valor entre -180 y 180', 'ADD', 'site_longitud_range_KO', 'Longitud inválida.'],
+  ["ubicacion", 'site_longitud', 'input', 31, 'Validar máximo 6 decimales', 'ADD', 'site_longitud_decimals_KO', 'Máximo 6 decimales permitidos.'],
+  ["ubicacion", 'site_longitud', 'input', 32, 'Validar correcto', 'ADD', true, 'Correcto.'],
 
-  ['ubicacion', 'site_longitud', 'input', 33, 'Validar que no esté vacío', 'EDIT', 'site_longitud_vacio_KO', 'No puede estar vacío.'],
-  ['ubicacion', 'site_longitud', 'input', 34, 'Validar que sea numérico', 'EDIT', 'site_longitud_format_KO', 'Formato inválido, solo números.'],
-  ['ubicacion', 'site_longitud', 'input', 35, 'Validar valor entre -180 y 180', 'EDIT', 'site_longitud_range_KO', 'Longitud inválida.'],
-  ['ubicacion', 'site_longitud', 'input', 36, 'Validar máximo 6 decimales', 'EDIT', 'site_longitud_decimals_KO', 'Máximo 6 decimales permitidos.'],
-  ['ubicacion', 'site_longitud', 'input', 37, 'Validar correcto', 'EDIT', true, 'Correcto.'],
+  ["ubicacion", 'site_longitud', 'input', 33, 'Validar que no esté vacío', 'EDIT', 'site_longitud_vacio_KO', 'No puede estar vacío.'],
+  ["ubicacion", 'site_longitud', 'input', 34, 'Validar que sea numérico', 'EDIT', 'site_longitud_format_KO', 'Formato inválido, solo números.'],
+  ["ubicacion", 'site_longitud', 'input', 35, 'Validar valor entre -180 y 180', 'EDIT', 'site_longitud_range_KO', 'Longitud inválida.'],
+  ["ubicacion", 'site_longitud', 'input', 36, 'Validar máximo 6 decimales', 'EDIT', 'site_longitud_decimals_KO', 'Máximo 6 decimales permitidos.'],
+  ["ubicacion", 'site_longitud', 'input', 37, 'Validar correcto', 'EDIT', true, 'Correcto.'],
 
-  ['ubicacion', 'site_longitud', 'input', 38, 'Validar que esté vacío o numérico', 'SEARCH', 'site_longitud_format_KO', 'Formato inválido, solo números.'],
-  ['ubicacion', 'site_longitud', 'input', 39, 'Validar valor entre -180 y 180', 'SEARCH', 'site_longitud_range_KO', 'Longitud inválida.'],
-  ['ubicacion', 'site_longitud', 'input', 40, 'Validar máximo 6 decimales', 'SEARCH', 'site_longitud_decimals_KO', 'Máximo 6 decimales permitidos.'],
-  ['ubicacion', 'site_longitud', 'input', 41, 'Validar correcto', 'SEARCH', true, 'Correcto.'],
+  ["ubicacion", 'site_longitud', 'input', 38, 'Validar que esté vacío o numérico', 'SEARCH', 'site_longitud_format_KO', 'Formato inválido, solo números.'],
+  ["ubicacion", 'site_longitud', 'input', 39, 'Validar valor entre -180 y 180', 'SEARCH', 'site_longitud_range_KO', 'Longitud inválida.'],
+  ["ubicacion", 'site_longitud', 'input', 40, 'Validar máximo 6 decimales', 'SEARCH', 'site_longitud_decimals_KO', 'Máximo 6 decimales permitidos.'],
+  ["ubicacion", 'site_longitud', 'input', 41, 'Validar correcto', 'SEARCH', true, 'Correcto.'],
 
   // ---------- SITE_ALTITUDE ----------
-  ['ubicacion', 'site_altitude', 'input', 42, 'Validar que no esté vacío', 'ADD', 'site_altitude_vacio_KO', 'No puede estar vacío.'],
-  ['ubicacion', 'site_altitude', 'input', 43, 'Validar que sea numérico', 'ADD', 'site_altitude_format_KO', 'Formato inválido, solo números.'],
-  ['ubicacion', 'site_altitude', 'input', 44, 'Validar longitud mínima 1', 'ADD', 'site_altitude_min_size_KO', 'Debe tener al menos 1 carácter.'],
-  ['ubicacion', 'site_altitude', 'input', 45, 'Validar longitud máxima 4', 'ADD', 'site_altitude_max_size_KO', 'No puede superar 4 caracteres.'],
-  ['ubicacion', 'site_altitude', 'input', 46, 'Validar correcto', 'ADD', true, 'Correcto.'],
+  ["ubicacion", 'site_altitude', 'input', 42, 'Validar que no esté vacío', 'ADD', 'site_altitude_vacio_KO', 'No puede estar vacío.'],
+  ["ubicacion", 'site_altitude', 'input', 43, 'Validar que sea numérico', 'ADD', 'site_altitude_format_KO', 'Formato inválido, solo números.'],
+  ["ubicacion", 'site_altitude', 'input', 44, 'Validar longitud mínima 1', 'ADD', 'site_altitude_min_size_KO', 'Debe tener al menos 1 carácter.'],
+  ["ubicacion", 'site_altitude', 'input', 45, 'Validar longitud máxima 4', 'ADD', 'site_altitude_max_size_KO', 'No puede superar 4 caracteres.'],
+  ["ubicacion", 'site_altitude', 'input', 46, 'Validar correcto', 'ADD', true, 'Correcto.'],
 
-  ['ubicacion', 'site_altitude', 'input', 47, 'Validar que no esté vacío', 'EDIT', 'site_altitude_vacio_KO', 'No puede estar vacío.'],
-  ['ubicacion', 'site_altitude', 'input', 48, 'Validar que sea numérico', 'EDIT', 'site_altitude_format_KO', 'Formato inválido, solo números.'],
-  ['ubicacion', 'site_altitude', 'input', 49, 'Validar longitud mínima 1', 'EDIT', 'site_altitude_min_size_KO', 'Debe tener al menos 1 carácter.'],
-  ['ubicacion', 'site_altitude', 'input', 50, 'Validar longitud máxima 4', 'EDIT', 'site_altitude_max_size_KO', 'No puede superar 4 caracteres.'],
-  ['ubicacion', 'site_altitude', 'input', 51, 'Validar correcto', 'EDIT', true, 'Correcto.'],
+  ["ubicacion", 'site_altitude', 'input', 47, 'Validar que no esté vacío', 'EDIT', 'site_altitude_vacio_KO', 'No puede estar vacío.'],
+  ["ubicacion", 'site_altitude', 'input', 48, 'Validar que sea numérico', 'EDIT', 'site_altitude_format_KO', 'Formato inválido, solo números.'],
+  ["ubicacion", 'site_altitude', 'input', 49, 'Validar longitud mínima 1', 'EDIT', 'site_altitude_min_size_KO', 'Debe tener al menos 1 carácter.'],
+  ["ubicacion", 'site_altitude', 'input', 50, 'Validar longitud máxima 4', 'EDIT', 'site_altitude_max_size_KO', 'No puede superar 4 caracteres.'],
+  ["ubicacion", 'site_altitude', 'input', 51, 'Validar correcto', 'EDIT', true, 'Correcto.'],
 
-  ['ubicacion', 'site_altitude', 'input', 52, 'Validar que esté vacío o numérico', 'SEARCH', 'site_altitude_format_KO', 'Formato inválido, solo números.'],
-  ['ubicacion', 'site_altitude', 'input', 53, 'Validar longitud máxima 4', 'SEARCH', 'site_altitude_max_size_KO', 'No puede superar 4 caracteres.'],
-  ['ubicacion', 'site_altitude', 'input', 54, 'Validar correcto', 'SEARCH', true, 'Correcto.'],
+  ["ubicacion", 'site_altitude', 'input', 52, 'Validar que esté vacío o numérico', 'SEARCH', 'site_altitude_format_KO', 'Formato inválido, solo números.'],
+  ["ubicacion", 'site_altitude', 'input', 53, 'Validar longitud máxima 4', 'SEARCH', 'site_altitude_max_size_KO', 'No puede superar 4 caracteres.'],
+  ["ubicacion", 'site_altitude', 'input', 54, 'Validar correcto', 'SEARCH', true, 'Correcto.'],
 
   // ---------- SITE_LOCALITY ----------
-  ['ubicacion', 'site_locality', 'input', 55, 'Validar que no esté vacío', 'ADD', 'site_locality_vacio_KO', 'No puede estar vacío.'],
-  ['ubicacion', 'site_locality', 'input', 56, 'Validar formato solo letras y espacios', 'ADD', 'site_locality_format_KO', 'Formato inválido.'],
-  ['ubicacion', 'site_locality', 'input', 57, 'Validar longitud mínima 2', 'ADD', 'site_locality_min_size_KO', 'Debe tener al menos 2 caracteres.'],
-  ['ubicacion', 'site_locality', 'input', 58, 'Validar longitud máxima 40', 'ADD', 'site_locality_max_size_KO', 'No puede superar 40 caracteres.'],
-  ['ubicacion', 'site_locality', 'input', 59, 'Validar correcto', 'ADD', true, 'Correcto.'],
+  ["ubicacion", 'site_locality', 'input', 55, 'Validar que no esté vacío', 'ADD', 'site_locality_vacio_KO', 'No puede estar vacío.'],
+  ["ubicacion", 'site_locality', 'input', 56, 'Validar formato solo letras y espacios', 'ADD', 'site_locality_format_KO', 'Formato inválido.'],
+  ["ubicacion", 'site_locality', 'input', 57, 'Validar longitud mínima 2', 'ADD', 'site_locality_min_size_KO', 'Debe tener al menos 2 caracteres.'],
+  ["ubicacion", 'site_locality', 'input', 58, 'Validar longitud máxima 40', 'ADD', 'site_locality_max_size_KO', 'No puede superar 40 caracteres.'],
+  ["ubicacion", 'site_locality', 'input', 59, 'Validar correcto', 'ADD', true, 'Correcto.'],
 
-  ['ubicacion', 'site_locality', 'input', 60, 'Validar que no esté vacío', 'EDIT', 'site_locality_vacio_KO', 'No puede estar vacío.'],
-  ['ubicacion', 'site_locality', 'input', 61, 'Validar formato solo letras y espacios', 'EDIT', 'site_locality_format_KO', 'Formato inválido.'],
-  ['ubicacion', 'site_locality', 'input', 62, 'Validar longitud mínima 2', 'EDIT', 'site_locality_min_size_KO', 'Debe tener al menos 2 caracteres.'],
-  ['ubicacion', 'site_locality', 'input', 63, 'Validar longitud máxima 40', 'EDIT', 'site_locality_max_size_KO', 'No puede superar 40 caracteres.'],
-  ['ubicacion', 'site_locality', 'input', 64, 'Validar correcto', 'EDIT', true, 'Correcto.'],
+  ["ubicacion", 'site_locality', 'input', 60, 'Validar que no esté vacío', 'EDIT', 'site_locality_vacio_KO', 'No puede estar vacío.'],
+  ["ubicacion", 'site_locality', 'input', 61, 'Validar formato solo letras y espacios', 'EDIT', 'site_locality_format_KO', 'Formato inválido.'],
+  ["ubicacion", 'site_locality', 'input', 62, 'Validar longitud mínima 2', 'EDIT', 'site_locality_min_size_KO', 'Debe tener al menos 2 caracteres.'],
+  ["ubicacion", 'site_locality', 'input', 63, 'Validar longitud máxima 40', 'EDIT', 'site_locality_max_size_KO', 'No puede superar 40 caracteres.'],
+  ["ubicacion", 'site_locality', 'input', 64, 'Validar correcto', 'EDIT', true, 'Correcto.'],
 
-  ['ubicacion', 'site_locality', 'input', 65, 'Validar que esté vacío o letras y espacios', 'SEARCH', 'site_locality_format_KO', 'Formato inválido.'],
-  ['ubicacion', 'site_locality', 'input', 66, 'Validar longitud máxima 40', 'SEARCH', 'site_locality_max_size_KO', 'No puede superar 40 caracteres.'],
-  ['ubicacion', 'site_locality', 'input', 67, 'Validar correcto', 'SEARCH', true, 'Correcto.'],
+  ["ubicacion", 'site_locality', 'input', 65, 'Validar que esté vacío o letras y espacios', 'SEARCH', 'site_locality_format_KO', 'Formato inválido.'],
+  ["ubicacion", 'site_locality', 'input', 66, 'Validar longitud máxima 40', 'SEARCH', 'site_locality_max_size_KO', 'No puede superar 40 caracteres.'],
+  ["ubicacion", 'site_locality', 'input', 67, 'Validar correcto', 'SEARCH', true, 'Correcto.'],
 
   // ---------- SITE_PROVIDER_LOGIN ----------
-  ['ubicacion', 'site_provider_login', 'input', 68, 'Validar que no esté vacío', 'ADD', 'site_provider_login_vacio_KO', 'No puede estar vacío.'],
-  ['ubicacion', 'site_provider_login', 'input', 69, 'Validar formato alfanumérico', 'ADD', 'site_provider_login_format_KO', 'Formato inválido, solo letras, números y guiones.'],
-  ['ubicacion', 'site_provider_login', 'input', 70, 'Validar longitud mínima 4', 'ADD', 'site_provider_login_min_size_KO', 'Debe tener al menos 4 caracteres.'],
-  ['ubicacion', 'site_provider_login', 'input', 71, 'Validar longitud máxima 30', 'ADD', 'site_provider_login_max_size_KO', 'No puede superar 30 caracteres.'],
-  ['ubicacion', 'site_provider_login', 'input', 72, 'Validar correcto', 'ADD', true, 'Correcto.'],
+  ["ubicacion", 'site_provider_login', 'input', 68, 'Validar que no esté vacío', 'ADD', 'site_provider_login_vacio_KO', 'No puede estar vacío.'],
+  ["ubicacion", 'site_provider_login', 'input', 69, 'Validar formato alfanumérico', 'ADD', 'site_provider_login_format_KO', 'Formato inválido, solo letras, números y guiones.'],
+  ["ubicacion", 'site_provider_login', 'input', 70, 'Validar longitud mínima 4', 'ADD', 'site_provider_login_min_size_KO', 'Debe tener al menos 4 caracteres.'],
+  ["ubicacion", 'site_provider_login', 'input', 71, 'Validar longitud máxima 30', 'ADD', 'site_provider_login_max_size_KO', 'No puede superar 30 caracteres.'],
+  ["ubicacion", 'site_provider_login', 'input', 72, 'Validar correcto', 'ADD', true, 'Correcto.'],
 
-  ['ubicacion', 'site_provider_login', 'input', 73, 'Validar que no esté vacío', 'EDIT', 'site_provider_login_vacio_KO', 'No puede estar vacío.'],
-  ['ubicacion', 'site_provider_login', 'input', 74, 'Validar formato alfanumérico', 'EDIT', 'site_provider_login_format_KO', 'Formato inválido, solo letras, números y guiones.'],
-  ['ubicacion', 'site_provider_login', 'input', 75, 'Validar longitud mínima 4', 'EDIT', 'site_provider_login_min_size_KO', 'Debe tener al menos 4 caracteres.'],
-  ['ubicacion', 'site_provider_login', 'input', 76, 'Validar longitud máxima 30', 'EDIT', 'site_provider_login_max_size_KO', 'No puede superar 30 caracteres.'],
-  ['ubicacion', 'site_provider_login', 'input', 77, 'Validar correcto', 'EDIT', true, 'Correcto.'],
+  ["ubicacion", 'site_provider_login', 'input', 73, 'Validar que no esté vacío', 'EDIT', 'site_provider_login_vacio_KO', 'No puede estar vacío.'],
+  ["ubicacion", 'site_provider_login', 'input', 74, 'Validar formato alfanumérico', 'EDIT', 'site_provider_login_format_KO', 'Formato inválido, solo letras, números y guiones.'],
+  ["ubicacion", 'site_provider_login', 'input', 75, 'Validar longitud mínima 4', 'EDIT', 'site_provider_login_min_size_KO', 'Debe tener al menos 4 caracteres.'],
+  ["ubicacion", 'site_provider_login', 'input', 76, 'Validar longitud máxima 30', 'EDIT', 'site_provider_login_max_size_KO', 'No puede superar 30 caracteres.'],
+  ["ubicacion", 'site_provider_login', 'input', 77, 'Validar correcto', 'EDIT', true, 'Correcto.'],
 
-  ['ubicacion', 'site_provider_login', 'input', 78, 'Validar que esté vacío o alfanumérico', 'SEARCH', 'site_provider_login_format_KO', 'Formato inválido, solo letras, números y guiones.'],
-  ['ubicacion', 'site_provider_login', 'input', 79, 'Validar longitud máxima 30', 'SEARCH', 'site_provider_login_max_size_KO', 'No puede superar 30 caracteres.'],
-  ['ubicacion', 'site_provider_login', 'input', 80, 'Validar correcto', 'SEARCH', true, 'Correcto.'],
+  ["ubicacion", 'site_provider_login', 'input', 78, 'Validar que esté vacío o alfanumérico', 'SEARCH', 'site_provider_login_format_KO', 'Formato inválido, solo letras, números y guiones.'],
+  ["ubicacion", 'site_provider_login', 'input', 79, 'Validar longitud máxima 30', 'SEARCH', 'site_provider_login_max_size_KO', 'No puede superar 30 caracteres.'],
+  ["ubicacion", 'site_provider_login', 'input', 80, 'Validar correcto', 'SEARCH', true, 'Correcto.'],
 
   // ---------- SITE_NORTH_PHOTO ----------
   // ADD
-  ['ubicacion', 'nuevo_site_north_photo', 'inputfile', 81, 'Validar que el campo no esté vacío', 'ADD', 'nuevo_site_north_photo_vacio_KO', 'Complete el campo'],
-  ['ubicacion', 'nuevo_site_north_photo', 'inputfile', 82, 'Validar que el nombre tenga solo alfanuméricos, ñ, acentos y sin espacios', 'ADD', 'nuevo_site_north_photo_nombrefoto_format_KO', 'El formato debe ser alfanumérico, con ñ y acentos, sin espacios.'],
-  ['ubicacion', 'nuevo_site_north_photo', 'inputfile', 83, 'Validar nombre mínimo 1 carácter', 'ADD', 'nuevo_site_north_photo_nombrefoto_min_size_KO', 'El nombre debe contener mínimo 1 carácter.'],
-  ['ubicacion', 'nuevo_site_north_photo', 'inputfile', 84, 'Validar nombre máximo 50 caracteres', 'ADD', 'nuevo_site_north_photo_nombrefoto_max_size_KO', 'El nombre debe contener máximo 50 caracteres.'],
-  ['ubicacion', 'nuevo_site_north_photo', 'inputfile', 85, 'Validar que el fichero sea imagen', 'ADD', 'nuevo_site_north_photo_format_KO', 'El fichero debe ser imagen.'],
-  ['ubicacion', 'nuevo_site_north_photo', 'inputfile', 86, 'Validar tamaño máximo 2MB', 'ADD', 'nuevo_site_north_photo_max_size_KO', 'El tamaño máximo permitido es 2MB.'],
-  ['ubicacion', 'nuevo_site_north_photo', 'inputfile', 87, 'Validar correcto', 'ADD', true, 'Correcto.'],
+  ["ubicacion", 'nuevo_site_north_photo', 'inputfile', 81, 'Validar que el campo no esté vacío', 'ADD', 'nuevo_site_north_photo_vacio_KO', 'Complete el campo'],
+  ["ubicacion", 'nuevo_site_north_photo', 'inputfile', 82, 'Validar que el nombre tenga solo alfanuméricos, ñ, acentos y sin espacios', 'ADD', 'nuevo_site_north_photo_nombrefoto_format_KO', 'El formato debe ser alfanumérico, con ñ y acentos, sin espacios.'],
+  ["ubicacion", 'nuevo_site_north_photo', 'inputfile', 83, 'Validar nombre mínimo 1 carácter', 'ADD', 'nuevo_site_north_photo_nombrefoto_min_size_KO', 'El nombre debe contener mínimo 1 carácter.'],
+  ["ubicacion", 'nuevo_site_north_photo', 'inputfile', 84, 'Validar nombre máximo 50 caracteres', 'ADD', 'nuevo_site_north_photo_nombrefoto_max_size_KO', 'El nombre debe contener máximo 50 caracteres.'],
+  ["ubicacion", 'nuevo_site_north_photo', 'inputfile', 85, 'Validar que el fichero sea imagen', 'ADD', 'nuevo_site_north_photo_format_KO', 'El fichero debe ser imagen.'],
+  ["ubicacion", 'nuevo_site_north_photo', 'inputfile', 86, 'Validar tamaño máximo 2MB', 'ADD', 'nuevo_site_north_photo_max_size_KO', 'El tamaño máximo permitido es 2MB.'],
+  ["ubicacion", 'nuevo_site_north_photo', 'inputfile', 87, 'Validar correcto', 'ADD', true, 'Correcto.'],
 
   // EDIT
-  ['ubicacion', 'nuevo_site_north_photo', 'inputfile', 88, 'Validar que el campo no esté vacío', 'EDIT', 'nuevo_site_north_photo_vacio_KO', 'Complete el campo'],
-  ['ubicacion', 'nuevo_site_north_photo', 'inputfile', 89, 'Validar que el nombre tenga solo alfanuméricos, ñ, acentos y sin espacios', 'EDIT', 'nuevo_site_north_photo_nombrefoto_format_KO', 'El formato debe ser alfanumérico, con ñ y acentos, sin espacios.'],
-  ['ubicacion', 'nuevo_site_north_photo', 'inputfile', 90, 'Validar nombre mínimo 1 carácter', 'EDIT', 'nuevo_site_north_photo_nombrefoto_min_size_KO', 'El nombre debe contener mínimo 1 carácter.'],
-  ['ubicacion', 'nuevo_site_north_photo', 'inputfile', 91, 'Validar nombre máximo 50 caracteres', 'EDIT', 'nuevo_site_north_photo_nombrefoto_max_size_KO', 'El nombre debe contener máximo 50 caracteres.'],
-  ['ubicacion', 'nuevo_site_north_photo', 'inputfile', 92, 'Validar que el fichero sea imagen', 'EDIT', 'nuevo_site_north_photo_format_KO', 'El fichero debe ser imagen.'],
-  ['ubicacion', 'nuevo_site_north_photo', 'inputfile', 93, 'Validar tamaño máximo 2MB', 'EDIT', 'nuevo_site_north_photo_max_size_KO', 'El tamaño máximo permitido es 2MB.'],
-  ['ubicacion', 'nuevo_site_north_photo', 'inputfile', 94, 'Validar correcto', 'EDIT', true, 'Correcto.'],
+  ["ubicacion", 'nuevo_site_north_photo', 'inputfile', 88, 'Validar que el campo no esté vacío', 'EDIT', 'nuevo_site_north_photo_vacio_KO', 'Complete el campo'],
+  ["ubicacion", 'nuevo_site_north_photo', 'inputfile', 89, 'Validar que el nombre tenga solo alfanuméricos, ñ, acentos y sin espacios', 'EDIT', 'nuevo_site_north_photo_nombrefoto_format_KO', 'El formato debe ser alfanumérico, con ñ y acentos, sin espacios.'],
+  ["ubicacion", 'nuevo_site_north_photo', 'inputfile', 90, 'Validar nombre mínimo 1 carácter', 'EDIT', 'nuevo_site_north_photo_nombrefoto_min_size_KO', 'El nombre debe contener mínimo 1 carácter.'],
+  ["ubicacion", 'nuevo_site_north_photo', 'inputfile', 91, 'Validar nombre máximo 50 caracteres', 'EDIT', 'nuevo_site_north_photo_nombrefoto_max_size_KO', 'El nombre debe contener máximo 50 caracteres.'],
+  ["ubicacion", 'nuevo_site_north_photo', 'inputfile', 92, 'Validar que el fichero sea imagen', 'EDIT', 'nuevo_site_north_photo_format_KO', 'El fichero debe ser imagen.'],
+  ["ubicacion", 'nuevo_site_north_photo', 'inputfile', 93, 'Validar tamaño máximo 2MB', 'EDIT', 'nuevo_site_north_photo_max_size_KO', 'El tamaño máximo permitido es 2MB.'],
+  ["ubicacion", 'nuevo_site_north_photo', 'inputfile', 94, 'Validar correcto', 'EDIT', true, 'Correcto.'],
 
   // SEARCH
-  ['ubicacion', 'site_north_photo', 'input', 95, 'Validar que esté vacío o nombre con alfanuméricos, ñ, acentos y sin espacios', 'SEARCH', 'site_north_photo_nombrefoto_format_KO', 'El formato debe ser alfanumérico, con ñ y acentos, sin espacios.'],
-  ['ubicacion', 'site_north_photo', 'input', 96, 'Validar nombre máximo 50 caracteres', 'SEARCH', 'site_north_photo_nombrefoto_max_size_KO', 'El nombre debe contener máximo 50 caracteres.'],
-  ['ubicacion', 'site_north_photo', 'input', 97, 'Validar correcto', 'SEARCH', true, 'Correcto.'],
+  ["ubicacion", 'site_north_photo', 'input', 95, 'Validar que esté vacío o nombre con alfanuméricos, ñ, acentos y sin espacios', 'SEARCH', 'site_north_photo_nombrefoto_format_KO', 'El formato debe ser alfanumérico, con ñ y acentos, sin espacios.'],
+  ["ubicacion", 'site_north_photo', 'input', 96, 'Validar nombre máximo 50 caracteres', 'SEARCH', 'site_north_photo_nombrefoto_max_size_KO', 'El nombre debe contener máximo 50 caracteres.'],
+  ["ubicacion", 'site_north_photo', 'input', 97, 'Validar correcto', 'SEARCH', true, 'Correcto.'],
 
   // ---------- SITE_SOUTH_PHOTO ----------
   // ADD
-  ['ubicacion', 'nuevo_site_south_photo', 'inputfile', 98, 'Validar que el campo no esté vacío', 'ADD', 'nuevo_site_south_photo_vacio_KO', 'Complete el campo'],
-  ['ubicacion', 'nuevo_site_south_photo', 'inputfile', 99, 'Validar que el nombre tenga solo alfanuméricos, ñ, acentos y sin espacios', 'ADD', 'nuevo_site_south_photo_nombrefoto_format_KO', 'El formato debe ser alfanumérico, con ñ y acentos, sin espacios.'],
-  ['ubicacion', 'nuevo_site_south_photo', 'inputfile', 100, 'Validar nombre mínimo 1 carácter', 'ADD', 'nuevo_site_south_photo_nombrefoto_min_size_KO', 'El nombre debe contener mínimo 1 carácter.'],
-  ['ubicacion', 'nuevo_site_south_photo', 'inputfile', 101, 'Validar nombre máximo 50 caracteres', 'ADD', 'nuevo_site_south_photo_nombrefoto_max_size_KO', 'El nombre debe contener máximo 50 caracteres.'],
-  ['ubicacion', 'nuevo_site_south_photo', 'inputfile', 102, 'Validar que el fichero sea imagen', 'ADD', 'nuevo_site_south_photo_format_KO', 'El fichero debe ser imagen.'],
-  ['ubicacion', 'nuevo_site_south_photo', 'inputfile', 103, 'Validar tamaño máximo 2MB', 'ADD', 'nuevo_site_south_photo_max_size_KO', 'El tamaño máximo permitido es 2MB.'],
-  ['ubicacion', 'nuevo_site_south_photo', 'inputfile', 104, 'Validar correcto', 'ADD', true, 'Correcto.'],
+  ["ubicacion", 'nuevo_site_south_photo', 'inputfile', 98, 'Validar que el campo no esté vacío', 'ADD', 'nuevo_site_south_photo_vacio_KO', 'Complete el campo'],
+  ["ubicacion", 'nuevo_site_south_photo', 'inputfile', 99, 'Validar que el nombre tenga solo alfanuméricos, ñ, acentos y sin espacios', 'ADD', 'nuevo_site_south_photo_nombrefoto_format_KO', 'El formato debe ser alfanumérico, con ñ y acentos, sin espacios.'],
+  ["ubicacion", 'nuevo_site_south_photo', 'inputfile', 100, 'Validar nombre mínimo 1 carácter', 'ADD', 'nuevo_site_south_photo_nombrefoto_min_size_KO', 'El nombre debe contener mínimo 1 carácter.'],
+  ["ubicacion", 'nuevo_site_south_photo', 'inputfile', 101, 'Validar nombre máximo 50 caracteres', 'ADD', 'nuevo_site_south_photo_nombrefoto_max_size_KO', 'El nombre debe contener máximo 50 caracteres.'],
+  ["ubicacion", 'nuevo_site_south_photo', 'inputfile', 102, 'Validar que el fichero sea imagen', 'ADD', 'nuevo_site_south_photo_format_KO', 'El fichero debe ser imagen.'],
+  ["ubicacion", 'nuevo_site_south_photo', 'inputfile', 103, 'Validar tamaño máximo 2MB', 'ADD', 'nuevo_site_south_photo_max_size_KO', 'El tamaño máximo permitido es 2MB.'],
+  ["ubicacion", 'nuevo_site_south_photo', 'inputfile', 104, 'Validar correcto', 'ADD', true, 'Correcto.'],
 
   // EDIT
-  ['ubicacion', 'nuevo_site_south_photo', 'inputfile', 105, 'Validar que el campo no esté vacío', 'EDIT', 'nuevo_site_south_photo_vacio_KO', 'Complete el campo'],
-  ['ubicacion', 'nuevo_site_south_photo', 'inputfile', 106, 'Validar que el nombre tenga solo alfanuméricos, ñ, acentos y sin espacios', 'EDIT', 'nuevo_site_south_photo_nombrefoto_format_KO', 'El formato debe ser alfanumérico, con ñ y acentos, sin espacios.'],
-  ['ubicacion', 'nuevo_site_south_photo', 'inputfile', 107, 'Validar nombre mínimo 1 carácter', 'EDIT', 'nuevo_site_south_photo_nombrefoto_min_size_KO', 'El nombre debe contener mínimo 1 carácter.'],
-  ['ubicacion', 'nuevo_site_south_photo', 'inputfile', 108, 'Validar nombre máximo 50 caracteres', 'EDIT', 'nuevo_site_south_photo_nombrefoto_max_size_KO', 'El nombre debe contener máximo 50 caracteres.'],
-  ['ubicacion', 'nuevo_site_south_photo', 'inputfile', 109, 'Validar que el fichero sea imagen', 'EDIT', 'nuevo_site_south_photo_format_KO', 'El fichero debe ser imagen.'],
-  ['ubicacion', 'nuevo_site_south_photo', 'inputfile', 110, 'Validar tamaño máximo 2MB', 'EDIT', 'nuevo_site_south_photo_max_size_KO', 'El tamaño máximo permitido es 2MB.'],
-  ['ubicacion', 'nuevo_site_south_photo', 'inputfile', 111, 'Validar correcto', 'EDIT', true, 'Correcto.'],
+  ["ubicacion", 'nuevo_site_south_photo', 'inputfile', 105, 'Validar que el campo no esté vacío', 'EDIT', 'nuevo_site_south_photo_vacio_KO', 'Complete el campo'],
+  ["ubicacion", 'nuevo_site_south_photo', 'inputfile', 106, 'Validar que el nombre tenga solo alfanuméricos, ñ, acentos y sin espacios', 'EDIT', 'nuevo_site_south_photo_nombrefoto_format_KO', 'El formato debe ser alfanumérico, con ñ y acentos, sin espacios.'],
+  ["ubicacion", 'nuevo_site_south_photo', 'inputfile', 107, 'Validar nombre mínimo 1 carácter', 'EDIT', 'nuevo_site_south_photo_nombrefoto_min_size_KO', 'El nombre debe contener mínimo 1 carácter.'],
+  ["ubicacion", 'nuevo_site_south_photo', 'inputfile', 108, 'Validar nombre máximo 50 caracteres', 'EDIT', 'nuevo_site_south_photo_nombrefoto_max_size_KO', 'El nombre debe contener máximo 50 caracteres.'],
+  ["ubicacion", 'nuevo_site_south_photo', 'inputfile', 109, 'Validar que el fichero sea imagen', 'EDIT', 'nuevo_site_south_photo_format_KO', 'El fichero debe ser imagen.'],
+  ["ubicacion", 'nuevo_site_south_photo', 'inputfile', 110, 'Validar tamaño máximo 2MB', 'EDIT', 'nuevo_site_south_photo_max_size_KO', 'El tamaño máximo permitido es 2MB.'],
+  ["ubicacion", 'nuevo_site_south_photo', 'inputfile', 111, 'Validar correcto', 'EDIT', true, 'Correcto.'],
 
   // SEARCH
-  ['ubicacion', 'site_south_photo', 'input', 112, 'Validar que esté vacío o nombre con alfanuméricos, ñ, acentos y sin espacios', 'SEARCH', 'site_south_photo_nombrefoto_format_KO', 'El formato debe ser alfanumérico, con ñ y acentos, sin espacios.'],
-  ['ubicacion', 'site_south_photo', 'input', 113, 'Validar nombre máximo 50 caracteres', 'SEARCH', 'site_south_photo_nombrefoto_max_size_KO', 'El nombre debe contener máximo 50 caracteres.'],
-  ['ubicacion', 'site_south_photo', 'input', 114, 'Validar correcto', 'SEARCH', true, 'Correcto.'],
+  ["ubicacion", 'site_south_photo', 'input', 112, 'Validar que esté vacío o nombre con alfanuméricos, ñ, acentos y sin espacios', 'SEARCH', 'site_south_photo_nombrefoto_format_KO', 'El formato debe ser alfanumérico, con ñ y acentos, sin espacios.'],
+  ["ubicacion", 'site_south_photo', 'input', 113, 'Validar nombre máximo 50 caracteres', 'SEARCH', 'site_south_photo_nombrefoto_max_size_KO', 'El nombre debe contener máximo 50 caracteres.'],
+  ["ubicacion", 'site_south_photo', 'input', 114, 'Validar correcto', 'SEARCH', true, 'Correcto.'],
 
 
   // ---------- SITE_EAST_PHOTO ----------
   // ADD
-  ['ubicacion', 'nuevo_site_east_photo', 'inputfile', 115, 'Validar que el campo no esté vacío', 'ADD', 'nuevo_site_east_photo_vacio_KO', 'Complete el campo'],
-  ['ubicacion', 'nuevo_site_east_photo', 'inputfile', 116, 'Validar que el nombre tenga solo alfanuméricos, ñ, acentos y sin espacios', 'ADD', 'nuevo_site_east_photo_nombrefoto_format_KO', 'El formato debe ser alfanumérico, con ñ y acentos, sin espacios.'],
-  ['ubicacion', 'nuevo_site_east_photo', 'inputfile', 117, 'Validar nombre mínimo 1 carácter', 'ADD', 'nuevo_site_east_photo_nombrefoto_min_size_KO', 'El nombre debe contener mínimo 1 carácter.'],
-  ['ubicacion', 'nuevo_site_east_photo', 'inputfile', 118, 'Validar nombre máximo 50 caracteres', 'ADD', 'nuevo_site_east_photo_nombrefoto_max_size_KO', 'El nombre debe contener máximo 50 caracteres.'],
-  ['ubicacion', 'nuevo_site_east_photo', 'inputfile', 119, 'Validar que el fichero sea imagen', 'ADD', 'nuevo_site_east_photo_format_KO', 'El fichero debe ser imagen.'],
-  ['ubicacion', 'nuevo_site_east_photo', 'inputfile', 120, 'Validar tamaño máximo 2MB', 'ADD', 'nuevo_site_east_photo_max_size_KO', 'El tamaño máximo permitido es 2MB.'],
-  ['ubicacion', 'nuevo_site_east_photo', 'inputfile', 121, 'Validar correcto', 'ADD', true, 'Correcto.'],
+  ["ubicacion", 'nuevo_site_east_photo', 'inputfile', 115, 'Validar que el campo no esté vacío', 'ADD', 'nuevo_site_east_photo_vacio_KO', 'Complete el campo'],
+  ["ubicacion", 'nuevo_site_east_photo', 'inputfile', 116, 'Validar que el nombre tenga solo alfanuméricos, ñ, acentos y sin espacios', 'ADD', 'nuevo_site_east_photo_nombrefoto_format_KO', 'El formato debe ser alfanumérico, con ñ y acentos, sin espacios.'],
+  ["ubicacion", 'nuevo_site_east_photo', 'inputfile', 117, 'Validar nombre mínimo 1 carácter', 'ADD', 'nuevo_site_east_photo_nombrefoto_min_size_KO', 'El nombre debe contener mínimo 1 carácter.'],
+  ["ubicacion", 'nuevo_site_east_photo', 'inputfile', 118, 'Validar nombre máximo 50 caracteres', 'ADD', 'nuevo_site_east_photo_nombrefoto_max_size_KO', 'El nombre debe contener máximo 50 caracteres.'],
+  ["ubicacion", 'nuevo_site_east_photo', 'inputfile', 119, 'Validar que el fichero sea imagen', 'ADD', 'nuevo_site_east_photo_format_KO', 'El fichero debe ser imagen.'],
+  ["ubicacion", 'nuevo_site_east_photo', 'inputfile', 120, 'Validar tamaño máximo 2MB', 'ADD', 'nuevo_site_east_photo_max_size_KO', 'El tamaño máximo permitido es 2MB.'],
+  ["ubicacion", 'nuevo_site_east_photo', 'inputfile', 121, 'Validar correcto', 'ADD', true, 'Correcto.'],
 
   // EDIT
-  ['ubicacion', 'nuevo_site_east_photo', 'inputfile', 122, 'Validar que el campo no esté vacío', 'EDIT', 'nuevo_site_east_photo_vacio_KO', 'Complete el campo'],
-  ['ubicacion', 'nuevo_site_east_photo', 'inputfile', 123, 'Validar que el nombre tenga solo alfanuméricos, ñ, acentos y sin espacios', 'EDIT', 'nuevo_site_east_photo_nombrefoto_format_KO', 'El formato debe ser alfanumérico, con ñ y acentos, sin espacios.'],
-  ['ubicacion', 'nuevo_site_east_photo', 'inputfile', 124, 'Validar nombre mínimo 1 carácter', 'EDIT', 'nuevo_site_east_photo_nombrefoto_min_size_KO', 'El nombre debe contener mínimo 1 carácter.'],
-  ['ubicacion', 'nuevo_site_east_photo', 'inputfile', 125, 'Validar nombre máximo 50 caracteres', 'EDIT', 'nuevo_site_east_photo_nombrefoto_max_size_KO', 'El nombre debe contener máximo 50 caracteres.'],
-  ['ubicacion', 'nuevo_site_east_photo', 'inputfile', 126, 'Validar que el fichero sea imagen', 'EDIT', 'nuevo_site_east_photo_format_KO', 'El fichero debe ser imagen.'],
-  ['ubicacion', 'nuevo_site_east_photo', 'inputfile', 127, 'Validar tamaño máximo 2MB', 'EDIT', 'nuevo_site_east_photo_max_size_KO', 'El tamaño máximo permitido es 2MB.'],
-  ['ubicacion', 'nuevo_site_east_photo', 'inputfile', 128, 'Validar correcto', 'EDIT', true, 'Correcto.'],
+  ["ubicacion", 'nuevo_site_east_photo', 'inputfile', 122, 'Validar que el campo no esté vacío', 'EDIT', 'nuevo_site_east_photo_vacio_KO', 'Complete el campo'],
+  ["ubicacion", 'nuevo_site_east_photo', 'inputfile', 123, 'Validar que el nombre tenga solo alfanuméricos, ñ, acentos y sin espacios', 'EDIT', 'nuevo_site_east_photo_nombrefoto_format_KO', 'El formato debe ser alfanumérico, con ñ y acentos, sin espacios.'],
+  ["ubicacion", 'nuevo_site_east_photo', 'inputfile', 124, 'Validar nombre mínimo 1 carácter', 'EDIT', 'nuevo_site_east_photo_nombrefoto_min_size_KO', 'El nombre debe contener mínimo 1 carácter.'],
+  ["ubicacion", 'nuevo_site_east_photo', 'inputfile', 125, 'Validar nombre máximo 50 caracteres', 'EDIT', 'nuevo_site_east_photo_nombrefoto_max_size_KO', 'El nombre debe contener máximo 50 caracteres.'],
+  ["ubicacion", 'nuevo_site_east_photo', 'inputfile', 126, 'Validar que el fichero sea imagen', 'EDIT', 'nuevo_site_east_photo_format_KO', 'El fichero debe ser imagen.'],
+  ["ubicacion", 'nuevo_site_east_photo', 'inputfile', 127, 'Validar tamaño máximo 2MB', 'EDIT', 'nuevo_site_east_photo_max_size_KO', 'El tamaño máximo permitido es 2MB.'],
+  ["ubicacion", 'nuevo_site_east_photo', 'inputfile', 128, 'Validar correcto', 'EDIT', true, 'Correcto.'],
 
   // SEARCH
-  ['ubicacion', 'site_east_photo', 'input', 129, 'Validar que esté vacío o nombre con alfanuméricos, ñ, acentos y sin espacios', 'SEARCH', 'site_east_photo_nombrefoto_format_KO', 'El formato debe ser alfanumérico, con ñ y acentos, sin espacios.'],
-  ['ubicacion', 'site_east_photo', 'input', 130, 'Validar nombre máximo 50 caracteres', 'SEARCH', 'site_east_photo_nombrefoto_max_size_KO', 'El nombre debe contener máximo 50 caracteres.'],
-  ['ubicacion', 'site_east_photo', 'input', 131, 'Validar correcto', 'SEARCH', true, 'Correcto.'],
+  ["ubicacion", 'site_east_photo', 'input', 129, 'Validar que esté vacío o nombre con alfanuméricos, ñ, acentos y sin espacios', 'SEARCH', 'site_east_photo_nombrefoto_format_KO', 'El formato debe ser alfanumérico, con ñ y acentos, sin espacios.'],
+  ["ubicacion", 'site_east_photo', 'input', 130, 'Validar nombre máximo 50 caracteres', 'SEARCH', 'site_east_photo_nombrefoto_max_size_KO', 'El nombre debe contener máximo 50 caracteres.'],
+  ["ubicacion", 'site_east_photo', 'input', 131, 'Validar correcto', 'SEARCH', true, 'Correcto.'],
 
   // ---------- SITE_WEST_PHOTO ----------
   // ADD
-  ['ubicacion', 'nuevo_site_west_photo', 'inputfile', 132, 'Validar que el campo no esté vacío', 'ADD', 'nuevo_site_west_photo_vacio_KO', 'Complete el campo'],
-  ['ubicacion', 'nuevo_site_west_photo', 'inputfile', 133, 'Validar que el nombre tenga solo alfanuméricos, ñ, acentos y sin espacios', 'ADD', 'nuevo_site_west_photo_nombrefoto_format_KO', 'El formato debe ser alfanumérico, con ñ y acentos, sin espacios.'],
-  ['ubicacion', 'nuevo_site_west_photo', 'inputfile', 134, 'Validar nombre mínimo 1 carácter', 'ADD', 'nuevo_site_west_photo_nombrefoto_min_size_KO', 'El nombre debe contener mínimo 1 carácter.'],
-  ['ubicacion', 'nuevo_site_west_photo', 'inputfile', 135, 'Validar nombre máximo 50 caracteres', 'ADD', 'nuevo_site_west_photo_nombrefoto_max_size_KO', 'El nombre debe contener máximo 50 caracteres.'],
-  ['ubicacion', 'nuevo_site_west_photo', 'inputfile', 136, 'Validar que el fichero sea imagen', 'ADD', 'nuevo_site_west_photo_format_KO', 'El fichero debe ser imagen.'],
-  ['ubicacion', 'nuevo_site_west_photo', 'inputfile', 137, 'Validar tamaño máximo 2MB', 'ADD', 'nuevo_site_west_photo_max_size_KO', 'El tamaño máximo permitido es 2MB.'],
-  ['ubicacion', 'nuevo_site_west_photo', 'inputfile', 138, 'Validar correcto', 'ADD', true, 'Correcto.'],
+  ["ubicacion", 'nuevo_site_west_photo', 'inputfile', 132, 'Validar que el campo no esté vacío', 'ADD', 'nuevo_site_west_photo_vacio_KO', 'Complete el campo'],
+  ["ubicacion", 'nuevo_site_west_photo', 'inputfile', 133, 'Validar que el nombre tenga solo alfanuméricos, ñ, acentos y sin espacios', 'ADD', 'nuevo_site_west_photo_nombrefoto_format_KO', 'El formato debe ser alfanumérico, con ñ y acentos, sin espacios.'],
+  ["ubicacion", 'nuevo_site_west_photo', 'inputfile', 134, 'Validar nombre mínimo 1 carácter', 'ADD', 'nuevo_site_west_photo_nombrefoto_min_size_KO', 'El nombre debe contener mínimo 1 carácter.'],
+  ["ubicacion", 'nuevo_site_west_photo', 'inputfile', 135, 'Validar nombre máximo 50 caracteres', 'ADD', 'nuevo_site_west_photo_nombrefoto_max_size_KO', 'El nombre debe contener máximo 50 caracteres.'],
+  ["ubicacion", 'nuevo_site_west_photo', 'inputfile', 136, 'Validar que el fichero sea imagen', 'ADD', 'nuevo_site_west_photo_format_KO', 'El fichero debe ser imagen.'],
+  ["ubicacion", 'nuevo_site_west_photo', 'inputfile', 137, 'Validar tamaño máximo 2MB', 'ADD', 'nuevo_site_west_photo_max_size_KO', 'El tamaño máximo permitido es 2MB.'],
+  ["ubicacion", 'nuevo_site_west_photo', 'inputfile', 138, 'Validar correcto', 'ADD', true, 'Correcto.'],
 
   // EDIT
-  ['ubicacion', 'nuevo_site_west_photo', 'inputfile', 139, 'Validar que el campo no esté vacío', 'EDIT', 'nuevo_site_west_photo_vacio_KO', 'Complete el campo'],
-  ['ubicacion', 'nuevo_site_west_photo', 'inputfile', 140, 'Validar que el nombre tenga solo alfanuméricos, ñ, acentos y sin espacios', 'EDIT', 'nuevo_site_west_photo_nombrefoto_format_KO', 'El formato debe ser alfanumérico, con ñ y acentos, sin espacios.'],
-  ['ubicacion', 'nuevo_site_west_photo', 'inputfile', 141, 'Validar nombre mínimo 1 carácter', 'EDIT', 'nuevo_site_west_photo_nombrefoto_min_size_KO', 'El nombre debe contener mínimo 1 carácter.'],
-  ['ubicacion', 'nuevo_site_west_photo', 'inputfile', 142, 'Validar nombre máximo 50 caracteres', 'EDIT', 'nuevo_site_west_photo_nombrefoto_max_size_KO', 'El nombre debe contener máximo 50 caracteres.'],
-  ['ubicacion', 'nuevo_site_west_photo', 'inputfile', 143, 'Validar que el fichero sea imagen', 'EDIT', 'nuevo_site_west_photo_format_KO', 'El fichero debe ser imagen.'],
-  ['ubicacion', 'nuevo_site_west_photo', 'inputfile', 144, 'Validar tamaño máximo 2MB', 'EDIT', 'nuevo_site_west_photo_max_size_KO', 'El tamaño máximo permitido es 2MB.'],
-  ['ubicacion', 'nuevo_site_west_photo', 'inputfile', 145, 'Validar correcto', 'EDIT', true, 'Correcto.'],
+  ["ubicacion", 'nuevo_site_west_photo', 'inputfile', 139, 'Validar que el campo no esté vacío', 'EDIT', 'nuevo_site_west_photo_vacio_KO', 'Complete el campo'],
+  ["ubicacion", 'nuevo_site_west_photo', 'inputfile', 140, 'Validar que el nombre tenga solo alfanuméricos, ñ, acentos y sin espacios', 'EDIT', 'nuevo_site_west_photo_nombrefoto_format_KO', 'El formato debe ser alfanumérico, con ñ y acentos, sin espacios.'],
+  ["ubicacion", 'nuevo_site_west_photo', 'inputfile', 141, 'Validar nombre mínimo 1 carácter', 'EDIT', 'nuevo_site_west_photo_nombrefoto_min_size_KO', 'El nombre debe contener mínimo 1 carácter.'],
+  ["ubicacion", 'nuevo_site_west_photo', 'inputfile', 142, 'Validar nombre máximo 50 caracteres', 'EDIT', 'nuevo_site_west_photo_nombrefoto_max_size_KO', 'El nombre debe contener máximo 50 caracteres.'],
+  ["ubicacion", 'nuevo_site_west_photo', 'inputfile', 143, 'Validar que el fichero sea imagen', 'EDIT', 'nuevo_site_west_photo_format_KO', 'El fichero debe ser imagen.'],
+  ["ubicacion", 'nuevo_site_west_photo', 'inputfile', 144, 'Validar tamaño máximo 2MB', 'EDIT', 'nuevo_site_west_photo_max_size_KO', 'El tamaño máximo permitido es 2MB.'],
+  ["ubicacion", 'nuevo_site_west_photo', 'inputfile', 145, 'Validar correcto', 'EDIT', true, 'Correcto.'],
 
   // SEARCH
-  ['ubicacion', 'site_west_photo', 'input', 146, 'Validar que esté vacío o nombre con alfanuméricos, ñ, acentos y sin espacios', 'SEARCH', 'site_west_photo_nombrefoto_format_KO', 'El formato debe ser alfanumérico, con ñ y acentos, sin espacios.'],
-  ['ubicacion', 'site_west_photo', 'input', 147, 'Validar nombre máximo 50 caracteres', 'SEARCH', 'site_west_photo_nombrefoto_max_size_KO', 'El nombre debe contener máximo 50 caracteres.'],
-  ['ubicacion', 'site_west_photo', 'input', 148, 'Validar correcto', 'SEARCH', true, 'Correcto.'],
+  ["ubicacion", 'site_west_photo', 'input', 146, 'Validar que esté vacío o nombre con alfanuméricos, ñ, acentos y sin espacios', 'SEARCH', 'site_west_photo_nombrefoto_format_KO', 'El formato debe ser alfanumérico, con ñ y acentos, sin espacios.'],
+  ["ubicacion", 'site_west_photo', 'input', 147, 'Validar nombre máximo 50 caracteres', 'SEARCH', 'site_west_photo_nombrefoto_max_size_KO', 'El nombre debe contener máximo 50 caracteres.'],
+  ["ubicacion", 'site_west_photo', 'input', 148, 'Validar correcto', 'SEARCH', true, 'Correcto.'],
 
 ];
 
@@ -1359,194 +1359,194 @@ let ubicacion_def_tests = [
 let ubicacion_tests_fields = [
 /*
   // ADD
-  ['ubicacion', 'id_site', 1, 1, 'ADD', [{ id_site: '' }], 'id_site_vacio_KO'],                 // vacío
-  ['ubicacion', 'id_site', 2, 2, 'ADD', [{ id_site: 'abc' }], 'id_site_format_KO'],             // letras
-  ['ubicacion', 'id_site', 2, 3, 'ADD', [{ id_site: '123a' }], 'id_site_format_KO'],            // número + letra
-  ['ubicacion', 'id_site', 2, 4, 'ADD', [{ id_site: '12_34' }], 'id_site_format_KO'],           // guion bajo
-  ['ubicacion', 'id_site', 2, 5, 'ADD', [{ id_site: '12-34' }], 'id_site_format_KO'],           // guion
-  ['ubicacion', 'id_site', 2, 6, 'ADD', [{ id_site: '12.34' }], 'id_site_format_KO'],           // punto
-  ['ubicacion', 'id_site', 3, 7, 'ADD', [{ id_site: '1' }], true],                               // mínimo
-  ['ubicacion', 'id_site', 4, 8, 'ADD', [{ id_site: '123456789012' }], 'id_site_max_size_KO'],  // máximo
-  ['ubicacion', 'id_site', 5, 9, 'ADD', [{ id_site: '123456' }], true],                          // correcto
+  ["ubicacion", 'id_site', 1, 1, 'ADD', [{ id_site: '' }], 'id_site_vacio_KO'],                 // vacío
+  ["ubicacion", 'id_site', 2, 2, 'ADD', [{ id_site: 'abc' }], 'id_site_format_KO'],             // letras
+  ["ubicacion", 'id_site', 2, 3, 'ADD', [{ id_site: '123a' }], 'id_site_format_KO'],            // número + letra
+  ["ubicacion", 'id_site', 2, 4, 'ADD', [{ id_site: '12_34' }], 'id_site_format_KO'],           // guion bajo
+  ["ubicacion", 'id_site', 2, 5, 'ADD', [{ id_site: '12-34' }], 'id_site_format_KO'],           // guion
+  ["ubicacion", 'id_site', 2, 6, 'ADD', [{ id_site: '12.34' }], 'id_site_format_KO'],           // punto
+  ["ubicacion", 'id_site', 3, 7, 'ADD', [{ id_site: '1' }], true],                               // mínimo
+  ["ubicacion", 'id_site', 4, 8, 'ADD', [{ id_site: '123456789012' }], 'id_site_max_size_KO'],  // máximo
+  ["ubicacion", 'id_site', 5, 9, 'ADD', [{ id_site: '123456' }], true],                          // correcto
 
   // EDIT
-  ['ubicacion', 'id_site', 6, 10, 'EDIT', [{ id_site: '' }], 'id_site_vacio_KO'],
-  ['ubicacion', 'id_site', 7, 11, 'EDIT', [{ id_site: 'abc' }], 'id_site_format_KO'],
-  ['ubicacion', 'id_site', 7, 12, 'EDIT', [{ id_site: '123a' }], 'id_site_format_KO'],
-  ['ubicacion', 'id_site', 7, 13, 'EDIT', [{ id_site: '12_34' }], 'id_site_format_KO'],
-  ['ubicacion', 'id_site', 8, 14, 'EDIT', [{ id_site: '1' }], true],
-  ['ubicacion', 'id_site', 9, 15, 'EDIT', [{ id_site: '123456789012' }], 'id_site_max_size_KO'],
-  ['ubicacion', 'id_site', 10, 16, 'EDIT', [{ id_site: '123456' }], true],
+  ["ubicacion", 'id_site', 6, 10, 'EDIT', [{ id_site: '' }], 'id_site_vacio_KO'],
+  ["ubicacion", 'id_site', 7, 11, 'EDIT', [{ id_site: 'abc' }], 'id_site_format_KO'],
+  ["ubicacion", 'id_site', 7, 12, 'EDIT', [{ id_site: '123a' }], 'id_site_format_KO'],
+  ["ubicacion", 'id_site', 7, 13, 'EDIT', [{ id_site: '12_34' }], 'id_site_format_KO'],
+  ["ubicacion", 'id_site', 8, 14, 'EDIT', [{ id_site: '1' }], true],
+  ["ubicacion", 'id_site', 9, 15, 'EDIT', [{ id_site: '123456789012' }], 'id_site_max_size_KO'],
+  ["ubicacion", 'id_site', 10, 16, 'EDIT', [{ id_site: '123456' }], true],
 */
   // SEARCH
-  ['ubicacion', 'id_site', 11, 17, 'SEARCH', [{ id_site: 'abc' }], 'id_site_format_KO'],
-  ['ubicacion', 'id_site', 11, 18, 'SEARCH', [{ id_site: '123a' }], 'id_site_format_KO'],
-  ['ubicacion', 'id_site', 11, 19, 'SEARCH', [{ id_site: '12_34' }], 'id_site_format_KO'],
-  ['ubicacion', 'id_site', 12, 20, 'SEARCH', [{ id_site: '123456789012' }], 'id_site_max_size_KO'],
-  ['ubicacion', 'id_site', 13, 21, 'SEARCH', [{ id_site: '123456' }], true]
+  ["ubicacion", 'id_site', 11, 17, 'SEARCH', [{ id_site: 'abc' }], 'id_site_format_KO'],
+  ["ubicacion", 'id_site', 11, 18, 'SEARCH', [{ id_site: '123a' }], 'id_site_format_KO'],
+  ["ubicacion", 'id_site', 11, 19, 'SEARCH', [{ id_site: '12_34' }], 'id_site_format_KO'],
+  ["ubicacion", 'id_site', 12, 20, 'SEARCH', [{ id_site: '123456789012' }], 'id_site_max_size_KO'],
+  ["ubicacion", 'id_site', 13, 21, 'SEARCH', [{ id_site: '123456' }], true],
 
 
   // ADD site_latitud
-  ['ubicacion', 'site_latitud', 14, 22, 'ADD', [{ site_latitud: '' }], 'site_latitud_vacio_KO'],          // vacío
-  ['ubicacion', 'site_latitud', 15, 23, 'ADD', [{ site_latitud: 'abc' }], 'site_latitud_format_KO'],     // no numérico
-  ['ubicacion', 'site_latitud', 15, 24, 'ADD', [{ site_latitud: '12,34' }], 'site_latitud_format_KO'],   // coma
-  ['ubicacion', 'site_latitud', 15, 25, 'ADD', [{ site_latitud: '12a34' }], 'site_latitud_format_KO'],   // letras y números
-  ['ubicacion', 'site_latitud', 15, 26, 'ADD', [{ site_latitud: '12.34.56' }], 'site_latitud_format_KO'],// doble punto
-  ['ubicacion', 'site_latitud', 16, 27, 'ADD', [{ site_latitud: '-100' }], 'site_latitud_range_KO'],     // fuera de rango
-  ['ubicacion', 'site_latitud', 17, 28, 'ADD', [{ site_latitud: '12.1234567' }], 'site_latitud_decimals_KO'], // >6 decimales
-  ['ubicacion', 'site_latitud', 18, 29, 'ADD', [{ site_latitud: '45.123456' }], true],                   // correcto
+  ["ubicacion", 'site_latitud', 14, 22, 'ADD', [{ site_latitud: '' }], 'site_latitud_vacio_KO'],          // vacío
+  ["ubicacion", 'site_latitud', 15, 23, 'ADD', [{ site_latitud: 'abc' }], 'site_latitud_format_KO'],     // no numérico
+  ["ubicacion", 'site_latitud', 15, 24, 'ADD', [{ site_latitud: '12,34' }], 'site_latitud_format_KO'],   // coma
+  ["ubicacion", 'site_latitud', 15, 25, 'ADD', [{ site_latitud: '12a34' }], 'site_latitud_format_KO'],   // letras y números
+  ["ubicacion", 'site_latitud', 15, 26, 'ADD', [{ site_latitud: '12.34.56' }], 'site_latitud_format_KO'],// doble punto
+  ["ubicacion", 'site_latitud', 16, 27, 'ADD', [{ site_latitud: '-100' }], 'site_latitud_range_KO'],     // fuera de rango
+  ["ubicacion", 'site_latitud', 17, 28, 'ADD', [{ site_latitud: '12.1234567' }], 'site_latitud_decimals_KO'], // >6 decimales
+  ["ubicacion", 'site_latitud', 18, 29, 'ADD', [{ site_latitud: '45.123456' }], true],                   // correcto
 
   // EDIT site_latitud
-  ['ubicacion', 'site_latitud', 19, 30, 'EDIT', [{ site_latitud: '' }], 'site_latitud_vacio_KO'],
-  ['ubicacion', 'site_latitud', 20, 31, 'EDIT', [{ site_latitud: 'abc' }], 'site_latitud_format_KO'],
-  ['ubicacion', 'site_latitud', 20, 32, 'EDIT', [{ site_latitud: '12,34' }], 'site_latitud_format_KO'],
-  ['ubicacion', 'site_latitud', 20, 33, 'EDIT', [{ site_latitud: '12a34' }], 'site_latitud_format_KO'],
-  ['ubicacion', 'site_latitud', 20, 34, 'EDIT', [{ site_latitud: '12.34.56' }], 'site_latitud_format_KO'],
-  ['ubicacion', 'site_latitud', 21, 35, 'EDIT', [{ site_latitud: '-100' }], 'site_latitud_range_KO'],
-  ['ubicacion', 'site_latitud', 22, 36, 'EDIT', [{ site_latitud: '12.1234567' }], 'site_latitud_decimals_KO'],
-  ['ubicacion', 'site_latitud', 23, 37, 'EDIT', [{ site_latitud: '45.123456' }], true],
+  ["ubicacion", 'site_latitud', 19, 30, 'EDIT', [{ site_latitud: '' }], 'site_latitud_vacio_KO'],
+  ["ubicacion", 'site_latitud', 20, 31, 'EDIT', [{ site_latitud: 'abc' }], 'site_latitud_format_KO'],
+  ["ubicacion", 'site_latitud', 20, 32, 'EDIT', [{ site_latitud: '12,34' }], 'site_latitud_format_KO'],
+  ["ubicacion", 'site_latitud', 20, 33, 'EDIT', [{ site_latitud: '12a34' }], 'site_latitud_format_KO'],
+  ["ubicacion", 'site_latitud', 20, 34, 'EDIT', [{ site_latitud: '12.34.56' }], 'site_latitud_format_KO'],
+  ["ubicacion", 'site_latitud', 21, 35, 'EDIT', [{ site_latitud: '-100' }], 'site_latitud_range_KO'],
+  ["ubicacion", 'site_latitud', 22, 36, 'EDIT', [{ site_latitud: '12.1234567' }], 'site_latitud_decimals_KO'],
+  ["ubicacion", 'site_latitud', 23, 37, 'EDIT', [{ site_latitud: '45.123456' }], true],
 
   // SEARCH site_latitud
-  ['ubicacion', 'site_latitud', 24, 38, 'SEARCH', [{ site_latitud: 'abc' }], 'site_latitud_format_KO'],
-  ['ubicacion', 'site_latitud', 24, 39, 'SEARCH', [{ site_latitud: '12,34' }], 'site_latitud_format_KO'],
-  ['ubicacion', 'site_latitud', 24, 40, 'SEARCH', [{ site_latitud: '12a34' }], 'site_latitud_format_KO'],
-  ['ubicacion', 'site_latitud', 25, 41, 'SEARCH', [{ site_latitud: '-100' }], 'site_latitud_range_KO'],
-  ['ubicacion', 'site_latitud', 26, 42, 'SEARCH', [{ site_latitud: '12.1234567' }], 'site_latitud_decimals_KO'],
-  ['ubicacion', 'site_latitud', 27, 43, 'SEARCH', [{ site_latitud: '45.123456' }], true]
+  ["ubicacion", 'site_latitud', 24, 38, 'SEARCH', [{ site_latitud: 'abc' }], 'site_latitud_format_KO'],
+  ["ubicacion", 'site_latitud', 24, 39, 'SEARCH', [{ site_latitud: '12,34' }], 'site_latitud_format_KO'],
+  ["ubicacion", 'site_latitud', 24, 40, 'SEARCH', [{ site_latitud: '12a34' }], 'site_latitud_format_KO'],
+  ["ubicacion", 'site_latitud', 25, 41, 'SEARCH', [{ site_latitud: '-100' }], 'site_latitud_range_KO'],
+  ["ubicacion", 'site_latitud', 26, 42, 'SEARCH', [{ site_latitud: '12.1234567' }], 'site_latitud_decimals_KO'],
+  ["ubicacion", 'site_latitud', 27, 43, 'SEARCH', [{ site_latitud: '45.123456' }], true],
 
 
   // ---------- SITE_LONGITUD ----------
   // ADD
-  ['ubicacion', 'site_longitud', 28, 44, 'ADD', [{ site_longitud: '' }], 'site_longitud_vacio_KO'],
-  ['ubicacion', 'site_longitud', 29, 45, 'ADD', [{ site_longitud: 'abc' }], 'site_longitud_format_KO'],
-  ['ubicacion', 'site_longitud', 29, 46, 'ADD', [{ site_longitud: '12.34.56' }], 'site_longitud_format_KO'],
-  ['ubicacion', 'site_longitud', 29, 47, 'ADD', [{ site_longitud: '-180,123' }], 'site_longitud_format_KO'],
-  ['ubicacion', 'site_longitud', 30, 48, 'ADD', [{ site_longitud: '-190' }], 'site_longitud_range_KO'],
-  ['ubicacion', 'site_longitud', 30, 49, 'ADD', [{ site_longitud: '181' }], 'site_longitud_range_KO'],
-  ['ubicacion', 'site_longitud', 31, 50, 'ADD', [{ site_longitud: '12.1234567' }], 'site_longitud_decimals_KO'],
-  ['ubicacion', 'site_longitud', 32, 51, 'ADD', [{ site_longitud: '45.123456' }], true],
+  ["ubicacion", 'site_longitud', 28, 44, 'ADD', [{ site_longitud: '' }], 'site_longitud_vacio_KO'],
+  ["ubicacion", 'site_longitud', 29, 45, 'ADD', [{ site_longitud: 'abc' }], 'site_longitud_format_KO'],
+  ["ubicacion", 'site_longitud', 29, 46, 'ADD', [{ site_longitud: '12.34.56' }], 'site_longitud_format_KO'],
+  ["ubicacion", 'site_longitud', 29, 47, 'ADD', [{ site_longitud: '-180,123' }], 'site_longitud_format_KO'],
+  ["ubicacion", 'site_longitud', 30, 48, 'ADD', [{ site_longitud: '-190' }], 'site_longitud_range_KO'],
+  ["ubicacion", 'site_longitud', 30, 49, 'ADD', [{ site_longitud: '181' }], 'site_longitud_range_KO'],
+  ["ubicacion", 'site_longitud', 31, 50, 'ADD', [{ site_longitud: '12.1234567' }], 'site_longitud_decimals_KO'],
+  ["ubicacion", 'site_longitud', 32, 51, 'ADD', [{ site_longitud: '45.123456' }], true],
 
   // EDIT
-  ['ubicacion', 'site_longitud', 33, 52, 'EDIT', [{ site_longitud: '' }], 'site_longitud_vacio_KO'],
-  ['ubicacion', 'site_longitud', 34, 53, 'EDIT', [{ site_longitud: 'xyz' }], 'site_longitud_format_KO'],
-  ['ubicacion', 'site_longitud', 34, 54, 'EDIT', [{ site_longitud: '12..45' }], 'site_longitud_format_KO'],
-  ['ubicacion', 'site_longitud', 34, 55, 'EDIT', [{ site_longitud: '-181' }], 'site_longitud_range_KO'],
-  ['ubicacion', 'site_longitud', 35, 56, 'EDIT', [{ site_longitud: '182' }], 'site_longitud_range_KO'],
-  ['ubicacion', 'site_longitud', 36, 57, 'EDIT', [{ site_longitud: '23.1234567' }], 'site_longitud_decimals_KO'],
-  ['ubicacion', 'site_longitud', 37, 58, 'EDIT', [{ site_longitud: '60.123456' }], true],
+  ["ubicacion", 'site_longitud', 33, 52, 'EDIT', [{ site_longitud: '' }], 'site_longitud_vacio_KO'],
+  ["ubicacion", 'site_longitud', 34, 53, 'EDIT', [{ site_longitud: 'xyz' }], 'site_longitud_format_KO'],
+  ["ubicacion", 'site_longitud', 34, 54, 'EDIT', [{ site_longitud: '12..45' }], 'site_longitud_format_KO'],
+  ["ubicacion", 'site_longitud', 34, 55, 'EDIT', [{ site_longitud: '-181' }], 'site_longitud_range_KO'],
+  ["ubicacion", 'site_longitud', 35, 56, 'EDIT', [{ site_longitud: '182' }], 'site_longitud_range_KO'],
+  ["ubicacion", 'site_longitud', 36, 57, 'EDIT', [{ site_longitud: '23.1234567' }], 'site_longitud_decimals_KO'],
+  ["ubicacion", 'site_longitud', 37, 58, 'EDIT', [{ site_longitud: '60.123456' }], true],
 
   // SEARCH
-  ['ubicacion', 'site_longitud', 38, 59, 'SEARCH', [{ site_longitud: 'abc' }], 'site_longitud_format_KO'],
-  ['ubicacion', 'site_longitud', 38, 60, 'SEARCH', [{ site_longitud: '12.12.12' }], 'site_longitud_format_KO'],
-  ['ubicacion', 'site_longitud', 39, 61, 'SEARCH', [{ site_longitud: '-190' }], 'site_longitud_range_KO'],
-  ['ubicacion', 'site_longitud', 40, 62, 'SEARCH', [{ site_longitud: '185' }], 'site_longitud_range_KO'],
-  ['ubicacion', 'site_longitud', 41, 63, 'SEARCH', [{ site_longitud: '34.1234567' }], 'site_longitud_decimals_KO'],
-  ['ubicacion', 'site_longitud', 41, 64, 'SEARCH', [{ site_longitud: '90.123456' }], true],
+  ["ubicacion", 'site_longitud', 38, 59, 'SEARCH', [{ site_longitud: 'abc' }], 'site_longitud_format_KO'],
+  ["ubicacion", 'site_longitud', 38, 60, 'SEARCH', [{ site_longitud: '12.12.12' }], 'site_longitud_format_KO'],
+  ["ubicacion", 'site_longitud', 39, 61, 'SEARCH', [{ site_longitud: '-190' }], 'site_longitud_range_KO'],
+  ["ubicacion", 'site_longitud', 40, 62, 'SEARCH', [{ site_longitud: '185' }], 'site_longitud_range_KO'],
+  ["ubicacion", 'site_longitud', 41, 63, 'SEARCH', [{ site_longitud: '34.1234567' }], 'site_longitud_decimals_KO'],
+  ["ubicacion", 'site_longitud', 41, 64, 'SEARCH', [{ site_longitud: '90.123456' }], true],
 
 
   // ---------- SITE_ALTITUDE ----------
   // ADD
-  ['ubicacion', 'site_altitude', 42, 65, 'ADD', [{ site_altitude: '' }], 'site_altitude_vacio_KO'],
-  ['ubicacion', 'site_altitude', 43, 66, 'ADD', [{ site_altitude: '12a' }], 'site_altitude_format_KO'],
- // ['ubicacion', 'site_altitude', 44, 67, 'ADD', [{ site_altitude: '' }], 'site_altitude_min_size_KO'],
-  ['ubicacion', 'site_altitude', 45, 68, 'ADD', [{ site_altitude: '12345' }], 'site_altitude_max_size_KO'],
-  ['ubicacion', 'site_altitude', 46, 69, 'ADD', [{ site_altitude: '123' }], true],
+  ["ubicacion", 'site_altitude', 42, 65, 'ADD', [{ site_altitude: '' }], 'site_altitude_vacio_KO'],
+  ["ubicacion", 'site_altitude', 43, 66, 'ADD', [{ site_altitude: '12a' }], 'site_altitude_format_KO'],
+ // ["ubicacion", 'site_altitude', 44, 67, 'ADD', [{ site_altitude: '' }], 'site_altitude_min_size_KO'],
+  ["ubicacion", 'site_altitude', 45, 68, 'ADD', [{ site_altitude: '12345' }], 'site_altitude_max_size_KO'],
+  ["ubicacion", 'site_altitude', 46, 69, 'ADD', [{ site_altitude: '123' }], true],
 
   // EDIT
-  ['ubicacion', 'site_altitude', 47, 70, 'EDIT', [{ site_altitude: '' }], 'site_altitude_vacio_KO'],
-  ['ubicacion', 'site_altitude', 48, 71, 'EDIT', [{ site_altitude: '12b' }], 'site_altitude_format_KO'],
-  //['ubicacion', 'site_altitude', 49, 72, 'EDIT', [{ site_altitude: '' }], 'site_altitude_min_size_KO'],
-  ['ubicacion', 'site_altitude', 50, 73, 'EDIT', [{ site_altitude: '12345' }], 'site_altitude_max_size_KO'],
-  ['ubicacion', 'site_altitude', 51, 74, 'EDIT', [{ site_altitude: '100' }], true],
+  ["ubicacion", 'site_altitude', 47, 70, 'EDIT', [{ site_altitude: '' }], 'site_altitude_vacio_KO'],
+  ["ubicacion", 'site_altitude', 48, 71, 'EDIT', [{ site_altitude: '12b' }], 'site_altitude_format_KO'],
+  //["ubicacion", 'site_altitude', 49, 72, 'EDIT', [{ site_altitude: '' }], 'site_altitude_min_size_KO'],
+  ["ubicacion", 'site_altitude', 50, 73, 'EDIT', [{ site_altitude: '12345' }], 'site_altitude_max_size_KO'],
+  ["ubicacion", 'site_altitude', 51, 74, 'EDIT', [{ site_altitude: '100' }], true],
 
   // SEARCH
-  ['ubicacion', 'site_altitude', 52, 75, 'SEARCH', [{ site_altitude: '12c' }], 'site_altitude_format_KO'],
-  ['ubicacion', 'site_altitude', 53, 76, 'SEARCH', [{ site_altitude: '12345' }], 'site_altitude_max_size_KO'],
-  ['ubicacion', 'site_altitude', 54, 77, 'SEARCH', [{ site_altitude: '80' }], true],
+  ["ubicacion", 'site_altitude', 52, 75, 'SEARCH', [{ site_altitude: '12c' }], 'site_altitude_format_KO'],
+  ["ubicacion", 'site_altitude', 53, 76, 'SEARCH', [{ site_altitude: '12345' }], 'site_altitude_max_size_KO'],
+  ["ubicacion", 'site_altitude', 54, 77, 'SEARCH', [{ site_altitude: '80' }], true],
 
 
   // ---------- SITE_LOCALITY ----------
   // ADD
-  ['ubicacion', 'site_locality', 55, 78, 'ADD', [{ site_locality: '' }], 'site_locality_vacio_KO'],
-  ['ubicacion', 'site_locality', 56, 79, 'ADD', [{ site_locality: '123' }], 'site_locality_format_KO'],
-  ['ubicacion', 'site_locality', 56, 80, 'ADD', [{ site_locality: 'C!udad' }], 'site_locality_format_KO'],
-  ['ubicacion', 'site_locality', 56, 81, 'ADD', [{ site_locality: 'Ciudad123' }], 'site_locality_format_KO'],
-  ['ubicacion', 'site_locality', 57, 82, 'ADD', [{ site_locality: 'A' }], 'site_locality_min_size_KO'],
-  ['ubicacion', 'site_locality', 58, 83, 'ADD', [{ site_locality: 'A'.repeat(41) }], 'site_locality_max_size_KO'],
-  ['ubicacion', 'site_locality', 59, 84, 'ADD', [{ site_locality: 'Barcelona' }], true],
+  ["ubicacion", 'site_locality', 55, 78, 'ADD', [{ site_locality: '' }], 'site_locality_vacio_KO'],
+  ["ubicacion", 'site_locality', 56, 79, 'ADD', [{ site_locality: '123' }], 'site_locality_format_KO'],
+  ["ubicacion", 'site_locality', 56, 80, 'ADD', [{ site_locality: 'C!udad' }], 'site_locality_format_KO'],
+  ["ubicacion", 'site_locality', 56, 81, 'ADD', [{ site_locality: 'Ciudad123' }], 'site_locality_format_KO'],
+  ["ubicacion", 'site_locality', 57, 82, 'ADD', [{ site_locality: 'A' }], 'site_locality_min_size_KO'],
+  ["ubicacion", 'site_locality', 58, 83, 'ADD', [{ site_locality: 'A'.repeat(41) }], 'site_locality_max_size_KO'],
+  ["ubicacion", 'site_locality', 59, 84, 'ADD', [{ site_locality: 'Barcelona' }], true],
 
   // EDIT
-  ['ubicacion', 'site_locality', 60, 85, 'EDIT', [{ site_locality: '' }], 'site_locality_vacio_KO'],
-  ['ubicacion', 'site_locality', 61, 86, 'EDIT', [{ site_locality: '456' }], 'site_locality_format_KO'],
-  ['ubicacion', 'site_locality', 61, 87, 'EDIT', [{ site_locality: 'Val!encia' }], 'site_locality_format_KO'],
-  ['ubicacion', 'site_locality', 62, 88, 'EDIT', [{ site_locality: 'M1drid' }], 'site_locality_format_KO'],
-  ['ubicacion', 'site_locality', 63, 89, 'EDIT', [{ site_locality: 'Z' }], 'site_locality_min_size_KO'],
-  ['ubicacion', 'site_locality', 64, 90, 'EDIT', [{ site_locality: 'B'.repeat(41) }], 'site_locality_max_size_KO'],
-  ['ubicacion', 'site_locality', 64, 91, 'EDIT', [{ site_locality: 'Madrid' }], true],
+  ["ubicacion", 'site_locality', 60, 85, 'EDIT', [{ site_locality: '' }], 'site_locality_vacio_KO'],
+  ["ubicacion", 'site_locality', 61, 86, 'EDIT', [{ site_locality: '456' }], 'site_locality_format_KO'],
+  ["ubicacion", 'site_locality', 61, 87, 'EDIT', [{ site_locality: 'Val!encia' }], 'site_locality_format_KO'],
+  ["ubicacion", 'site_locality', 62, 88, 'EDIT', [{ site_locality: 'M1drid' }], 'site_locality_format_KO'],
+  ["ubicacion", 'site_locality', 63, 89, 'EDIT', [{ site_locality: 'Z' }], 'site_locality_min_size_KO'],
+  ["ubicacion", 'site_locality', 64, 90, 'EDIT', [{ site_locality: 'B'.repeat(41) }], 'site_locality_max_size_KO'],
+  ["ubicacion", 'site_locality', 64, 91, 'EDIT', [{ site_locality: 'Madrid' }], true],
 
   // SEARCH
-  ['ubicacion', 'site_locality', 65, 92, 'SEARCH', [{ site_locality: '123' }], 'site_locality_format_KO'],
-  ['ubicacion', 'site_locality', 65, 93, 'SEARCH', [{ site_locality: 'Sevill@' }], 'site_locality_format_KO'],
-  ['ubicacion', 'site_locality', 66, 94, 'SEARCH', [{ site_locality: 'Z'.repeat(41) }], 'site_locality_max_size_KO'],
-  ['ubicacion', 'site_locality', 67, 95, 'SEARCH', [{ site_locality: 'Valencia' }], true]
+  ["ubicacion", 'site_locality', 65, 92, 'SEARCH', [{ site_locality: '123' }], 'site_locality_format_KO'],
+  ["ubicacion", 'site_locality', 65, 93, 'SEARCH', [{ site_locality: 'Sevill@' }], 'site_locality_format_KO'],
+  ["ubicacion", 'site_locality', 66, 94, 'SEARCH', [{ site_locality: 'Z'.repeat(41) }], 'site_locality_max_size_KO'],
+  ["ubicacion", 'site_locality', 67, 95, 'SEARCH', [{ site_locality: 'Valencia' }], true],
 
 
 
   // ---------- SITE_PROVIDER_LOGIN ----------
   // ADD
-  ['ubicacion', 'site_provider_login', 68, 96, 'ADD', [{ site_provider_login: '' }], 'site_provider_login_vacio_KO'],
-  ['ubicacion', 'site_provider_login', 69, 97, 'ADD', [{ site_provider_login: 'abc@' }], 'site_provider_login_format_KO'],
-  ['ubicacion', 'site_provider_login', 69, 98, 'ADD', [{ site_provider_login: '12 34' }], 'site_provider_login_format_KO'],
-  ['ubicacion', 'site_provider_login', 69, 99, 'ADD', [{ site_provider_login: 'ab$c' }], 'site_provider_login_format_KO'],
-  ['ubicacion', 'site_provider_login', 69, 100, 'ADD', [{ site_provider_login: 'user!name' }], 'site_provider_login_format_KO'],
-  ['ubicacion', 'site_provider_login', 70, 101, 'ADD', [{ site_provider_login: 'abc' }], 'site_provider_login_min_size_KO'],
-  ['ubicacion', 'site_provider_login', 71, 102, 'ADD', [{ site_provider_login: 'a'.repeat(31) }], 'site_provider_login_max_size_KO'],
-  ['ubicacion', 'site_provider_login', 72, 103, 'ADD', [{ site_provider_login: 'usuario-01' }], true],
+  ["ubicacion", 'site_provider_login', 68, 96, 'ADD', [{ site_provider_login: '' }], 'site_provider_login_vacio_KO'],
+  ["ubicacion", 'site_provider_login', 69, 97, 'ADD', [{ site_provider_login: 'abc@' }], 'site_provider_login_format_KO'],
+  ["ubicacion", 'site_provider_login', 69, 98, 'ADD', [{ site_provider_login: '12 34' }], 'site_provider_login_format_KO'],
+  ["ubicacion", 'site_provider_login', 69, 99, 'ADD', [{ site_provider_login: 'ab$c' }], 'site_provider_login_format_KO'],
+  ["ubicacion", 'site_provider_login', 69, 100, 'ADD', [{ site_provider_login: 'user!name' }], 'site_provider_login_format_KO'],
+  ["ubicacion", 'site_provider_login', 70, 101, 'ADD', [{ site_provider_login: 'abc' }], 'site_provider_login_min_size_KO'],
+  ["ubicacion", 'site_provider_login', 71, 102, 'ADD', [{ site_provider_login: 'a'.repeat(31) }], 'site_provider_login_max_size_KO'],
+  ["ubicacion", 'site_provider_login', 72, 103, 'ADD', [{ site_provider_login: 'usuario_01' }], true],
 
   // EDIT
-  ['ubicacion', 'site_provider_login', 73, 104, 'EDIT', [{ site_provider_login: '' }], 'site_provider_login_vacio_KO'],
-  ['ubicacion', 'site_provider_login', 74, 105, 'EDIT', [{ site_provider_login: '12@34' }], 'site_provider_login_format_KO'],
-  ['ubicacion', 'site_provider_login', 74, 106, 'EDIT', [{ site_provider_login: 'abc#def' }], 'site_provider_login_format_KO'],
-  ['ubicacion', 'site_provider_login', 74, 107, 'EDIT', [{ site_provider_login: 'us$er' }], 'site_provider_login_format_KO'],
-  ['ubicacion', 'site_provider_login', 75, 108, 'EDIT', [{ site_provider_login: 'ab' }], 'site_provider_login_min_size_KO'],
-  ['ubicacion', 'site_provider_login', 76, 109, 'EDIT', [{ site_provider_login: 'b'.repeat(32) }], 'site_provider_login_max_size_KO'],
-  ['ubicacion', 'site_provider_login', 77, 110, 'EDIT', [{ site_provider_login: 'user-99' }], true],
+  ["ubicacion", 'site_provider_login', 73, 104, 'EDIT', [{ site_provider_login: '' }], 'site_provider_login_vacio_KO'],
+  ["ubicacion", 'site_provider_login', 74, 105, 'EDIT', [{ site_provider_login: '12@34' }], 'site_provider_login_format_KO'],
+  ["ubicacion", 'site_provider_login', 74, 106, 'EDIT', [{ site_provider_login: 'abc#def' }], 'site_provider_login_format_KO'],
+  ["ubicacion", 'site_provider_login', 74, 107, 'EDIT', [{ site_provider_login: 'us$er' }], 'site_provider_login_format_KO'],
+  ["ubicacion", 'site_provider_login', 75, 108, 'EDIT', [{ site_provider_login: 'ab' }], 'site_provider_login_min_size_KO'],
+  ["ubicacion", 'site_provider_login', 76, 109, 'EDIT', [{ site_provider_login: 'b'.repeat(32) }], 'site_provider_login_max_size_KO'],
+  ["ubicacion", 'site_provider_login', 77, 110, 'EDIT', [{ site_provider_login: 'user_99' }], true],
 
   // SEARCH
-  ['ubicacion', 'site_provider_login', 78, 111, 'SEARCH', [{ site_provider_login: 'abc@' }], 'site_provider_login_format_KO'],
-  ['ubicacion', 'site_provider_login', 78, 112, 'SEARCH', [{ site_provider_login: '12 34' }], 'site_provider_login_format_KO'],
-  ['ubicacion', 'site_provider_login', 78, 113, 'SEARCH', [{ site_provider_login: 'ab$c' }], 'site_provider_login_format_KO'],
-  ['ubicacion', 'site_provider_login', 79, 114, 'SEARCH', [{ site_provider_login: 'a'.repeat(31) }], 'site_provider_login_max_size_KO'],
-  ['ubicacion', 'site_provider_login', 80, 115, 'SEARCH', [{ site_provider_login: 'user-88' }], true]
+  ["ubicacion", 'site_provider_login', 78, 111, 'SEARCH', [{ site_provider_login: 'abc@' }], 'site_provider_login_format_KO'],
+  ["ubicacion", 'site_provider_login', 78, 112, 'SEARCH', [{ site_provider_login: '12 34' }], 'site_provider_login_format_KO'],
+  ["ubicacion", 'site_provider_login', 78, 113, 'SEARCH', [{ site_provider_login: 'ab$c' }], 'site_provider_login_format_KO'],
+  ["ubicacion", 'site_provider_login', 79, 114, 'SEARCH', [{ site_provider_login: 'a'.repeat(31) }], 'site_provider_login_max_size_KO'],
+  ["ubicacion", 'site_provider_login', 80, 115, 'SEARCH', [{ site_provider_login: 'user_88' }], true],
 
   // ---------- SITE_NORTH_PHOTO ----------
-  ['ubicacion', 'site_north_photo', 95, 116, 'SEARCH', [{ site_north_photo: '' }], true], // vacío
-  ['ubicacion', 'site_north_photo', 95, 117, 'SEARCH', [{ site_north_photo: 'foto con espacios.jpg' }], 'site_north_photo_nombrefoto_format_KO'],
-  ['ubicacion', 'site_north_photo', 95, 118, 'SEARCH', [{ site_north_photo: 'foto#123.jpg' }], 'site_north_photo_nombrefoto_format_KO'],
-  ['ubicacion', 'site_north_photo', 95, 119, 'SEARCH', [{ site_north_photo: 'foto@ñá.jpg' }], 'site_north_photo_nombrefoto_format_KO'],
-  ['ubicacion', 'site_north_photo', 96, 120, 'SEARCH', [{ site_north_photo: 'n'.repeat(51) + '.jpg' }], 'site_north_photo_nombrefoto_max_size_KO'], // max size
-  ['ubicacion', 'site_north_photo', 97, 121, 'SEARCH', [{ site_north_photo: 'correcto_ñá.jpg' }], true], // correcto
+  ["ubicacion", 'site_north_photo', 95, 116, 'SEARCH', [{ site_north_photo: '' }], true], // vacío
+  ["ubicacion", 'site_north_photo', 95, 117, 'SEARCH', [{ site_north_photo: 'foto con espacios.jpg' }], 'site_north_photo_nombrefoto_format_KO'],
+  ["ubicacion", 'site_north_photo', 95, 118, 'SEARCH', [{ site_north_photo: 'foto#123.jpg' }], 'site_north_photo_nombrefoto_format_KO'],
+  ["ubicacion", 'site_north_photo', 95, 119, 'SEARCH', [{ site_north_photo: 'foto@ñá.jpg' }], 'site_north_photo_nombrefoto_format_KO'],
+  ["ubicacion", 'site_north_photo', 96, 120, 'SEARCH', [{ site_north_photo: 'n'.repeat(51) + '.jpg' }], 'site_north_photo_nombrefoto_max_size_KO'], // max size
+  ["ubicacion", 'site_north_photo', 97, 121, 'SEARCH', [{ site_north_photo: 'correcto_ñá.jpg' }], true], // correcto
 
   // ---------- SITE_SOUTH_PHOTO ----------
-  ['ubicacion', 'site_south_photo', 112, 122, 'SEARCH', [{ site_south_photo: '' }], true], // vacío
-  ['ubicacion', 'site_south_photo', 112, 123, 'SEARCH', [{ site_south_photo: 'nombre con espacios.jpg' }], 'site_south_photo_nombrefoto_format_KO'],
-  ['ubicacion', 'site_south_photo', 112, 124, 'SEARCH', [{ site_south_photo: 'foto#invalido.jpg' }], 'site_south_photo_nombrefoto_format_KO'],
-  ['ubicacion', 'site_south_photo', 113, 125, 'SEARCH', [{ site_south_photo: 'n'.repeat(51) + '.jpg' }], 'site_south_photo_nombrefoto_max_size_KO'], // max size
-  ['ubicacion', 'site_south_photo', 114, 126, 'SEARCH', [{ site_south_photo: 'correcto_south.jpg' }], true], // correcto
+  ["ubicacion", 'site_south_photo', 112, 122, 'SEARCH', [{ site_south_photo: '' }], true], // vacío
+  ["ubicacion", 'site_south_photo', 112, 123, 'SEARCH', [{ site_south_photo: 'nombre con espacios.jpg' }], 'site_south_photo_nombrefoto_format_KO'],
+  ["ubicacion", 'site_south_photo', 112, 124, 'SEARCH', [{ site_south_photo: 'foto#invalido.jpg' }], 'site_south_photo_nombrefoto_format_KO'],
+  ["ubicacion", 'site_south_photo', 113, 125, 'SEARCH', [{ site_south_photo: 'n'.repeat(51) + '.jpg' }], 'site_south_photo_nombrefoto_max_size_KO'], // max size
+  ["ubicacion", 'site_south_photo', 114, 126, 'SEARCH', [{ site_south_photo: 'correcto_south.jpg' }], true], // correcto
 
   // ---------- SITE_EAST_PHOTO ----------
-  ['ubicacion', 'site_east_photo', 129, 127, 'SEARCH', [{ site_east_photo: '' }], true], // vacío
-  ['ubicacion', 'site_east_photo', 129, 128, 'SEARCH', [{ site_east_photo: 'espacios en el nombre.jpg' }], 'site_east_photo_nombrefoto_format_KO'],
-  ['ubicacion', 'site_east_photo', 129, 129, 'SEARCH', [{ site_east_photo: 'foto#east.jpg' }], 'site_east_photo_nombrefoto_format_KO'],
-  ['ubicacion', 'site_east_photo', 130, 130, 'SEARCH', [{ site_east_photo: 'n'.repeat(51) + '.jpg' }], 'site_east_photo_nombrefoto_max_size_KO'], // max size
-  ['ubicacion', 'site_east_photo', 131, 131, 'SEARCH', [{ site_east_photo: 'correcto_east.jpg' }], true], // correcto
+  ["ubicacion", 'site_east_photo', 129, 127, 'SEARCH', [{ site_east_photo: '' }], true], // vacío
+  ["ubicacion", 'site_east_photo', 129, 128, 'SEARCH', [{ site_east_photo: 'espacios en el nombre.jpg' }], 'site_east_photo_nombrefoto_format_KO'],
+  ["ubicacion", 'site_east_photo', 129, 129, 'SEARCH', [{ site_east_photo: 'foto#east.jpg' }], 'site_east_photo_nombrefoto_format_KO'],
+  ["ubicacion", 'site_east_photo', 130, 130, 'SEARCH', [{ site_east_photo: 'n'.repeat(51) + '.jpg' }], 'site_east_photo_nombrefoto_max_size_KO'], // max size
+  ["ubicacion", 'site_east_photo', 131, 131, 'SEARCH', [{ site_east_photo: 'correcto_east.jpg' }], true], // correcto
 
   // ---------- SITE_WEST_PHOTO ----------
-  ['ubicacion', 'site_west_photo', 146, 132, 'SEARCH', [{ site_west_photo: '' }], true], // vacío
-  ['ubicacion', 'site_west_photo', 146, 133, 'SEARCH', [{ site_west_photo: 'nombre west invalido.jpg' }], 'site_west_photo_nombrefoto_format_KO'],
-  ['ubicacion', 'site_west_photo', 146, 134, 'SEARCH', [{ site_west_photo: 'foto#west.jpg' }], 'site_west_photo_nombrefoto_format_KO'],
-  ['ubicacion', 'site_west_photo', 147, 135, 'SEARCH', [{ site_west_photo: 'n'.repeat(51) + '.jpg' }], 'site_west_photo_nombrefoto_max_size_KO'], // max size
-  ['ubicacion', 'site_west_photo', 148, 136, 'SEARCH', [{ site_west_photo: 'correcto_west.jpg' }], true] // correcto
+  ["ubicacion", 'site_west_photo', 146, 132, 'SEARCH', [{ site_west_photo: '' }], true], // vacío
+  ["ubicacion", 'site_west_photo', 146, 133, 'SEARCH', [{ site_west_photo: 'nombre west invalido.jpg' }], 'site_west_photo_nombrefoto_format_KO'],
+  ["ubicacion", 'site_west_photo', 146, 134, 'SEARCH', [{ site_west_photo: 'foto#west.jpg' }], 'site_west_photo_nombrefoto_format_KO'],
+  ["ubicacion", 'site_west_photo', 147, 135, 'SEARCH', [{ site_west_photo: 'n'.repeat(51) + '.jpg' }], 'site_west_photo_nombrefoto_max_size_KO'], // max size
+  ["ubicacion", 'site_west_photo', 148, 136, 'SEARCH', [{ site_west_photo: 'correcto_west.jpg' }], true] // correcto
 
 ];
 
@@ -1554,104 +1554,112 @@ let ubicacion_tests_fields = [
 let ubicacion_tests_files = [
   // ------------------- NUEVO SITE NORTH PHOTO -------------------
   // ADD 
-  ['ubicacion', 'nuevo_site_north_photo', 81, 1, 'ADD', 'existe', [], 'nuevo_site_north_photo_vacio_KO'],
-  ['ubicacion', 'nuevo_site_north_photo', 82, 2, 'ADD', 'format_name_file', [{ format_name_file: 'nombre_con_guion.pdf' }, { type_file: 'image/png' }, { max_size_file: 5 }], 'nuevo_site_north_photo_nombrefoto_format_KO'],
-  ['ubicacion', 'nuevo_site_north_photo', 82, 3, 'ADD', 'format_name_file', [{ format_name_file: 'nombre#especial.jpg' }, { type_file: 'image/jpeg' }, { max_size_file: 5 }], 'nuevo_site_north_photo_nombrefoto_format_KO'],
-  ['ubicacion', 'nuevo_site_north_photo', 82, 4, 'ADD', 'format_name_file', [{ format_name_file: 'nombre$%&.png' }, { type_file: 'image/png' }, { max_size_file: 5 }], 'nuevo_site_north_photo_nombrefoto_format_KO'],
-  ['ubicacion', 'nuevo_site_north_photo', 82, 5, 'ADD', 'format_name_file', [{ format_name_file: 'nombre con espacios.jpeg' }, { type_file: 'image/jpeg' }, { max_size_file: 5 }], 'nuevo_site_north_photo_nombrefoto_format_KO'],
-  ['ubicacion', 'nuevo_site_north_photo', 82, 6, 'ADD', 'format_name_file', [{ format_name_file: 'nombre*asterisco.bmp' }, { type_file: 'image/bmp' }, { max_size_file: 5 }], 'nuevo_site_north_photo_nombrefoto_format_KO'],
-  ['ubicacion', 'nuevo_site_north_photo', 83, 7, 'ADD', 'format_name_file', [{ format_name_file: 'a.png' }, { type_file: 'image/png' }, { max_size_file: 5 }], 'nuevo_site_north_photo_nombrefoto_min_size_KO'],
-  ['ubicacion', 'nuevo_site_north_photo', 84, 8, 'ADD', 'format_name_file', [{ format_name_file: 'n'.repeat(51) + '.png' }, { type_file: 'image/png' }, { max_size_file: 5 }], 'nuevo_site_north_photo_nombrefoto_max_size_KO'],
-  ['ubicacion', 'nuevo_site_north_photo', 87, 9, 'ADD', 'correcto', [{ format_name_file: 'nombreValido.png' }, { type_file: 'image/png' }, { max_size_file: 5 }], true],
+  ["ubicacion", 'nuevo_site_north_photo', 81, 1, 'ADD', 'existe', [], 'nuevo_site_north_photo_vacio_KO'],
+  ["ubicacion", 'nuevo_site_north_photo', 82, 2, 'ADD', 'format_name_file', [{ format_name_file: 'nombre_con_guion.jpg' }, { type_file: 'image/jpeg' }, { max_size_file: 5 }], 'nuevo_site_north_photo_nombrefoto_format_KO'],
+  ["ubicacion", 'nuevo_site_north_photo', 82, 3, 'ADD', 'format_name_file', [{ format_name_file: 'nombre#especial.jpg' }, { type_file: 'image/jpeg' }, { max_size_file: 5 }], 'nuevo_site_north_photo_nombrefoto_format_KO'],
+  ["ubicacion", 'nuevo_site_north_photo', 82, 4, 'ADD', 'format_name_file', [{ format_name_file: 'nombre$%&.jpg' }, { type_file: 'image/jpeg' }, { max_size_file: 5 }], 'nuevo_site_north_photo_nombrefoto_format_KO'],
+  ["ubicacion", 'nuevo_site_north_photo', 82, 5, 'ADD', 'format_name_file', [{ format_name_file: 'nombre con espacios.jpg' }, { type_file: 'image/jpeg' }, { max_size_file: 5 }], 'nuevo_site_north_photo_nombrefoto_format_KO'],
+  ["ubicacion", 'nuevo_site_north_photo', 82, 6, 'ADD', 'format_name_file', [{ format_name_file: 'nombre*asterisco.jpg' }, { type_file: 'image/jpeg' }, { max_size_file: 5 }], 'nuevo_site_north_photo_nombrefoto_format_KO'],
+  ["ubicacion", 'nuevo_site_north_photo', 83, 7, 'ADD', 'format_name_file', [{ format_name_file: '.jpg' }, { type_file: 'image/jpeg' }, { max_size_file: 5 }], 'nuevo_site_north_photo_nombrefoto_min_size_KO'],
+  ["ubicacion", 'nuevo_site_north_photo', 84, 8, 'ADD', 'format_name_file', [{ format_name_file: 'n'.repeat(51) + '.jpg' }, { type_file: 'image/jpeg' }, { max_size_file: 5 }], 'nuevo_site_north_photo_nombrefoto_max_size_KO'],
+  ["ubicacion", 'nuevo_site_north_photo', 85, 9, 'ADD', 'format_name_file', [{ format_name_file: 'nombreValido.jpg' }, { type_file: 'application/pdf' }, { max_size_file: 5 }], 'nuevo_site_north_photo_format_KO'],
+  ["ubicacion", 'nuevo_site_north_photo', 86, 10, 'ADD', 'format_name_file', [{ format_name_file: 'nombreValido.jpg'  }, { type_file: 'image/jpeg' }, { max_size_file: 21000000 }], 'nuevo_site_north_photo_max_size_KO'],
+  ["ubicacion", 'nuevo_site_north_photo', 87, 11, 'ADD', 'correcto', [{ format_name_file: 'nombreValido.jpg' }, { type_file: 'image/jpeg' }, { max_size_file: 5 }], true],
 
   // EDIT - FORMATO (varias pruebas)
-  ['ubicacion', 'nuevo_site_north_photo', 88, 10, 'EDIT', 'existe', [], 'nuevo_site_north_photo_vacio_KO'],
-  ['ubicacion', 'nuevo_site_north_photo', 89, 11, 'EDIT', 'format_name_file', [{ format_name_file: 'nombre_con_guion.pdf' }, { type_file: 'image/png' }, { max_size_file: 5 }], 'nuevo_site_north_photo_nombrefoto_format_KO'],
-  ['ubicacion', 'nuevo_site_north_photo', 89, 12, 'EDIT', 'format_name_file', [{ format_name_file: 'nombre#especial.jpg' }, { type_file: 'image/jpeg' }, { max_size_file: 5 }], 'nuevo_site_north_photo_nombrefoto_format_KO'],
-  ['ubicacion', 'nuevo_site_north_photo', 89, 13, 'EDIT', 'format_name_file', [{ format_name_file: 'nombre$%&.png' }, { type_file: 'image/png' }, { max_size_file: 5 }], 'nuevo_site_north_photo_nombrefoto_format_KO'],
-  ['ubicacion', 'nuevo_site_north_photo', 89, 14, 'EDIT', 'format_name_file', [{ format_name_file: 'nombre con espacios.jpeg' }, { type_file: 'image/jpeg' }, { max_size_file: 5 }], 'nuevo_site_north_photo_nombrefoto_format_KO'],
-  ['ubicacion', 'nuevo_site_north_photo', 89, 15, 'EDIT', 'format_name_file', [{ format_name_file: 'nombre*asterisco.bmp' }, { type_file: 'image/bmp' }, { max_size_file: 5 }], 'nuevo_site_north_photo_nombrefoto_format_KO'],
-  ['ubicacion', 'nuevo_site_north_photo', 90, 16, 'EDIT', 'format_name_file', [{ format_name_file: 'a.png' }, { type_file: 'image/png' }, { max_size_file: 5 }], 'nuevo_site_north_photo_nombrefoto_min_size_KO'],
-  ['ubicacion', 'nuevo_site_north_photo', 91, 17, 'EDIT', 'format_name_file', [{ format_name_file: 'n'.repeat(51) + '.png' }, { type_file: 'image/png' }, { max_size_file: 5 }], 'nuevo_site_north_photo_nombrefoto_max_size_KO'],
-  ['ubicacion', 'nuevo_site_north_photo', 94, 18, 'EDIT', 'correcto', [{ format_name_file: 'nombreValido.png' }, { type_file: 'image/png' }, { max_size_file: 5 }], true],
+  ["ubicacion", 'nuevo_site_north_photo', 88, 12, 'EDIT', 'existe', [], 'nuevo_site_north_photo_vacio_KO'],
+  ["ubicacion", 'nuevo_site_north_photo', 89, 13, 'EDIT', 'format_name_file', [{ format_name_file: 'nombre_con_guion.jpeg' }, { type_file: 'image/jpeg' }, { max_size_file: 5 }], 'nuevo_site_north_photo_nombrefoto_format_KO'],
+  ["ubicacion", 'nuevo_site_north_photo', 89, 14, 'EDIT', 'format_name_file', [{ format_name_file: 'nombre#especial.jpg' }, { type_file: 'image/jpeg' }, { max_size_file: 5 }], 'nuevo_site_north_photo_nombrefoto_format_KO'],
+  ["ubicacion", 'nuevo_site_north_photo', 89, 15, 'EDIT', 'format_name_file', [{ format_name_file: 'nombre$%&.jpg' }, { type_file: 'image/jpeg' }, { max_size_file: 5 }], 'nuevo_site_north_photo_nombrefoto_format_KO'],
+  ["ubicacion", 'nuevo_site_north_photo', 89, 16, 'EDIT', 'format_name_file', [{ format_name_file: 'nombre con espacios.jpg' }, { type_file: 'image/jpeg' }, { max_size_file: 5 }], 'nuevo_site_north_photo_nombrefoto_format_KO'],
+  ["ubicacion", 'nuevo_site_north_photo', 89, 17, 'EDIT', 'format_name_file', [{ format_name_file: 'nombre*asterisco.jpg' }, { type_file: 'image/jpeg' }, { max_size_file: 5 }], 'nuevo_site_north_photo_nombrefoto_format_KO'],
+  ["ubicacion", 'nuevo_site_north_photo', 90, 18, 'EDIT', 'format_name_file', [{ format_name_file: '.jpg' }, { type_file: 'image/jpeg' }, { max_size_file: 5 }], 'nuevo_site_north_photo_nombrefoto_min_size_KO'],
+  ["ubicacion", 'nuevo_site_north_photo', 91, 19, 'EDIT', 'format_name_file', [{ format_name_file: 'n'.repeat(51) + '.jpg' }, { type_file: 'image/jpeg' }, { max_size_file: 5 }], 'nuevo_site_north_photo_nombrefoto_max_size_KO'],
+  ["ubicacion", 'nuevo_site_north_photo', 92, 20, 'EDIT', 'format_name_file', [{ format_name_file: 'nombreValido.jpg' }, { type_file: 'application/pdf' }, { max_size_file: 5 }], 'nuevo_site_north_photo_format_KO'],
+  ["ubicacion", 'nuevo_site_north_photo', 93, 21, 'EDIT', 'format_name_file', [{ format_name_file: 'nombreValido.jpg'  }, { type_file: 'image/jpeg' }, { max_size_file: 21000000 }], 'nuevo_site_north_photo_max_size_KO'],
+  ["ubicacion", 'nuevo_site_north_photo', 94, 22, 'EDIT', 'correcto', [{ format_name_file: 'nombreValido.jpg' }, { type_file: 'image/jpeg' }, { max_size_file: 5 }], true],
 
   // ------------------- NUEVO SITE SOUTH PHOTO -------------------
   // ADD - 
-  ['ubicacion', 'nuevo_site_south_photo', 98, 19, 'ADD', 'existe', [], 'nuevo_site_south_photo_vacio_KO'],
-  ['ubicacion', 'nuevo_site_south_photo', 99, 20, 'ADD', 'format_name_file', [{ format_name_file: 'nombre_con_guion.pdf' }, { type_file: 'image/png' }, { max_size_file: 5 }], 'nuevo_site_south_photo_nombrefoto_format_KO'],
-  ['ubicacion', 'nuevo_site_south_photo', 99, 21, 'ADD', 'format_name_file', [{ format_name_file: 'nombre#especial.jpg' }, { type_file: 'image/jpeg' }, { max_size_file: 5 }], 'nuevo_site_south_photo_nombrefoto_format_KO'],
-  ['ubicacion', 'nuevo_site_south_photo', 99, 22, 'ADD', 'format_name_file', [{ format_name_file: 'nombre$%&.png' }, { type_file: 'image/png' }, { max_size_file: 5 }], 'nuevo_site_south_photo_nombrefoto_format_KO'],
-  ['ubicacion', 'nuevo_site_south_photo', 99, 23, 'ADD', 'format_name_file', [{ format_name_file: 'nombre con espacios.jpeg' }, { type_file: 'image/jpeg' }, { max_size_file: 5 }], 'nuevo_site_south_photo_nombrefoto_format_KO'],
-  ['ubicacion', 'nuevo_site_south_photo', 99, 24, 'ADD', 'format_name_file', [{ format_name_file: 'nombre*asterisco.bmp' }, { type_file: 'image/bmp' }, { max_size_file: 5 }], 'nuevo_site_south_photo_nombrefoto_format_KO'],
-  ['ubicacion', 'nuevo_site_south_photo', 100, 25, 'ADD', 'format_name_file', [{ format_name_file: 'a.png' }, { type_file: 'image/png' }, { max_size_file: 5 }], 'nuevo_site_south_photo_nombrefoto_min_size_KO'],
-  ['ubicacion', 'nuevo_site_south_photo', 101, 26, 'ADD', 'format_name_file', [{ format_name_file: 'n'.repeat(51) + '.png' }, { type_file: 'image/png' }, { max_size_file: 5 }], 'nuevo_site_south_photo_nombrefoto_max_size_KO'],
-  ['ubicacion', 'nuevo_site_south_photo', 104, 27, 'ADD', 'correcto', [{ format_name_file: 'nombreValido.png' }, { type_file: 'image/png' }, { max_size_file: 5 }], true],
+  ["ubicacion", 'nuevo_site_south_photo', 98, 23, 'ADD', 'existe', [], 'nuevo_site_south_photo_vacio_KO'],
+  ["ubicacion", 'nuevo_site_south_photo', 99, 24, 'ADD', 'format_name_file', [{ format_name_file: 'nombre_con_guion.jpeg' }, { type_file: 'image/jpeg' }, { max_size_file: 5 }], 'nuevo_site_south_photo_nombrefoto_format_KO'],
+  ["ubicacion", 'nuevo_site_south_photo', 99, 25, 'ADD', 'format_name_file', [{ format_name_file: 'nombre#especial.jpg' }, { type_file: 'image/jpeg' }, { max_size_file: 5 }], 'nuevo_site_south_photo_nombrefoto_format_KO'],
+  ["ubicacion", 'nuevo_site_south_photo', 99, 26, 'ADD', 'format_name_file', [{ format_name_file: 'nombre$%&.jpg' }, { type_file: 'image/jpeg' }, { max_size_file: 5 }], 'nuevo_site_south_photo_nombrefoto_format_KO'],
+  ["ubicacion", 'nuevo_site_south_photo', 99, 27, 'ADD', 'format_name_file', [{ format_name_file: 'nombre con espacios.jpg' }, { type_file: 'image/jpeg' }, { max_size_file: 5 }], 'nuevo_site_south_photo_nombrefoto_format_KO'],
+  ["ubicacion", 'nuevo_site_south_photo', 99, 28, 'ADD', 'format_name_file', [{ format_name_file: 'nombre*asterisco.jpg' }, { type_file: 'image/jpeg' }, { max_size_file: 5 }], 'nuevo_site_south_photo_nombrefoto_format_KO'],
+  ["ubicacion", 'nuevo_site_south_photo', 100, 29, 'ADD', 'format_name_file', [{ format_name_file: '.jpg' }, { type_file: 'image/jpeg' }, { max_size_file: 5 }], 'nuevo_site_south_photo_nombrefoto_min_size_KO'],
+  ["ubicacion", 'nuevo_site_south_photo', 101, 30, 'ADD', 'format_name_file', [{ format_name_file: 'n'.repeat(51) + '.jpg' }, { type_file: 'image/jpeg' }, { max_size_file: 5 }], 'nuevo_site_south_photo_nombrefoto_max_size_KO'],
+  ["ubicacion", 'nuevo_site_south_photo', 102, 31, 'ADD', 'format_name_file', [{ format_name_file: 'nombreValido.jpg' }, { type_file: 'application/pdf' }, { max_size_file: 5 }], 'nuevo_site_south_photo_format_KO'],
+  ["ubicacion", 'nuevo_site_south_photo', 103, 32, 'ADD', 'format_name_file', [{ format_name_file: 'nombreValido.jpg'  }, { type_file: 'image/jpeg' }, { max_size_file: 21000000 }], 'nuevo_site_south_photo_max_size_KO'],
+  ["ubicacion", 'nuevo_site_south_photo', 104, 33, 'ADD', 'correcto', [{ format_name_file: 'nombreValido.jpg' }, { type_file: 'image/jpeg' }, { max_size_file: 5 }], true],
 
   // EDIT -
-  ['ubicacion', 'nuevo_site_south_photo', 105, 28, 'EDIT', 'existe', [], 'nuevo_site_south_photo_vacio_KO'],
-  ['ubicacion', 'nuevo_site_south_photo', 106, 29, 'EDIT', 'format_name_file', [{ format_name_file: 'nombre_con_guion.pdf' }, { type_file: 'image/png' }, { max_size_file: 5 }], 'nuevo_site_south_photo_nombrefoto_format_KO'],
-  ['ubicacion', 'nuevo_site_south_photo', 106, 30, 'EDIT', 'format_name_file', [{ format_name_file: 'nombre#especial.jpg' }, { type_file: 'image/jpeg' }, { max_size_file: 5 }], 'nuevo_site_south_photo_nombrefoto_format_KO'],
-  ['ubicacion', 'nuevo_site_south_photo', 106, 31, 'EDIT', 'format_name_file', [{ format_name_file: 'nombre$%&.png' }, { type_file: 'image/png' }, { max_size_file: 5 }], 'nuevo_site_south_photo_nombrefoto_format_KO'],
-  ['ubicacion', 'nuevo_site_south_photo', 106, 32, 'EDIT', 'format_name_file', [{ format_name_file: 'nombre con espacios.jpeg' }, { type_file: 'image/jpeg' }, { max_size_file: 5 }], 'nuevo_site_south_photo_nombrefoto_format_KO'],
-  ['ubicacion', 'nuevo_site_south_photo', 106, 33, 'EDIT', 'format_name_file', [{ format_name_file: 'nombre*asterisco.bmp' }, { type_file: 'image/bmp' }, { max_size_file: 5 }], 'nuevo_site_south_photo_nombrefoto_format_KO'],
-  ['ubicacion', 'nuevo_site_south_photo', 107, 34, 'EDIT', 'format_name_file', [{ format_name_file: 'a.png' }, { type_file: 'image/png' }, { max_size_file: 5 }], 'nuevo_site_south_photo_nombrefoto_min_size_KO'],
-  ['ubicacion', 'nuevo_site_south_photo', 108, 35, 'EDIT', 'format_name_file', [{ format_name_file: 'n'.repeat(51) + '.png' }, { type_file: 'image/png' }, { max_size_file: 5 }], 'nuevo_site_south_photo_nombrefoto_max_size_KO'],
-  ['ubicacion', 'nuevo_site_south_photo', 111, 36, 'EDIT', 'correcto', [{ format_name_file: 'nombreValido.png' }, { type_file: 'image/png' }, { max_size_file: 5 }], true],
+  ["ubicacion", 'nuevo_site_south_photo', 105, 34, 'EDIT', 'existe', [], 'nuevo_site_south_photo_vacio_KO'],
+  ["ubicacion", 'nuevo_site_south_photo', 106, 35, 'EDIT', 'format_name_file', [{ format_name_file: 'nombre_con_guion.jpeg' }, { type_file: 'image/jpeg' }, { max_size_file: 5 }], 'nuevo_site_south_photo_nombrefoto_format_KO'],
+  ["ubicacion", 'nuevo_site_south_photo', 106, 36, 'EDIT', 'format_name_file', [{ format_name_file: 'nombre#especial.jpg' }, { type_file: 'image/jpeg' }, { max_size_file: 5 }], 'nuevo_site_south_photo_nombrefoto_format_KO'],
+  ["ubicacion", 'nuevo_site_south_photo', 106, 37, 'EDIT', 'format_name_file', [{ format_name_file: 'nombre$%&.jpg' }, { type_file: 'image/jpeg' }, { max_size_file: 5 }], 'nuevo_site_south_photo_nombrefoto_format_KO'],
+  ["ubicacion", 'nuevo_site_south_photo', 106, 38, 'EDIT', 'format_name_file', [{ format_name_file: 'nombre con espacios.jpg' }, { type_file: 'image/jpeg' }, { max_size_file: 5 }], 'nuevo_site_south_photo_nombrefoto_format_KO'],
+  ["ubicacion", 'nuevo_site_south_photo', 106, 39, 'EDIT', 'format_name_file', [{ format_name_file: 'nombre*asterisco.jpg' }, { type_file: 'image/jpeg' }, { max_size_file: 5 }], 'nuevo_site_south_photo_nombrefoto_format_KO'],
+  ["ubicacion", 'nuevo_site_south_photo', 107, 40, 'EDIT', 'format_name_file', [{ format_name_file: '.jpg' }, { type_file: 'image/jpeg' }, { max_size_file: 5 }], 'nuevo_site_south_photo_nombrefoto_min_size_KO'],
+  ["ubicacion", 'nuevo_site_south_photo', 108, 41, 'EDIT', 'format_name_file', [{ format_name_file: 'n'.repeat(51) + '.jpg' }, { type_file: 'image/jpeg' }, { max_size_file: 5 }], 'nuevo_site_south_photo_nombrefoto_max_size_KO'],
+  ["ubicacion", 'nuevo_site_south_photo', 109,42, 'EDIT', 'format_name_file', [{ format_name_file: 'nombreValido.jpg' }, { type_file: 'application/pdf' }, { max_size_file: 5 }], 'nuevo_site_south_photo_format_KO'],
+  ["ubicacion", 'nuevo_site_south_photo', 110,43, 'EDIT', 'format_name_file', [{ format_name_file: 'nombreValido.jpg'  }, { type_file: 'image/jpeg' }, { max_size_file: 21000000 }], 'nuevo_site_south_photo_max_size_KO'],
+  ["ubicacion", 'nuevo_site_south_photo', 111, 44, 'EDIT', 'correcto', [{ format_name_file: 'nombreValido.jpg' }, { type_file: 'image/jpeg' }, { max_size_file: 5 }], true],
  
     // ------------------- NUEVO SITE EAST PHOTO -------------------
     // ADD
     //
-    ['ubicacion', 'nuevo_site_east_photo', 115, 37, 'ADD', 'existe', [], 'nuevo_site_east_photo_vacio_KO'],
-    ['ubicacion', 'nuevo_site_east_photo', 116, 38, 'ADD', 'format_name_file', [{ format_name_file: 'nombre_con_guion.pdf' }, { type_file: 'image/png' }, { max_size_file: 5 }], 'nuevo_site_east_photo_nombrefoto_format_KO'],
-    ['ubicacion', 'nuevo_site_east_photo', 116, 39, 'ADD', 'format_name_file', [{ format_name_file: 'nombre#especial.jpg' }, { type_file: 'image/jpeg' }, { max_size_file: 5 }], 'nuevo_site_east_photo_nombrefoto_format_KO'],
-    ['ubicacion', 'nuevo_site_east_photo', 116, 40, 'ADD', 'format_name_file', [{ format_name_file: 'nombre$%&.png' }, { type_file: 'image/png' }, { max_size_file: 5 }], 'nuevo_site_east_photo_nombrefoto_format_KO'],
-    ['ubicacion', 'nuevo_site_east_photo', 116, 41, 'ADD', 'format_name_file', [{ format_name_file: 'nombre con espacios.jpeg' }, { type_file: 'image/jpeg' }, { max_size_file: 5 }], 'nuevo_site_east_photo_nombrefoto_format_KO'],
-    ['ubicacion', 'nuevo_site_east_photo', 116, 42, 'ADD', 'format_name_file', [{ format_name_file: 'nombre*asterisco.bmp' }, { type_file: 'image/bmp' }, { max_size_file: 5 }], 'nuevo_site_east_photo_nombrefoto_format_KO'],
-    ['ubicacion', 'nuevo_site_east_photo', 117, 43, 'ADD', 'format_name_file', [{ format_name_file: 'a.png' }, { type_file: 'image/png' }, { max_size_file: 5 }], 'nuevo_site_east_photo_nombrefoto_min_size_KO'],
-    ['ubicacion', 'nuevo_site_east_photo', 118, 44, 'ADD', 'format_name_file', [{ format_name_file: 'n'.repeat(51) + '.png' }, { type_file: 'image/png' }, { max_size_file: 5 }], 'nuevo_site_east_photo_nombrefoto_max_size_KO'],
-    ['ubicacion', 'nuevo_site_east_photo', 119, 45, 'ADD', 'format_name_file', [{ format_name_file: 'nombreValido.png' }, { type_file: 'image/pdf' }, { max_size_file: 5 }], 'nuevo_site_east_photo_format_KO'],
-    ['ubicacion', 'nuevo_site_east_photo', 120, 46, 'ADD', 'format_name_file', [{ format_name_file: 'nombreValido.png' }, { type_file: 'image/png' }, { max_size_file: 20000000 }], 'nuevo_site_east_photo_max_size_KO'],
-    ['ubicacion', 'nuevo_site_east_photo', 121, 47, 'ADD', 'correcto', [{ format_name_file: 'nombreValido.png' }, { type_file: 'image/png' }, { max_size_file: 5 }], true],
+    ["ubicacion", 'nuevo_site_east_photo', 115, 45, 'ADD', 'existe', [], 'nuevo_site_east_photo_vacio_KO'],
+    ["ubicacion", 'nuevo_site_east_photo', 116, 46, 'ADD', 'format_name_file', [{ format_name_file: 'nombre_con_guion.jpeg' }, { type_file: 'image/jpeg' }, { max_size_file: 5 }], 'nuevo_site_east_photo_nombrefoto_format_KO'],
+    ["ubicacion", 'nuevo_site_east_photo', 116, 47, 'ADD', 'format_name_file', [{ format_name_file: 'nombre#especial.jpg' }, { type_file: 'image/jpeg' }, { max_size_file: 5 }], 'nuevo_site_east_photo_nombrefoto_format_KO'],
+    ["ubicacion", 'nuevo_site_east_photo', 116, 48, 'ADD', 'format_name_file', [{ format_name_file: 'nombre$%&.jpg' }, { type_file: 'image/jpeg' }, { max_size_file: 5 }], 'nuevo_site_east_photo_nombrefoto_format_KO'],
+    ["ubicacion", 'nuevo_site_east_photo', 116, 49, 'ADD', 'format_name_file', [{ format_name_file: 'nombre con espacios.jpg' }, { type_file: 'image/jpeg' }, { max_size_file: 5 }], 'nuevo_site_east_photo_nombrefoto_format_KO'],
+    ["ubicacion", 'nuevo_site_east_photo', 116, 50, 'ADD', 'format_name_file', [{ format_name_file: 'nombre*asterisco.jpg' }, { type_file: 'image/jpeg' }, { max_size_file: 5 }], 'nuevo_site_east_photo_nombrefoto_format_KO'],
+    ["ubicacion", 'nuevo_site_east_photo', 117, 51, 'ADD', 'format_name_file', [{ format_name_file: '.jpg' }, { type_file: 'image/jpeg' }, { max_size_file: 5 }], 'nuevo_site_east_photo_nombrefoto_min_size_KO'],
+    ["ubicacion", 'nuevo_site_east_photo', 118, 52, 'ADD', 'format_name_file', [{ format_name_file: 'n'.repeat(51) + '.jpg' }, { type_file: 'image/jpeg' }, { max_size_file: 5 }], 'nuevo_site_east_photo_nombrefoto_max_size_KO'],
+    ["ubicacion", 'nuevo_site_east_photo', 119, 53, 'ADD', 'format_name_file', [{ format_name_file: 'nombreValido.jpg' }, { type_file: 'image/pdf' }, { max_size_file: 5 }], 'nuevo_site_east_photo_format_KO'],
+    ["ubicacion", 'nuevo_site_east_photo', 120, 54, 'ADD', 'format_name_file', [{ format_name_file: 'nombreValido.jpg' }, { type_file: 'image/jpeg' }, { max_size_file: 21000000 }], 'nuevo_site_east_photo_max_size_KO'],  
+    ["ubicacion", 'nuevo_site_east_photo', 121, 55, 'ADD', 'correcto', [{ format_name_file: 'nombreValido.jpg' }, { type_file: 'image/jpeg' }, { max_size_file: 5 }], true],
   
     // EDIT 
-    ['ubicacion', 'nuevo_site_east_photo', 122, 48, 'EDIT', 'existe', [], 'nuevo_site_east_photo_vacio_KO'],
-    ['ubicacion', 'nuevo_site_east_photo', 123, 49, 'EDIT', 'format_name_file', [{ format_name_file: 'nombre_con_guion.pdf' }, { type_file: 'image/png' }, { max_size_file: 5 }], 'nuevo_site_east_photo_nombrefoto_format_KO'],
-    ['ubicacion', 'nuevo_site_east_photo', 123, 50, 'EDIT', 'format_name_file', [{ format_name_file: 'nombre#especial.jpg' }, { type_file: 'image/jpeg' }, { max_size_file: 5 }], 'nuevo_site_east_photo_nombrefoto_format_KO'],
-    ['ubicacion', 'nuevo_site_east_photo', 123, 51, 'EDIT', 'format_name_file', [{ format_name_file: 'nombre$%&.png' }, { type_file: 'image/png' }, { max_size_file: 5 }], 'nuevo_site_east_photo_nombrefoto_format_KO'],
-    ['ubicacion', 'nuevo_site_east_photo', 123, 52, 'EDIT', 'format_name_file', [{ format_name_file: 'nombre con espacios.jpeg' }, { type_file: 'image/jpeg' }, { max_size_file: 5 }], 'nuevo_site_east_photo_nombrefoto_format_KO'],
-    ['ubicacion', 'nuevo_site_east_photo', 123, 53, 'EDIT', 'format_name_file', [{ format_name_file: 'nombre*asterisco.bmp' }, { type_file: 'image/bmp' }, { max_size_file: 5 }], 'nuevo_site_east_photo_nombrefoto_format_KO'],
-    ['ubicacion', 'nuevo_site_east_photo', 124, 54, 'EDIT', 'format_name_file', [{ format_name_file: 'a.png' }, { type_file: 'image/png' }, { max_size_file: 5 }], 'nuevo_site_east_photo_nombrefoto_min_size_KO'],
-    ['ubicacion', 'nuevo_site_east_photo', 125, 55, 'EDIT', 'format_name_file', [{ format_name_file: 'n'.repeat(51) + '.png' }, { type_file: 'image/png' }, { max_size_file: 5 }], 'nuevo_site_east_photo_nombrefoto_max_size_KO'],
-    ['ubicacion', 'nuevo_site_east_photo', 126, 56, 'EDIT', 'format_name_file', [{ format_name_file: 'nombreValido.png' }, { type_file: 'image/pdf' }, { max_size_file: 5 }], 'nuevo_site_east_photo_format_KO'],
-    ['ubicacion', 'nuevo_site_east_photo', 127, 57, 'EDIT', 'format_name_file', [{ format_name_file: 'nombreValido.png' }, { type_file: 'image/png' }, { max_size_file: 20000000 }], 'nuevo_site_east_photo_max_size_KO'],
-    ['ubicacion', 'nuevo_site_east_photo', 128, 58, 'EDIT', 'correcto', [{ format_name_file: 'nombreValido.png' }, { type_file: 'image/png' }, { max_size_file: 5 }], true],
+    ["ubicacion", 'nuevo_site_east_photo', 122, 56, 'EDIT', 'existe', [], 'nuevo_site_east_photo_vacio_KO'],
+    ["ubicacion", 'nuevo_site_east_photo', 122, 57, 'EDIT', 'format_name_file', [{ format_name_file: 'nombre_con_guion.jpeg' }, { type_file: 'image/jpeg' }, { max_size_file: 5 }], 'nuevo_site_east_photo_nombrefoto_format_KO'],
+    ["ubicacion", 'nuevo_site_east_photo', 122, 58, 'EDIT', 'format_name_file', [{ format_name_file: 'nombre#especial.jpg' }, { type_file: 'image/jpeg' }, { max_size_file: 5 }], 'nuevo_site_east_photo_nombrefoto_format_KO'],
+    ["ubicacion", 'nuevo_site_east_photo', 122, 59, 'EDIT', 'format_name_file', [{ format_name_file: 'nombre$%&.jpg' }, { type_file: 'image/jpeg' }, { max_size_file: 5 }], 'nuevo_site_east_photo_nombrefoto_format_KO'],
+    ["ubicacion", 'nuevo_site_east_photo', 122, 60, 'EDIT', 'format_name_file', [{ format_name_file: 'nombre con espacios.jpg' }, { type_file: 'image/jpeg' }, { max_size_file: 5 }], 'nuevo_site_east_photo_nombrefoto_format_KO'],
+    ["ubicacion", 'nuevo_site_east_photo', 122, 61, 'EDIT', 'format_name_file', [{ format_name_file: 'nombre*asterisco.jpg' }, { type_file: 'image/jpeg' }, { max_size_file: 5 }], 'nuevo_site_east_photo_nombrefoto_format_KO'],
+    ["ubicacion", 'nuevo_site_east_photo', 123, 62, 'EDIT', 'format_name_file', [{ format_name_file: '.jpg' }, { type_file: 'image/jpeg' }, { max_size_file: 5 }], 'nuevo_site_east_photo_nombrefoto_min_size_KO'],
+    ["ubicacion", 'nuevo_site_east_photo', 124, 63, 'EDIT', 'format_name_file', [{ format_name_file: 'n'.repeat(51) + '.jpg' }, { type_file: 'image/jpeg' }, { max_size_file: 5 }], 'nuevo_site_east_photo_nombrefoto_max_size_KO'],
+    ["ubicacion", 'nuevo_site_east_photo', 125, 64, 'EDIT', 'format_name_file', [{ format_name_file: 'nombreValido.jpg' }, { type_file: 'image/pdf' }, { max_size_file: 5 }], 'nuevo_site_east_photo_format_KO'],
+    ["ubicacion", 'nuevo_site_east_photo', 126, 65, 'EDIT', 'format_name_file', [{ format_name_file: 'nombreValido.jpg' }, { type_file: 'image/jpeg' }, { max_size_file: 21000000 }], 'nuevo_site_east_photo_max_size_KO'], 
+    ["ubicacion", 'nuevo_site_east_photo', 127, 66, 'EDIT', 'correcto', [{ format_name_file: 'nombreValido.jpg' }, { type_file: 'image/jpeg' }, { max_size_file: 5 }], true],
   
     // ------------------- NUEVO SITE WEST PHOTO -------------------
     // ADD 
-    ['ubicacion', 'nuevo_site_west_photo', 132, 59, 'ADD', 'existe', [], 'nuevo_site_west_photo_vacio_KO'],
-    ['ubicacion', 'nuevo_site_west_photo', 133, 60, 'ADD', 'format_name_file', [{ format_name_file: 'nombre_con_guion.pdf' }, { type_file: 'image/png' }, { max_size_file: 5 }], 'nuevo_site_west_photo_nombrefoto_format_KO'],
-    ['ubicacion', 'nuevo_site_west_photo', 133, 61, 'ADD', 'format_name_file', [{ format_name_file: 'nombre#especial.jpg' }, { type_file: 'image/jpeg' }, { max_size_file: 5 }], 'nuevo_site_west_photo_nombrefoto_format_KO'],
-    ['ubicacion', 'nuevo_site_west_photo', 133, 62, 'ADD', 'format_name_file', [{ format_name_file: 'nombre$%&.png' }, { type_file: 'image/png' }, { max_size_file: 5 }], 'nuevo_site_west_photo_nombrefoto_format_KO'],
-    ['ubicacion', 'nuevo_site_west_photo', 133, 63, 'ADD', 'format_name_file', [{ format_name_file: 'nombre con espacios.jpeg' }, { type_file: 'image/jpeg' }, { max_size_file: 5 }], 'nuevo_site_west_photo_nombrefoto_format_KO'],
-    ['ubicacion', 'nuevo_site_west_photo', 133, 64, 'ADD', 'format_name_file', [{ format_name_file: 'nombre*asterisco.bmp' }, { type_file: 'image/bmp' }, { max_size_file: 5 }], 'nuevo_site_west_photo_nombrefoto_format_KO'],
-    ['ubicacion', 'nuevo_site_west_photo', 134, 65, 'ADD', 'format_name_file', [{ format_name_file: 'a.png' }, { type_file: 'image/png' }, { max_size_file: 5 }], 'nuevo_site_west_photo_nombrefoto_min_size_KO'],
-    ['ubicacion', 'nuevo_site_west_photo', 135, 66, 'ADD', 'format_name_file', [{ format_name_file: 'n'.repeat(51) + '.png' }, { type_file: 'image/png' }, { max_size_file: 5 }], 'nuevo_site_west_photo_nombrefoto_max_size_KO'],
-    ['ubicacion', 'nuevo_site_west_photo', 136, 67, 'ADD', 'format_name_file', [{ format_name_file: 'nombreValido.png' }, { type_file: 'image/pdf' }, { max_size_file: 5 }], 'nuevo_site_west_photo_format_KO'],
-    ['ubicacion', 'nuevo_site_west_photo', 137, 68, 'ADD', 'format_name_file', [{ format_name_file: 'nombreValido.png' }, { type_file: 'image/png' }, { max_size_file: 20000000 }], 'nuevo_site_west_photo_max_size_KO'],
-    ['ubicacion', 'nuevo_site_west_photo', 138, 69, 'ADD', 'correcto', [{ format_name_file: 'nombreValido.png' }, { type_file: 'image/png' }, { max_size_file: 5 }], true],
+    ["ubicacion", 'nuevo_site_west_photo', 132, 67, 'ADD', 'existe', [], 'nuevo_site_west_photo_vacio_KO'],
+    ["ubicacion", 'nuevo_site_west_photo', 133, 68, 'ADD', 'format_name_file', [{ format_name_file: 'nombre_con_guion.jpeg' }, { type_file: 'image/jpeg' }, { max_size_file: 5 }], 'nuevo_site_west_photo_nombrefoto_format_KO'],
+    ["ubicacion", 'nuevo_site_west_photo', 133, 69, 'ADD', 'format_name_file', [{ format_name_file: 'nombre#especial.jpg' }, { type_file: 'image/jpeg' }, { max_size_file: 5 }], 'nuevo_site_west_photo_nombrefoto_format_KO'],
+    ["ubicacion", 'nuevo_site_west_photo', 133, 70, 'ADD', 'format_name_file', [{ format_name_file: 'nombre$%&.jpg' }, { type_file: 'image/jpeg' }, { max_size_file: 5 }], 'nuevo_site_west_photo_nombrefoto_format_KO'],
+    ["ubicacion", 'nuevo_site_west_photo', 133, 71, 'ADD', 'format_name_file', [{ format_name_file: 'nombre con espacios.jpg' }, { type_file: 'image/jpeg' }, { max_size_file: 5 }], 'nuevo_site_west_photo_nombrefoto_format_KO'],
+    ["ubicacion", 'nuevo_site_west_photo', 133, 72, 'ADD', 'format_name_file', [{ format_name_file: 'nombre*asterisco.jpg' }, { type_file: 'image/jpeg' }, { max_size_file: 5 }], 'nuevo_site_west_photo_nombrefoto_format_KO'],
+    ["ubicacion", 'nuevo_site_west_photo', 134, 73, 'ADD', 'format_name_file', [{ format_name_file: '.jpg' }, { type_file: 'image/jpeg' }, { max_size_file: 5 }], 'nuevo_site_west_photo_nombrefoto_min_size_KO'],
+    ["ubicacion", 'nuevo_site_west_photo', 135, 74, 'ADD', 'format_name_file', [{ format_name_file: 'n'.repeat(51) + '.jpg' }, { type_file: 'image/jpeg' }, { max_size_file: 5 }], 'nuevo_site_west_photo_nombrefoto_max_size_KO'],
+    ["ubicacion", 'nuevo_site_west_photo', 136, 75, 'ADD', 'format_name_file', [{ format_name_file: 'nombreValido.jpg' }, { type_file: 'image/pdf' }, { max_size_file: 5 }], 'nuevo_site_west_photo_format_KO'],
+    ["ubicacion", 'nuevo_site_west_photo', 137, 76, 'ADD', 'format_name_file', [{ format_name_file: 'nombreValido.jpg' }, { type_file: 'image/jpeg' }, { max_size_file: 21000000 }], 'nuevo_site_west_photo_max_size_KO'],
+    ["ubicacion", 'nuevo_site_west_photo', 138, 77, 'ADD', 'correcto', [{ format_name_file: 'nombreValido.jpg' }, { type_file: 'image/jpeg' }, { max_size_file: 5 }], true],
   
     // EDIT 
-    ['ubicacion', 'nuevo_site_west_photo', 139, 70, 'EDIT', 'existe', [], 'nuevo_site_west_photo_vacio_KO'],
-    ['ubicacion', 'nuevo_site_west_photo', 140, 71, 'EDIT', 'format_name_file', [{ format_name_file: 'nombre_con_guion.pdf' }, { type_file: 'image/png' }, { max_size_file: 5 }], 'nuevo_site_west_photo_nombrefoto_format_KO'],
-    ['ubicacion', 'nuevo_site_west_photo', 140, 72, 'EDIT', 'format_name_file', [{ format_name_file: 'nombre#especial.jpg' }, { type_file: 'image/jpeg' }, { max_size_file: 5 }], 'nuevo_site_west_photo_nombrefoto_format_KO'],
-    ['ubicacion', 'nuevo_site_west_photo', 140, 73, 'EDIT', 'format_name_file', [{ format_name_file: 'nombre$%&.png' }, { type_file: 'image/png' }, { max_size_file: 5 }], 'nuevo_site_west_photo_nombrefoto_format_KO'],
-    ['ubicacion', 'nuevo_site_west_photo', 140, 74, 'EDIT', 'format_name_file', [{ format_name_file: 'nombre con espacios.jpeg' }, { type_file: 'image/jpeg' }, { max_size_file: 5 }], 'nuevo_site_west_photo_nombrefoto_format_KO'],
-    ['ubicacion', 'nuevo_site_west_photo', 140, 75, 'EDIT', 'format_name_file', [{ format_name_file: 'nombre*asterisco.bmp' }, { type_file: 'image/bmp' }, { max_size_file: 5 }], 'nuevo_site_west_photo_nombrefoto_format_KO'],
-    ['ubicacion', 'nuevo_site_west_photo', 141, 76, 'EDIT', 'format_name_file', [{ format_name_file: 'a.png' }, { type_file: 'image/png' }, { max_size_file: 5 }], 'nuevo_site_west_photo_nombrefoto_min_size_KO'],
-    ['ubicacion', 'nuevo_site_west_photo', 142, 77, 'EDIT', 'format_name_file', [{ format_name_file: 'n'.repeat(51) + '.png' }, { type_file: 'image/png' }, { max_size_file: 5 }], 'nuevo_site_west_photo_nombrefoto_max_size_KO'],
-    ['ubicacion', 'nuevo_site_west_photo', 143, 78, 'EDIT', 'format_name_file', [{ format_name_file: 'nombreValido.png' }, { type_file: 'image/pdf' }, { max_size_file: 5 }], 'nuevo_site_west_photo_format_KO'],
-    ['ubicacion', 'nuevo_site_west_photo', 144, 79, 'EDIT', 'format_name_file', [{ format_name_file: 'nombreValido.png' }, { type_file: 'image/png' }, { max_size_file: 20000000 }], 'nuevo_site_west_photo_max_size_KO'],
-    ['ubicacion', 'nuevo_site_west_photo', 145, 80, 'EDIT', 'correcto', [{ format_name_file: 'nombreValido.png' }, { type_file: 'image/png' }, { max_size_file: 5 }], true],
+    ["ubicacion", 'nuevo_site_west_photo', 139, 78, 'EDIT', 'existe', [], 'nuevo_site_west_photo_vacio_KO'],
+    ["ubicacion", 'nuevo_site_west_photo', 140, 79, 'EDIT', 'format_name_file', [{ format_name_file: 'nombre_con_guion.jpeg' }, { type_file: 'image/jpeg' }, { max_size_file: 5 }], 'nuevo_site_west_photo_nombrefoto_format_KO'],
+    ["ubicacion", 'nuevo_site_west_photo', 140, 80, 'EDIT', 'format_name_file', [{ format_name_file: 'nombre#especial.jpg' }, { type_file: 'image/jpeg' }, { max_size_file: 5 }], 'nuevo_site_west_photo_nombrefoto_format_KO'],
+    ["ubicacion", 'nuevo_site_west_photo', 140, 81, 'EDIT', 'format_name_file', [{ format_name_file: 'nombre$%&.jpg' }, { type_file: 'image/jpeg' }, { max_size_file: 5 }], 'nuevo_site_west_photo_nombrefoto_format_KO'],
+    ["ubicacion", 'nuevo_site_west_photo', 140, 82, 'EDIT', 'format_name_file', [{ format_name_file: 'nombre con espacios.jpg' }, { type_file: 'image/jpeg' }, { max_size_file: 5 }], 'nuevo_site_west_photo_nombrefoto_format_KO'],
+    ["ubicacion", 'nuevo_site_west_photo', 140, 83, 'EDIT', 'format_name_file', [{ format_name_file: 'nombre*asterisco.jpg' }, { type_file: 'image/jpeg' }, { max_size_file: 5 }], 'nuevo_site_west_photo_nombrefoto_format_KO'],
+    ["ubicacion", 'nuevo_site_west_photo', 141, 84, 'EDIT', 'format_name_file', [{ format_name_file: '.jpg' }, { type_file: 'image/jpeg' }, { max_size_file: 5 }], 'nuevo_site_west_photo_nombrefoto_min_size_KO'],
+    ["ubicacion", 'nuevo_site_west_photo', 142, 85, 'EDIT', 'format_name_file', [{ format_name_file: 'n'.repeat(51) + '.jpg' }, { type_file: 'image/jpeg' }, { max_size_file: 5 }], 'nuevo_site_west_photo_nombrefoto_max_size_KO'],
+    ["ubicacion", 'nuevo_site_west_photo', 143, 86, 'EDIT', 'format_name_file', [{ format_name_file: 'nombreValido.jpg' }, { type_file: 'image/pdf' }, { max_size_file: 5 }], 'nuevo_site_west_photo_format_KO'],
+    ["ubicacion", 'nuevo_site_west_photo', 144, 87, 'EDIT', 'format_name_file', [{ format_name_file: 'nombreValido.jpg' }, { type_file: 'image/jpeg' }, { max_size_file: 21000000 }], 'nuevo_site_west_photo_max_size_KO'],
+    ["ubicacion", 'nuevo_site_west_photo', 145, 88, 'EDIT', 'correcto', [{ format_name_file: 'nombreValido.jpg' }, { type_file: 'image/jpeg' }, { max_size_file: 5 }], true],
   
   
 ];
