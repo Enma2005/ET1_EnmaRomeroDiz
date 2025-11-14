@@ -1035,7 +1035,7 @@ class alumnograduacion extends EntidadAbstracta {
 		this.dom.colocarvalidaciones('form_iu', 'EDIT');
 
 		// poner inactivos los campos correspondientes
-		this.dom.assign_property_value('dni', 'readonly', 'true');
+		this.dom.assign_property_value('alumnograduacion_dni', 'readonly', 'true');
 		this.dom.assign_property_value('alumnograduacion_fotoacto', 'readonly', 'true');
 
 		// colocar boton de submit
@@ -1157,11 +1157,11 @@ class alumnograduacion extends EntidadAbstracta {
 
 		// reemplazar enumerados por texto
 		// titulacion_persona que es un select
-		this.dom.replaceSelectXEmptyInput('titulacion_persona');
+		this.dom.replaceSelectXEmptyInput('alumnograduacion_titulacion');
 		// menu_persona que es un checkbox
-		this.dom.replaceEnumNameXEmptyInput('menu_persona');
+		//this.dom.replaceEnumNameXEmptyInput('menu_persona');
 		// genero_persona que es un radio
-		this.dom.replaceEnumNameXEmptyInput('genero_persona');
+		//this.dom.replaceEnumNameXEmptyInput('genero_persona');
 
 		// rellenar valores
 		// en SEARCH no hay valores que rellenar

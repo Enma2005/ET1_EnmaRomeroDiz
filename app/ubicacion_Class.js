@@ -941,145 +941,217 @@ is_jpeg_file(id) {
     }
  
     
-    createForm_ADD() {
 
-        // limpiar y poner visible el formulario
-        document.getElementById('contenedor_IU_form').innerHTML = this.manual_form_creation();
-        this.dom.show_element('Div_IU_form', 'block');
-        this.dom.remove_class_value('class_contenido_Titulo_form', 'text_contenido_Titulo_form');
-        this.dom.assign_class_value('class_contenido_Titulo_form', 'text_contenido_Titulo_form_ADD');
-    
-        // poner onsubmit y action
-        this.dom.assign_property_value('form_iu', 'onsubmit', 'return entidad.ADD_submit_ubicacion()');
-        this.dom.assign_property_value('form_iu', 'action', 'javascript:entidad.ADD();');
-    
-        // ocultar elementos de solo visualización o autogenerados
-        this.dom.hide_element('site_north_photo');
-        this.dom.hide_element('site_south_photo');
-        this.dom.hide_element('site_east_photo');
-        this.dom.hide_element('site_west_photo');
-    
-        // colocar validaciones
-        this.dom.colocarvalidaciones('form_iu', 'ADD');
-    
-        // colocar boton de submit
-        this.dom.colocarboton('ADD');
-    
-        setLang();
-    }
-    
     createForm_EDIT(fila) {
-    
-        // limpiar y poner visible el formulario
+
+        // limpiar poner titulo y poner visible el formulario
         document.getElementById('contenedor_IU_form').innerHTML = this.manual_form_creation();
         this.dom.show_element('Div_IU_form', 'block');
-        this.dom.remove_class_value('class_contenido_Titulo_form', 'text_contenido_Titulo_form');
-        this.dom.assign_class_value('class_contenido_Titulo_form', 'text_contenido_Titulo_form_EDIT');
-    
-        // onsubmit y action
-        this.dom.assign_property_value('form_iu', 'onsubmit', 'return entidad.EDIT_submit_ubicacion()');
+
+        this.dom.remove_class_value('class_contenido_titulo_form', 'text_contenido_titulo_form');
+        this.dom.assign_class_value('class_contenido_titulo_form', 'text_contenido_titulo_form_ubicacion_EDIT');
+
+        // rellenar onsubmit y action
+        this.dom.assign_property_value('form_iu', 'onsubmit', 'return entidad.EDIT_submit_' + this.nombreentidad + '()');
         this.dom.assign_property_value('form_iu', 'action', 'javascript:entidad.EDIT();');
-    
+
+        //activar el link al fichero
+
+        this.dom.assign_property_value('link_site_north_photo', 'href', 'http://193.147.87.202/ET2/filesuploaded/files_site_north_photo/' + fila.site_north_photo);
+
+        this.dom.assign_property_value('link_site_south_photo', 'href', 'http://193.147.87.202/ET2/filesuploaded/files_site_south_photo/' + fila.site_west_photo);
+
+        this.dom.assign_property_value('link_site_east_photo', 'href', 'http://193.147.87.202/ET2/filesuploaded/files_site_east_photo/' + fila.site_east_photo);
+
+        this.dom.assign_property_value('link_site_west_photo', 'href', 'http://193.147.87.202/ET2/filesuploaded/files_site_west_photo/' + fila.site_west_photo);
+
+
         // rellenar valores
         this.dom.rellenarvaloresform(fila);
-    
-        // mostrar links a fotos
-        this.dom.assign_property_value('site_north_photo', 'href', 'http://193.147.87.202/ET2/filesuploaded/sites/' + fila.site_north_photo);
-        this.dom.assign_property_value('site_south_photo', 'href', 'http://193.147.87.202/ET2/filesuploaded/sites/' + fila.site_south_photo);
-        this.dom.assign_property_value('site_east_photo', 'href', 'http://193.147.87.202/ET2/filesuploaded/sites/' + fila.site_east_photo);
-        this.dom.assign_property_value('site_west_photo', 'href', 'http://193.147.87.202/ET2/filesuploaded/sites/' + fila.site_west_photo);
-    
-        // colocar validaciones
+
+        // poner las validaciones
         this.dom.colocarvalidaciones('form_iu', 'EDIT');
-    
-        // campos solo lectura si aplica
-        this.dom.assign_property_value('site_provider_login', 'readonly', 'true');
-    
+
+        // poner inactivos los campos correspondientes
+        this.dom.assign_property_value('id_site', 'readonly', 'true');
+
+        this.dom.assign_property_value('site_north_photo', 'readonly', 'true');
+        this.dom.assign_property_value('site_south_photo', 'readonly', 'true');
+        this.dom.assign_property_value('site_east_photo', 'readonly', 'true');
+        this.dom.assign_property_value('site_west_photo', 'readonly', 'true');
+
         // colocar boton de submit
         this.dom.colocarboton('EDIT');
-    
+
         setLang();
+
     }
-    
+
     createForm_DELETE(fila) {
-    
-        // limpiar y poner visible el formulario
-        document.getElementById('contenedor_IU_form').innerHTML = this.manual_form_creation();
-        this.dom.show_element('Div_IU_form', 'block');
-        this.dom.remove_class_value('class_contenido_Titulo_form', 'text_contenido_Titulo_form');
-        this.dom.assign_class_value('class_contenido_Titulo_form', 'text_contenido_Titulo_form_DELETE');
-    
-        // action
-        this.dom.assign_property_value('form_iu', 'action', 'javascript:entidad.DELETE();');
-    
-        // rellenar valores
-        this.dom.rellenarvaloresform(fila);
-    
-        // mostrar links a fotos
-        this.dom.assign_property_value('site_north_photo', 'href', 'http://193.147.87.202/ET2/filesuploaded/sites/' + fila.site_north_photo);
-        this.dom.assign_property_value('site_south_photo', 'href', 'http://193.147.87.202/ET2/filesuploaded/sites/' + fila.site_south_photo);
-        this.dom.assign_property_value('site_east_photo', 'href', 'http://193.147.87.202/ET2/filesuploaded/sites/' + fila.site_east_photo);
-        this.dom.assign_property_value('site_west_photo', 'href', 'http://193.147.87.202/ET2/filesuploaded/sites/' + fila.site_west_photo);
-    
-        // poner todos readonly
-        this.dom.colocartodosreadonly('form_iu');
-    
-        // colocar boton de submit
-        this.dom.colocarboton('DELETE');
-    
-        setLang();
-    }
-    
-    createForm_SHOWCURRENT(fila) {
-    
-        // limpiar y poner visible el formulario
-        document.getElementById('contenedor_IU_form').innerHTML = this.manual_form_creation();
-        this.dom.show_element('Div_IU_form', 'block');
-        this.dom.remove_class_value('class_contenido_Titulo_form', 'text_contenido_Titulo_form');
-        this.dom.assign_class_value('class_contenido_Titulo_form', 'text_contenido_Titulo_form_SHOWCURRENT');
-    
-        // rellenar valores
-        this.dom.rellenarvaloresform(fila);
-    
-        // mostrar links a fotos
-        this.dom.assign_property_value('site_north_photo', 'href', 'http://193.147.87.202/ET2/filesuploaded/sites/' + fila.site_north_photo);
-        this.dom.assign_property_value('site_south_photo', 'href', 'http://193.147.87.202/ET2/filesuploaded/sites/' + fila.site_south_photo);
-        this.dom.assign_property_value('site_east_photo', 'href', 'http://193.147.87.202/ET2/filesuploaded/sites/' + fila.site_east_photo);
-        this.dom.assign_property_value('site_west_photo', 'href', 'http://193.147.87.202/ET2/filesuploaded/sites/' + fila.site_west_photo);
-    
-        // poner todos readonly
-        this.dom.colocartodosreadonly('form_iu');
-    
-        setLang();
-    }
-    
-    createForm_SEARCH() {
 
         // limpiar y poner visible el formulario
         document.getElementById('contenedor_IU_form').innerHTML = this.manual_form_creation();
         this.dom.show_element('Div_IU_form', 'block');
-        this.dom.remove_class_value('class_contenido_Titulo_form', 'text_contenido_Titulo_form');
-        this.dom.assign_class_value('class_contenido_Titulo_form', 'text_contenido_Titulo_form_SEARCH');
-    
-        // onsubmit y action
-        this.dom.assign_property_value('form_iu', 'onsubmit', 'return entidad.SEARCH_submit_ubicacion()');
-        this.dom.assign_property_value('form_iu', 'action', 'javascript:entidad.SEARCH();');
-    
-        // ocultar links de fotos
-        this.dom.hide_element('site_north_photo');
-        this.dom.hide_element('site_south_photo');
-        this.dom.hide_element('site_east_photo');
-        this.dom.hide_element('site_west_photo');
-    
-        // colocar validaciones
-        this.dom.colocarvalidaciones('form_iu', 'SEARCH');
-    
+        this.dom.remove_class_value('class_contenido_titulo_form', 'text_contenido_titulo_form');
+        this.dom.assign_class_value('class_contenido_titulo_form', 'text_contenido_titulo_form_ubicacion_DELETE');
+
+        // rellenar y action
+        this.dom.assign_property_value('form_iu', 'action', 'javascript:entidad.DELETE();');
+
+        this.dom.hide_element_form('nuevo_site_north_photo');
+        this.dom.assign_property_value('link_site_north_photo', 'href', 'http://193.147.87.202/ET2/filesuploaded/files_site_north_photo/' + fila.site_north_photo);
+
+        this.dom.hide_element_form('nuevo_site_south_photo');
+        this.dom.assign_property_value('link_site_south_photo', 'href', 'http://193.147.87.202/ET2/filesuploaded/files_site_south_photo/' + fila.site_west_photo);
+
+        this.dom.hide_element_form('nuevo_site_east_photo');
+        this.dom.assign_property_value('link_site_east_photo', 'href', 'http://193.147.87.202/ET2/filesuploaded/files_site_east_photo/' + fila.site_east_photo);
+
+        this.dom.hide_element_form('nuevo_site_west_photo');
+        this.dom.assign_property_value('link_site_west_photo', 'href', 'http://193.147.87.202/ET2/filesuploaded/files_site_west_photo/' + fila.site_west_photo);
+
+
+        // rellenar valores
+        this.dom.rellenarvaloresform(fila);
+
+
+        // poner inactivos los campos correspondientes
+        this.dom.colocartodosreadonly('form_iu');
+
         // colocar boton de submit
-        this.dom.colocarboton('SEARCH');
-    
+        this.dom.colocarboton('DELETE');
+
         setLang();
     }
-    
+
+    createForm_SHOWCURRENT(fila) {
+        // limpiar y poner visible el formulario
+        document.getElementById('contenedor_IU_form').innerHTML = this.manual_form_creation();
+        this.dom.show_element('Div_IU_form', 'block');
+        this.dom.remove_class_value('class_contenido_titulo_form', 'text_contenido_titulo_form');
+        this.dom.assign_class_value('class_contenido_titulo_form', 'text_contenido_titulo_form_ubicacion_SHOWCURRENT');
+
+        // rellenar y action
+        //this.dom.assign_property_value('form_iu', 'action', 'javascript:entidad.DELETE();');
+
+        this.dom.hide_element_form('nuevo_site_north_photo');
+        this.dom.assign_property_value('link_site_north_photo', 'href', 'http://193.147.87.202/ET2/filesuploaded/files_site_north_photo/' + fila.site_north_photo);
+
+        this.dom.hide_element_form('nuevo_site_south_photo');
+        this.dom.assign_property_value('link_site_south_photo', 'href', 'http://193.147.87.202/ET2/filesuploaded/files_site_south_photo/' + fila.site_west_photo);
+
+        this.dom.hide_element_form('nuevo_site_east_photo');
+        this.dom.assign_property_value('link_site_east_photo', 'href', 'http://193.147.87.202/ET2/filesuploaded/files_site_east_photo/' + fila.site_east_photo);
+
+        this.dom.hide_element_form('nuevo_site_west_photo');
+        this.dom.assign_property_value('link_site_west_photo', 'href', 'http://193.147.87.202/ET2/filesuploaded/files_site_west_photo/' + fila.site_west_photo);
+
+        this.dom.hide_element('submit_button');
+        // rellenar valores
+        this.dom.rellenarvaloresform(fila);
+
+        // poner inactivos los campos correspondientes
+        this.dom.colocartodosreadonly('form_iu');
+
+        // colocar boton de submit
+        //this.colocarboton('SHOWCURRENT');
+
+        setLang();
+
+    }
+
+    createForm_ADD() {
+
+        // poner titulo al formulario
+
+        // limpiar y poner visible el formulario
+        document.getElementById('contenedor_IU_form').innerHTML = this.manual_form_creation();
+        this.dom.show_element('Div_IU_form', 'block');
+        this.dom.remove_class_value('class_contenido_titulo_form', 'text_contenido_titulo_form');
+        this.dom.assign_class_value('class_contenido_titulo_form', 'text_contenido_titulo_form_ubicacion_ADD');
+
+        // poner onsubmit
+        this.dom.assign_property_value('form_iu', 'onsubmit', 'return entidad.ADD_submit_' + this.nombreentidad + '()');
+
+        // poner action
+        this.dom.assign_property_value('form_iu', 'action', 'javascript:entidad.ADD();');
+
+        this.dom.hide_element_form('site_north_photo');
+        this.dom.hide_element('link_site_north_photo');
+
+        this.dom.hide_element_form('site_south_photo');
+        this.dom.hide_element('link_site_south_photo');
+
+        this.dom.hide_element_form('site_east_photo');
+        this.dom.hide_element('link_site_east_photo');
+
+        this.dom.hide_element_form('site_west_photo');
+        this.dom.hide_element('link_site_west_photo');
+
+        this.dom.hide_element('id_site');
+        // this.dom.hide_element('label_id_site');
+
+
+        // rellenar valores
+        // en ADD no hay valores que rellenar
+
+        // poner las validaciones
+        this.dom.colocarvalidaciones('form_iu', 'ADD');
+
+        // poner inactivos los campos correspondientes
+        // en ADD no hay inactivos... si hubiese un autoincremental ya no se mostraria
+
+        // colocar boton de submit
+        this.dom.colocarboton('ADD');
+
+        setLang();
+    }
+
+    createForm_SEARCH() {
+
+        // poner titulo al formulario
+
+        // limpiar y poner visible el formulario
+        document.getElementById('contenedor_IU_form').innerHTML = this.manual_form_creation();
+        this.dom.show_element('Div_IU_form', 'block');
+        this.dom.remove_class_value('class_contenido_titulo_form', 'text_contenido_titulo_form');
+        this.dom.assign_class_value('class_contenido_titulo_form', 'text_contenido_titulo_form_ubicacion_SEARCH');
+
+        // poner onsubmit
+        this.dom.assign_property_value('form_iu', 'onsubmit', 'return entidad.SEARCH_submit_' + this.nombreentidad + '()');
+
+        // poner action
+        this.dom.assign_property_value('form_iu', 'action', 'javascript:entidad.SEARCH();');
+
+        this.dom.hide_element_form('nuevo_site_north_photo');
+        this.dom.hide_element('link_site_north_photo');
+
+        this.dom.hide_element_form('nuevo_site_south_photo');
+        this.dom.hide_element('link_site_south_photo');
+
+        this.dom.hide_element_form('nuevo_site_east_photo');
+        this.dom.hide_element('link_site_east_photo');
+
+        this.dom.hide_element_form('nuevo_site_west_photo');
+        this.dom.hide_element('link_site_west_photo');
+
+
+
+
+        
+        // rellenar valores
+        // en SEARCH no hay valores que rellenar
+
+        // poner las validaciones
+        this.dom.colocarvalidaciones('form_iu', 'SEARCH');
+
+        // colocar boton de submit
+        this.dom.colocarboton('SEARCH');
+
+        setLang();
+
+    }
+
 
 
 }

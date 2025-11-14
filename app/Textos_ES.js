@@ -4,9 +4,9 @@ var textos_ES = {
 	'text_titulo_app': 'Interfaz ET2 IU',
 	'text_titulo_menu': 'Opciones  Menú',
 	'text_titulo_pie': 'Pie de página',
-    'label_seleccioncolumnas': 'Seleccionar columnas',
-    
-    // textos de test
+	'label_seleccioncolumnas': 'Seleccionar columnas',
+
+	// textos de test
 	/*'res_estructura_tests':'Tabla verificacion estructura de test',
 	'resultadodef':'formato correcto estructura definicion tests',
 	'res_estructura_pruebas':'Tabla verificacion estructura de pruebas',
@@ -15,7 +15,7 @@ var textos_ES = {
 	'resultadotest':'Resultado ejecucion pruebas',
 	*/
 
-    // textos menu
+	// textos menu
 	'text_menu_persona': 'Gestionar persona',
 
 
@@ -33,7 +33,7 @@ var textos_ES = {
 	//menu
 	'menu_alumnograduacion': 'Gestionar alumnograduacion',
 
-    // textos entidad alumnograduacion
+	// textos entidad alumnograduacion
 	'text_titulo_page_alumnograduacion': 'Gestión de Datos alumnograduacion',
 	'text_contenido_titulo_form_alumnograduacion_ADD': 'Formulario Alta Datos alumnograduacion',
 	'text_contenido_titulo_form_alumnograduacion_EDIT': 'Formulario Modificación Datos alumnograduacion',

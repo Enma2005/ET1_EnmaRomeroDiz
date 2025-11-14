@@ -48,7 +48,7 @@ ARTICULO------------------------------------------------------------------------
 
     FECHAPUBLICACIONR-> De la forma nnnn-nn-nn todos ellos caracteres numéricos. No puede ser nulo.
 
-    FICHEROPDFA->       Nombre del fichero como máximo 20 caracteres alfanuméricos y como mínimo 1 y la extension (4 en total). 
+    FICHEROPDFA->       Nombre del fichero como máximo 20 caracteres alfanuméricos y como mínimo 1 y la extension (5 en total). 
                         No se admiten espacios pero si ñ y acentos. 
                         No puede ser nulo.
 

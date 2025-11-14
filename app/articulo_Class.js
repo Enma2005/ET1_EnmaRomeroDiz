@@ -145,10 +145,6 @@ class articulo extends EntidadAbstracta {
 
 	/* Validaciones para ADD/EDIT */
 
-	ADD_CodigoA_validation(){
-		this.dom.mostrar_exito_campo('CodigoA');
-		return true;
-	}
 
 	ADD_AutoresA_validation() {
 		if (!(this.not_empty('AutoresA'))) {
@@ -413,7 +409,7 @@ class articulo extends EntidadAbstracta {
 			return "nuevo_FicheropdfA_nombrepdf_format_KO";
 		}
 
-		if (!(this.min_size_file(7))) {
+		if (!(this.min_size_file(5))) {
 			this.dom.mostrar_error_campo('nuevo_FicheropdfA', 'nuevo_FicheropdfA_nombrepdf_min_size_KO');
 			return "nuevo_FicheropdfA_nombrepdf_min_size_KO";
 		}
@@ -438,7 +434,7 @@ class articulo extends EntidadAbstracta {
 	ADD_submit_articulo() {
 
 		let result = (
-			(this.ADD_CodigoA_validation()) &
+
 			(this.ADD_AutoresA_validation()) &
 			(this.ADD_TituloA_validation()) &
 			(this.ADD_TituloR_validation()) &
@@ -459,9 +455,7 @@ class articulo extends EntidadAbstracta {
 
 	}
 
-	EDIT_CodigoA_validation(){
-		return true;
-	}
+
 
 	EDIT_AutoresA_validation() {
 		if (!(this.not_empty('AutoresA'))) {
@@ -714,7 +708,7 @@ class articulo extends EntidadAbstracta {
 			return "nuevo_FicheropdfA_nombrepdf_format_KO";
 		}
 
-		if (!(this.min_size_file(7))) {
+		if (!(this.min_size_file(5))) {
 			this.dom.mostrar_error_campo('nuevo_FicheropdfA', 'nuevo_FicheropdfA_nombrepdf_min_size_KO');
 			return "nuevo_FicheropdfA_nombrepdf_min_size_KO";
 		}
@@ -1027,169 +1021,171 @@ class articulo extends EntidadAbstracta {
 	}
 
 
+ 
+    createForm_EDIT(fila) {
 
-	createForm_EDIT(fila) {
+        // limpiar poner titulo y poner visible el formulario
+        document.getElementById('contenedor_IU_form').innerHTML = this.manual_form_creation();
+        this.dom.show_element('Div_IU_form', 'block');
 
-		// limpiar poner Titulo y poner visible el formulario
-		document.getElementById('contenedor_IU_form').innerHTML = this.manual_form_creation();
-		this.dom.show_element('Div_IU_form', 'block');
+        this.dom.remove_class_value('class_contenido_titulo_form', 'text_contenido_titulo_form');
+        this.dom.assign_class_value('class_contenido_titulo_form', 'text_contenido_titulo_form_articulo_EDIT');
 
-		this.dom.remove_class_value('class_contenido_Titulo_form', 'text_contenido_Titulo_form');
-		this.dom.assign_class_value('class_contenido_Titulo_form', 'text_contenido_Titulo_form_EDIT');
+        // rellenar onsubmit y action
+        this.dom.assign_property_value('form_iu', 'onsubmit', 'return entidad.EDIT_submit_' + this.nombreentidad + '()');
+        this.dom.assign_property_value('form_iu', 'action', 'javascript:entidad.EDIT();');
 
-		// rellenar onsubmit y action
-		this.dom.assign_property_value('form_iu', 'onsubmit', 'return entidad.EDIT_submit_' + this.nombreentidad);
-		this.dom.assign_property_value('form_iu', 'action', 'javascript:entidad.EDIT();');
+        //activar el link al fichero
 
-		//activar el link al fichero
+        this.dom.assign_property_value('link_FicheropdfA', 'href', 'http://193.147.87.202/ET2/filesuploaded/files_FicheropdfA/' + fila.FicheropdfA);
 
-		this.dom.assign_property_value('link_FicheropdfA', 'href', 'http://193.147.87.202/ET2/filesuploaded/files_FicheropdfA/' + fila.FicheropdfA);
+        // rellenar valores
+        this.dom.rellenarvaloresform(fila);
 
-		// rellenar valores
-		this.dom.rellenarvaloresform(fila);
+        // poner las validaciones
+        this.dom.colocarvalidaciones('form_iu', 'EDIT');
 
-		// poner las validaciones
-		this.dom.colocarvalidaciones('form_iu', 'EDIT');
+        // poner inactivos los campos correspondientes
+        this.dom.assign_property_value('CodigoA', 'readonly', 'true');
 
-		// poner inactivos los campos correspondientes
-		this.dom.assign_property_value('CodigoA', 'readonly', 'true');
+        this.dom.assign_property_value('link_FicheropdfA', 'readonly', 'true');
 
-		this.dom.assign_property_value('link_FicheropdfA', 'readonly', 'true');
+        // colocar boton de submit
+        this.dom.colocarboton('EDIT');
+        document.getElementById('FechaPublicacionR').value = this.isoToDDMMYYYY( document.getElementById('FechaPublicacionR').value);
 
-		// colocar boton de submit
-		this.dom.colocarboton('EDIT');
-		document.getElementById('FechaPublicacionR').value = this.isoToDDMMYYYY(document.getElementById('FechaPublicacionR').value);
+        setLang();
 
-		setLang();
+    }
 
-	}
+    createForm_DELETE(fila) {
 
-	createForm_DELETE(fila) {
+        // limpiar y poner visible el formulario
+        document.getElementById('contenedor_IU_form').innerHTML = this.manual_form_creation();
+        this.dom.show_element('Div_IU_form', 'block');
+        this.dom.remove_class_value('class_contenido_titulo_form', 'text_contenido_titulo_form');
+        this.dom.assign_class_value('class_contenido_titulo_form', 'text_contenido_titulo_form_articulo_DELETE');
 
-		// limpiar y poner visible el formulario
-		document.getElementById('contenedor_IU_form').innerHTML = this.manual_form_creation();
-		this.dom.show_element('Div_IU_form', 'block');
-		this.dom.remove_class_value('class_contenido_Titulo_form', 'text_contenido_Titulo_form');
-		this.dom.assign_class_value('class_contenido_Titulo_form', 'text_contenido_Titulo_form_DELETE');
+        // rellenar y action
+        this.dom.assign_property_value('form_iu', 'action', 'javascript:entidad.DELETE();');
 
-		// rellenar y action
-		this.dom.assign_property_value('form_iu', 'action', 'javascript:entidad.DELETE();');
+        this.dom.hide_element_form('nuevo_FicheropdfA');
+        this.dom.assign_property_value('link_FicheropdfA', 'href', 'http://193.147.87.202/ET2/filesuploaded/files_FicheropdfA/' + fila.FicheropdfA);
 
-		this.dom.hide_element_form('nuevo_FicheropdfA');
-		this.dom.assign_property_value('link_FicheropdfA', 'href', 'http://193.147.87.202/ET2/filesuploaded/files_FicheropdfA/' + fila.FicheropdfA);
-
-		// rellenar valores
-		this.dom.rellenarvaloresform(fila);
-		document.getElementById('FechaPublicacionR').value = this.isoToDDMMYYYY(document.getElementById('FechaPublicacionR').value);
-
-
-		// poner inactivos los campos correspondientes
-		this.dom.colocartodosreadonly('form_iu');
-
-		// colocar boton de submit
-		this.dom.colocarboton('DELETE');
-
-		setLang();
-	}
-
-	createForm_SHOWCURRENT(fila) {
-		// limpiar y poner visible el formulario
-		document.getElementById('contenedor_IU_form').innerHTML = this.manual_form_creation();
-		this.dom.show_element('Div_IU_form', 'block');
-		this.dom.remove_class_value('class_contenido_Titulo_form', 'text_contenido_Titulo_form');
-		this.dom.assign_class_value('class_contenido_Titulo_form', 'text_contenido_Titulo_form_SHOWCURRENT');
-
-		// rellenar y action
-		//this.dom.assign_property_value('form_iu', 'action', 'javascript:entidad.DELETE();');
-
-		this.dom.hide_element_form('nuevo_FicheropdfA');
-		this.dom.assign_property_value('link_FicheropdfA', 'href', 'http://193.147.87.202/ET2/filesuploaded/files_FicheropdfA/' + fila.FicheropdfA);
+        // rellenar valores
+        this.dom.rellenarvaloresform(fila);
+        document.getElementById('FechaPublicacionR').value = this.mostrarcambioatributo('FechaPublicacionR', document.getElementById('FechaPublicacionR').value);
 
 
+        // poner inactivos los campos correspondientes
+        this.dom.colocartodosreadonly('form_iu');
 
-		// rellenar valores
-		this.dom.rellenarvaloresform(fila);
-		document.getElementById('FechaPublicacionR').value = this.isoToDDMMYYYY(document.getElementById('FechaPublicacionR').value);
+        // colocar boton de submit
+        this.dom.colocarboton('DELETE');
 
-		// poner inactivos los campos correspondientes
-		this.dom.colocartodosreadonly('form_iu');
+        setLang();
+    }
 
-		// colocar boton de submit
-		//this.colocarboton('SHOWCURRENT');
+    createForm_SHOWCURRENT(fila) {
+        // limpiar y poner visible el formulario
+        document.getElementById('contenedor_IU_form').innerHTML = this.manual_form_creation();
+        this.dom.show_element('Div_IU_form', 'block');
+        this.dom.remove_class_value('class_contenido_titulo_form', 'text_contenido_titulo_form');
+        this.dom.assign_class_value('class_contenido_titulo_form', 'text_contenido_titulo_form_articulo_SHOWCURRENT');
 
-		setLang();
+        // rellenar y action
+        //this.dom.assign_property_value('form_iu', 'action', 'javascript:entidad.DELETE();');
 
-	}
-
-	createForm_ADD() {
-
-		// poner Titulo al formulario
-
-		// limpiar y poner visible el formulario
-		document.getElementById('contenedor_IU_form').innerHTML = this.manual_form_creation();
-		this.dom.show_element('Div_IU_form', 'block');
-		this.dom.remove_class_value('class_contenido_Titulo_form', 'text_contenido_Titulo_form');
-		this.dom.assign_class_value('class_contenido_Titulo_form', 'text_contenido_Titulo_form_ADD');
-
-		// poner onsubmit
-		this.dom.assign_property_value('form_iu', 'onsubmit', 'return entidad.ADD_submit_' + this.nombreentidad + '()');
-
-		// poner action
-		this.dom.assign_property_value('form_iu', 'action', 'javascript:entidad.ADD();');
-
-		this.dom.hide_element_form('FicheropdfA');
-		this.dom.hide_element('link_FicheropdfA');
-		this.dom.hide_element('CodigoA');
-
-		// rellenar valores
-		// en ADD no hay valores que rellenar
-
-		// poner las validaciones
-		this.dom.colocarvalidaciones('form_iu', 'ADD');
-
-		// poner inactivos los campos correspondientes
-		// en ADD no hay inactivos... si hubiese un autoincremental ya no se mostraria
-
-		// colocar boton de submit
-		this.dom.colocarboton('ADD');
-
-		setLang();
-	}
-
-	createForm_SEARCH() {
-
-		// poner Titulo al formulario
-
-		// limpiar y poner visible el formulario
-		document.getElementById('contenedor_IU_form').innerHTML = this.manual_form_creation();
-		this.dom.show_element('Div_IU_form', 'block');
-		this.dom.remove_class_value('class_contenido_Titulo_form', 'text_contenido_Titulo_form');
-		this.dom.assign_class_value('class_contenido_Titulo_form', 'text_contenido_Titulo_form_SEARCH');
-
-		// poner onsubmit
-		this.dom.assign_property_value('form_iu', 'onsubmit', 'return entidad.SEARCH_submit_' + this.nombreentidad);
-
-		// poner action
-		this.dom.assign_property_value('form_iu', 'action', 'javascript:entidad.SEARCH();');
-
-		this.dom.hide_element_form('nuevo_FicheropdfA');
-		this.dom.hide_element('link_FicheropdfA');
+        this.dom.hide_element_form('nuevo_FicheropdfA');
+        this.dom.assign_property_value('link_FicheropdfA', 'href', 'http://193.147.87.202/ET2/filesuploaded/files_FicheropdfA/' + fila.FicheropdfA);
 
 
 
+        // rellenar valores
+        this.dom.rellenarvaloresform(fila);
+        document.getElementById('FechaPublicacionR').value = this.isoToDDMMYYYY(document.getElementById('FechaPublicacionR').value);
 
-		// rellenar valores
-		// en SEARCH no hay valores que rellenar
+        // poner inactivos los campos correspondientes
+        this.dom.colocartodosreadonly('form_iu');
 
-		// poner las validaciones
-		this.dom.colocarvalidaciones('form_iu', 'SEARCH');
+        // colocar boton de submit
+        //this.colocarboton('SHOWCURRENT');
 
-		// colocar boton de submit
-		this.dom.colocarboton('SEARCH');
+        setLang();
 
-		setLang();
+    }
 
-	}
+    createForm_ADD() {
+
+        // poner titulo al formulario
+
+        // limpiar y poner visible el formulario
+        document.getElementById('contenedor_IU_form').innerHTML = this.manual_form_creation();
+        this.dom.show_element('Div_IU_form', 'block');
+        this.dom.remove_class_value('class_contenido_titulo_form', 'text_contenido_titulo_form');
+        this.dom.assign_class_value('class_contenido_titulo_form', 'text_contenido_titulo_form_articulo_ADD');
+
+        // poner onsubmit
+        this.dom.assign_property_value('form_iu', 'onsubmit', 'return entidad.ADD_submit_' + this.nombreentidad + '()');
+
+        // poner action
+        this.dom.assign_property_value('form_iu', 'action', 'javascript:entidad.ADD();');
+
+        this.dom.hide_element_form('FicheropdfA');
+        this.dom.hide_element('link_FicheropdfA');
+        this.dom.hide_element('CodigoA');
+
+        // rellenar valores
+        // en ADD no hay valores que rellenar
+
+        // poner las validaciones
+        this.dom.colocarvalidaciones('form_iu', 'ADD');
+
+        // poner inactivos los campos correspondientes
+        // en ADD no hay inactivos... si hubiese un autoincremental ya no se mostraria
+
+        // colocar boton de submit
+        this.dom.colocarboton('ADD');
+
+        setLang();
+    }
+
+    createForm_SEARCH() {
+
+        // poner titulo al formulario
+
+        // limpiar y poner visible el formulario
+        document.getElementById('contenedor_IU_form').innerHTML = this.manual_form_creation();
+        this.dom.show_element('Div_IU_form', 'block');
+        this.dom.remove_class_value('class_contenido_titulo_form', 'text_contenido_titulo_form');
+        this.dom.assign_class_value('class_contenido_titulo_form', 'text_contenido_titulo_form_articulo_SEARCH');
+
+        // poner onsubmit
+        this.dom.assign_property_value('form_iu', 'onsubmit', 'return entidad.SEARCH_submit_' + this.nombreentidad + '()');
+
+        // poner action
+        this.dom.assign_property_value('form_iu', 'action', 'javascript:entidad.SEARCH();');
+
+        this.dom.hide_element_form('nuevo_FicheropdfA');
+        this.dom.hide_element('link_FicheropdfA');
+
+
+
+
+        // rellenar valores
+        // en SEARCH no hay valores que rellenar
+
+		this.dom.replaceSelectXEmptyInput('EstadoA');
+
+        // poner las validaciones
+        this.dom.colocarvalidaciones('form_iu', 'SEARCH');
+
+        // colocar boton de submit
+        this.dom.colocarboton('SEARCH');
+
+        setLang();
+
+    }
 
 	/**
 	 * modifica el formato de visualización de un atributo concreto y se devuelve el valor modificado
@@ -1323,7 +1319,6 @@ class articulo extends EntidadAbstracta {
 		if (valor === undefined || valor === null || valor.trim() === '' || isNaN(valor)) {
 			return false;
 		}
-
 		// Convierte a número entero
 		valor = parseInt(valor, 10);
 

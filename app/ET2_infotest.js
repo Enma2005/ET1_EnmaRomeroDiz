@@ -557,7 +557,7 @@ let alumnograduacion_tests_files = [
   ['alumnograduacion', 'nuevo_alumnograduacion_fotoacto', 111, 7, 'ADD', 'format_name_file', [{ format_name_file: 'j.jpg' }, { type_file: 'image/jpeg' }, { max_size_file: 19 }], 'nuevo_alumnograduacion_fotoacto_nombrefoto_min_size_KO'],
   ['alumnograduacion', 'nuevo_alumnograduacion_fotoacto', 112, 8, 'ADD', 'format_name_file', [{ format_name_file: 'n'.repeat(41) + '.jpg' }, { type_file: 'image/jpeg' }, { max_size_file: 19 }], 'nuevo_alumnograduacion_fotoacto_nombrefoto_max_size_KO'], //nombre con 41 caracteres y format jpg
   ['alumnograduacion', 'nuevo_alumnograduacion_fotoacto', 113, 9, 'ADD', 'type_file', [{ format_name_file: 'foto.pdf' }, { type_file: 'pdf' }, { max_size_file: 19 }], 'nuevo_alumnograduacion_fotoacto_format_KO'], //format jpg
-  ['alumnograduacion', 'nuevo_alumnograduacion_fotoacto', 114, 10, 'ADD', 'max_size_file', [{ format_name_file: 'fomkjskdkto.jpg' }, { type_file: 'image/jpeg' }, { max_size_file: 21000000 }], 'nuevo_alumnograduacion_fotoacto_max_size_KO'], //20MB
+  ['alumnograduacion', 'nuevo_alumnograduacion_fotoacto', 114, 10, 'ADD', 'max_size_file', [{ format_name_file: 'fomkjskdkto.jpg' }, { type_file: 'image/jpeg' }, { max_size_file: 2000001 }], 'nuevo_alumnograduacion_fotoacto_max_size_KO'], //20MB
   ['alumnograduacion', 'nuevo_alumnograduacion_fotoacto', 115, 11, 'ADD', 'correcto', [{ format_name_file: 'nombrecorrecto.jpg' }, { type_file: 'image/jpeg' }, { max_size_file: 19 }], true], //correcto 
 
   //EDITAR FOTOACTO
@@ -570,7 +570,7 @@ let alumnograduacion_tests_files = [
   ['alumnograduacion', 'nuevo_alumnograduacion_fotoacto', 118, 18, 'EDIT', 'format_name_file', [{ format_name_file: 'n.jpg' }, { type_file: 'image/jpeg' }, { max_size_file: 19 }], 'nuevo_alumnograduacion_fotoacto_nombrefoto_min_size_KO'],
   ['alumnograduacion', 'nuevo_alumnograduacion_fotoacto', 119, 19, 'EDIT', 'format_name_file', [{ format_name_file: 'n'.repeat(41) + '.jpg' }, { type_file: 'image/jpeg' }, { max_size_file: 19 }], 'nuevo_alumnograduacion_fotoacto_nombrefoto_max_size_KO'], //nombre con 41 caracteres y format jpg
   ['alumnograduacion', 'nuevo_alumnograduacion_fotoacto', 120, 20, 'EDIT', 'type_file', [ { format_name_file: 'foto.pdf' }, { type_file: 'pdf' }, { max_size_file: 19 }], 'nuevo_alumnograduacion_fotoacto_format_KO'], //format jpg
-  ['alumnograduacion', 'nuevo_alumnograduacion_fotoacto', 121, 21, 'EDIT', 'max_size_file', [{ format_name_file: 'foto.jpg' }, { type_file: 'image/jpeg' }, { max_size_file: 21000000 }], 'nuevo_alumnograduacion_fotoacto_max_size_KO'], //20MB
+  ['alumnograduacion', 'nuevo_alumnograduacion_fotoacto', 121, 21, 'EDIT', 'max_size_file', [{ format_name_file: 'foto.jpg' }, { type_file: 'image/jpeg' }, { max_size_file: 2000001 }], 'nuevo_alumnograduacion_fotoacto_max_size_KO'], //20MB
   ['alumnograduacion', 'nuevo_alumnograduacion_fotoacto', 122, 22, 'EDIT', 'correcto', [{ format_name_file: 'nombrecorrecto.jpg' }, { type_file: 'image/jpeg' }, { max_size_file: 19 }], true], //correcto 
 
 ];
@@ -794,7 +794,7 @@ let articulo_def_tests = [
   //ADD FicheropdfA
   ['articulo', 'nuevo_FicheropdfA', 'inputfile', 106, 'Validar que el campo no este vacio', 'ADD', 'nuevo_FicheropdfA_vacio_KO', 'Complete el campo'],
   ['articulo', 'nuevo_FicheropdfA', 'inputfile', 107, 'Validar que el campo tenga un nombre con solo alfabeticos sin espacios ni puntos antes de la extension', 'ADD', 'nuevo_FicheropdfA_nombrepdf_format_KO', 'El format deben ser alfabeticos sin espacios'],
-  ['articulo', 'nuevo_FicheropdfA', 'inputfile', 108, 'Validar que el campo tenga un nombre con un minimo de 1 caracter mas la extension (total 5)', 'ADD', 'nuevo_FicheropdfA_nombrepdf_min_size_KO', 'El nombre debe contener minimo de 1 caracter mas la extension (total 4).'],
+  ['articulo', 'nuevo_FicheropdfA', 'inputfile', 108, 'Validar que el campo tenga un nombre con un minimo de 1 caracter mas la extension (total 5)', 'ADD', 'nuevo_FicheropdfA_nombrepdf_min_size_KO', 'El nombre debe contener minimo de 1 caracter mas la extension (total 5).'],
   ['articulo', 'nuevo_FicheropdfA', 'inputfile', 109, 'Validar que el campo tenga un nombre con un maximo de 20 caracteres', 'ADD', 'nuevo_FicheropdfA_nombrepdf_max_size_KO', 'El nombre debe contener maximo de 20 caracteres.'],
   ['articulo', 'nuevo_FicheropdfA', 'inputfile', 110, 'Validar que el campo sea un pdf', 'ADD', 'nuevo_FicheropdfA_format_KO', 'El format debe ser pdf.'],
   ['articulo', 'nuevo_FicheropdfA', 'inputfile', 111, 'Validar que el campo no supere el tamaño maximo de 2MB', 'ADD', 'nuevo_FicheropdfA_max_size_KO', 'El tamaño máximo permitido es 2MB.'],
@@ -803,7 +803,7 @@ let articulo_def_tests = [
   //EDITAR FicheropdfA
   ['articulo', 'nuevo_FicheropdfA', 'inputfile', 113, 'Validar que el campo no este vacio', 'EDIT', 'nuevo_FicheropdfA_vacio_KO', 'Complete el campo'],
   ['articulo', 'nuevo_FicheropdfA', 'inputfile', 114, 'Validar que el campo tenga un nombre con solo alfabeticos sin espacios ni puntos antes de la extension', 'EDIT', 'nuevo_FicheropdfA_nombrepdf_format_KO', 'El format deben ser alfabeticos sin espacios'],
-  ['articulo', 'nuevo_FicheropdfA', 'inputfile', 115, 'Validar que el campo tenga un nombre con un minimo de 1 caracter mas la extension (total 5)', 'EDIT', 'nuevo_FicheropdfA_nombrepdf_min_size_KO', 'El nombre debe contener un minimo 1 caracter mas la extension (total 4)..'],
+  ['articulo', 'nuevo_FicheropdfA', 'inputfile', 115, 'Validar que el campo tenga un nombre con un minimo de 1 caracter mas la extension (total 5)', 'EDIT', 'nuevo_FicheropdfA_nombrepdf_min_size_KO', 'El nombre debe contener un minimo 1 caracter mas la extension (total 5)..'],
   ['articulo', 'nuevo_FicheropdfA', 'inputfile', 116, 'Validar que el campo tenga un nombre con un maximo de 20 caracteres', 'EDIT', 'nuevo_FicheropdfA_nombrepdf_max_size_KO', 'El nombre debe contener maximo de 20 caracteres.'],
   ['articulo', 'nuevo_FicheropdfA', 'inputfile', 117, 'Validar que el campo sea un pdf', 'EDIT', 'nuevo_FicheropdfA_format_KO', 'El format debe ser pdf.'],
   ['articulo', 'nuevo_FicheropdfA', 'inputfile', 118, 'Validar que el campo no supere el tamaño maximo de 2MB', 'EDIT', 'nuevo_FicheropdfA_max_size_KO', 'El tamaño máximo permitido es 2MB.'],
